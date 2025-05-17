@@ -1,12 +1,12 @@
 # MkSaaS
 
-Make AI SaaS in days, simply and effortlessly.
+Make AI SaaS in a weekend.
 
-MkSaaS is a complete Next.js boilerplate for building AI SaaS websites. Make money from day one with our battle-tested stack and built-in monetization features.
+The complete Next.js boilerplate for building profitable SaaS, with auth, payments, i18n, newsletter, dashboard, blog, docs, blocks, themes, SEO and more.
 
 ## Author
 
-This project is created by [Fox](https://x.com/indie_maker_fox), the founder of [MkSaaS](https://mksaas.com) and [Mkdirs](https://mkdirs.com).
+This project is created by [Fox](https://x.com/indie_maker_fox), the founder of [MkSaaS](https://mksaas.com) and [Mkdirs](https://mkdirs.com). The official X account for [MkSaaS](https://mksaas.com) is [@mksaascom](https://x.com/mksaascom), you can follow this account for the updates about MkSaaS.
 
 ## Documentation
 
@@ -16,19 +16,19 @@ If you found anything that could be improved, please let me know.
 
 ## Links
 
-- website: [mksaas.com](https://mksaas.com)
-- demo: [demo.mksaas.com](https://demo.mksaas.com)
-- discord: [discord.gg/mtjx6W6mNY](https://discord.gg/mtjx6W6mNY)
-- documentation: [mksaas.com/docs](https://mksaas.com/docs)
-- roadmap: [mksaas project](https://github.com/orgs/MkSaaSHQ/projects/1)
-- video (WIP): [youtube.com/@MkSaaSHQ](https://www.youtube.com/@MkSaaSHQ)
+- 🔥 website: [mksaas.com](https://mksaas.com)
+- 🌐 demo: [demo.mksaas.com](https://demo.mksaas.com)
+- 📚 documentation: [mksaas.com/docs](https://mksaas.com/docs)
+- 🗓️ roadmap: [mksaas project](https://mksaas.link/roadmap)
+- 👨‍💻 discord: [mksaas.link/discord](https://mksaas.link/discord)
+- 📹 video (WIP): [mksaas.link/youtube](https://mksaas.link/youtube)
 
 ## Repositories
 
 By default, you should have access to all four repositories. If you find that you’re unable to access any of them, please don’t hesitate to reach out to me, and I’ll assist you in resolving the issue.
 
 - [MkSaaSHQ/mksaas-template](https://github.com/MkSaaSHQ/mksaas-template): https://demo.mksaas.com (ready)
-- [MkSaaSHQ/mksaas-blog](https://github.com/MkSaaSHQ/mksaas-blog): https://javayhu.com (ready)
+- [MkSaaSHQ/mksaas-blog](https://github.com/MkSaaSHQ/mksaas-blog): https://mksaas.me (ready)
 - [MkSaaSHQ/mksaas-app](https://github.com/MkSaaSHQ/mksaas-app): https://mksaas.app (WIP)
 - [MkSaaSHQ/mksaas-haitang](https://github.com/MkSaaSHQ/mksaas-haitang): https://haitang.app (WIP)
 
