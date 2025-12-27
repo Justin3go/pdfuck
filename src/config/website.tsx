@@ -153,7 +153,7 @@ export const websiteConfig: WebsiteConfig = {
     },
   },
   credits: {
-    enableCredits: true,
+    enableCredits: process.env.NEXT_PUBLIC_DEMO_WEBSITE === 'true',
     enablePackagesForFreePlan: false,
     registerGiftCredits: {
       enable: true,
