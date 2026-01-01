@@ -1,6 +1,6 @@
 import * as Preview from '@/components/docs';
 import { getMDXComponents } from '@/components/docs/mdx-components';
-import { LLMCopyButton, ViewOptions } from '@/components/page-actions';
+import { LLMCopyButton, ViewOptions } from '@/components/docs/page-actions';
 import { PremiumBadge } from '@/components/premium/premium-badge';
 import { PremiumGuard } from '@/components/premium/premium-guard';
 import {
@@ -118,10 +118,7 @@ export default async function DocPage({ params }: DocPageProps) {
       <DocsDescription>{page.data.description}</DocsDescription>
       <div className="flex flex-row gap-2 items-center border-b pb-6">
         <LLMCopyButton markdownUrl={markdownUrl} />
-        <ViewOptions
-          markdownUrl={markdownUrl}
-          githubUrl={`https://github.com/MkSaaSHQ/mksaas-template/blob/main/content/docs/${page.path}`}
-        />
+        <ViewOptions markdownUrl={markdownUrl} />
       </div>
       <DocsBody>
         {/* Preview Rendered Component */}
