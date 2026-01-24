@@ -17,8 +17,8 @@ import {
 const intlMiddleware = createMiddleware(routing);
 
 /**
- * Next.js 16 Proxy (formerly Middleware)
- * https://nextjs.org/docs/app/building-your-application/routing/middleware
+ * Edge Middleware (temporary)
+ * OpenNext Cloudflare does not support Node.js middleware yet.
  *
  * Better Auth integration
  * https://www.better-auth.com/docs/integrations/next#cookie-based-checks-recommended-for-all-versions
@@ -28,15 +28,15 @@ const intlMiddleware = createMiddleware(routing);
  * It does NOT validate the session. Anyone can manually create a cookie to bypass this check.
  * You MUST always validate the session on your server for any protected actions or pages.
  *
- * This proxy only performs fast cookie-based redirection. Actual session validation
+ * This middleware only performs fast cookie-based redirection. Actual session validation
  * happens in:
  * - Protected pages: via layout.tsx using getSession() from server
  * - Protected API routes: via auth.api.getSession({ headers })
  * - Server actions: via safe-action middleware
  */
-export default async function proxy(req: NextRequest) {
+export default async function middleware(req: NextRequest) {
   const { nextUrl } = req;
-  console.log('>> proxy start, pathname', nextUrl.pathname);
+  console.log('>> middleware start, pathname', nextUrl.pathname);
 
   // When AI agents request docs with markdown preference, serve markdown content
   // https://www.fumadocs.dev/docs/integrations/llms#accept
@@ -51,7 +51,7 @@ export default async function proxy(req: NextRequest) {
         // Remove .mdx extension and rewrite to llms.mdx route
         const pathWithoutMdx = restPath.replace(/\.mdx$/, '');
         const result = `/${locale}/docs/llms.mdx/${pathWithoutMdx}`;
-        console.log('<< proxy end, rewriting to LLM markdown:', result);
+        console.log('<< middleware end, rewriting to LLM markdown:', result);
         return NextResponse.rewrite(new URL(result, nextUrl));
       }
     }
@@ -72,7 +72,7 @@ export default async function proxy(req: NextRequest) {
     ) {
       const localizedPath = `/${preferredLocale}${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`;
       console.log(
-        '<< proxy end, redirecting docs link to preferred locale:',
+        '<< middleware end, redirecting docs link to preferred locale:',
         localizedPath
       );
       return NextResponse.redirect(new URL(localizedPath, nextUrl));
@@ -84,7 +84,7 @@ export default async function proxy(req: NextRequest) {
   // Actual validation happens in protected layouts and API routes
   const sessionCookie = getSessionCookie(req);
   const isLoggedIn = !!sessionCookie;
-  // console.log('proxy, isLoggedIn', isLoggedIn);
+  // console.log('middleware, isLoggedIn', isLoggedIn);
 
   // Get the pathname of the request (e.g. /zh/dashboard to /dashboard)
   const pathnameWithoutLocale = getPathnameWithoutLocale(
@@ -99,7 +99,7 @@ export default async function proxy(req: NextRequest) {
     );
     if (isNotAllowedRoute) {
       console.log(
-        '<< proxy end, not allowed route, already logged in, redirecting to dashboard'
+        '<< middleware end, not allowed route, already logged in, redirecting to dashboard'
       );
       return NextResponse.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl));
     }
@@ -108,7 +108,7 @@ export default async function proxy(req: NextRequest) {
   const isProtectedRoute = protectedRoutes.some((route) =>
     new RegExp(`^${route}$`).test(pathnameWithoutLocale)
   );
-  // console.log('proxy, isProtectedRoute', isProtectedRoute);
+  // console.log('middleware, isProtectedRoute', isProtectedRoute);
 
   // If the route is a protected route, redirect to login if user is not logged in
   if (!isLoggedIn && isProtectedRoute) {
@@ -118,7 +118,7 @@ export default async function proxy(req: NextRequest) {
     }
     const encodedCallbackUrl = encodeURIComponent(callbackUrl);
     console.log(
-      '<< proxy end, not logged in, redirecting to login, callbackUrl',
+      '<< middleware end, not logged in, redirecting to login, callbackUrl',
       callbackUrl
     );
     return NextResponse.redirect(
@@ -127,7 +127,7 @@ export default async function proxy(req: NextRequest) {
   }
 
   // Apply intlMiddleware for all routes
-  console.log('<< proxy end, applying intlMiddleware');
+  console.log('<< middleware end, applying intlMiddleware');
   return intlMiddleware(req);
 }
 
@@ -141,7 +141,7 @@ function getPathnameWithoutLocale(pathname: string, locales: string[]): string {
 
 /**
  * Next.js internationalized routing
- * specify the routes the proxy applies to
+ * specify the routes the middleware applies to
  *
  * https://next-intl.dev/docs/routing#base-path
  */
