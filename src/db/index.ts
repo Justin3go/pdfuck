@@ -1,26 +1,24 @@
-/**
- * Connect to PostgreSQL Database (Supabase/Neon/Local PostgreSQL)
- * https://orm.drizzle.team/docs/tutorials/drizzle-with-supabase
- */
 import { getCloudflareContext } from '@opennextjs/cloudflare';
 import { drizzle } from 'drizzle-orm/node-postgres';
 import { Pool } from 'pg';
+import { cache } from 'react';
 import * as schema from './schema';
 
-let db: ReturnType<typeof drizzle> | null = null;
-
-// https://opennext.js.org/cloudflare/howtos/db#postgresql
-export async function getDb() {
-  if (db) return db;
+/**
+ * Connect to PostgreSQL Database (Supabase/Neon/Local PostgreSQL)
+ * https://orm.drizzle.team/docs/tutorials/drizzle-with-supabase
+ * https://opennext.js.org/cloudflare/howtos/db#hyperdrive-example
+ */
+export const getDb = cache(async () => {
   const { env } = await getCloudflareContext({ async: true });
+  const connectionString = env.HYPERDRIVE.connectionString;
   const pool = new Pool({
-    connectionString: env.HYPERDRIVE.connectionString,
+    connectionString,
     // You don't want to reuse the same connection for multiple requests
     maxUses: 1,
   });
-  db = drizzle({ client: pool, schema });
-  return db;
-}
+  return drizzle({ client: pool, schema });
+});
 
 /**
  * Connect to Neon Database
