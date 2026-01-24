@@ -1,7 +1,7 @@
 import { websiteConfig } from '@/config/website';
 import { getMessagesForLocale } from '@/i18n/messages';
 import { routing } from '@/i18n/routing';
-import { render } from '@react-email/render';
+import type { ReactElement } from 'react';
 import type { Locale, Messages } from 'next-intl';
 import { ResendProvider } from './provider/resend';
 import {
@@ -11,6 +11,51 @@ import {
   type SendRawEmailParams,
   type SendTemplateParams,
 } from './types';
+
+const renderEmailHtml = async (email: ReactElement): Promise<string> => {
+  // Avoid @react-email/render to prevent prettier imports in workerd.
+  const reactDomServer = (await import('react-dom/server')) as {
+    renderToReadableStream?: (element: ReactElement) => Promise<ReadableStream>;
+    renderToStaticMarkup?: (element: ReactElement) => string;
+    renderToString?: (element: ReactElement) => string;
+  };
+
+  if (reactDomServer.renderToReadableStream) {
+    const stream = await reactDomServer.renderToReadableStream(email);
+    return await new Response(stream).text();
+  }
+
+  if (reactDomServer.renderToStaticMarkup) {
+    return reactDomServer.renderToStaticMarkup(email);
+  }
+
+  if (reactDomServer.renderToString) {
+    return reactDomServer.renderToString(email);
+  }
+
+  return '';
+};
+
+const decodeHtmlEntities = (text: string): string =>
+  text
+    .replaceAll('&nbsp;', ' ')
+    .replaceAll('&amp;', '&')
+    .replaceAll('&lt;', '<')
+    .replaceAll('&gt;', '>')
+    .replaceAll('&quot;', '"')
+    .replaceAll('&#39;', "'");
+
+const toPlainText = (html: string): string => {
+  // Simple HTML-to-text fallback for email providers.
+  const stripped = html
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  return decodeHtmlEntities(stripped);
+};
 
 /**
  * Global mail provider instance
@@ -94,8 +139,8 @@ export async function getTemplate<T extends EmailTemplate>({
       ? messages.Mail[template].subject
       : '';
 
-  const html = await render(email);
-  const text = await render(email, { plainText: true });
+  const html = await renderEmailHtml(email);
+  const text = toPlainText(html);
 
   return { html, text, subject };
 }
