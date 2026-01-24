@@ -9,18 +9,6 @@ const nextConfig: NextConfig = {
   // Docker standalone output
   ...(process.env.DOCKER_BUILD === 'true' && { output: 'standalone' }),
 
-  // https://github.com/vercel/next.js/discussions/50177#discussioncomment-6006702
-  // fix build error: Module build failed: UnhandledSchemeError:
-  // Reading from "cloudflare:sockets" is not handled by plugins (Unhandled scheme).
-  webpack: (config, { webpack }) => {
-    config.plugins.push(
-      new webpack.IgnorePlugin({
-        resourceRegExp: /^pg-native$|^cloudflare:sockets$/,
-      })
-    );
-    return config;
-  },
-
   /* config options here */
   devIndicators: false,
 
