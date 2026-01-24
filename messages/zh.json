@@ -297,7 +297,14 @@
     "nextPage": "下一页",
     "chooseLanguage": "选择语言",
     "title": "MkSaaS文档",
-    "homepage": "首页"
+    "homepage": "首页",
+    "PageActions": {
+      "copyMarkdown": "复制 Markdown",
+      "open": "打开",
+      "openInChatGPT": "在 ChatGPT 中打开",
+      "openInClaude": "在 Claude 中打开",
+      "queryHint": "阅读 {url}，我想根据它的内容进行提问。"
+    }
   },
   "PremiumContent": {
     "title": "解锁付费内容",
