@@ -22,7 +22,7 @@ export default function ClarityAnalytics() {
     <Script
       id="microsoft-clarity-init"
       strategy="afterInteractive"
-      // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: Microsoft Clarity requires inline script
       dangerouslySetInnerHTML={{
         __html: `
                 (function(c,l,a,r,i,t,y){

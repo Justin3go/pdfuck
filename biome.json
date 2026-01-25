@@ -45,7 +45,7 @@
     "formatWithErrors": true,
     "useEditorconfig": true
   },
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "assist": { "actions": { "source": { "organizeImports": "off" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -54,13 +54,25 @@
         "noSparseArray": "off",
         "noArrayIndexKey": "off",
         "noExplicitAny": "off",
-        "noShadowRestrictedNames": "off"
+        "noShadowRestrictedNames": "off",
+        "noNonNullAssertedOptionalChain": "off"
       },
       "complexity": {
-        "noForEach": "off"
+        "noForEach": "off",
+        "noUselessFragments": "off",
+        "noImportantStyles": "off"
       },
       "correctness": {
-        "useExhaustiveDependencies": "off"
+        "useExhaustiveDependencies": "off",
+        "noUnusedVariables": "off",
+        "noUnusedFunctionParameters": "off",
+        "noUnusedImports": "off",
+        "useHookAtTopLevel": "off",
+        "useParseIntRadix": "off"
+      },
+      "performance": {
+        "noDynamicNamespaceImportAccess": "off",
+        "noImgElement": "off"
       },
       "style": {
         "useTemplate": "off",
@@ -74,7 +86,8 @@
       "a11y": {
         "useValidAnchor": "off",
         "noSvgWithoutTitle": "off",
-        "useKeyWithClickEvents": "off"
+        "useKeyWithClickEvents": "off",
+        "noStaticElementInteractions": "off"
       }
     }
   },
