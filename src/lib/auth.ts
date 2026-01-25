@@ -27,7 +27,7 @@ import { getBaseUrl, getUrlWithLocaleInCallbackUrl } from './urls/urls';
 export const auth = betterAuth({
   baseURL: getBaseUrl(),
   appName: defaultMessages.Metadata.name,
-  database: drizzleAdapter(await getDb(), {
+  database: drizzleAdapter(getDb(), {
     provider: 'pg', // or "mysql", "sqlite"
   }),
   session: {

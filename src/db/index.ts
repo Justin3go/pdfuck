@@ -1,23 +1,36 @@
-import { getCloudflareContext } from '@opennextjs/cloudflare';
-import { drizzle } from 'drizzle-orm/postgres-js';
-import postgres from 'postgres';
-import * as schema from './schema';
-
-let db: ReturnType<typeof drizzle> | null = null;
+import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { drizzle } from "drizzle-orm/node-postgres";
+import { cache } from "react";
+import * as schema from "./schema";
+import { Pool } from "pg";
 
 /**
  * Connect to PostgreSQL Database (Supabase/Neon/Local PostgreSQL)
  * https://orm.drizzle.team/docs/tutorials/drizzle-with-supabase
  * https://opennext.js.org/cloudflare/howtos/db#hyperdrive-example
  */
-export async function getDb() {
-  if (db) return db;
+export const getDbSync = cache(() => {
+  const { env } = getCloudflareContext();
+  const connectionString = env.HYPERDRIVE.connectionString;
+  const pool = new Pool({
+    connectionString,
+    // You don't want to reuse the same connection for multiple requests
+    maxUses: 1,
+  });
+  return drizzle({ client: pool, schema });
+});
+
+// This is the one to use for static routes (i.e. ISR/SSG)
+export const getDb = cache(async () => {
   const { env } = await getCloudflareContext({ async: true });
-  const connectionString = env.HYPERDRIVE.connectionString!;
-  const client = postgres(connectionString, { prepare: false });
-  db = drizzle(client, { schema });
-  return db;
-}
+  const connectionString = env.HYPERDRIVE.connectionString;
+  const pool = new Pool({
+    connectionString,
+    // You don't want to reuse the same connection for multiple requests
+    maxUses: 1,
+  });
+  return drizzle({ client: pool, schema });
+});
 
 /**
  * Connect to Neon Database
