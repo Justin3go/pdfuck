@@ -109,7 +109,7 @@
     "react-dom": "^19.2.3",
     "react-hook-form": "^7.71.1",
     "react-remove-scroll": "^2.7.2",
-    "react-resizable-panels": "^4.5.1",
+    "react-resizable-panels": "^2.1.7",
     "react-social-media-embed": "^2.5.18",
     "react-tweet": "^3.3.0",
     "react-use-measure": "^2.1.7",
