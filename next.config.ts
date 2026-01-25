@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
   // Docker standalone output
   ...(process.env.DOCKER_BUILD === 'true' && { output: 'standalone' }),
 
+  // serverExternalPackages tells Next.js not to bundle these packages
+  // This is required for pg to work with Cloudflare Workers
+  // https://nextjs.org/docs/app/api-reference/config/next-config-js#serverexternalpackages
+  serverExternalPackages: ['pg'],
+
   /* config options here */
   devIndicators: false,
 

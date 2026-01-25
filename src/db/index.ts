@@ -11,10 +11,8 @@ import * as schema from './schema';
  */
 export const getDb = cache(async () => {
   const { env } = await getCloudflareContext({ async: true });
-  const connectionString = env.HYPERDRIVE.connectionString;
   const pool = new Pool({
-    connectionString,
-    // You don't want to reuse the same connection for multiple requests
+    connectionString: env.HYPERDRIVE.connectionString,
     maxUses: 1,
   });
   return drizzle({ client: pool, schema });
