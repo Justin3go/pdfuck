@@ -33,11 +33,11 @@ If you found anything that could be improved, please let me know.
 
 By default, you should have access to all 5 repositories. If you find that you’re unable to access any of them, please don’t hesitate to reach out to me, and I’ll assist you in resolving the issue.
 
-- [mksaas-template (ready)](https://github.com/MkSaaSHQ/mksaas-template): https://demo.mksaas.com
-- [mksaas-blog (ready)](https://github.com/MkSaaSHQ/mksaas-blog): https://mksaas.me
-- [mksaas-haitang (ready)](https://github.com/MkSaaSHQ/mksaas-haitang): https://haitang.app
-- [mksaas-app (ready)](https://github.com/MkSaaSHQ/mksaas-app): https://mkdollar.com
-- [mksaas-outfit (ready)](https://github.com/MkSaaSHQ/mksaas-outfit): built by [@yihui_indie](https://x.com/yihui_indie)
+- [mksaas-template](https://github.com/MkSaaSHQ/mksaas-template): https://demo.mksaas.com
+- [mksaas-blog](https://github.com/MkSaaSHQ/mksaas-blog): https://mksaas.me
+- [mksaas-haitang](https://github.com/MkSaaSHQ/mksaas-haitang): https://haitang.app
+- [mksaas-app](https://github.com/MkSaaSHQ/mksaas-app): https://mkdollar.com
+- [mksaas-outfit](https://github.com/MkSaaSHQ/mksaas-outfit): built by [@yihui_indie](https://x.com/yihui_indie)
 
 ## Notice
 
