@@ -18,18 +18,36 @@ import { getAllPricePlans } from './price-plan';
 import { getBaseUrl, getUrlWithLocaleInCallbackUrl } from './urls/urls';
 
 /**
- * Better Auth configuration
+ * Better Auth factory function for Cloudflare Workers
  *
- * docs:
- * https://mksaas.com/docs/auth
- * https://www.better-auth.com/docs/reference/options
+ * ⚠️ IMPORTANT: In Cloudflare Workers environment, we MUST NOT initialize
+ * resources that depend on env/bindings at module level (top-level).
+ *
+ * This is because:
+ * 1. Hyperdrive binding is only available in request context
+ * 2. OpenNext.js wraps env in AsyncLocalStorage, requiring async access
+ * 3. Top-level await in module scope causes Worker to hang
+ *
+ * Solution: Create auth instance per request (request-level factory pattern)
+ *
+ * Performance: This is the standard pattern for serverless environments.
+ * The overhead of creating auth instance is negligible compared to DB queries.
+ * Hyperdrive itself handles connection pooling at the edge.
+ *
+ * Implementation:
+ * - Uses async getDb() to get database connection
+ * - React cache() in getDb() ensures single connection per request
+ * - Creates fresh auth instance for each request
  */
-export const auth = betterAuth({
-  baseURL: getBaseUrl(),
-  appName: defaultMessages.Metadata.name,
-  database: drizzleAdapter(await getDb(), {
-    provider: 'pg', // or "mysql", "sqlite"
-  }),
+export async function createAuth() {
+  const db = await getDb();
+
+  return betterAuth({
+    baseURL: getBaseUrl(),
+    appName: defaultMessages.Metadata.name,
+    database: drizzleAdapter(db, {
+      provider: 'pg',
+    }),
   session: {
     // https://www.better-auth.com/docs/concepts/session-management#cookie-cache
     cookieCache: {
@@ -110,6 +128,28 @@ export const auth = betterAuth({
         type: 'string',
         required: false,
       },
+      // Admin plugin fields - explicitly declared for TypeScript type inference
+      // Reference: https://www.better-auth.com/docs/plugins/admin
+      role: {
+        type: 'string',
+        required: false,
+        input: false, // Prevent users from setting their own role
+      },
+      banned: {
+        type: 'boolean',
+        required: false,
+        input: false,
+      },
+      banReason: {
+        type: 'string',
+        required: false,
+        input: false,
+      },
+      banExpires: {
+        type: 'date', // Must be 'date' type, not 'number'
+        required: false,
+        input: false,
+      },
     },
     // https://www.better-auth.com/docs/concepts/users-accounts#delete-user
     deleteUser: {
@@ -152,7 +192,8 @@ export const auth = betterAuth({
       console.error('auth error:', error);
     },
   },
-});
+  });
+}
 
 /**
  * Gets the locale from a request by parsing the cookies
