@@ -23,11 +23,6 @@ const nextConfig: NextConfig = {
   // blocking metadata instead of streaming metadata
   htmlLimitedBots: /.*/,
 
-  // Transpile packages for Cloudflare Workers compatibility
-  // fix error: No such module "pg-793db63bce6b80dc"
-  // https://nextjs.org/docs/app/api-reference/config/next-config-js/transpilePackages
-  // transpilePackages: ['pg'],
-
   images: {
     // https://vercel.com/docs/image-optimization/managing-image-optimization-costs#minimizing-image-optimization-costs
     // https://nextjs.org/docs/app/api-reference/components/image#unoptimized
