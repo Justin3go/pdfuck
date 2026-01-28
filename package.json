@@ -137,7 +137,6 @@
     "@tanstack/eslint-plugin-query": "^5.91.3",
     "@types/mdx": "^2.0.13",
     "@types/node": "^25.0.10",
-    "@types/pg": "^8.16.0",
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
     "drizzle-kit": "^0.30.4",
