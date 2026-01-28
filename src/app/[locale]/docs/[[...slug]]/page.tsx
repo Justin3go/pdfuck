@@ -1,5 +1,6 @@
 import * as Preview from '@/components/docs';
 import { getMDXComponents } from '@/components/docs/mdx-components';
+import { LLMCopyButton, ViewOptions } from '@/components/docs/page-actions';
 import { PremiumBadge } from '@/components/premium/premium-badge';
 import { PremiumGuard } from '@/components/premium/premium-guard';
 import {
@@ -9,9 +10,8 @@ import {
 } from '@/components/ui/hover-card';
 import { LOCALES } from '@/i18n/routing';
 import { constructMetadata } from '@/lib/metadata';
-import { checkPremiumAccess } from '@/lib/premium-access';
-import { getSession } from '@/lib/server';
 import { source } from '@/lib/source';
+import { getMarkdownUrlWithLocale } from '@/lib/urls/urls';
 import Link from 'fumadocs-core/link';
 import {
   DocsBody,
@@ -20,7 +20,7 @@ import {
   DocsTitle,
 } from 'fumadocs-ui/page';
 import type { Locale } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
 
@@ -81,6 +81,10 @@ interface DocPageProps {
  */
 export default async function DocPage({ params }: DocPageProps) {
   const { slug, locale } = await params;
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
   const language = locale as string;
   const page = source.getPage(slug, language);
 
@@ -92,14 +96,14 @@ export default async function DocPage({ params }: DocPageProps) {
   const preview = page.data.preview;
   const { premium } = page.data;
 
-  // Check premium access for premium docs
-  const session = await getSession();
-  const hasPremiumAccess =
-    premium && session?.user?.id
-      ? await checkPremiumAccess(session.user.id)
-      : !premium; // Non-premium docs are always accessible
-
+  // Premium access is now checked client-side in PremiumGuard component
+  // This allows the page to remain static while still protecting premium content
   const MDX = page.data.body;
+
+  // Build markdownUrl with locale prefix for LLM markdown endpoint
+  // page.url might already include locale prefix (e.g., /zh/docs/comparisons)
+  // or might not (e.g., /docs/what-is-fumadocs), so we need to normalize it
+  const markdownUrl = getMarkdownUrlWithLocale(page.url, locale);
 
   return (
     <DocsPage
@@ -112,22 +116,25 @@ export default async function DocPage({ params }: DocPageProps) {
       <DocsTitle>{page.data.title}</DocsTitle>
       {premium && <PremiumBadge size="sm" className="mt-2" />}
       <DocsDescription>{page.data.description}</DocsDescription>
+      <div className="flex flex-row gap-2 items-center border-b pb-6">
+        <LLMCopyButton markdownUrl={markdownUrl} />
+        <ViewOptions markdownUrl={markdownUrl} />
+      </div>
       <DocsBody>
         {/* Preview Rendered Component */}
         {preview ? <PreviewRenderer preview={preview} /> : null}
 
         {/* MDX Content */}
-        <PremiumGuard
-          isPremium={!!premium}
-          canAccess={hasPremiumAccess}
-          className="max-w-none"
-        >
+        <PremiumGuard isPremium={!!premium} className="max-w-none">
           <MDX
             components={getMDXComponents({
               a: ({
                 href,
                 ...props
-              }: { href?: string; [key: string]: any }) => {
+              }: {
+                href?: string;
+                [key: string]: any;
+              }) => {
                 const found = source.getPageByHref(href ?? '');
 
                 if (!found) return <Link href={href} {...props} />;

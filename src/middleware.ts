@@ -1,4 +1,5 @@
 import { getSessionCookie } from 'better-auth/cookies';
+import { isMarkdownPreferred } from 'fumadocs-core/negotiation';
 import createMiddleware from 'next-intl/middleware';
 import { type NextRequest, NextResponse } from 'next/server';
 import {
@@ -16,10 +17,10 @@ import {
 const intlMiddleware = createMiddleware(routing);
 
 /**
- * 1. Next.js middleware
- * https://nextjs.org/docs/app/building-your-application/routing/middleware
+ * Edge Middleware (temporary)
+ * OpenNext Cloudflare does not support Node.js middleware yet.
  *
- * 2. Better Auth middleware
+ * Better Auth integration
  * https://www.better-auth.com/docs/integrations/next#cookie-based-checks-recommended-for-all-versions
  *
  * SECURITY WARNING:
@@ -36,6 +37,25 @@ const intlMiddleware = createMiddleware(routing);
 export default async function middleware(req: NextRequest) {
   const { nextUrl } = req;
   console.log('>> middleware start, pathname', nextUrl.pathname);
+
+  // When AI agents request docs with markdown preference, serve markdown content
+  // https://www.fumadocs.dev/docs/integrations/llms#accept
+  if (isMarkdownPreferred(req)) {
+    const pathname = nextUrl.pathname;
+    // Match pattern: /:locale/docs/*path.mdx (e.g., /en/docs/some-page.mdx)
+    const localeDocsMatch = pathname.match(/^\/([^/]+)\/docs\/(.+\.mdx)$/);
+    if (localeDocsMatch) {
+      const [, locale, restPath] = localeDocsMatch;
+      // Only rewrite if locale is valid
+      if (LOCALES.includes(locale)) {
+        // Remove .mdx extension and rewrite to llms.mdx route
+        const pathWithoutMdx = restPath.replace(/\.mdx$/, '');
+        const result = `/${locale}/docs/llms.mdx/${pathWithoutMdx}`;
+        console.log('<< middleware end, rewriting to LLM markdown:', result);
+        return NextResponse.rewrite(new URL(result, nextUrl));
+      }
+    }
+  }
 
   // Handle internal docs link redirection for internationalization
   // Check if this is a docs page without locale prefix

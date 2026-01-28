@@ -297,7 +297,14 @@
     "nextPage": "Next",
     "chooseLanguage": "Select language",
     "title": "MkSaaS Docs",
-    "homepage": "Homepage"
+    "homepage": "Homepage",
+    "PageActions": {
+      "copyMarkdown": "Copy Markdown",
+      "open": "Open",
+      "openInChatGPT": "Open in ChatGPT",
+      "openInClaude": "Open in Claude",
+      "queryHint": "Read {url}, I want to ask questions about it."
+    }
   },
   "PremiumContent": {
     "title": "Unlock Premium Content",

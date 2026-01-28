@@ -1,7 +1,7 @@
 import 'server-only';
 
 import { NextResponse } from 'next/server';
-import { auth } from './auth';
+import { createAuth } from './auth';
 import type { Session } from './auth-types';
 
 /**
@@ -9,6 +9,9 @@ import type { Session } from './auth-types';
  *
  * This helper provides consistent session validation across protected API routes.
  * It validates the session on the server using Better Auth's auth.api.getSession.
+ *
+ * ⚠️ IMPORTANT: In Cloudflare Workers environment, auth must be created per-request
+ * because Hyperdrive binding is only available in request context.
  *
  * @param request - The incoming request
  * @returns Session object if valid, null otherwise
@@ -27,6 +30,7 @@ import type { Session } from './auth-types';
 export async function requireSession(
   request: Request
 ): Promise<Session | null> {
+  const auth = await createAuth();
   const session = await auth.api.getSession({
     headers: request.headers,
   });

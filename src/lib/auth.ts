@@ -18,141 +18,160 @@ import { getAllPricePlans } from './price-plan';
 import { getBaseUrl, getUrlWithLocaleInCallbackUrl } from './urls/urls';
 
 /**
- * Better Auth configuration
+ * Better Auth factory function for Cloudflare Workers
  *
- * docs:
- * https://mksaas.com/docs/auth
- * https://www.better-auth.com/docs/reference/options
+ * ⚠️ IMPORTANT: In Cloudflare Workers environment, we MUST NOT initialize
+ * resources that depend on env/bindings at module level (top-level).
+ *
+ * This is because:
+ * 1. Hyperdrive binding is only available in request context
+ * 2. OpenNext.js wraps env in AsyncLocalStorage, requiring async access
+ * 3. Top-level await in module scope causes Worker to hang
+ *
+ * Solution: Create auth instance per request (request-level factory pattern)
+ *
+ * Performance: This is the standard pattern for serverless environments.
+ * The overhead of creating auth instance is negligible compared to DB queries.
+ * Hyperdrive itself handles connection pooling at the edge.
+ *
+ * Implementation:
+ * - Uses async getDb() to get database connection
+ * - React cache() in getDb() ensures single connection per request
+ * - Creates fresh auth instance for each request
  */
-export const auth = betterAuth({
-  baseURL: getBaseUrl(),
-  appName: defaultMessages.Metadata.name,
-  database: drizzleAdapter(await getDb(), {
-    provider: 'pg', // or "mysql", "sqlite"
-  }),
-  session: {
-    // https://www.better-auth.com/docs/concepts/session-management#cookie-cache
-    cookieCache: {
-      enabled: true,
-      maxAge: 60 * 60, // Cache duration in seconds
-    },
-    // https://www.better-auth.com/docs/concepts/session-management#session-expiration
-    expiresIn: 60 * 60 * 24 * 7,
-    updateAge: 60 * 60 * 24,
-    // https://www.better-auth.com/docs/concepts/session-management#session-freshness
-    // https://www.better-auth.com/docs/concepts/users-accounts#authentication-requirements
-    // disable freshness check for user deletion
-    freshAge: 0 /* 60 * 60 * 24 */,
-  },
-  emailAndPassword: {
-    // https://discord.com/channels/1300839113142046730/1300839113594769431/1454280549060444393
-    enabled: websiteConfig.auth.enableCredentialLogin ?? false,
-    // https://www.better-auth.com/docs/concepts/email#2-require-email-verification
-    requireEmailVerification: true,
-    // https://www.better-auth.com/docs/authentication/email-password#forget-password
-    async sendResetPassword({ user, url }, request) {
-      const locale = getLocaleFromRequest(request);
-      const localizedUrl = getUrlWithLocaleInCallbackUrl(url, locale);
+export async function createAuth() {
+  const db = await getDb();
 
-      await sendEmail({
-        to: user.email,
-        template: 'forgotPassword',
-        context: {
-          url: localizedUrl,
-          name: user.name,
-        },
-        locale,
-      });
+  return betterAuth({
+    baseURL: getBaseUrl(),
+    appName: defaultMessages.Metadata.name,
+    database: drizzleAdapter(db, {
+      provider: 'pg',
+    }),
+    session: {
+      // https://www.better-auth.com/docs/concepts/session-management#cookie-cache
+      cookieCache: {
+        enabled: true,
+        maxAge: 60 * 60, // Cache duration in seconds
+      },
+      // https://www.better-auth.com/docs/concepts/session-management#session-expiration
+      expiresIn: 60 * 60 * 24 * 7,
+      updateAge: 60 * 60 * 24,
+      // https://www.better-auth.com/docs/concepts/session-management#session-freshness
+      // https://www.better-auth.com/docs/concepts/users-accounts#authentication-requirements
+      // disable freshness check for user deletion
+      freshAge: 0 /* 60 * 60 * 24 */,
     },
-  },
-  emailVerification: {
-    // https://www.better-auth.com/docs/concepts/email#auto-signin-after-verification
-    autoSignInAfterVerification: true,
-    // https://www.better-auth.com/docs/authentication/email-password#require-email-verification
-    sendVerificationEmail: async ({ user, url, token }, request) => {
-      const locale = getLocaleFromRequest(request);
-      const localizedUrl = getUrlWithLocaleInCallbackUrl(url, locale);
+    emailAndPassword: {
+      // https://discord.com/channels/1300839113142046730/1300839113594769431/1454280549060444393
+      enabled: websiteConfig.auth.enableCredentialLogin ?? false,
+      // https://www.better-auth.com/docs/concepts/email#2-require-email-verification
+      requireEmailVerification: true,
+      // https://www.better-auth.com/docs/authentication/email-password#forget-password
+      async sendResetPassword({ user, url }, request) {
+        const locale = getLocaleFromRequest(request);
+        const localizedUrl = getUrlWithLocaleInCallbackUrl(url, locale);
 
-      await sendEmail({
-        to: user.email,
-        template: 'verifyEmail',
-        context: {
-          url: localizedUrl,
-          name: user.name,
-        },
-        locale,
-      });
-    },
-  },
-  socialProviders: {
-    // https://www.better-auth.com/docs/authentication/github
-    github: {
-      clientId: process.env.GITHUB_CLIENT_ID!,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET!,
-    },
-    // https://www.better-auth.com/docs/authentication/google
-    google: {
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-    },
-  },
-  account: {
-    // https://www.better-auth.com/docs/concepts/users-accounts#account-linking
-    accountLinking: {
-      enabled: true,
-      trustedProviders: ['google', 'github'],
-    },
-  },
-  user: {
-    // https://www.better-auth.com/docs/concepts/database#extending-core-schema
-    additionalFields: {
-      customerId: {
-        type: 'string',
-        required: false,
+        await sendEmail({
+          to: user.email,
+          template: 'forgotPassword',
+          context: {
+            url: localizedUrl,
+            name: user.name,
+          },
+          locale,
+        });
       },
     },
-    // https://www.better-auth.com/docs/concepts/users-accounts#delete-user
-    deleteUser: {
-      enabled: true,
+    emailVerification: {
+      // https://www.better-auth.com/docs/concepts/email#auto-signin-after-verification
+      autoSignInAfterVerification: true,
+      // https://www.better-auth.com/docs/authentication/email-password#require-email-verification
+      sendVerificationEmail: async ({ user, url, token }, request) => {
+        const locale = getLocaleFromRequest(request);
+        const localizedUrl = getUrlWithLocaleInCallbackUrl(url, locale);
+
+        await sendEmail({
+          to: user.email,
+          template: 'verifyEmail',
+          context: {
+            url: localizedUrl,
+            name: user.name,
+          },
+          locale,
+        });
+      },
     },
-  },
-  databaseHooks: {
-    // https://www.better-auth.com/docs/concepts/database#database-hooks
+    socialProviders: {
+      // https://www.better-auth.com/docs/authentication/github
+      github: {
+        clientId: process.env.GITHUB_CLIENT_ID!,
+        clientSecret: process.env.GITHUB_CLIENT_SECRET!,
+      },
+      // https://www.better-auth.com/docs/authentication/google
+      google: {
+        clientId: process.env.GOOGLE_CLIENT_ID!,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      },
+    },
+    account: {
+      // https://www.better-auth.com/docs/concepts/users-accounts#account-linking
+      accountLinking: {
+        enabled: true,
+        trustedProviders: ['google', 'github'],
+      },
+    },
     user: {
-      create: {
-        after: async (user) => {
-          await onCreateUser(user);
+      // https://www.better-auth.com/docs/concepts/database#extending-core-schema
+      additionalFields: {
+        customerId: {
+          type: 'string',
+          required: false,
+        },
+      },
+      // https://www.better-auth.com/docs/concepts/users-accounts#delete-user
+      deleteUser: {
+        enabled: true,
+      },
+    },
+    databaseHooks: {
+      // https://www.better-auth.com/docs/concepts/database#database-hooks
+      user: {
+        create: {
+          after: async (user) => {
+            await onCreateUser(user);
+          },
         },
       },
     },
-  },
-  plugins: [
-    // https://www.better-auth.com/docs/plugins/admin
-    // support user management, ban/unban user, manage user roles, etc.
-    admin({
-      // https://www.better-auth.com/docs/plugins/admin#default-ban-reason
-      // defaultBanReason: 'Spamming',
-      defaultBanExpiresIn: undefined,
-      bannedUserMessage:
-        'You have been banned from this application. Please contact support if you believe this is an error.',
-    }),
-    // https://github.com/gekorm/better-auth-harmony
-    // Email normalization and validation to prevent duplicate registrations
-    emailHarmony({
-      // Don't allow login with any version of the unnormalized email address
-      // e.g., user signed up with johndoe@googlemail.com can't login with john.doe@gmail.com
-      // e.g., user signed up with johndoe@googlemail.com can't login with johndoe+abc@gmail.com
-      allowNormalizedSignin: false,
-    }),
-  ],
-  onAPIError: {
-    // https://www.better-auth.com/docs/reference/options#onapierror
-    errorURL: '/auth/error',
-    onError: (error, ctx) => {
-      console.error('auth error:', error);
+    plugins: [
+      // https://www.better-auth.com/docs/plugins/admin
+      // support user management, ban/unban user, manage user roles, etc.
+      admin({
+        // https://www.better-auth.com/docs/plugins/admin#default-ban-reason
+        // defaultBanReason: 'Spamming',
+        defaultBanExpiresIn: undefined,
+        bannedUserMessage:
+          'You have been banned from this application. Please contact support if you believe this is an error.',
+      }),
+      // https://github.com/gekorm/better-auth-harmony
+      // Email normalization and validation to prevent duplicate registrations
+      emailHarmony({
+        // Don't allow login with any version of the unnormalized email address
+        // e.g., user signed up with johndoe@googlemail.com can't login with john.doe@gmail.com
+        // e.g., user signed up with johndoe@googlemail.com can't login with johndoe+abc@gmail.com
+        allowNormalizedSignin: false,
+      }),
+    ],
+    onAPIError: {
+      // https://www.better-auth.com/docs/reference/options#onapierror
+      errorURL: '/auth/error',
+      onError: (error, ctx) => {
+        console.error('auth error:', error);
+      },
     },
-  },
-});
+  });
+}
 
 /**
  * Gets the locale from a request by parsing the cookies

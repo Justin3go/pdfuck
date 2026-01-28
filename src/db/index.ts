@@ -1,50 +1,38 @@
-/**
- * Connect to PostgreSQL Database (Supabase/Neon/Local PostgreSQL)
- * https://orm.drizzle.team/docs/tutorials/drizzle-with-supabase
- */
 import { getCloudflareContext } from '@opennextjs/cloudflare';
-import { drizzle } from 'drizzle-orm/node-postgres';
-import { Pool } from 'pg';
+import { drizzle } from 'drizzle-orm/postgres-js';
+import postgres from 'postgres';
+import { cache } from 'react';
 import * as schema from './schema';
 
-let db: ReturnType<typeof drizzle> | null = null;
-
-// https://opennext.js.org/cloudflare/howtos/db#postgresql
-export async function getDb() {
-  if (db) return db;
+/**
+ * Get database connection for all routes
+ *
+ * Uses async getCloudflareContext({ async: true }) for compatibility.
+ * Wrapped with React cache() to ensure single connection per request.
+ *
+ * Key improvements over original implementation:
+ * 1. Uses React cache() instead of global variable for better request isolation
+ * 2. Adds performance optimizations (max: 5, fetch_types: false)
+ * 3. Each request gets a fresh connection, avoiding cross-request pollution
+ *
+ * Performance optimizations:
+ * - max: 5 - Limit connections per Worker request (Cloudflare Workers limit)
+ * - fetch_types: false - Disable fetch_types to avoid unnecessary round-trip
+ *
+ * Reference:
+ * - https://opennext.js.org/cloudflare/howtos/db#hyperdrive-example
+ * - https://developers.cloudflare.com/hyperdrive/examples/connect-to-postgres/postgres-drivers-and-libraries/drizzle-orm/
+ */
+export const getDb = cache(async () => {
   const { env } = await getCloudflareContext({ async: true });
-  const pool = new Pool({
-    connectionString: env.HYPERDRIVE.connectionString,
-    // You don't want to reuse the same connection for multiple requests
-    maxUses: 1,
+
+  const sql = postgres(env.HYPERDRIVE.connectionString, {
+    // Limit connections per Worker request (Cloudflare Workers limit on concurrent external connections)
+    max: 5,
+    // Disable fetch_types to avoid an additional round-trip for better performance
+    // Only disable if you are not using array types in your Postgres schema
+    fetch_types: false,
   });
-  db = drizzle({ client: pool, schema });
-  return db;
-}
 
-/**
- * Connect to Neon Database
- * https://orm.drizzle.team/docs/tutorials/drizzle-with-neon
- */
-// import { drizzle } from 'drizzle-orm/neon-http';
-// const db = drizzle(process.env.DATABASE_URL!);
-
-/**
- * Database connection with Drizzle
- * https://orm.drizzle.team/docs/connect-overview
- *
- * Drizzle <> PostgreSQL
- * https://orm.drizzle.team/docs/get-started-postgresql
- *
- * Get Started with Drizzle and Neon
- * https://orm.drizzle.team/docs/get-started/neon-new
- *
- * Drizzle with Neon Postgres
- * https://orm.drizzle.team/docs/tutorials/drizzle-with-neon
- *
- * Drizzle <> Neon Postgres
- * https://orm.drizzle.team/docs/connect-neon
- *
- * Drizzle with Supabase Database
- * https://orm.drizzle.team/docs/tutorials/drizzle-with-supabase
- */
+  return drizzle(sql, { schema });
+});

@@ -9,18 +9,6 @@ const nextConfig: NextConfig = {
   // Docker standalone output
   ...(process.env.DOCKER_BUILD === 'true' && { output: 'standalone' }),
 
-  // https://github.com/vercel/next.js/discussions/50177#discussioncomment-6006702
-  // fix build error: Module build failed: UnhandledSchemeError:
-  // Reading from "cloudflare:sockets" is not handled by plugins (Unhandled scheme).
-  webpack: (config, { webpack }) => {
-    config.plugins.push(
-      new webpack.IgnorePlugin({
-        resourceRegExp: /^pg-native$|^cloudflare:sockets$/,
-      })
-    );
-    return config;
-  },
-
   /* config options here */
   devIndicators: false,
 
@@ -34,6 +22,11 @@ const nextConfig: NextConfig = {
   // This config allows you to specify a list of user agents that should receive
   // blocking metadata instead of streaming metadata
   htmlLimitedBots: /.*/,
+
+  // Transpile packages for Cloudflare Workers compatibility
+  // fix error: No such module "pg-793db63bce6b80dc"
+  // https://nextjs.org/docs/app/api-reference/config/next-config-js/transpilePackages
+  // transpilePackages: ['pg'],
 
   images: {
     // https://vercel.com/docs/image-optimization/managing-image-optimization-costs#minimizing-image-optimization-costs
@@ -74,6 +67,16 @@ const nextConfig: NextConfig = {
         hostname: 'service.firecrawl.dev',
       },
     ],
+  },
+  async rewrites() {
+    return [
+      // Rewrite markdown requests to llms.mdx route
+      // All markdownUrl includes locale prefix (e.g., /en/docs/xxx.mdx)
+      {
+        source: '/:locale/docs/:path*.mdx',
+        destination: '/:locale/docs/llms.mdx/:path*',
+      },
+    ];
   },
 };
 

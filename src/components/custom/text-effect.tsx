@@ -299,7 +299,7 @@ export function CustomTextEffect({
               variants={computedVariants.item}
               per={per}
               segmentWrapperClassName={segmentWrapperClassName}
-              // biome-ignore lint/correctness/noChildrenProp: <explanation>
+              // biome-ignore lint/correctness/noChildrenProp: framer-motion AnimationComponent requires children prop
               children={typeof segment !== 'string' ? segment : undefined}
             />
           ))}
