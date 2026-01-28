@@ -1,10 +1,13 @@
 import { adminClient, inferAdditionalFields } from 'better-auth/client/plugins';
 import { createAuthClient } from 'better-auth/react';
-import type { auth } from './auth';
+import type { createAuth } from './auth';
 import { getBaseUrl } from './urls/urls';
 
 /**
  * https://www.better-auth.com/docs/installation#create-client-instance
+ *
+ * Note: Since we use factory pattern (createAuth), we infer the type using:
+ * Awaited<ReturnType<typeof createAuth>>
  */
 export const authClient = createAuthClient({
   baseURL: getBaseUrl(),
@@ -12,6 +15,6 @@ export const authClient = createAuthClient({
     // https://www.better-auth.com/docs/plugins/admin#add-the-client-plugin
     adminClient(),
     // https://www.better-auth.com/docs/concepts/typescript#inferring-additional-fields-on-client
-    inferAdditionalFields<typeof auth>(),
+    inferAdditionalFields<Awaited<ReturnType<typeof createAuth>>>(),
   ],
 });

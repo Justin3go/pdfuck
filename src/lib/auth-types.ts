@@ -1,6 +1,9 @@
-import type { auth } from './auth';
+import type { createAuth } from './auth';
 
 // https://www.better-auth.com/docs/concepts/typescript#additional-fields
-export type Session = typeof auth.$Infer.Session;
+// Note: Since we use factory pattern (createAuth), we infer the auth type first
+type Auth = Awaited<ReturnType<typeof createAuth>>;
 
-export type User = typeof auth.$Infer.Session.user;
+export type Session = Auth['$Infer']['Session'];
+
+export type User = Auth['$Infer']['Session']['user'];
