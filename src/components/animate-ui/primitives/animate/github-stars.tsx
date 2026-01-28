@@ -20,6 +20,10 @@ import {
 } from '@/components/animate-ui/primitives/effects/particles';
 import { cn } from '@/lib/utils';
 
+type GithubRepoResponse = {
+  stargazers_count: number;
+};
+
 type GithubStarsContextType = {
   stars: number;
   setStars: (stars: number) => void;
@@ -81,7 +85,7 @@ function GithubStars({
 
     const timeout = setTimeout(() => {
       fetch(`https://api.github.com/repos/${username}/${repo}`)
-        .then((response) => response.json())
+        .then((response) => response.json() as Promise<GithubRepoResponse>)
         .then((data) => {
           if (data && typeof data.stargazers_count === 'number') {
             setStars(data.stargazers_count);
