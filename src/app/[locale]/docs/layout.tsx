@@ -1,3 +1,4 @@
+import { DocsRootProvider } from '@/components/providers/docs-root-provider';
 import { XTwitterIcon } from '@/components/icons/x';
 import { Logo } from '@/components/layout/logo';
 import { ModeSwitcher } from '@/components/layout/mode-switcher';
@@ -86,8 +87,10 @@ export default async function DocsRootLayout({
   };
 
   return (
-    <DocsLayout tree={source.pageTree[locale]} {...docsOptions}>
-      {children}
-    </DocsLayout>
+    <DocsRootProvider>
+      <DocsLayout tree={source.pageTree[locale]} {...docsOptions}>
+        {children}
+      </DocsLayout>
+    </DocsRootProvider>
   );
 }
