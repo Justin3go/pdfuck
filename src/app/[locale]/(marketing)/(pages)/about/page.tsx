@@ -82,11 +82,11 @@ export default async function AboutPage() {
                       {t('followMe')}
                     </a>
                   )}
-                  {websiteConfig.mail.supportEmail && (
+                  {websiteConfig.metadata.contactEmail && (
                     <div className="flex items-center gap-4">
                       <Button className="rounded-lg cursor-pointer">
                         <MailIcon className="mr-1 size-4" />
-                        <a href={`mailto:${websiteConfig.mail.supportEmail}`}>
+                        <a href={`mailto:${websiteConfig.metadata.contactEmail}`}>
                           {t('talkWithMe')}
                         </a>
                       </Button>

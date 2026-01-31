@@ -1,6 +1,4 @@
 import type { ReactNode } from 'react';
-import type { PricePlan } from '@/payment/types';
-import type { CreditPackage } from '@/credits/types';
 
 /**
  * website config, without translations
@@ -8,19 +6,10 @@ import type { CreditPackage } from '@/credits/types';
 export type WebsiteConfig = {
   ui: UiConfig;
   metadata: MetadataConfig;
-  features: FeaturesConfig;
-  routes: RoutesConfig;
   analytics: AnalyticsConfig;
-  auth: AuthConfig;
   i18n: I18nConfig;
   blog: BlogConfig;
   docs: DocsConfig;
-  mail: MailConfig;
-  newsletter: NewsletterConfig;
-  storage: StorageConfig;
-  payment: PaymentConfig;
-  price: PriceConfig;
-  credits: CreditsConfig;
 };
 
 /**
@@ -36,6 +25,7 @@ export interface UiConfig {
 export interface MetadataConfig {
   images?: ImagesConfig;
   social?: SocialConfig;
+  contactEmail?: string;
 }
 
 export interface ModeConfig {
@@ -67,37 +57,11 @@ export interface SocialConfig {
 }
 
 /**
- * Website features
- */
-export interface FeaturesConfig {
-  enableCrispChat?: boolean;          // Whether to enable the crisp chat
-  enableUpgradeCard?: boolean;        // Whether to enable the upgrade card in the sidebar
-  enableUpdateAvatar?: boolean;       // Whether to enable the update avatar in settings
-  enableAffonsoAffiliate?: boolean;   // Whether to enable affonso affiliate
-  enablePromotekitAffiliate?: boolean;   // Whether to enable promotekit affiliate
-  enableDatafastRevenueTrack?: boolean;   // Whether to enable datafast revenue tracking
-  enableTurnstileCaptcha?: boolean;   // Whether to enable turnstile captcha
-}
-
-/**
- * Routes configuration
- */
-export interface RoutesConfig {
-  defaultLoginRedirect?: string;      // The default login redirect route
-}
-
-/**
  * Analytics configuration
  */
 export interface AnalyticsConfig {
   enableVercelAnalytics?: boolean;    // Whether to enable vercel analytics
   enableSpeedInsights?: boolean;      // Whether to enable speed insights
-}
-
-export interface AuthConfig {
-  enableGoogleLogin?: boolean;       // Whether to enable google login
-  enableGithubLogin?: boolean;       // Whether to enable github login
-  enableCredentialLogin?: boolean;   // Whether to enable email/password login
 }
 
 /**
@@ -133,60 +97,6 @@ export interface DocsConfig {
 }
 
 /**
- * Mail configuration
- */
-export interface MailConfig {
-  provider: 'resend';                // The email provider, only resend is supported for now
-  fromEmail?: string;                // The email address to send from
-  supportEmail?: string;             // The email address to send support emails to
-}
-
-/**
- * Newsletter configuration
- */
-export interface NewsletterConfig {
-  enable: boolean;                   // Whether to enable the newsletter
-  provider: 'resend' | 'beehiiv';    // The newsletter provider
-  autoSubscribeAfterSignUp?: boolean; // Whether to automatically subscribe users to the newsletter after sign up
-}
-
-/**
- * Storage configuration
- */
-export interface StorageConfig {
-  enable: boolean;                   // Whether to enable the storage
-  provider: 's3';                    // The storage provider, only s3 is supported for now
-}
-
-/**
- * Payment configuration
- */
-export interface PaymentConfig {
-  provider: 'stripe';                // The payment provider, only stripe is supported for now
-}
-
-/**
- * Price configuration
- */
-export interface PriceConfig {
-  plans: Record<string, PricePlan>;  // Plans indexed by ID
-}
-
-/**
- * Credits configuration
- */
-export interface CreditsConfig {
-  enableCredits: boolean;            // Whether to enable credits
-  enablePackagesForFreePlan: boolean;// Whether to enable purchase credits for free plan users
-  registerGiftCredits: {
-    enable: boolean;                 // Whether to enable register gift credits
-    amount: number;                  // The amount of credits to give to the user
-    expireDays?: number;             // The number of days to expire the credits, undefined means no expire
-  };
-  packages: Record<string, CreditPackage>;  // Packages indexed by ID
-}
-
-/**
  * menu item, used for navbar links, sidebar links, footer links
  */
 export type MenuItem = {
@@ -195,7 +105,6 @@ export type MenuItem = {
   icon?: ReactNode;                   // The icon to display
   href?: string;                      // The url to link to
   external?: boolean;                 // Whether the link is external
-  authorizeOnly?: string[];           // The roles that are authorized to see the item
 };
 
 /**

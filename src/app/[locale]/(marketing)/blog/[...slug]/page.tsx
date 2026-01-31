@@ -1,9 +1,6 @@
 import AllPostsButton from '@/components/blog/all-posts-button';
 import BlogGrid from '@/components/blog/blog-grid';
 import { getMDXComponents } from '@/components/docs/mdx-components';
-import { NewsletterCard } from '@/components/newsletter/newsletter-card';
-import { PremiumBadge } from '@/components/premium/premium-badge';
-import { PremiumGuard } from '@/components/premium/premium-guard';
 import { websiteConfig } from '@/config/website';
 import { LocaleLink } from '@/i18n/navigation';
 import { formatDate } from '@/lib/formatter';
@@ -89,7 +86,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     notFound();
   }
 
-  const { date, title, description, image, author, categories, premium } =
+  const { date, title, description, image, author, categories } =
     post.data;
   const publishDate = formatDate(new Date(date));
 
@@ -98,8 +95,6 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
     .getPages(locale)
     .filter((category) => categories.includes(category.slugs[0] ?? ''));
 
-  // Premium access is now checked client-side in PremiumGuard component
-  // This allows the page to remain static while still protecting premium content
   const MDX = post.data.body;
 
   // getTranslations may cause error DYNAMIC_SERVER_USAGE, so we set dynamic to force-static
@@ -130,16 +125,12 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
               )}
             </div>
 
-            {/* blog post date and premium badge */}
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2">
-                <CalendarIcon className="size-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground leading-none my-auto">
-                  {publishDate}
-                </span>
-              </div>
-
-              {premium && <PremiumBadge size="sm" />}
+            {/* blog post date */}
+            <div className="flex items-center gap-2">
+              <CalendarIcon className="size-4 text-muted-foreground" />
+              <span className="text-sm text-muted-foreground leading-none my-auto">
+                {publishDate}
+              </span>
             </div>
 
             {/* blog post title */}
@@ -153,9 +144,7 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
           {/* in order to make the mdx.css work, we need to add the className prose to the div */}
           {/* https://github.com/tailwindlabs/tailwindcss-typography */}
           <div className="mt-8">
-            <PremiumGuard isPremium={!!premium} className="max-w-none">
-              <MDX components={getMDXComponents()} />
-            </PremiumGuard>
+            <MDX components={getMDXComponents()} />
           </div>
 
           <div className="flex items-center justify-start my-16">
@@ -235,10 +224,6 @@ export default async function BlogPostPage(props: BlogPostPageProps) {
         </div>
       )}
 
-      {/* newsletter */}
-      <div className="flex items-center justify-start my-8">
-        <NewsletterCard />
-      </div>
     </div>
   );
 }

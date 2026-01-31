@@ -1,6 +1,6 @@
 'use client';
 
-import { sendMessageAction } from '@/actions/send-message';
+import { websiteConfig } from '@/config/website';
 import { FormError } from '@/components/shared/form-error';
 import { Button } from '@/components/ui/button';
 import {
@@ -23,18 +23,17 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
-import { useState, useTransition } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
 /**
  * Contact form card component
- * This is a client component that handles the contact form submission
+ * This is a client component that handles the contact form submission via mailto
  */
 export function ContactFormCard() {
   const t = useTranslations('ContactPage.form');
-  const [isPending, startTransition] = useTransition();
   const [error, setError] = useState<string | undefined>('');
 
   // Create a schema for contact form validation
@@ -60,29 +59,23 @@ export function ContactFormCard() {
     },
   });
 
-  // Handle form submission
+  // Handle form submission via mailto
   const onSubmit = (values: ContactFormValues) => {
-    startTransition(async () => {
-      try {
-        setError('');
-
-        // Submit form data using the contact server action
-        const result = await sendMessageAction(values);
-
-        if (result?.data?.success) {
-          toast.success(t('success'));
-          form.reset();
-        } else {
-          const errorMessage = result?.data?.error || t('fail');
-          setError(errorMessage);
-          toast.error(errorMessage);
-        }
-      } catch (err) {
-        console.error('Form submission error:', err);
-        setError(t('fail'));
-        toast.error(t('fail'));
-      }
-    });
+    try {
+      setError('');
+      const contactEmail = websiteConfig.metadata.contactEmail || '';
+      const subject = encodeURIComponent(`Contact from ${values.name}`);
+      const body = encodeURIComponent(
+        `Name: ${values.name}\nEmail: ${values.email}\n\nMessage:\n${values.message}`
+      );
+      window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+      toast.success(t('success'));
+      form.reset();
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setError(t('fail'));
+      toast.error(t('fail'));
+    }
   };
 
   return (
@@ -141,10 +134,9 @@ export function ContactFormCard() {
           <CardFooter className="mt-6 px-6 py-4 flex justify-between items-center bg-muted rounded-none">
             <Button
               type="submit"
-              disabled={isPending}
               className="cursor-pointer"
             >
-              {isPending ? t('submitting') : t('submit')}
+              {t('submit')}
             </Button>
           </CardFooter>
         </form>

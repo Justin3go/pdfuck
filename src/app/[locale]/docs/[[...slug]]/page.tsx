@@ -1,8 +1,6 @@
 import * as Preview from '@/components/docs';
 import { getMDXComponents } from '@/components/docs/mdx-components';
 import { LLMCopyButton, ViewOptions } from '@/components/docs/page-actions';
-import { PremiumBadge } from '@/components/premium/premium-badge';
-import { PremiumGuard } from '@/components/premium/premium-guard';
 import {
   HoverCard,
   HoverCardContent,
@@ -94,10 +92,6 @@ export default async function DocPage({ params }: DocPageProps) {
   }
 
   const preview = page.data.preview;
-  const { premium } = page.data;
-
-  // Premium access is now checked client-side in PremiumGuard component
-  // This allows the page to remain static while still protecting premium content
   const MDX = page.data.body;
 
   // Build markdownUrl with locale prefix for LLM markdown endpoint
@@ -114,7 +108,6 @@ export default async function DocPage({ params }: DocPageProps) {
       }}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
-      {premium && <PremiumBadge size="sm" className="mt-2" />}
       <DocsDescription>{page.data.description}</DocsDescription>
       <div className="flex flex-row gap-2 items-center border-b pb-6">
         <LLMCopyButton markdownUrl={markdownUrl} />
@@ -125,44 +118,42 @@ export default async function DocPage({ params }: DocPageProps) {
         {preview ? <PreviewRenderer preview={preview} /> : null}
 
         {/* MDX Content */}
-        <PremiumGuard isPremium={!!premium} className="max-w-none">
-          <MDX
-            components={getMDXComponents({
-              a: ({
-                href,
-                ...props
-              }: {
-                href?: string;
-                [key: string]: any;
-              }) => {
-                const found = source.getPageByHref(href ?? '');
+        <MDX
+          components={getMDXComponents({
+            a: ({
+              href,
+              ...props
+            }: {
+              href?: string;
+              [key: string]: any;
+            }) => {
+              const found = source.getPageByHref(href ?? '');
 
-                if (!found) return <Link href={href} {...props} />;
+              if (!found) return <Link href={href} {...props} />;
 
-                return (
-                  <HoverCard>
-                    <HoverCardTrigger asChild>
-                      <Link
-                        href={
-                          found.hash
-                            ? `${found.page.url}#${found.hash}`
-                            : found.page.url
-                        }
-                        {...props}
-                      />
-                    </HoverCardTrigger>
-                    <HoverCardContent className="text-sm">
-                      <p className="font-medium">{found.page.data.title}</p>
-                      <p className="text-fd-muted-foreground">
-                        {found.page.data.description}
-                      </p>
-                    </HoverCardContent>
-                  </HoverCard>
-                );
-              },
-            })}
-          />
-        </PremiumGuard>
+              return (
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <Link
+                      href={
+                        found.hash
+                          ? `${found.page.url}#${found.hash}`
+                          : found.page.url
+                      }
+                      {...props}
+                    />
+                  </HoverCardTrigger>
+                  <HoverCardContent className="text-sm">
+                    <p className="font-medium">{found.page.data.title}</p>
+                    <p className="text-fd-muted-foreground">
+                      {found.page.data.description}
+                    </p>
+                  </HoverCardContent>
+                </HoverCard>
+              );
+            },
+          })}
+        />
       </DocsBody>
     </DocsPage>
   );

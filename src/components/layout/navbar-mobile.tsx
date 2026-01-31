@@ -11,7 +11,6 @@ import {
 } from '@/components/ui/collapsible';
 import { useNavbarLinks } from '@/config/navbar-config';
 import { LocaleLink, useLocalePathname } from '@/i18n/navigation';
-import { authClient } from '@/lib/auth-client';
 import { cn } from '@/lib/utils';
 import { Routes } from '@/routes';
 import { Portal } from '@radix-ui/react-portal';
@@ -24,10 +23,8 @@ import {
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { RemoveScroll } from 'react-remove-scroll';
-import { Skeleton } from '../ui/skeleton';
-import { UserButtonMobile } from './user-button-mobile';
 
 export function NavbarMobile({
   className,
@@ -36,13 +33,6 @@ export function NavbarMobile({
   const t = useTranslations();
   const [open, setOpen] = React.useState<boolean>(false);
   const localePathname = useLocalePathname();
-  const [mounted, setMounted] = useState(false);
-  const { data: session, isPending } = authClient.useSession();
-  const currentUser = session?.user;
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     const handleRouteChangeStart = () => {
@@ -72,10 +62,6 @@ export function NavbarMobile({
     setOpen((open) => !open);
   };
 
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <>
       <div
@@ -88,18 +74,8 @@ export function NavbarMobile({
           <span className="text-xl font-semibold">{t('Metadata.name')}</span>
         </LocaleLink>
 
-        {/* navbar right shows menu icon and user button */}
+        {/* navbar right shows menu icon */}
         <div className="flex items-center justify-end gap-4">
-          {/* show user button if user is logged in */}
-          {isPending ? (
-            <Skeleton className="size-8 border rounded-full" />
-          ) : currentUser ? (
-            <>
-              {/* <CreditsBalanceButton /> */}
-              <UserButtonMobile user={currentUser} />
-            </>
-          ) : null}
-
           <Button
             variant="ghost"
             size="icon"
@@ -124,13 +100,7 @@ export function NavbarMobile({
           {/* if we don't add RemoveScroll component, the underlying
             page will scroll when we scroll the mobile menu */}
           <RemoveScroll allowPinchZoom enabled>
-            {/* Only render MainMobileMenu when not in loading state */}
-            {!isPending && (
-              <MainMobileMenu
-                userLoggedIn={!!currentUser}
-                onLinkClicked={handleToggleMobileMenu}
-              />
-            )}
+            <MainMobileMenu onLinkClicked={handleToggleMobileMenu} />
           </RemoveScroll>
         </Portal>
       )}
@@ -139,11 +109,10 @@ export function NavbarMobile({
 }
 
 interface MainMobileMenuProps {
-  userLoggedIn: boolean;
   onLinkClicked: () => void;
 }
 
-function MainMobileMenu({ userLoggedIn, onLinkClicked }: MainMobileMenuProps) {
+function MainMobileMenu({ onLinkClicked }: MainMobileMenuProps) {
   const [expanded, setExpanded] = React.useState<Record<string, boolean>>({});
   const t = useTranslations();
   const menuLinks = useNavbarLinks();
@@ -155,38 +124,6 @@ function MainMobileMenu({ userLoggedIn, onLinkClicked }: MainMobileMenuProps) {
       bg-background backdrop-blur-md animate-in fade-in-0"
     >
       <div className="size-full flex flex-col items-start space-y-4">
-        {/* action buttons */}
-        {userLoggedIn ? null : (
-          <div className="w-full flex flex-col gap-4 px-4">
-            <LocaleLink
-              href={Routes.Login}
-              onClick={onLinkClicked}
-              className={cn(
-                buttonVariants({
-                  variant: 'outline',
-                  size: 'lg',
-                }),
-                'w-full'
-              )}
-            >
-              {t('Common.login')}
-            </LocaleLink>
-            <LocaleLink
-              href={Routes.Register}
-              className={cn(
-                buttonVariants({
-                  variant: 'default',
-                  size: 'lg',
-                }),
-                'w-full'
-              )}
-              onClick={onLinkClicked}
-            >
-              {t('Common.signUp')}
-            </LocaleLink>
-          </div>
-        )}
-
         {/* main menu */}
         <ul className="w-full px-4">
           {menuLinks?.map((item) => {
@@ -287,20 +224,6 @@ function MainMobileMenu({ userLoggedIn, onLinkClicked }: MainMobileMenuProps) {
                                   >
                                     {subItem.title}
                                   </span>
-                                  {/* hide description for now */}
-                                  {/* {subItem.description && (
-                                      <p
-                                        className={cn(
-                                          'text-xs text-muted-foreground',
-                                          'group-hover:bg-transparent group-hover:text-foreground/80',
-                                          'group-focus:bg-transparent group-focus:text-foreground/80',
-                                          isSubItemActive &&
-                                          'bg-transparent text-foreground/80'
-                                        )}
-                                      >
-                                        {subItem.description}
-                                      </p>
-                                    )} */}
                                 </div>
                                 {subItem.external && (
                                   <ArrowUpRightIcon

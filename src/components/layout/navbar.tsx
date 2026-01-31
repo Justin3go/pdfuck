@@ -1,12 +1,9 @@
 'use client';
 
-import { LoginWrapper } from '@/components/auth/login-wrapper';
 import Container from '@/components/layout/container';
 import { Logo } from '@/components/layout/logo';
 import { ModeSwitcher } from '@/components/layout/mode-switcher';
 import { NavbarMobile } from '@/components/layout/navbar-mobile';
-import { UserButton } from '@/components/layout/user-button';
-import { Button, buttonVariants } from '@/components/ui/button';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -19,13 +16,9 @@ import {
 import { useNavbarLinks } from '@/config/navbar-config';
 import { useScroll } from '@/hooks/use-scroll';
 import { LocaleLink, useLocalePathname } from '@/i18n/navigation';
-import { authClient } from '@/lib/auth-client';
 import { cn } from '@/lib/utils';
-import { Routes } from '@/routes';
 import { ArrowUpRightIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
-import { Skeleton } from '../ui/skeleton';
 import LocaleSwitcher from './locale-switcher';
 
 interface NavBarProps {
@@ -46,14 +39,6 @@ export function Navbar({ scroll }: NavBarProps) {
   const scrolled = useScroll(50);
   const menuLinks = useNavbarLinks();
   const localePathname = useLocalePathname();
-  const [mounted, setMounted] = useState(false);
-  const { data: session, isPending } = authClient.useSession();
-  const currentUser = session?.user;
-  // console.log(`Navbar, user:`, user);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <section
@@ -215,41 +200,8 @@ export function Navbar({ scroll }: NavBarProps) {
             </NavigationMenu>
           </div>
 
-          {/* navbar right show sign in or user */}
+          {/* navbar right */}
           <div className="flex items-center gap-x-4">
-            {!mounted || isPending ? (
-              <Skeleton className="size-8 border rounded-full" />
-            ) : currentUser ? (
-              <>
-                {/* <CreditsBalanceButton /> */}
-                <UserButton user={currentUser} />
-              </>
-            ) : (
-              <div className="flex items-center gap-x-4">
-                <LoginWrapper mode="modal" asChild>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="cursor-pointer"
-                  >
-                    {t('Common.login')}
-                  </Button>
-                </LoginWrapper>
-
-                <LocaleLink
-                  href={Routes.Register}
-                  className={cn(
-                    buttonVariants({
-                      variant: 'default',
-                      size: 'sm',
-                    })
-                  )}
-                >
-                  {t('Common.signUp')}
-                </LocaleLink>
-              </div>
-            )}
-
             <ModeSwitcher />
             <LocaleSwitcher />
           </div>

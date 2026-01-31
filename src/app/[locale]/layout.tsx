@@ -1,12 +1,5 @@
 import { Analytics } from '@/analytics/analytics';
-import {
-  fontBricolageGrotesque,
-  fontNotoSans,
-  fontNotoSansMono,
-  fontNotoSerif,
-} from '@/assets/fonts';
-import AffonsoScript from '@/components/affiliate/affonso';
-import PromotekitScript from '@/components/affiliate/promotekit';
+import { fontGeistMono } from '@/assets/fonts';
 import { TailwindIndicator } from '@/components/layout/tailwind-indicator';
 import { routing } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
@@ -49,18 +42,11 @@ export default async function LocaleLayout({
 
   return (
     <html suppressHydrationWarning lang={locale}>
-      <head>
-        <AffonsoScript />
-        <PromotekitScript />
-      </head>
       <body
         suppressHydrationWarning
         className={cn(
           'size-full antialiased',
-          fontNotoSans.className,
-          fontNotoSerif.variable,
-          fontNotoSansMono.variable,
-          fontBricolageGrotesque.variable
+          fontGeistMono.className
         )}
       >
         <NuqsAdapter>

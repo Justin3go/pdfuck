@@ -1,6 +1,6 @@
 'use client';
 
-import { subscribeNewsletterAction } from '@/actions/subscribe-newsletter';
+import { websiteConfig } from '@/config/website';
 import { FormError } from '@/components/shared/form-error';
 import { Button } from '@/components/ui/button';
 import {
@@ -22,18 +22,17 @@ import {
 import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
-import { useState, useTransition } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
 /**
  * Waitlist form card component
- * This is a client component that handles the waitlist form submission
+ * This is a client component that handles the waitlist form submission via mailto
  */
 export function WaitlistFormCard() {
   const t = useTranslations('WaitlistPage.form');
-  const [isPending, startTransition] = useTransition();
   const [error, setError] = useState<string | undefined>('');
 
   // Create a schema for waitlist form validation
@@ -49,30 +48,21 @@ export function WaitlistFormCard() {
     },
   });
 
-  // Handle form submission
+  // Handle form submission via mailto
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    startTransition(async () => {
-      try {
-        setError('');
-
-        const result = await subscribeNewsletterAction({
-          email: values.email,
-        });
-
-        if (result?.data?.success) {
-          toast.success(t('success'));
-          form.reset();
-        } else {
-          const errorMessage = result?.data?.error || t('fail');
-          setError(errorMessage);
-          toast.error(errorMessage);
-        }
-      } catch (err) {
-        console.error('Form submission error:', err);
-        setError(t('fail'));
-        toast.error(t('fail'));
-      }
-    });
+    try {
+      setError('');
+      const contactEmail = websiteConfig.metadata.contactEmail || '';
+      const subject = encodeURIComponent('Waitlist Signup');
+      const body = encodeURIComponent(`Email: ${values.email}`);
+      window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+      toast.success(t('success'));
+      form.reset();
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setError(t('fail'));
+      toast.error(t('fail'));
+    }
   };
 
   return (
@@ -103,10 +93,9 @@ export function WaitlistFormCard() {
           <CardFooter className="mt-6 px-6 py-4 flex justify-between items-center bg-muted rounded-none">
             <Button
               type="submit"
-              disabled={isPending}
               className="cursor-pointer"
             >
-              {isPending ? t('subscribing') : t('subscribe')}
+              {t('subscribe')}
             </Button>
           </CardFooter>
         </form>
