@@ -56,11 +56,11 @@
 - `pdfjs-dist` - PDF 渲染库
 
 #### 配置文件
-- `src/config/pdf-tools.ts` - 工具注册表和配置
+- `src/config/pdf-tools.ts` - 工具注册表和配置（按类别组织）
 - `src/routes.ts` - 添加 Tools 路由
 - `src/app/sitemap.ts` - 添加工具页面站点地图
-- `src/config/navbar-config.tsx` - 导航栏添加 Tools 链接
-- `src/config/footer-config.tsx` - 页脚添加 PDF Tools 链接
+- `src/config/navbar-config.tsx` - 导航栏按类别展示工具（支持下拉展开）
+- `src/config/footer-config.tsx` - 页脚按类别分组展示工具链接
 
 #### PDF 处理库 (`src/lib/pdf/`)
 - `worker-setup.ts` - PDF.js worker 初始化（使用本地 worker 文件）
@@ -125,12 +125,86 @@
 **问题**: `dynamic()` with `ssr: false` 不能在 Server Component 中使用
 **解决**: 创建客户端组件 `tool-component-loader.tsx` 封装动态导入
 
+## 2025-02-01 更新：Landing Page 重新设计
+
+### 主要变更
+
+#### 1. 导航栏简化
+- **变更**: 删除所有导航链接
+- **原因**: 一进入网站就是工具合集 landing page，无需额外导航
+- **修改文件**: `src/config/navbar-config.tsx`
+- **实现**: `useNavbarLinks()` 返回空数组
+
+#### 2. Landing Page 重新设计
+- **变更**: 将工具列表从 `/tools` 页面整合到首页
+- **新结构**:
+  - Hero 区域：主标题 + 副标题 + 隐私说明
+  - 特性栏：极速处理 / 100% 私密 / 完全免费
+  - 工具网格：按分类展示所有 PDF 工具
+  - 使用步骤：3步说明如何使用
+  - FAQ 区域：常见问题解答
+- **SEO 优化**:
+  - 更新 Metadata 为 PDFuck 品牌
+  - 添加适当的内容层次结构（h1/h2/h3）
+  - 保持所有工具页面的独立 SEO
+- **修改文件**:
+  - `src/app/[locale]/(marketing)/(home)/page.tsx` - 新首页
+  - `messages/en.json` / `messages/zh.json` - 添加 HomePage 翻译
+
+#### 3. 页脚简化
+- **变更**: 删除产品、资源、公司栏目，只保留法律链接
+- **修改文件**: `src/config/footer-config.tsx`
+- **新结构**: 仅保留隐私政策和服务条款
+
+#### 4. 品牌统一
+- **名称**: PDFuck
+- **英文描述**: "Free Online PDF Tools - 100% private and secure"
+- **中文描述**: "免费在线 PDF 工具 - 100% 隐私保护"
+- **Metadata 更新**:
+  - 标题: "PDFuck - Free Online PDF Tools"
+  - 描述: "Free browser-based PDF tools. Merge, split, compress, rotate, convert PDFs. 100% privacy..."
+
+### 保留的页面
+- `/tools/[slug]` - 各工具的独立操作页面（用于 SEO 和直接访问）
+- `/tools` - 工具列表页（保留，作为备用入口）
+
+## 2025-02-01 更新：导航和页脚按类别组织
+
+### 导航栏结构
+- **主菜单**: "PDF Tools"（或本地化翻译）
+- **下拉菜单**: 按类别组织
+  - **整理 (Organize)**: 合并、拆分、旋转、重排、提取
+  - **转换 (Convert)**: PDF转图片、图片转PDF
+  - **编辑 (Edit)**: 压缩、水印、页码
+
+### 页脚结构
+- **整理**: 所有整理类工具链接
+- **转换**: 所有转换类工具链接
+- **编辑**: 所有编辑类工具链接
+- **法律**: 隐私政策、服务条款
+
+### 实现说明
+- 使用 `PDF_TOOLS` 和 `PDF_TOOL_CATEGORIES` 配置自动生成导航和页脚
+- 导航栏支持多级下拉（类别 → 具体工具）
+- 页脚扁平化展示，每个类别为一个栏目
+- 新增翻译键：
+  - `Common.pdfTools` - 导航主菜单标题
+  - `ToolsPage.common.legal` - 页脚法律栏目
+  - `ToolsPage.common.privacyPolicy` - 隐私政策
+  - `ToolsPage.common.termsOfService` - 服务条款
+
+### 修改文件
+- `src/config/navbar-config.tsx` - 按类别组织的导航菜单
+- `src/config/footer-config.tsx` - 按类别组织的页脚链接
+- `messages/en.json` / `messages/zh.json` - 添加新翻译键
+
 ## 后续维护注意事项
 
 1. **PDF.js 版本更新**: 更新 pdfjs-dist 时需检查 worker 路径是否变化
 2. **新工具添加**: 遵循现有模式，在 `pdf-tools.ts` 注册，创建对应组件，添加翻译
 3. **性能优化**: 大文件处理时可考虑添加 Web Worker 避免阻塞主线程
 4. **错误处理**: 添加更详细的错误提示和用户引导
+5. **SEO 监控**: 定期检查搜索排名，优化关键词
 
 ## 相关文件清单
 
