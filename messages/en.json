@@ -781,6 +781,12 @@
         "question": "What browsers are supported?",
         "answer": "Our tools work in all modern browsers including Chrome, Firefox, Safari, and Edge. Make sure your browser is up to date for the best experience."
       }
+    },
+    "calltoaction": {
+      "title": "Get Started",
+      "description": "PDFuck lets you handle all your PDF needs in seconds",
+      "primaryButton": "Get Started",
+      "secondaryButton": "View Demo"
     }
   },
   "ToolsPage": {
@@ -1017,97 +1023,285 @@
           }
         }
       },
-      "pdfToImages": {
-        "name": "PDF to Images",
-        "description": "Convert PDF pages to JPG or PNG images.",
-        "metaTitle": "Convert PDF to Images Online Free - PDF to JPG/PNG",
-        "metaDescription": "Convert PDF pages to JPG or PNG images for free. Choose quality and format. Browser-based, no uploads needed.",
-        "longDescription": "Convert each page of your PDF document into high-quality JPG or PNG images. Adjust the output quality and resolution to meet your needs. Perfect for sharing individual pages as images.",
+      "pdfToPng": {
+        "name": "PDF to PNG",
+        "description": "Convert PDF pages to high-quality PNG images with lossless compression.",
+        "metaTitle": "Convert PDF to PNG Online Free - PDF to PNG Converter",
+        "metaDescription": "Convert PDF pages to PNG images for free. High-quality lossless conversion with adjustable resolution. Browser-based, no uploads needed.",
+        "longDescription": "Convert each page of your PDF document into high-quality PNG images with lossless compression. PNG preserves sharp text and graphics perfectly, making it ideal for documents, screenshots, and images requiring transparency support.",
         "faq": {
           "item-1": {
-            "question": "What image formats are supported?",
-            "answer": "You can convert PDF pages to JPG (JPEG) or PNG format."
+            "question": "Why choose PNG over other formats?",
+            "answer": "PNG uses lossless compression, meaning no quality is lost during conversion. It preserves sharp text, clean lines, and supports transparency — ideal for documents and graphics."
           },
           "item-2": {
-            "question": "Can I adjust the image quality?",
-            "answer": "Yes. You can choose the output quality from low to high, and adjust the resolution scale."
+            "question": "Can I adjust the image resolution?",
+            "answer": "Yes. Use the scale slider to set the output resolution from 1x to 4x. The default is 2x (144 DPI), suitable for most use cases."
           },
           "item-3": {
-            "question": "Can I convert specific pages only?",
-            "answer": "Yes. You can select which pages to convert rather than converting the entire document."
+            "question": "Will PNG files be larger than JPG?",
+            "answer": "Generally yes, because PNG uses lossless compression. However, for text-heavy documents, the difference is often minimal while the quality is noticeably better."
           },
           "item-4": {
-            "question": "What resolution will the images be?",
-            "answer": "The default is 2x scale (144 DPI). You can increase or decrease the scale for higher or lower resolution."
+            "question": "Does PNG support transparency?",
+            "answer": "Yes. PNG supports alpha transparency, so any transparent areas in your PDF will be preserved in the output images."
           },
           "item-5": {
             "question": "Can I convert a multi-page PDF?",
-            "answer": "Yes. Each page will be converted to a separate image file that you can download individually."
+            "answer": "Yes. Each page is converted to a separate PNG file that you can download individually."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Document Archiving",
+            "description": "Convert important documents to PNG for lossless archival storage."
+          },
+          "item-2": {
+            "title": "Web Publishing",
+            "description": "Create crisp PNG images from PDF content for websites and blogs."
+          },
+          "item-3": {
+            "title": "Design Assets",
+            "description": "Extract pages as high-quality PNG files for use in graphic design projects."
+          },
+          "item-4": {
+            "title": "Presentation Materials",
+            "description": "Convert PDF slides to PNG images for embedding in presentations."
+          }
+        }
+      },
+      "pdfToJpg": {
+        "name": "PDF to JPG",
+        "description": "Convert PDF pages to JPG images with adjustable quality.",
+        "metaTitle": "Convert PDF to JPG Online Free - PDF to JPEG Converter",
+        "metaDescription": "Convert PDF pages to JPG/JPEG images for free. Adjustable quality and resolution settings. Browser-based, no uploads needed.",
+        "longDescription": "Convert each page of your PDF document into JPG images. Adjust the quality and resolution to balance file size and visual fidelity. JPG is the most widely supported image format, ideal for photos, web use, and sharing.",
+        "faq": {
+          "item-1": {
+            "question": "Can I adjust the JPG quality?",
+            "answer": "Yes. Use the quality slider to set output quality from 10% to 100%. Higher quality means larger file sizes but better visual fidelity."
+          },
+          "item-2": {
+            "question": "What resolution will the images be?",
+            "answer": "The default is 2x scale (144 DPI). You can increase up to 4x for high-resolution output or decrease to 1x for smaller files."
+          },
+          "item-3": {
+            "question": "What is the difference between JPG and PNG?",
+            "answer": "JPG uses lossy compression for smaller files, best for photos. PNG uses lossless compression for perfect quality, best for text and graphics."
+          },
+          "item-4": {
+            "question": "Can I convert a multi-page PDF?",
+            "answer": "Yes. Each page is converted to a separate JPG file that you can download individually."
+          },
+          "item-5": {
+            "question": "Will colors be preserved accurately?",
+            "answer": "Yes. JPG supports millions of colors and handles photographs and gradient-rich documents very well."
           }
         },
         "useCases": {
           "item-1": {
             "title": "Social Media Sharing",
-            "description": "Convert PDF content to images for posting on social media platforms."
+            "description": "Convert PDF content to JPG for posting on social media platforms."
           },
           "item-2": {
-            "title": "Presentation Slides",
-            "description": "Extract pages as images to include in presentations or other documents."
+            "title": "Email Attachments",
+            "description": "Create compact JPG images from PDFs for easy email sharing."
           },
           "item-3": {
-            "title": "Website Content",
-            "description": "Convert PDF pages to images for use on websites and blogs."
+            "title": "Website Thumbnails",
+            "description": "Generate lightweight JPG previews of PDF documents for web display."
           },
           "item-4": {
-            "title": "Preview Generation",
-            "description": "Create image previews of PDF documents for quick viewing."
+            "title": "Photo Printing",
+            "description": "Convert photo-rich PDF pages to JPG for professional printing services."
           }
         }
       },
-      "imagesToPdf": {
-        "name": "Images to PDF",
-        "description": "Convert JPG, PNG, or WebP images to a PDF document.",
-        "metaTitle": "Convert Images to PDF Online Free - JPG/PNG to PDF",
-        "metaDescription": "Convert JPG, PNG, and WebP images to PDF for free. Arrange images and create PDFs. Browser-based, no uploads needed.",
-        "longDescription": "Convert your images into a PDF document. Upload multiple JPG, PNG, or WebP images, arrange them in the desired order, and combine them into a single PDF file.",
+      "pdfToWebp": {
+        "name": "PDF to WebP",
+        "description": "Convert PDF pages to modern WebP images with superior compression.",
+        "metaTitle": "Convert PDF to WebP Online Free - PDF to WebP Converter",
+        "metaDescription": "Convert PDF pages to WebP images for free. Modern format with superior compression and quality. Browser-based, no uploads needed.",
+        "longDescription": "Convert each page of your PDF document into WebP images, the modern image format developed by Google. WebP offers superior compression with excellent visual quality, resulting in significantly smaller file sizes compared to JPG and PNG.",
         "faq": {
           "item-1": {
-            "question": "What image formats are supported?",
-            "answer": "JPG (JPEG), PNG, and WebP images are supported."
+            "question": "What is WebP format?",
+            "answer": "WebP is a modern image format developed by Google that provides superior lossy and lossless compression. It produces smaller files than JPG and PNG while maintaining comparable quality."
+          },
+          "item-2": {
+            "question": "Is WebP supported by all browsers?",
+            "answer": "WebP is supported by all modern browsers including Chrome, Firefox, Edge, and Safari 16+. It has over 97% global browser support."
+          },
+          "item-3": {
+            "question": "Can I adjust the WebP quality?",
+            "answer": "Yes. Use the quality slider to balance file size and visual quality. Lower quality produces smaller files, while higher quality preserves more detail."
+          },
+          "item-4": {
+            "question": "How does WebP compare to JPG?",
+            "answer": "WebP typically produces files 25-35% smaller than JPG at equivalent visual quality, making it ideal for web use where bandwidth matters."
+          },
+          "item-5": {
+            "question": "Can I convert a multi-page PDF?",
+            "answer": "Yes. Each page is converted to a separate WebP file that you can download individually."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Web Optimization",
+            "description": "Create WebP images for faster website loading with smaller file sizes."
+          },
+          "item-2": {
+            "title": "Bandwidth Reduction",
+            "description": "Convert PDFs to WebP for efficient delivery in bandwidth-constrained environments."
+          },
+          "item-3": {
+            "title": "CDN & Hosting",
+            "description": "Generate WebP images to reduce storage and delivery costs on CDNs."
+          },
+          "item-4": {
+            "title": "Modern Web Development",
+            "description": "Produce WebP assets from PDF source files for modern web applications."
+          }
+        }
+      },
+      "pngToPdf": {
+        "name": "PNG to PDF",
+        "description": "Convert PNG images to a PDF document.",
+        "metaTitle": "Convert PNG to PDF Online Free - PNG to PDF Converter",
+        "metaDescription": "Convert PNG images to PDF for free. Arrange and combine multiple PNGs into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your PNG images into a PDF document. Upload multiple PNG files, arrange them in the desired order with drag-and-drop, and combine them into a single PDF. Image quality is preserved at the original resolution.",
+        "faq": {
+          "item-1": {
+            "question": "Will PNG quality be preserved in the PDF?",
+            "answer": "Yes. PNG images are embedded at their original resolution in the PDF. No compression is applied during conversion."
           },
           "item-2": {
             "question": "Can I reorder images before converting?",
-            "answer": "Yes. Drag and drop to arrange images in your preferred order before creating the PDF."
+            "answer": "Yes. Drag and drop to arrange your PNG images in the preferred order before creating the PDF."
           },
           "item-3": {
-            "question": "Will the image quality be preserved?",
-            "answer": "Yes. Images are embedded at their original resolution in the PDF document."
+            "question": "Is transparency preserved in the PDF?",
+            "answer": "PNG transparency is preserved when the image is embedded in the PDF, though the PDF viewer may display transparent areas as white."
           },
           "item-4": {
-            "question": "How many images can I convert at once?",
-            "answer": "There is no hard limit. The number of images you can process depends on your device's memory."
+            "question": "How many PNG images can I combine?",
+            "answer": "There is no hard limit. The number of images you can process depends on your device's available memory."
           },
           "item-5": {
             "question": "What will the page size be?",
-            "answer": "Each page is sized to match the dimensions of its corresponding image."
+            "answer": "Each PDF page is automatically sized to match the dimensions of its corresponding PNG image."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Screenshot Compilation",
+            "description": "Combine multiple screenshots into a single organized PDF document."
+          },
+          "item-2": {
+            "title": "Design Portfolio",
+            "description": "Compile PNG design assets into a professional PDF portfolio."
+          },
+          "item-3": {
+            "title": "Document Scanning",
+            "description": "Convert scanned PNG images into a well-organized PDF document."
+          },
+          "item-4": {
+            "title": "Report Creation",
+            "description": "Assemble PNG charts, diagrams, and graphics into a PDF report."
+          }
+        }
+      },
+      "jpgToPdf": {
+        "name": "JPG to PDF",
+        "description": "Convert JPG images to a PDF document.",
+        "metaTitle": "Convert JPG to PDF Online Free - JPEG to PDF Converter",
+        "metaDescription": "Convert JPG/JPEG images to PDF for free. Combine multiple photos into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your JPG images into a PDF document. Upload multiple JPEG files, arrange them in your preferred order with drag-and-drop, and combine them into a single PDF. Perfect for creating photo books, document compilations, and more.",
+        "faq": {
+          "item-1": {
+            "question": "Will JPG quality be preserved in the PDF?",
+            "answer": "Yes. JPG images are embedded at their original quality in the PDF document. No additional compression is applied."
+          },
+          "item-2": {
+            "question": "Can I reorder photos before converting?",
+            "answer": "Yes. Drag and drop to arrange your JPG images in the preferred order before creating the PDF."
+          },
+          "item-3": {
+            "question": "Does it accept both .jpg and .jpeg files?",
+            "answer": "Yes. Both .jpg and .jpeg file extensions are accepted — they are the same format."
+          },
+          "item-4": {
+            "question": "How many JPG images can I combine?",
+            "answer": "There is no hard limit. The number of images depends on your device's available memory."
+          },
+          "item-5": {
+            "question": "What will the page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions of its corresponding JPG image."
           }
         },
         "useCases": {
           "item-1": {
             "title": "Photo Albums",
-            "description": "Combine photos into a single PDF for easy sharing and printing."
+            "description": "Combine vacation or event photos into a single PDF album for sharing."
           },
           "item-2": {
-            "title": "Document Scanning",
-            "description": "Convert scanned images into a organized PDF document."
+            "title": "Receipt Collection",
+            "description": "Merge receipt photos into one PDF for organized expense reporting."
           },
           "item-3": {
-            "title": "Portfolio Creation",
-            "description": "Compile design work or artwork images into a professional PDF portfolio."
+            "title": "Real Estate Listings",
+            "description": "Compile property photos into a professional PDF presentation."
           },
           "item-4": {
-            "title": "Receipt Collection",
-            "description": "Combine photos of receipts into a single PDF for expense reporting."
+            "title": "Travel Documentation",
+            "description": "Combine travel document photos into a single PDF for easy access."
+          }
+        }
+      },
+      "webpToPdf": {
+        "name": "WebP to PDF",
+        "description": "Convert WebP images to a PDF document.",
+        "metaTitle": "Convert WebP to PDF Online Free - WebP to PDF Converter",
+        "metaDescription": "Convert WebP images to PDF for free. Combine multiple WebP files into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your WebP images into a PDF document. Upload multiple WebP files, arrange them in your preferred order with drag-and-drop, and combine them into a single PDF. WebP images are automatically converted for maximum PDF compatibility.",
+        "faq": {
+          "item-1": {
+            "question": "How are WebP images handled in the PDF?",
+            "answer": "WebP images are automatically converted to PNG format before being embedded in the PDF. This ensures maximum compatibility with all PDF viewers."
+          },
+          "item-2": {
+            "question": "Will image quality be preserved?",
+            "answer": "Yes. The conversion process preserves the visual quality of your WebP images in the resulting PDF document."
+          },
+          "item-3": {
+            "question": "Can I reorder images before converting?",
+            "answer": "Yes. Drag and drop to arrange your WebP images in the preferred order before creating the PDF."
+          },
+          "item-4": {
+            "question": "How many WebP images can I combine?",
+            "answer": "There is no hard limit. The number of images depends on your device's available memory."
+          },
+          "item-5": {
+            "question": "What will the page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions of its corresponding WebP image."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Web Asset Archiving",
+            "description": "Convert downloaded WebP images from websites into archived PDF documents."
+          },
+          "item-2": {
+            "title": "Image Format Conversion",
+            "description": "Bridge WebP images into PDF format for sharing with users who lack WebP support."
+          },
+          "item-3": {
+            "title": "Design Documentation",
+            "description": "Compile WebP design assets into a professional PDF for client review."
+          },
+          "item-4": {
+            "title": "Cross-Platform Sharing",
+            "description": "Convert WebP files to universally accessible PDF for sharing across platforms."
           }
         }
       },

@@ -1194,97 +1194,285 @@
           }
         }
       },
-      "pdfToImages": {
-        "name": "PDF转图片",
-        "description": "将PDF页面转换为JPG或PNG图片。",
-        "metaTitle": "免费在线将PDF转换为图片 - PDF转JPG/PNG",
-        "metaDescription": "免费将PDF页面转换为JPG或PNG图片。选择质量和格式。基于浏览器处理，无需上传。",
-        "longDescription": "将PDF文档的每一页转换为高质量的JPG或PNG图片。调整输出质量和分辨率以满足您的需求。适合将单独的页面作为图片分享。",
+      "pdfToPng": {
+        "name": "PDF转PNG",
+        "description": "将PDF页面转换为高质量的无损PNG图片。",
+        "metaTitle": "免费在线PDF转PNG - PDF转PNG转换器",
+        "metaDescription": "免费将PDF页面转换为PNG图片。高质量无损转换，可调节分辨率。基于浏览器处理，无需上传。",
+        "longDescription": "将PDF文档的每一页转换为高质量的PNG无损压缩图片。PNG格式能完美保留清晰的文字和图形，非常适合文档、截图以及需要透明背景的图片。",
         "faq": {
           "item-1": {
-            "question": "支持哪些图片格式？",
-            "answer": "您可以将PDF页面转换为JPG（JPEG）或PNG格式。"
+            "question": "为什么选择PNG格式？",
+            "answer": "PNG使用无损压缩，转换过程中不会丢失任何质量。它能保留清晰的文字、干净的线条，并支持透明度——非常适合文档和图形。"
           },
           "item-2": {
-            "question": "可以调整图片质量吗？",
-            "answer": "可以。您可以选择从低到高的输出质量，并调整分辨率缩放比例。"
+            "question": "可以调整图片分辨率吗？",
+            "answer": "可以。使用缩放滑块设置1x到4x的输出分辨率。默认为2x（144 DPI），适合大多数使用场景。"
           },
           "item-3": {
-            "question": "可以只转换特定页面吗？",
-            "answer": "可以。您可以选择要转换的页面，而不是转换整个文档。"
+            "question": "PNG文件会比JPG大吗？",
+            "answer": "通常会的，因为PNG使用无损压缩。但对于文字较多的文档，大小差异通常很小，而质量明显更好。"
           },
           "item-4": {
-            "question": "图片的分辨率是多少？",
-            "answer": "默认为2倍缩放（144 DPI）。您可以增加或减少缩放比例以获得更高或更低的分辨率。"
+            "question": "PNG支持透明度吗？",
+            "answer": "支持。PNG支持Alpha透明度，PDF中的任何透明区域都会在输出图片中保留。"
           },
           "item-5": {
             "question": "可以转换多页PDF吗？",
-            "answer": "可以。每页将转换为单独的图片文件，您可以单独下载。"
+            "answer": "可以。每页将转换为单独的PNG文件，您可以逐个下载。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "文档存档",
+            "description": "将重要文档转换为PNG进行无损存档保存。"
+          },
+          "item-2": {
+            "title": "网页发布",
+            "description": "从PDF内容创建清晰的PNG图片用于网站和博客。"
+          },
+          "item-3": {
+            "title": "设计素材",
+            "description": "将页面提取为高质量PNG文件用于平面设计项目。"
+          },
+          "item-4": {
+            "title": "演示材料",
+            "description": "将PDF幻灯片转换为PNG图片嵌入演示文稿中。"
+          }
+        }
+      },
+      "pdfToJpg": {
+        "name": "PDF转JPG",
+        "description": "将PDF页面转换为可调质量的JPG图片。",
+        "metaTitle": "免费在线PDF转JPG - PDF转JPEG转换器",
+        "metaDescription": "免费将PDF页面转换为JPG/JPEG图片。可调节质量和分辨率设置。基于浏览器处理，无需上传。",
+        "longDescription": "将PDF文档的每一页转换为JPG图片。调整质量和分辨率以平衡文件大小和视觉保真度。JPG是最广泛支持的图片格式，适合照片、网络使用和分享。",
+        "faq": {
+          "item-1": {
+            "question": "可以调整JPG质量吗？",
+            "answer": "可以。使用质量滑块设置10%到100%的输出质量。更高的质量意味着更大的文件，但视觉保真度更好。"
+          },
+          "item-2": {
+            "question": "图片分辨率是多少？",
+            "answer": "默认为2倍缩放（144 DPI）。最高可增加到4倍以获得高分辨率输出，或降低到1倍以获得更小的文件。"
+          },
+          "item-3": {
+            "question": "JPG和PNG有什么区别？",
+            "answer": "JPG使用有损压缩产生更小的文件，最适合照片。PNG使用无损压缩保持完美质量，最适合文字和图形。"
+          },
+          "item-4": {
+            "question": "可以转换多页PDF吗？",
+            "answer": "可以。每页将转换为单独的JPG文件，您可以逐个下载。"
+          },
+          "item-5": {
+            "question": "颜色会被准确保留吗？",
+            "answer": "会的。JPG支持数百万种颜色，能很好地处理照片和渐变丰富的文档。"
           }
         },
         "useCases": {
           "item-1": {
             "title": "社交媒体分享",
-            "description": "将PDF内容转换为图片以在社交媒体平台上发布。"
+            "description": "将PDF内容转换为JPG以在社交媒体平台上发布。"
           },
           "item-2": {
-            "title": "演示文稿幻灯片",
-            "description": "将页面提取为图片以包含在演示文稿或其他文档中。"
+            "title": "邮件附件",
+            "description": "从PDF创建紧凑的JPG图片以便于邮件分享。"
           },
           "item-3": {
-            "title": "网站内容",
-            "description": "将PDF页面转换为图片以在网站和博客上使用。"
+            "title": "网站缩略图",
+            "description": "生成轻量级的JPG预览图用于网页展示PDF文档。"
           },
           "item-4": {
-            "title": "预览生成",
-            "description": "创建PDF文档的图片预览以便快速查看。"
+            "title": "照片打印",
+            "description": "将包含照片的PDF页面转换为JPG用于专业打印服务。"
           }
         }
       },
-      "imagesToPdf": {
-        "name": "图片转PDF",
-        "description": "将JPG、PNG或WebP图片转换为PDF文档。",
-        "metaTitle": "免费在线将图片转换为PDF - JPG/PNG转PDF",
-        "metaDescription": "免费将JPG、PNG和WebP图片转换为PDF。排列图片并创建PDF。基于浏览器处理，无需上传。",
-        "longDescription": "将您的图片转换为PDF文档。上传多个JPG、PNG或WebP图片，按照所需顺序排列，然后合并为一个PDF文件。",
+      "pdfToWebp": {
+        "name": "PDF转WebP",
+        "description": "将PDF页面转换为现代WebP图片，压缩效果更优。",
+        "metaTitle": "免费在线PDF转WebP - PDF转WebP转换器",
+        "metaDescription": "免费将PDF页面转换为WebP图片。现代格式，压缩更优质量更高。基于浏览器处理，无需上传。",
+        "longDescription": "将PDF文档的每一页转换为WebP图片，这是Google开发的现代图片格式。WebP在保持优秀视觉质量的同时提供卓越的压缩效果，文件大小比JPG和PNG显著更小。",
         "faq": {
           "item-1": {
-            "question": "支持哪些图片格式？",
-            "answer": "支持JPG（JPEG）、PNG和WebP图片。"
+            "question": "什么是WebP格式？",
+            "answer": "WebP是Google开发的现代图片格式，提供卓越的有损和无损压缩。它在保持相当质量的同时产生比JPG和PNG更小的文件。"
           },
           "item-2": {
-            "question": "转换前可以重新排序图片吗？",
-            "answer": "可以。拖放以按您的首选顺序排列图片，然后再创建PDF。"
+            "question": "所有浏览器都支持WebP吗？",
+            "answer": "WebP被所有现代浏览器支持，包括Chrome、Firefox、Edge和Safari 16+。全球浏览器支持率超过97%。"
           },
           "item-3": {
-            "question": "图片质量会保留吗？",
-            "answer": "是的。图片以其原始分辨率嵌入PDF文档中。"
+            "question": "可以调整WebP质量吗？",
+            "answer": "可以。使用质量滑块在文件大小和视觉质量之间进行平衡。较低的质量产生更小的文件，较高的质量保留更多细节。"
           },
           "item-4": {
-            "question": "一次可以转换多少张图片？",
-            "answer": "没有硬性限制。您可以处理的图片数量取决于您设备的内存。"
+            "question": "WebP与JPG相比如何？",
+            "answer": "在同等视觉质量下，WebP通常产生比JPG小25-35%的文件，非常适合注重带宽的网络使用。"
           },
           "item-5": {
-            "question": "页面大小是多少？",
-            "answer": "每页的大小与对应图片的尺寸匹配。"
+            "question": "可以转换多页PDF吗？",
+            "answer": "可以。每页将转换为单独的WebP文件，您可以逐个下载。"
           }
         },
         "useCases": {
           "item-1": {
-            "title": "相册",
-            "description": "将照片合并为一个PDF以便于分享和打印。"
+            "title": "网页优化",
+            "description": "创建WebP图片以更小的文件大小加速网站加载。"
           },
           "item-2": {
-            "title": "文档扫描",
-            "description": "将扫描的图片转换为有组织的PDF文档。"
+            "title": "带宽节省",
+            "description": "将PDF转换为WebP以在带宽受限的环境中高效传输。"
           },
           "item-3": {
-            "title": "作品集制作",
-            "description": "将设计作品或艺术品图片编译为专业的PDF作品集。"
+            "title": "CDN与托管",
+            "description": "生成WebP图片以降低CDN上的存储和传输成本。"
           },
           "item-4": {
+            "title": "现代Web开发",
+            "description": "从PDF源文件生成WebP资源用于现代Web应用。"
+          }
+        }
+      },
+      "pngToPdf": {
+        "name": "PNG转PDF",
+        "description": "将PNG图片转换为PDF文档。",
+        "metaTitle": "免费在线PNG转PDF - PNG转PDF转换器",
+        "metaDescription": "免费将PNG图片转换为PDF。排列并合并多个PNG为一个PDF。基于浏览器处理，无需上传。",
+        "longDescription": "将您的PNG图片转换为PDF文档。上传多个PNG文件，通过拖放按所需顺序排列，然后合并为一个PDF文件。图片质量以原始分辨率保留。",
+        "faq": {
+          "item-1": {
+            "question": "PNG质量在PDF中会保留吗？",
+            "answer": "会的。PNG图片以其原始分辨率嵌入PDF中。转换过程中不会应用额外压缩。"
+          },
+          "item-2": {
+            "question": "转换前可以重新排序图片吗？",
+            "answer": "可以。通过拖放按您喜欢的顺序排列PNG图片，然后再创建PDF。"
+          },
+          "item-3": {
+            "question": "透明度会在PDF中保留吗？",
+            "answer": "PNG的透明度在嵌入PDF时会保留，但PDF查看器可能会将透明区域显示为白色。"
+          },
+          "item-4": {
+            "question": "可以合并多少张PNG图片？",
+            "answer": "没有硬性限制。您可以处理的图片数量取决于您设备的可用内存。"
+          },
+          "item-5": {
+            "question": "页面大小是多少？",
+            "answer": "每个PDF页面会自动调整为对应PNG图片的尺寸。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "截图合集",
+            "description": "将多个截图合并为一个有组织的PDF文档。"
+          },
+          "item-2": {
+            "title": "设计作品集",
+            "description": "将PNG设计素材编排为专业的PDF作品集。"
+          },
+          "item-3": {
+            "title": "文档扫描",
+            "description": "将扫描的PNG图片转换为有组织的PDF文档。"
+          },
+          "item-4": {
+            "title": "报告制作",
+            "description": "将PNG格式的图表、示意图和图形组合为PDF报告。"
+          }
+        }
+      },
+      "jpgToPdf": {
+        "name": "JPG转PDF",
+        "description": "将JPG图片转换为PDF文档。",
+        "metaTitle": "免费在线JPG转PDF - JPEG转PDF转换器",
+        "metaDescription": "免费将JPG/JPEG图片转换为PDF。将多张照片合并为一个PDF。基于浏览器处理，无需上传。",
+        "longDescription": "将您的JPG图片转换为PDF文档。上传多个JPEG文件，通过拖放按所需顺序排列，然后合并为一个PDF。非常适合创建相册、文档合集等。",
+        "faq": {
+          "item-1": {
+            "question": "JPG质量在PDF中会保留吗？",
+            "answer": "会的。JPG图片以其原始质量嵌入PDF文档中。不会应用额外压缩。"
+          },
+          "item-2": {
+            "question": "转换前可以重新排序照片吗？",
+            "answer": "可以。通过拖放按您喜欢的顺序排列JPG图片，然后再创建PDF。"
+          },
+          "item-3": {
+            "question": "同时接受.jpg和.jpeg文件吗？",
+            "answer": "是的。.jpg和.jpeg文件扩展名都被接受——它们是同一种格式。"
+          },
+          "item-4": {
+            "question": "可以合并多少张JPG图片？",
+            "answer": "没有硬性限制。图片数量取决于您设备的可用内存。"
+          },
+          "item-5": {
+            "question": "页面大小是多少？",
+            "answer": "每个PDF页面会自动调整为对应JPG图片的尺寸。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "相册制作",
+            "description": "将假期或活动照片合并为一个PDF相册便于分享。"
+          },
+          "item-2": {
             "title": "收据整理",
-            "description": "将收据照片合并为一个PDF以便于费用报销。"
+            "description": "将收据照片合并为一个PDF以便有组织地报销费用。"
+          },
+          "item-3": {
+            "title": "房产展示",
+            "description": "将房产照片编排为专业的PDF展示文档。"
+          },
+          "item-4": {
+            "title": "旅行文档",
+            "description": "将旅行证件照片合并为一个PDF便于随时查阅。"
+          }
+        }
+      },
+      "webpToPdf": {
+        "name": "WebP转PDF",
+        "description": "将WebP图片转换为PDF文档。",
+        "metaTitle": "免费在线WebP转PDF - WebP转PDF转换器",
+        "metaDescription": "免费将WebP图片转换为PDF。将多个WebP文件合并为一个PDF。基于浏览器处理，无需上传。",
+        "longDescription": "将您的WebP图片转换为PDF文档。上传多个WebP文件，通过拖放按所需顺序排列，然后合并为一个PDF。WebP图片会自动转换以确保最大PDF兼容性。",
+        "faq": {
+          "item-1": {
+            "question": "WebP图片在PDF中如何处理？",
+            "answer": "WebP图片在嵌入PDF之前会自动转换为PNG格式。这确保了与所有PDF查看器的最大兼容性。"
+          },
+          "item-2": {
+            "question": "图片质量会保留吗？",
+            "answer": "会的。转换过程会保留您WebP图片的视觉质量。"
+          },
+          "item-3": {
+            "question": "转换前可以重新排序图片吗？",
+            "answer": "可以。通过拖放按您喜欢的顺序排列WebP图片，然后再创建PDF。"
+          },
+          "item-4": {
+            "question": "可以合并多少张WebP图片？",
+            "answer": "没有硬性限制。图片数量取决于您设备的可用内存。"
+          },
+          "item-5": {
+            "question": "页面大小是多少？",
+            "answer": "每个PDF页面会自动调整为对应WebP图片的尺寸。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "网页素材存档",
+            "description": "将从网站下载的WebP图片转换为PDF文档进行存档。"
+          },
+          "item-2": {
+            "title": "格式转换桥梁",
+            "description": "将WebP图片转为PDF格式，方便分享给不支持WebP的用户。"
+          },
+          "item-3": {
+            "title": "设计文档",
+            "description": "将WebP设计素材编排为专业PDF供客户审阅。"
+          },
+          "item-4": {
+            "title": "跨平台分享",
+            "description": "将WebP文件转换为通用的PDF格式以便跨平台分享。"
           }
         }
       },

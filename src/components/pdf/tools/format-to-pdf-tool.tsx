@@ -8,6 +8,7 @@ import {
   SortableItem,
   SortableOverlay,
 } from '@/components/ui/sortable';
+import type { PdfToolI18nKey } from '@/config/pdf-tools';
 import { convertWebpToPng, imagesToPdf } from '@/lib/pdf/from-images';
 import { CheckCircleIcon, GripVerticalIcon, Trash2Icon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -24,7 +25,15 @@ interface ImageFile {
 
 let imgIdCounter = 0;
 
-export function ImagesToPdfTool() {
+interface FormatToPdfToolProps {
+  acceptedMimeType: string;
+  i18nKey: PdfToolI18nKey;
+}
+
+export function FormatToPdfTool({
+  acceptedMimeType,
+  i18nKey,
+}: FormatToPdfToolProps) {
   const t = useTranslations('ToolsPage');
   const [images, setImages] = useState<ImageFile[]>([]);
   const [status, setStatus] = useState<
@@ -139,7 +148,7 @@ export function ImagesToPdfTool() {
   return (
     <div className="space-y-6">
       <FileDropzone
-        acceptedMimeTypes={['image/jpeg', 'image/png', 'image/webp']}
+        acceptedMimeTypes={[acceptedMimeType]}
         multiple={true}
         onFilesSelected={loadImages}
       />
@@ -187,7 +196,7 @@ export function ImagesToPdfTool() {
             <Button onClick={handleConvert} disabled={status === 'processing'}>
               {status === 'processing'
                 ? t('common.processing')
-                : t('tools.imagesToPdf.name')}
+                : t(`tools.${i18nKey}.name`)}
             </Button>
             <Button variant="outline" onClick={handleReset}>
               {t('common.reset')}

@@ -1,7 +1,7 @@
 import * as pdfjsLib from 'pdfjs-dist';
 import { initPdfWorker } from './worker-setup';
 
-export type ImageFormat = 'image/jpeg' | 'image/png';
+export type ImageFormat = 'image/jpeg' | 'image/png' | 'image/webp';
 
 export interface PdfToImagesOptions {
   format: ImageFormat;

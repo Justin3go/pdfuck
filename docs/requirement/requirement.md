@@ -5,17 +5,21 @@
 
 ## 功能需求
 
-### 工具列表（10个）
+### 工具列表（14个）
 1. **Merge PDF** - 合并多个 PDF 文件
 2. **Split PDF** - 拆分 PDF（按页或自定义范围）
 3. **Compress PDF** - 压缩 PDF 文件
 4. **Rotate PDF** - 旋转 PDF 页面
-5. **PDF to Images** - 将 PDF 转换为 JPG/PNG 图片
-6. **Images to PDF** - 将图片转换为 PDF
-7. **Watermark PDF** - 添加文字水印
-8. **Page Numbers** - 添加页码
-9. **Reorder Pages** - 重新排序页面
-10. **Extract Pages** - 提取指定页面
+5. **PDF to PNG** - 将 PDF 转换为无损 PNG 图片
+6. **PDF to JPG** - 将 PDF 转换为可调质量的 JPG 图片
+7. **PDF to WebP** - 将 PDF 转换为现代 WebP 图片
+8. **PNG to PDF** - 将 PNG 图片转换为 PDF
+9. **JPG to PDF** - 将 JPG 图片转换为 PDF
+10. **WebP to PDF** - 将 WebP 图片转换为 PDF
+11. **Watermark PDF** - 添加文字水印
+12. **Page Numbers** - 添加页码
+13. **Reorder Pages** - 重新排序页面
+14. **Extract Pages** - 提取指定页面
 
 ### 页面需求
 - **工具列表页** (`/tools`): 展示所有工具的卡片网格，按分类组织
@@ -69,7 +73,7 @@
 - `split.ts` - PDF 拆分
 - `compress.ts` - PDF 压缩
 - `rotate.ts` - PDF 旋转
-- `to-images.ts` - PDF 转图片
+- `to-images.ts` - PDF 转图片（支持 PNG/JPG/WebP 三种格式）
 - `from-images.ts` - 图片转 PDF（含 WebP 转 PNG）
 - `watermark.ts` - 添加水印
 - `page-numbers.ts` - 添加页码（支持数字、罗马数字、页码/总页数格式）
@@ -92,8 +96,14 @@
 - `split-pdf.tsx` - 拆分工具（支持单页拆分和范围拆分）
 - `compress-pdf.tsx` - 压缩工具（显示压缩前后大小对比）
 - `rotate-pdf.tsx` - 旋转工具（支持单页和全部旋转）
-- `pdf-to-images.tsx` - PDF转图片（支持 JPG/PNG，可调节质量和缩放）
-- `images-to-pdf.tsx` - 图片转PDF（支持拖拽排序，WebP自动转换）
+- `pdf-to-format-tool.tsx` - PDF转图片共享组件（接受 format/fileExtension/i18nKey props）
+- `pdf-to-png.tsx` - PDF转PNG（薄包装，使用 pdf-to-format-tool）
+- `pdf-to-jpg.tsx` - PDF转JPG（薄包装，使用 pdf-to-format-tool）
+- `pdf-to-webp.tsx` - PDF转WebP（薄包装，使用 pdf-to-format-tool）
+- `format-to-pdf-tool.tsx` - 图片转PDF共享组件（接受 acceptedMimeType/i18nKey props）
+- `png-to-pdf.tsx` - PNG转PDF（薄包装，使用 format-to-pdf-tool）
+- `jpg-to-pdf.tsx` - JPG转PDF（薄包装，使用 format-to-pdf-tool）
+- `webp-to-pdf.tsx` - WebP转PDF（薄包装，使用 format-to-pdf-tool）
 - `watermark-pdf.tsx` - 水印工具（文字水印，可调节大小、透明度、位置）
 - `page-numbers-pdf.tsx` - 页码工具（6个位置，3种格式）
 - `reorder-pdf.tsx` - 重新排序工具（拖拽页面缩略图排序）
@@ -174,7 +184,7 @@
 - **主菜单**: "PDF Tools"（或本地化翻译）
 - **下拉菜单**: 按类别组织
   - **整理 (Organize)**: 合并、拆分、旋转、重排、提取
-  - **转换 (Convert)**: PDF转图片、图片转PDF
+  - **转换 (Convert)**: PDF转PNG、PDF转JPG、PDF转WebP、PNG转PDF、JPG转PDF、WebP转PDF
   - **编辑 (Edit)**: 压缩、水印、页码
 
 ### 页脚结构
@@ -218,7 +228,7 @@
 
 ### 组件
 - `src/components/pdf/*.tsx` (5个共享组件)
-- `src/components/pdf/tools/*.tsx` (10个工具组件)
+- `src/components/pdf/tools/*.tsx` (16个工具组件，含2个共享组件+8个薄包装+6个独立组件)
 
 ### 页面
 - `src/app/[locale]/(marketing)/tools/page.tsx`

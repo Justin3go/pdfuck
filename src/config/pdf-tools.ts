@@ -14,11 +14,27 @@ import {
 
 export type PdfToolCategory = 'organize' | 'convert' | 'edit';
 
+export type PdfToolI18nKey =
+  | 'mergePdf'
+  | 'splitPdf'
+  | 'compressPdf'
+  | 'rotatePdf'
+  | 'pdfToPng'
+  | 'pdfToJpg'
+  | 'pdfToWebp'
+  | 'pngToPdf'
+  | 'jpgToPdf'
+  | 'webpToPdf'
+  | 'watermarkPdf'
+  | 'pageNumbers'
+  | 'reorderPages'
+  | 'extractPages';
+
 export interface PdfToolDefinition {
   slug: string;
   icon: LucideIcon;
   category: PdfToolCategory;
-  i18nKey: string;
+  i18nKey: PdfToolI18nKey;
   faqCount: number;
   useCaseCount: number;
   acceptedMimeTypes: string[];
@@ -67,23 +83,63 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
     multipleFiles: false,
   },
   {
-    slug: 'pdf-to-images',
+    slug: 'pdf-to-png',
     icon: ImageIcon,
     category: 'convert',
-    i18nKey: 'pdfToImages',
+    i18nKey: 'pdfToPng',
     faqCount: 5,
     useCaseCount: 4,
     acceptedMimeTypes: ['application/pdf'],
     multipleFiles: false,
   },
   {
-    slug: 'images-to-pdf',
-    icon: ImagePlusIcon,
+    slug: 'pdf-to-jpg',
+    icon: ImageIcon,
     category: 'convert',
-    i18nKey: 'imagesToPdf',
+    i18nKey: 'pdfToJpg',
     faqCount: 5,
     useCaseCount: 4,
-    acceptedMimeTypes: ['image/jpeg', 'image/png', 'image/webp'],
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'pdf-to-webp',
+    icon: ImageIcon,
+    category: 'convert',
+    i18nKey: 'pdfToWebp',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'png-to-pdf',
+    icon: ImagePlusIcon,
+    category: 'convert',
+    i18nKey: 'pngToPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['image/png'],
+    multipleFiles: true,
+  },
+  {
+    slug: 'jpg-to-pdf',
+    icon: ImagePlusIcon,
+    category: 'convert',
+    i18nKey: 'jpgToPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['image/jpeg'],
+    multipleFiles: true,
+  },
+  {
+    slug: 'webp-to-pdf',
+    icon: ImagePlusIcon,
+    category: 'convert',
+    i18nKey: 'webpToPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['image/webp'],
     multipleFiles: true,
   },
   {
@@ -136,11 +192,8 @@ export function getAllPdfToolSlugs(): string[] {
   return PDF_TOOLS.map((t) => t.slug);
 }
 
-export const PDF_TOOL_CATEGORIES: {
-  key: PdfToolCategory;
-  i18nKey: string;
-}[] = [
+export const PDF_TOOL_CATEGORIES = [
   { key: 'organize', i18nKey: 'organize' },
   { key: 'convert', i18nKey: 'convert' },
   { key: 'edit', i18nKey: 'edit' },
-];
+] as const;

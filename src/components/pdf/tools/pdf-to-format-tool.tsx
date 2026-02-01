@@ -2,6 +2,7 @@
 
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
+import type { PdfToolI18nKey } from '@/config/pdf-tools';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
 import {
   type ImageFormat,
@@ -12,7 +13,17 @@ import { CheckCircleIcon, DownloadIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
-export function PdfToImagesTool() {
+interface PdfToFormatToolProps {
+  format: ImageFormat;
+  fileExtension: string;
+  i18nKey: PdfToolI18nKey;
+}
+
+export function PdfToFormatTool({
+  format,
+  fileExtension,
+  i18nKey,
+}: PdfToFormatToolProps) {
   const t = useTranslations('ToolsPage');
   const {
     files,
@@ -25,12 +36,12 @@ export function PdfToImagesTool() {
     reset,
   } = usePdfProcessor();
 
-  const [format, setFormat] = useState<ImageFormat>('image/jpeg');
   const [scale, setScale] = useState(2);
   const [quality, setQuality] = useState(0.9);
   const [images, setImages] = useState<PageImage[]>([]);
 
   const file = files[0];
+  const showQuality = format !== 'image/png';
 
   const handleConvert = async () => {
     if (!file) return;
@@ -54,7 +65,6 @@ export function PdfToImagesTool() {
   };
 
   if (status === 'done' && images.length > 0) {
-    const ext = format === 'image/jpeg' ? 'jpg' : 'png';
     const baseName = file?.name.replace(/\.pdf$/i, '') || 'page';
     return (
       <div className="space-y-6">
@@ -80,7 +90,7 @@ export function PdfToImagesTool() {
                 onClick={() =>
                   downloadBlob(
                     img.blob,
-                    `${baseName}-page-${img.pageNumber}.${ext}`
+                    `${baseName}-page-${img.pageNumber}.${fileExtension}`
                   )
                 }
                 className="absolute inset-0 flex items-center justify-center rounded-lg bg-black/50 opacity-0 group-hover:opacity-100"
@@ -131,21 +141,7 @@ export function PdfToImagesTool() {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
-        <div>
-          <label htmlFor="format" className="mb-1 block text-sm font-medium">
-            Format
-          </label>
-          <select
-            id="format"
-            value={format}
-            onChange={(e) => setFormat(e.target.value as ImageFormat)}
-            className="w-full rounded-md border bg-background px-3 py-2 text-sm"
-          >
-            <option value="image/jpeg">JPG</option>
-            <option value="image/png">PNG</option>
-          </select>
-        </div>
+      <div className={`grid gap-4 ${showQuality ? 'sm:grid-cols-2' : ''}`}>
         <div>
           <label htmlFor="scale" className="mb-1 block text-sm font-medium">
             Scale ({scale}x)
@@ -161,7 +157,7 @@ export function PdfToImagesTool() {
             className="w-full"
           />
         </div>
-        {format === 'image/jpeg' && (
+        {showQuality && (
           <div>
             <label htmlFor="quality" className="mb-1 block text-sm font-medium">
               Quality ({Math.round(quality * 100)}%)
@@ -184,7 +180,7 @@ export function PdfToImagesTool() {
         <Button onClick={handleConvert} disabled={status === 'processing'}>
           {status === 'processing'
             ? t('common.processing')
-            : t('tools.pdfToImages.name')}
+            : t(`tools.${i18nKey}.name`)}
         </Button>
         <Button variant="outline" onClick={handleReset}>
           {t('common.reset')}

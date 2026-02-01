@@ -190,7 +190,7 @@ export default async function HomePage({ params }: HomePageProps) {
             </p>
           </div>
           <div className="space-y-4">
-            {[1, 2, 3, 4, 5].map((i) => (
+            {([1, 2, 3, 4, 5] as const).map((i) => (
               <div
                 key={i}
                 className="rounded-lg border bg-card p-6 text-card-foreground"

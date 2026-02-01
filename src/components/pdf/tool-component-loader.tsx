@@ -33,17 +33,45 @@ const toolComponents: Record<string, React.ComponentType> = {
       })),
     { ssr: false }
   ),
-  'pdf-to-images': dynamic(
+  'pdf-to-png': dynamic(
     () =>
-      import('@/components/pdf/tools/pdf-to-images').then((m) => ({
-        default: m.PdfToImagesTool,
+      import('@/components/pdf/tools/pdf-to-png').then((m) => ({
+        default: m.PdfToPngTool,
       })),
     { ssr: false }
   ),
-  'images-to-pdf': dynamic(
+  'pdf-to-jpg': dynamic(
     () =>
-      import('@/components/pdf/tools/images-to-pdf').then((m) => ({
-        default: m.ImagesToPdfTool,
+      import('@/components/pdf/tools/pdf-to-jpg').then((m) => ({
+        default: m.PdfToJpgTool,
+      })),
+    { ssr: false }
+  ),
+  'pdf-to-webp': dynamic(
+    () =>
+      import('@/components/pdf/tools/pdf-to-webp').then((m) => ({
+        default: m.PdfToWebpTool,
+      })),
+    { ssr: false }
+  ),
+  'png-to-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/png-to-pdf').then((m) => ({
+        default: m.PngToPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'jpg-to-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/jpg-to-pdf').then((m) => ({
+        default: m.JpgToPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'webp-to-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/webp-to-pdf').then((m) => ({
+        default: m.WebpToPdfTool,
       })),
     { ssr: false }
   ),

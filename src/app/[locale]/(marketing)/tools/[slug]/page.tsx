@@ -48,15 +48,21 @@ export default async function ToolPage({ params }: ToolPageProps) {
 
   const t = await getTranslations('ToolsPage');
 
-  const faqs = Array.from({ length: tool.faqCount }, (_, i) => ({
-    question: t(`tools.${tool.i18nKey}.faq.item-${i + 1}.question`),
-    answer: t(`tools.${tool.i18nKey}.faq.item-${i + 1}.answer`),
-  }));
+  const faqs = Array.from({ length: tool.faqCount }, (_, i) => {
+    const n = (i + 1) as 1 | 2 | 3 | 4 | 5;
+    return {
+      question: t(`tools.${tool.i18nKey}.faq.item-${n}.question`),
+      answer: t(`tools.${tool.i18nKey}.faq.item-${n}.answer`),
+    };
+  });
 
-  const useCases = Array.from({ length: tool.useCaseCount }, (_, i) => ({
-    title: t(`tools.${tool.i18nKey}.useCases.item-${i + 1}.title`),
-    description: t(`tools.${tool.i18nKey}.useCases.item-${i + 1}.description`),
-  }));
+  const useCases = Array.from({ length: tool.useCaseCount }, (_, i) => {
+    const n = (i + 1) as 1 | 2 | 3 | 4;
+    return {
+      title: t(`tools.${tool.i18nKey}.useCases.item-${n}.title`),
+      description: t(`tools.${tool.i18nKey}.useCases.item-${n}.description`),
+    };
+  });
 
   return (
     <ToolLayout
