@@ -1,15 +1,14 @@
 'use client';
 
 import { FileDropzone } from '@/components/pdf/file-dropzone';
-import { PdfPreview } from '@/components/pdf/pdf-preview';
 import { Button } from '@/components/ui/button';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
-import { extractPages } from '@/lib/pdf/extract';
+import { type CropMargins, cropPdf } from '@/lib/pdf/crop';
 import { CheckCircleIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
-export function ExtractPagesPdfTool() {
+export function CropPdfTool() {
   const t = useTranslations('ToolsPage');
   const {
     files,
@@ -24,54 +23,39 @@ export function ExtractPagesPdfTool() {
     reset,
   } = usePdfProcessor();
 
-  const [selectedPages, setSelectedPages] = useState<Set<number>>(new Set());
+  const [margins, setMargins] = useState<CropMargins>({
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+  });
 
   const file = files[0];
 
-  const togglePage = (pageIndex: number) => {
-    setSelectedPages((prev) => {
-      const next = new Set(prev);
-      if (next.has(pageIndex)) {
-        next.delete(pageIndex);
-      } else {
-        next.add(pageIndex);
-      }
-      return next;
-    });
+  const updateMargin = (key: keyof CropMargins, value: string) => {
+    const num = Number.parseFloat(value) || 0;
+    setMargins((prev) => ({ ...prev, [key]: Math.max(0, num) }));
   };
 
-  const selectAll = () => {
+  const handleCrop = async () => {
     if (!file) return;
-    const all = new Set(Array.from({ length: file.pageCount }, (_, i) => i));
-    setSelectedPages(all);
-  };
-
-  const deselectAll = () => {
-    setSelectedPages(new Set());
-  };
-
-  const handleExtract = async () => {
-    if (!file || selectedPages.size === 0) return;
     setStatus('processing');
     try {
-      const indices = Array.from(selectedPages).sort((a, b) => a - b);
-      const result = await extractPages(file.buffer, indices);
+      const result = await cropPdf(file.buffer, margins);
       const baseName = file.name.replace(/\.pdf$/i, '');
       setResultBlobs([
         {
-          name: `${baseName}-extracted.pdf`,
-          blob: new Blob([new Uint8Array(result)], {
-            type: 'application/pdf',
-          }),
+          name: `${baseName}-cropped.pdf`,
+          blob: new Blob([new Uint8Array(result)], { type: 'application/pdf' }),
         },
       ]);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Extract failed');
+      setError(err instanceof Error ? err.message : 'Crop failed');
     }
   };
 
   const handleReset = () => {
-    setSelectedPages(new Set());
+    setMargins({ top: 0, right: 0, bottom: 0, left: 0 });
     reset();
   };
 
@@ -79,9 +63,6 @@ export function ExtractPagesPdfTool() {
     return (
       <div className="flex flex-col items-center gap-4 rounded-xl border bg-card p-8">
         <CheckCircleIcon className="size-12 text-green-500" />
-        <p className="text-sm text-muted-foreground">
-          {selectedPages.size} {t('common.pages')}
-        </p>
         <Button
           onClick={() => downloadBlob(resultBlobs[0].blob, resultBlobs[0].name)}
         >
@@ -115,36 +96,48 @@ export function ExtractPagesPdfTool() {
     );
   }
 
+  const marginFields: Array<{ key: keyof CropMargins; label: string }> = [
+    { key: 'top', label: t('tools.cropPdf.margins.top') },
+    { key: 'right', label: t('tools.cropPdf.margins.right') },
+    { key: 'bottom', label: t('tools.cropPdf.margins.bottom') },
+    { key: 'left', label: t('tools.cropPdf.margins.left') },
+  ];
+
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <p className="text-sm text-muted-foreground">
-          {selectedPages.size} / {file.pageCount} {t('common.pages')}
+      <div className="rounded-xl border bg-card p-4 text-center">
+        <p className="text-sm font-medium">
+          {file.name} &middot; {file.pageCount} {t('common.pages')}
         </p>
-        <div className="flex gap-2">
-          <Button variant="outline" size="sm" onClick={selectAll}>
-            Select All
-          </Button>
-          <Button variant="outline" size="sm" onClick={deselectAll}>
-            Deselect All
-          </Button>
-        </div>
       </div>
 
-      <PdfPreview
-        thumbnails={file.thumbnails}
-        selectedPages={selectedPages}
-        onPageClick={togglePage}
-      />
+      <div className="grid grid-cols-2 gap-4">
+        {marginFields.map(({ key, label }) => (
+          <div key={key}>
+            <label
+              htmlFor={`margin-${key}`}
+              className="mb-1 block text-sm font-medium"
+            >
+              {label} (pt)
+            </label>
+            <input
+              id={`margin-${key}`}
+              type="number"
+              min="0"
+              step="1"
+              value={margins[key]}
+              onChange={(e) => updateMargin(key, e.target.value)}
+              className="w-full rounded-lg border bg-background px-3 py-2 text-sm"
+            />
+          </div>
+        ))}
+      </div>
 
       <div className="flex justify-center gap-3">
-        <Button
-          onClick={handleExtract}
-          disabled={selectedPages.size === 0 || status === 'processing'}
-        >
+        <Button onClick={handleCrop} disabled={status === 'processing'}>
           {status === 'processing'
             ? t('common.processing')
-            : t('tools.extractPages.name')}
+            : t('tools.cropPdf.name')}
         </Button>
         <Button variant="outline" onClick={handleReset}>
           {t('common.reset')}

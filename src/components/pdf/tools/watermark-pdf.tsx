@@ -48,7 +48,7 @@ export function WatermarkPdfTool() {
       setResultBlobs([
         {
           name: `${baseName}-watermarked.pdf`,
-          blob: new Blob([result], {
+          blob: new Blob([new Uint8Array(result)], {
             type: 'application/pdf',
           }),
         },

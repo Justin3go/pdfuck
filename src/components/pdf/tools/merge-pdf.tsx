@@ -45,7 +45,7 @@ export function MergePdfTool() {
       setResultBlobs([
         {
           name: 'merged.pdf',
-          blob: new Blob([result], { type: 'application/pdf' }),
+          blob: new Blob([new Uint8Array(result)], { type: 'application/pdf' }),
         },
       ]);
     } catch (err) {

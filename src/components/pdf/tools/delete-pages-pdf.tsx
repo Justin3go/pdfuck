@@ -4,12 +4,12 @@ import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { PdfPreview } from '@/components/pdf/pdf-preview';
 import { Button } from '@/components/ui/button';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
-import { extractPages } from '@/lib/pdf/extract';
+import { deletePages } from '@/lib/pdf/delete-pages';
 import { CheckCircleIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
-export function ExtractPagesPdfTool() {
+export function DeletePagesPdfTool() {
   const t = useTranslations('ToolsPage');
   const {
     files,
@@ -50,23 +50,25 @@ export function ExtractPagesPdfTool() {
     setSelectedPages(new Set());
   };
 
-  const handleExtract = async () => {
+  const handleDelete = async () => {
     if (!file || selectedPages.size === 0) return;
+    if (selectedPages.size >= file.pageCount) {
+      setError('Cannot delete all pages');
+      return;
+    }
     setStatus('processing');
     try {
-      const indices = Array.from(selectedPages).sort((a, b) => a - b);
-      const result = await extractPages(file.buffer, indices);
+      const indices = Array.from(selectedPages);
+      const result = await deletePages(file.buffer, indices);
       const baseName = file.name.replace(/\.pdf$/i, '');
       setResultBlobs([
         {
-          name: `${baseName}-extracted.pdf`,
-          blob: new Blob([new Uint8Array(result)], {
-            type: 'application/pdf',
-          }),
+          name: `${baseName}-deleted.pdf`,
+          blob: new Blob([new Uint8Array(result)], { type: 'application/pdf' }),
         },
       ]);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Extract failed');
+      setError(err instanceof Error ? err.message : 'Delete failed');
     }
   };
 
@@ -80,7 +82,8 @@ export function ExtractPagesPdfTool() {
       <div className="flex flex-col items-center gap-4 rounded-xl border bg-card p-8">
         <CheckCircleIcon className="size-12 text-green-500" />
         <p className="text-sm text-muted-foreground">
-          {selectedPages.size} {t('common.pages')}
+          {selectedPages.size} {t('common.pages')}{' '}
+          {t('tools.deletePages.deleted')}
         </p>
         <Button
           onClick={() => downloadBlob(resultBlobs[0].blob, resultBlobs[0].name)}
@@ -119,14 +122,15 @@ export function ExtractPagesPdfTool() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <p className="text-sm text-muted-foreground">
-          {selectedPages.size} / {file.pageCount} {t('common.pages')}
+          {selectedPages.size} / {file.pageCount} {t('common.pages')}{' '}
+          {t('tools.deletePages.selected')}
         </p>
         <div className="flex gap-2">
           <Button variant="outline" size="sm" onClick={selectAll}>
-            Select All
+            {t('tools.deletePages.selectAll')}
           </Button>
           <Button variant="outline" size="sm" onClick={deselectAll}>
-            Deselect All
+            {t('tools.deletePages.deselectAll')}
           </Button>
         </div>
       </div>
@@ -139,12 +143,17 @@ export function ExtractPagesPdfTool() {
 
       <div className="flex justify-center gap-3">
         <Button
-          onClick={handleExtract}
-          disabled={selectedPages.size === 0 || status === 'processing'}
+          variant="destructive"
+          onClick={handleDelete}
+          disabled={
+            selectedPages.size === 0 ||
+            selectedPages.size >= file.pageCount ||
+            status === 'processing'
+          }
         >
           {status === 'processing'
             ? t('common.processing')
-            : t('tools.extractPages.name')}
+            : t('tools.deletePages.name')}
         </Button>
         <Button variant="outline" onClick={handleReset}>
           {t('common.reset')}

@@ -103,6 +103,69 @@ const toolComponents: Record<string, React.ComponentType> = {
       })),
     { ssr: false }
   ),
+  'delete-pages': dynamic(
+    () =>
+      import('@/components/pdf/tools/delete-pages-pdf').then((m) => ({
+        default: m.DeletePagesPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'reverse-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/reverse-pdf').then((m) => ({
+        default: m.ReversePdfTool,
+      })),
+    { ssr: false }
+  ),
+  'pdf-to-text': dynamic(
+    () =>
+      import('@/components/pdf/tools/pdf-to-text').then((m) => ({
+        default: m.PdfToTextTool,
+      })),
+    { ssr: false }
+  ),
+  'bmp-to-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/bmp-to-pdf').then((m) => ({
+        default: m.BmpToPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'gif-to-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/gif-to-pdf').then((m) => ({
+        default: m.GifToPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'svg-to-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/svg-to-pdf').then((m) => ({
+        default: m.SvgToPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'edit-metadata': dynamic(
+    () =>
+      import('@/components/pdf/tools/edit-metadata-pdf').then((m) => ({
+        default: m.EditMetadataPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'crop-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/crop-pdf').then((m) => ({
+        default: m.CropPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'flatten-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/flatten-pdf').then((m) => ({
+        default: m.FlattenPdfTool,
+      })),
+    { ssr: false }
+  ),
 };
 
 interface ToolComponentLoaderProps {

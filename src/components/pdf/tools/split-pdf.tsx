@@ -62,7 +62,7 @@ export function SplitPdfTool() {
       setResultBlobs(
         results.map((r, i) => ({
           name: `${baseName}-part-${i + 1}.pdf`,
-          blob: new Blob([r], { type: 'application/pdf' }),
+          blob: new Blob([new Uint8Array(r)], { type: 'application/pdf' }),
         }))
       );
     } catch (err) {

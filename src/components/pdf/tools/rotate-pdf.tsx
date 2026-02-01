@@ -58,7 +58,7 @@ export function RotatePdfTool() {
       setResultBlobs([
         {
           name: `${baseName}-rotated.pdf`,
-          blob: new Blob([result], {
+          blob: new Blob([new Uint8Array(result)], {
             type: 'application/pdf',
           }),
         },

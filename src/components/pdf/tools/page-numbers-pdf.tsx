@@ -50,7 +50,7 @@ export function PageNumbersPdfTool() {
       setResultBlobs([
         {
           name: `${baseName}-numbered.pdf`,
-          blob: new Blob([result], {
+          blob: new Blob([new Uint8Array(result)], {
             type: 'application/pdf',
           }),
         },

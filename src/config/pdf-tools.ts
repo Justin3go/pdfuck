@@ -1,15 +1,21 @@
 import {
+  ArrowDownUpIcon,
   ArrowUpDownIcon,
   CombineIcon,
+  CropIcon,
   FileOutputIcon,
+  FileTextIcon,
   HashIcon,
   ImageIcon,
   ImagePlusIcon,
+  LayersIcon,
   type LucideIcon,
   MinimizeIcon,
+  PencilLineIcon,
   RotateCwIcon,
   ScissorsIcon,
   StampIcon,
+  Trash2Icon,
 } from 'lucide-react';
 
 export type PdfToolCategory = 'organize' | 'convert' | 'edit';
@@ -28,7 +34,16 @@ export type PdfToolI18nKey =
   | 'watermarkPdf'
   | 'pageNumbers'
   | 'reorderPages'
-  | 'extractPages';
+  | 'extractPages'
+  | 'deletePages'
+  | 'reversePdf'
+  | 'pdfToText'
+  | 'bmpToPdf'
+  | 'gifToPdf'
+  | 'svgToPdf'
+  | 'editMetadata'
+  | 'cropPdf'
+  | 'flattenPdf';
 
 export interface PdfToolDefinition {
   slug: string;
@@ -177,6 +192,96 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
     icon: FileOutputIcon,
     category: 'organize',
     i18nKey: 'extractPages',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'delete-pages',
+    icon: Trash2Icon,
+    category: 'organize',
+    i18nKey: 'deletePages',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'reverse-pdf',
+    icon: ArrowDownUpIcon,
+    category: 'organize',
+    i18nKey: 'reversePdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'pdf-to-text',
+    icon: FileTextIcon,
+    category: 'convert',
+    i18nKey: 'pdfToText',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'bmp-to-pdf',
+    icon: ImagePlusIcon,
+    category: 'convert',
+    i18nKey: 'bmpToPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['image/bmp'],
+    multipleFiles: true,
+  },
+  {
+    slug: 'gif-to-pdf',
+    icon: ImagePlusIcon,
+    category: 'convert',
+    i18nKey: 'gifToPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['image/gif'],
+    multipleFiles: true,
+  },
+  {
+    slug: 'svg-to-pdf',
+    icon: ImagePlusIcon,
+    category: 'convert',
+    i18nKey: 'svgToPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['image/svg+xml'],
+    multipleFiles: true,
+  },
+  {
+    slug: 'edit-metadata',
+    icon: PencilLineIcon,
+    category: 'edit',
+    i18nKey: 'editMetadata',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'crop-pdf',
+    icon: CropIcon,
+    category: 'edit',
+    i18nKey: 'cropPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'flatten-pdf',
+    icon: LayersIcon,
+    category: 'edit',
+    i18nKey: 'flattenPdf',
     faqCount: 5,
     useCaseCount: 4,
     acceptedMimeTypes: ['application/pdf'],

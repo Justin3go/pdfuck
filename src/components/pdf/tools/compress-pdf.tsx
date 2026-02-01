@@ -40,7 +40,7 @@ export function CompressPdfTool() {
     setOriginalSize(file.size);
     try {
       const result = await compressPdf(file.buffer);
-      const blob = new Blob([result], {
+      const blob = new Blob([new Uint8Array(result)], {
         type: 'application/pdf',
       });
       setCompressedSize(blob.size);

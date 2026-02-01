@@ -33,21 +33,36 @@ export async function imagesToPdf(
 export async function convertWebpToPng(
   buffer: Uint8Array
 ): Promise<Uint8Array> {
-  const blob = new Blob([buffer], { type: 'image/webp' });
+  return convertImageToPng(buffer, 'image/webp');
+}
+
+/**
+ * Convert any browser-supported image format to PNG using canvas.
+ * Works with WebP, BMP, GIF, SVG, and other formats the browser can render.
+ * Must be called in browser context.
+ */
+export async function convertImageToPng(
+  buffer: Uint8Array,
+  mimeType: string
+): Promise<Uint8Array> {
+  const blob = new Blob([new Uint8Array(buffer)], { type: mimeType });
   const url = URL.createObjectURL(blob);
   const img = new Image();
 
   return new Promise((resolve, reject) => {
     img.onload = () => {
+      // For SVG without explicit dimensions, use a reasonable default
+      const width = img.width || 800;
+      const height = img.height || 600;
       const canvas = document.createElement('canvas');
-      canvas.width = img.width;
-      canvas.height = img.height;
+      canvas.width = width;
+      canvas.height = height;
       const ctx = canvas.getContext('2d')!;
-      ctx.drawImage(img, 0, 0);
+      ctx.drawImage(img, 0, 0, width, height);
       canvas.toBlob((pngBlob) => {
         URL.revokeObjectURL(url);
         if (!pngBlob) {
-          reject(new Error('Failed to convert WebP to PNG'));
+          reject(new Error(`Failed to convert ${mimeType} to PNG`));
           return;
         }
         pngBlob.arrayBuffer().then((ab) => {
@@ -57,7 +72,7 @@ export async function convertWebpToPng(
     };
     img.onerror = () => {
       URL.revokeObjectURL(url);
-      reject(new Error('Failed to load WebP image'));
+      reject(new Error(`Failed to load ${mimeType} image`));
     };
     img.src = url;
   });

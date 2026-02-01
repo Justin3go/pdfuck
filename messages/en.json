@@ -736,6 +736,27 @@
       "free": {
         "title": "Completely Free",
         "description": "All tools are free to use with no hidden fees or subscriptions."
+      },
+      "title": "Features",
+      "subtitle": "Powerful PDF Tools",
+      "description": "Everything you need to work with PDF files, right in your browser",
+      "items": {
+        "item-1": {
+          "title": "Browser-Based Processing",
+          "description": "All PDF processing happens locally in your browser. Your files never leave your device, ensuring complete privacy and security."
+        },
+        "item-2": {
+          "title": "100% Free",
+          "description": "All tools are completely free to use with no registration, no watermarks, and no limitations. Process as many files as you need."
+        },
+        "item-3": {
+          "title": "Fast & Efficient",
+          "description": "Process PDFs instantly without waiting for uploads or downloads. Our optimized algorithms handle your files quickly and efficiently."
+        },
+        "item-4": {
+          "title": "High Quality Output",
+          "description": "Maintain the original quality of your PDFs. All operations are performed with precision to preserve your document's integrity."
+        }
       }
     },
     "tools": {
@@ -758,28 +779,39 @@
         "description": "Process your files and download the result instantly."
       }
     },
-    "faq": {
+    "features2": {
+      "title": "Why Choose PDFuck",
+      "subtitle": "The Best PDF Tools",
+      "description": "Powerful, private, and completely free PDF tools for all your needs",
+      "feature-1": "Process files instantly in your browser",
+      "feature-2": "No uploads - your files never leave your device",
+      "feature-3": "Completely free with no limitations",
+      "feature-4": "High quality output preserved"
+    },
+    "faqs": {
       "title": "Frequently Asked Questions",
       "subtitle": "Everything you need to know about our PDF tools",
-      "item-1": {
-        "question": "Are my files uploaded to a server?",
-        "answer": "No. All processing happens directly in your browser using JavaScript. Your files never leave your device, ensuring complete privacy."
-      },
-      "item-2": {
-        "question": "Is there a file size limit?",
-        "answer": "Files up to 100MB are supported. The actual limit depends on your browser's available memory and device capabilities."
-      },
-      "item-3": {
-        "question": "Are the tools really free?",
-        "answer": "Yes, all PDF tools are completely free to use with no registration, no watermarks, and no limitations."
-      },
-      "item-4": {
-        "question": "Will the quality of my PDFs be affected?",
-        "answer": "No, our tools preserve the original quality of your PDFs. Operations like merging, splitting, and rotating are lossless."
-      },
-      "item-5": {
-        "question": "What browsers are supported?",
-        "answer": "Our tools work in all modern browsers including Chrome, Firefox, Safari, and Edge. Make sure your browser is up to date for the best experience."
+      "items": {
+        "item-1": {
+          "question": "Are my files uploaded to a server?",
+          "answer": "No. All processing happens directly in your browser using JavaScript. Your files never leave your device, ensuring complete privacy."
+        },
+        "item-2": {
+          "question": "Is there a file size limit?",
+          "answer": "Files up to 100MB are supported. The actual limit depends on your browser's available memory and device capabilities."
+        },
+        "item-3": {
+          "question": "Are the tools really free?",
+          "answer": "Yes, all PDF tools are completely free to use with no registration, no watermarks, and no limitations."
+        },
+        "item-4": {
+          "question": "Will the quality of my PDFs be affected?",
+          "answer": "No, our tools preserve the original quality of your PDFs. Operations like merging, splitting, and rotating are lossless."
+        },
+        "item-5": {
+          "question": "What browsers are supported?",
+          "answer": "Our tools work in all modern browsers including Chrome, Firefox, Safari, and Edge. Make sure your browser is up to date for the best experience."
+        }
       }
     },
     "calltoaction": {
@@ -1490,6 +1522,451 @@
           "item-4": {
             "title": "Building Custom Documents",
             "description": "Extract pages from multiple documents to compile a custom reference."
+          }
+        }
+      },
+      "deletePages": {
+        "name": "Delete Pages",
+        "description": "Remove specific pages from a PDF document.",
+        "metaTitle": "Delete PDF Pages Online Free - Remove Pages from PDF",
+        "metaDescription": "Delete specific pages from PDF documents for free. Select and remove unwanted pages visually. Browser-based, no uploads needed.",
+        "longDescription": "Remove unwanted pages from your PDF document quickly and easily. View page thumbnails, select the pages you want to delete, and create a clean PDF without them. All processing happens locally in your browser for complete privacy.",
+        "deleted": "deleted",
+        "selected": "selected",
+        "selectAll": "Select All",
+        "deselectAll": "Deselect All",
+        "faq": {
+          "item-1": {
+            "question": "How do I select pages to delete?",
+            "answer": "Click on page thumbnails to mark them for deletion. Selected pages will be highlighted. You can also use the Select All or Deselect All buttons for bulk selection."
+          },
+          "item-2": {
+            "question": "Can I delete non-consecutive pages?",
+            "answer": "Yes. You can select any combination of pages to delete, whether they are consecutive or scattered throughout the document."
+          },
+          "item-3": {
+            "question": "Will the remaining pages keep their formatting?",
+            "answer": "Yes. All pages that are not deleted retain their original formatting, images, text, and hyperlinks."
+          },
+          "item-4": {
+            "question": "Can I undo the deletion after downloading?",
+            "answer": "The original file is never modified. If you need the deleted pages later, simply process the original file again."
+          },
+          "item-5": {
+            "question": "Is there a limit to how many pages I can delete?",
+            "answer": "You can delete any number of pages, but at least one page must remain in the final document."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Removing Cover Pages",
+            "description": "Delete unnecessary cover pages, blank pages, or filler pages from documents before sharing."
+          },
+          "item-2": {
+            "title": "Cleaning Up Scanned Documents",
+            "description": "Remove accidentally scanned blank or duplicate pages from scanned PDF files."
+          },
+          "item-3": {
+            "title": "Redacting Confidential Sections",
+            "description": "Delete pages containing sensitive or confidential information before distributing a document."
+          },
+          "item-4": {
+            "title": "Streamlining Reports",
+            "description": "Remove appendix pages, outdated sections, or irrelevant content to create a concise report."
+          }
+        }
+      },
+      "reversePdf": {
+        "name": "Reverse PDF",
+        "description": "Reverse the page order of a PDF document.",
+        "metaTitle": "Reverse PDF Page Order Online Free",
+        "metaDescription": "Reverse the page order of PDF documents for free. Flip your PDF pages from last to first instantly. Browser-based, no uploads needed.",
+        "longDescription": "Reverse the entire page order of your PDF document so the last page becomes the first and vice versa. This is useful for correcting print order issues, reversing chronological documents, or preparing files for specific binding requirements.",
+        "faq": {
+          "item-1": {
+            "question": "What does reversing a PDF do?",
+            "answer": "Reversing a PDF flips the page order so the last page becomes the first page, the second-to-last becomes the second, and so on through the entire document."
+          },
+          "item-2": {
+            "question": "Will reversing affect the content on each page?",
+            "answer": "No. Only the order of pages changes. The content, formatting, and orientation of each individual page remain exactly the same."
+          },
+          "item-3": {
+            "question": "Can I reverse a PDF with hundreds of pages?",
+            "answer": "Yes. The tool handles PDFs of any length. Larger documents may take a few moments to process depending on your device."
+          },
+          "item-4": {
+            "question": "Is there a way to reverse only some pages?",
+            "answer": "This tool reverses the entire document. To rearrange specific pages, use the Reorder Pages tool instead."
+          },
+          "item-5": {
+            "question": "Can I reverse the PDF back to its original order?",
+            "answer": "Yes. Simply run the reversed PDF through the tool again to restore the original page order."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Correcting Print Order",
+            "description": "Reverse page order when a printer outputs pages in the wrong sequence."
+          },
+          "item-2": {
+            "title": "Chronological Adjustment",
+            "description": "Flip date-ordered documents so the most recent entries appear first."
+          },
+          "item-3": {
+            "title": "Booklet Preparation",
+            "description": "Reverse page order to prepare documents for specific booklet binding or duplex printing."
+          },
+          "item-4": {
+            "title": "Presentation Reordering",
+            "description": "Quickly reverse a slide deck to review content from end to beginning."
+          }
+        }
+      },
+      "pdfToText": {
+        "name": "PDF to Text",
+        "description": "Extract text content from PDF documents.",
+        "metaTitle": "Extract Text from PDF Online Free - PDF to Text Converter",
+        "metaDescription": "Extract text content from PDF documents for free. Copy text or download as TXT file. Browser-based, no uploads needed.",
+        "longDescription": "Extract all readable text content from your PDF documents. View the extracted text, copy it to your clipboard, or download it as a plain text file. Ideal for repurposing PDF content, text analysis, and accessibility conversion.",
+        "extracted": "Text extracted successfully",
+        "copy": "Copy Text",
+        "copied": "Copied to clipboard",
+        "downloadTxt": "Download TXT",
+        "faq": {
+          "item-1": {
+            "question": "Can this tool extract text from scanned PDFs?",
+            "answer": "This tool extracts embedded text data from PDFs. Scanned documents that consist of images without embedded text layers will not yield readable text. OCR functionality is not currently supported."
+          },
+          "item-2": {
+            "question": "Will the extracted text preserve the original formatting?",
+            "answer": "The extracted text is plain text without formatting such as bold, italic, or font styles. The text order follows the logical reading order of the PDF content."
+          },
+          "item-3": {
+            "question": "Can I extract text from a specific page only?",
+            "answer": "Currently, the tool extracts text from all pages at once. You can then copy the portion you need from the extracted results."
+          },
+          "item-4": {
+            "question": "What languages are supported?",
+            "answer": "The tool extracts text in any language that is embedded in the PDF, including Latin, CJK (Chinese, Japanese, Korean), Arabic, and other scripts."
+          },
+          "item-5": {
+            "question": "Can I download the extracted text?",
+            "answer": "Yes. You can copy the text to your clipboard or download it as a .txt file for further use."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Content Repurposing",
+            "description": "Extract text from PDF reports, articles, or e-books to reuse content in other formats."
+          },
+          "item-2": {
+            "title": "Data Entry and Analysis",
+            "description": "Pull text from PDF invoices, forms, or tables for data entry into spreadsheets or databases."
+          },
+          "item-3": {
+            "title": "Accessibility Conversion",
+            "description": "Convert PDF documents to plain text for screen readers and other assistive technologies."
+          },
+          "item-4": {
+            "title": "Search and Indexing",
+            "description": "Extract text from PDF archives to create searchable indexes or full-text search databases."
+          }
+        }
+      },
+      "bmpToPdf": {
+        "name": "BMP to PDF",
+        "description": "Convert BMP images to a PDF document.",
+        "metaTitle": "Convert BMP to PDF Online Free - BMP to PDF Converter",
+        "metaDescription": "Convert BMP bitmap images to PDF for free. Combine multiple BMP files into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your BMP (Bitmap) images into a PDF document. Upload multiple BMP files, arrange them in your preferred order with drag-and-drop, and combine them into a single PDF. BMP images are embedded with full quality preservation.",
+        "faq": {
+          "item-1": {
+            "question": "Will BMP image quality be preserved in the PDF?",
+            "answer": "Yes. BMP images are embedded at their original resolution and quality in the PDF document without any compression loss."
+          },
+          "item-2": {
+            "question": "Can I combine multiple BMP files into one PDF?",
+            "answer": "Yes. Upload as many BMP files as you need, arrange them in your desired order with drag-and-drop, and convert them into a single PDF."
+          },
+          "item-3": {
+            "question": "Why are BMP files so large?",
+            "answer": "BMP is an uncompressed raster format, so files are typically much larger than JPG or PNG. Converting to PDF can make them easier to share and organize."
+          },
+          "item-4": {
+            "question": "What will the PDF page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions of its corresponding BMP image."
+          },
+          "item-5": {
+            "question": "Are my files uploaded to a server?",
+            "answer": "No. All processing happens directly in your browser. Your BMP files never leave your device."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Legacy Image Conversion",
+            "description": "Convert older BMP screenshots or graphics into modern, shareable PDF documents."
+          },
+          "item-2": {
+            "title": "Medical and Scientific Imaging",
+            "description": "Compile BMP images from diagnostic equipment or scientific instruments into organized PDF reports."
+          },
+          "item-3": {
+            "title": "Archiving Bitmap Graphics",
+            "description": "Convert collections of BMP files into compact PDF archives for long-term storage."
+          },
+          "item-4": {
+            "title": "Print Preparation",
+            "description": "Convert BMP artwork or graphics into PDF format for reliable printing across different devices."
+          }
+        }
+      },
+      "gifToPdf": {
+        "name": "GIF to PDF",
+        "description": "Convert GIF images to a PDF document.",
+        "metaTitle": "Convert GIF to PDF Online Free - GIF to PDF Converter",
+        "metaDescription": "Convert GIF images to PDF for free. Combine multiple GIF files into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your GIF images into a PDF document. Upload multiple GIF files, arrange them in your preferred order with drag-and-drop, and combine them into a single PDF. Static GIF images are embedded with full quality preservation.",
+        "faq": {
+          "item-1": {
+            "question": "Does this tool support animated GIFs?",
+            "answer": "The tool converts the first frame of animated GIFs into the PDF. For animated GIFs, only the static first frame is captured."
+          },
+          "item-2": {
+            "question": "Will GIF image quality be preserved?",
+            "answer": "Yes. GIF images are embedded at their original resolution in the PDF document without quality loss."
+          },
+          "item-3": {
+            "question": "Can I combine multiple GIF files into one PDF?",
+            "answer": "Yes. Upload multiple GIF files, reorder them with drag-and-drop, and convert them into a single PDF document."
+          },
+          "item-4": {
+            "question": "What will the PDF page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions of its corresponding GIF image."
+          },
+          "item-5": {
+            "question": "Are my files uploaded to a server?",
+            "answer": "No. All processing happens directly in your browser. Your GIF files never leave your device."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Diagram Collection",
+            "description": "Compile GIF diagrams, flowcharts, or infographics into a single organized PDF."
+          },
+          "item-2": {
+            "title": "Web Asset Documentation",
+            "description": "Convert GIF icons, banners, or web graphics into a PDF reference document."
+          },
+          "item-3": {
+            "title": "Storyboard Creation",
+            "description": "Arrange GIF frames or illustrations into a sequential PDF storyboard."
+          },
+          "item-4": {
+            "title": "Archiving Simple Graphics",
+            "description": "Convert GIF logos, icons, and simple artwork into a PDF for organized digital archiving."
+          }
+        }
+      },
+      "svgToPdf": {
+        "name": "SVG to PDF",
+        "description": "Convert SVG vector images to a PDF document.",
+        "metaTitle": "Convert SVG to PDF Online Free - SVG to PDF Converter",
+        "metaDescription": "Convert SVG vector images to PDF for free. Combine multiple SVG files into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your SVG (Scalable Vector Graphics) images into a PDF document. Upload multiple SVG files, arrange them in your preferred order with drag-and-drop, and combine them into a single PDF. SVG vector quality is preserved at any scale.",
+        "faq": {
+          "item-1": {
+            "question": "Will vector quality be preserved in the PDF?",
+            "answer": "SVG images are rasterized at high resolution during conversion. The resulting PDF images are sharp and clear, though they become raster-based rather than vector."
+          },
+          "item-2": {
+            "question": "Can I combine multiple SVG files into one PDF?",
+            "answer": "Yes. Upload multiple SVG files, arrange them in your preferred order, and convert them all into a single PDF document."
+          },
+          "item-3": {
+            "question": "What SVG features are supported?",
+            "answer": "Standard SVG elements including shapes, paths, text, gradients, and transforms are supported. Complex filters or animations may not render identically."
+          },
+          "item-4": {
+            "question": "What will the PDF page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions defined in the SVG file's viewBox or width/height attributes."
+          },
+          "item-5": {
+            "question": "Are my files uploaded to a server?",
+            "answer": "No. All processing happens directly in your browser. Your SVG files never leave your device."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Design Portfolio",
+            "description": "Compile SVG illustrations, logos, and design work into a professional PDF portfolio."
+          },
+          "item-2": {
+            "title": "Technical Drawings",
+            "description": "Convert SVG technical diagrams, schematics, or blueprints into shareable PDF documents."
+          },
+          "item-3": {
+            "title": "Brand Asset Sheets",
+            "description": "Create PDF brand guides by compiling SVG logos, icons, and brand elements."
+          },
+          "item-4": {
+            "title": "Print-Ready Graphics",
+            "description": "Convert SVG artwork to PDF format for high-quality printing and reproduction."
+          }
+        }
+      },
+      "editMetadata": {
+        "name": "Edit Metadata",
+        "description": "Edit PDF document metadata including title, author, and keywords.",
+        "metaTitle": "Edit PDF Metadata Online Free - PDF Metadata Editor",
+        "metaDescription": "Edit PDF metadata including title, author, subject, and keywords for free. Update document properties easily. Browser-based, no uploads needed.",
+        "longDescription": "Edit the metadata properties of your PDF documents. Update the title, author, subject, keywords, creator, and producer fields to improve document organization, searchability, and professional presentation. All changes are applied instantly in your browser.",
+        "fields": {
+          "title": "Title",
+          "author": "Author",
+          "subject": "Subject",
+          "keywords": "Keywords",
+          "creator": "Creator",
+          "producer": "Producer"
+        },
+        "faq": {
+          "item-1": {
+            "question": "What is PDF metadata?",
+            "answer": "PDF metadata includes document properties like title, author, subject, keywords, creator, and producer. This information helps organize, search, and identify PDF files."
+          },
+          "item-2": {
+            "question": "Which metadata fields can I edit?",
+            "answer": "You can edit six fields: Title, Author, Subject, Keywords, Creator, and Producer. All fields are optional and can be left blank."
+          },
+          "item-3": {
+            "question": "Will editing metadata change the document content?",
+            "answer": "No. Editing metadata only changes the document properties. The visible content, formatting, and pages remain completely unchanged."
+          },
+          "item-4": {
+            "question": "How do keywords help with searchability?",
+            "answer": "Keywords are indexed by search engines and document management systems, making it easier to find your PDF when searching for specific terms."
+          },
+          "item-5": {
+            "question": "Can I view the current metadata before editing?",
+            "answer": "Yes. When you upload a PDF, the existing metadata fields are automatically populated so you can see and modify the current values."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Professional Document Preparation",
+            "description": "Set proper title and author fields before sharing reports, proposals, or contracts with clients."
+          },
+          "item-2": {
+            "title": "Document Library Management",
+            "description": "Add consistent metadata to PDFs for better organization in document management systems."
+          },
+          "item-3": {
+            "title": "SEO for Published PDFs",
+            "description": "Add descriptive titles, subjects, and keywords to PDFs published online for better search engine visibility."
+          },
+          "item-4": {
+            "title": "Compliance and Record Keeping",
+            "description": "Update author and producer fields to meet regulatory or organizational documentation requirements."
+          }
+        }
+      },
+      "cropPdf": {
+        "name": "Crop PDF",
+        "description": "Crop and adjust PDF page margins.",
+        "metaTitle": "Crop PDF Pages Online Free - Adjust PDF Margins",
+        "metaDescription": "Crop PDF page margins for free. Adjust top, bottom, left, and right margins precisely. Browser-based, no uploads needed.",
+        "longDescription": "Crop the margins of your PDF pages to remove unwanted whitespace or adjust the visible area. Set precise margin values for top, right, bottom, and left sides. Apply cropping to all pages uniformly for a clean, professional result.",
+        "margins": {
+          "top": "Top",
+          "right": "Right",
+          "bottom": "Bottom",
+          "left": "Left"
+        },
+        "faq": {
+          "item-1": {
+            "question": "How does PDF cropping work?",
+            "answer": "Cropping adjusts the visible area of each page by setting new margin boundaries. Content outside the crop area is hidden but not permanently deleted from the file."
+          },
+          "item-2": {
+            "question": "Can I set different margins for each side?",
+            "answer": "Yes. You can independently adjust the top, right, bottom, and left margins to crop each side precisely."
+          },
+          "item-3": {
+            "question": "Will cropping affect all pages?",
+            "answer": "Yes. The crop settings are applied uniformly to all pages in the document for consistent results."
+          },
+          "item-4": {
+            "question": "Can I undo the cropping?",
+            "answer": "The original file is never modified. If you need to adjust the cropping, simply process the original file again with different margin values."
+          },
+          "item-5": {
+            "question": "What units are the margin values in?",
+            "answer": "Margin values are specified in points (1 point = 1/72 inch). You can enter precise values for exact control over the crop area."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Removing Excess Whitespace",
+            "description": "Trim large margins and unnecessary whitespace around PDF content for a tighter layout."
+          },
+          "item-2": {
+            "title": "Standardizing Page Margins",
+            "description": "Apply uniform margins to documents with inconsistent spacing for a professional appearance."
+          },
+          "item-3": {
+            "title": "Print Preparation",
+            "description": "Adjust margins to fit specific paper sizes or printing requirements before sending to press."
+          },
+          "item-4": {
+            "title": "Removing Headers and Footers",
+            "description": "Crop out existing headers, footers, or watermarks by trimming the top or bottom margins."
+          }
+        }
+      },
+      "flattenPdf": {
+        "name": "Flatten PDF",
+        "description": "Flatten PDF form fields and annotations into static content.",
+        "metaTitle": "Flatten PDF Online Free - Flatten Forms & Annotations",
+        "metaDescription": "Flatten PDF form fields and annotations for free. Convert interactive elements to static content. Browser-based, no uploads needed.",
+        "longDescription": "Flatten your PDF documents to convert all interactive form fields, annotations, and comments into static, non-editable content. This ensures the document appears identically on every device and prevents further modifications to form data.",
+        "faq": {
+          "item-1": {
+            "question": "What does flattening a PDF mean?",
+            "answer": "Flattening a PDF converts all interactive elements such as form fields, checkboxes, dropdown menus, and annotations into static content that is permanently embedded in the page."
+          },
+          "item-2": {
+            "question": "Why would I want to flatten a PDF?",
+            "answer": "Flattening ensures the document looks the same on every device and PDF viewer. It also prevents accidental or intentional changes to form data and annotations."
+          },
+          "item-3": {
+            "question": "Can I edit form fields after flattening?",
+            "answer": "No. Once flattened, form fields become part of the static page content and can no longer be edited. Keep your original file if you may need to make changes later."
+          },
+          "item-4": {
+            "question": "Will flattening reduce the file size?",
+            "answer": "In many cases, yes. Flattening removes the interactive form structure and can reduce file size, especially for forms with many fields."
+          },
+          "item-5": {
+            "question": "Does flattening affect the visual appearance?",
+            "answer": "No. The visual appearance remains identical. All filled form values and annotations are preserved exactly as they appear, just as non-editable content."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Finalizing Completed Forms",
+            "description": "Flatten filled PDF forms to lock in responses and prevent accidental edits before submission or archiving."
+          },
+          "item-2": {
+            "title": "Ensuring Display Consistency",
+            "description": "Flatten PDFs to guarantee they render identically across all PDF viewers, devices, and operating systems."
+          },
+          "item-3": {
+            "title": "Preparing for Digital Signatures",
+            "description": "Flatten annotations and form fields before applying digital signatures to ensure document integrity."
+          },
+          "item-4": {
+            "title": "Archiving Official Documents",
+            "description": "Flatten completed government forms, contracts, or official records for tamper-resistant long-term archival."
           }
         }
       }

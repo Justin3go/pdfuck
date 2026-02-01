@@ -9,7 +9,7 @@ import {
   SortableOverlay,
 } from '@/components/ui/sortable';
 import type { PdfToolI18nKey } from '@/config/pdf-tools';
-import { convertWebpToPng, imagesToPdf } from '@/lib/pdf/from-images';
+import { convertImageToPng, imagesToPdf } from '@/lib/pdf/from-images';
 import { CheckCircleIcon, GripVerticalIcon, Trash2Icon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useCallback, useState } from 'react';
@@ -52,8 +52,14 @@ export function FormatToPdfTool({
         let buffer = new Uint8Array(await file.arrayBuffer());
         let mimeType = file.type;
 
-        if (mimeType === 'image/webp') {
-          buffer = await convertWebpToPng(buffer);
+        // Convert non-PNG/JPG formats to PNG for PDF embedding compatibility
+        if (
+          mimeType === 'image/webp' ||
+          mimeType === 'image/bmp' ||
+          mimeType === 'image/gif' ||
+          mimeType === 'image/svg+xml'
+        ) {
+          buffer = new Uint8Array(await convertImageToPng(buffer, mimeType));
           mimeType = 'image/png';
         }
 
@@ -94,7 +100,7 @@ export function FormatToPdfTool({
           mimeType: img.mimeType,
         }))
       );
-      setResultBlob(new Blob([result], { type: 'application/pdf' }));
+      setResultBlob(new Blob([new Uint8Array(result)], { type: 'application/pdf' }));
       setStatus('done');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Conversion failed');
