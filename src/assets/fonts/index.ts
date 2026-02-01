@@ -18,4 +18,3 @@ export const fontGeistMono = Geist_Mono({
   variable: '--font-geist-mono',
   weight: ['400', '600'],
 });
-

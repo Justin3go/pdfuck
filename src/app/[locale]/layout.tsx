@@ -44,10 +44,7 @@ export default async function LocaleLayout({
     <html suppressHydrationWarning lang={locale}>
       <body
         suppressHydrationWarning
-        className={cn(
-          'size-full antialiased',
-          fontGeistMono.className
-        )}
+        className={cn('size-full antialiased', fontGeistMono.className)}
       >
         <NuqsAdapter>
           <NextIntlClientProvider>

@@ -14,6 +14,7 @@ export enum Routes {
   Waitlist = '/waitlist',
   Changelog = '/changelog',
   Roadmap = '/roadmap',
+  Tools = '/tools',
   CookiePolicy = '/cookie',
   PrivacyPolicy = '/privacy',
   TermsOfService = '/terms',

@@ -120,13 +120,7 @@ export default async function DocPage({ params }: DocPageProps) {
         {/* MDX Content */}
         <MDX
           components={getMDXComponents({
-            a: ({
-              href,
-              ...props
-            }: {
-              href?: string;
-              [key: string]: any;
-            }) => {
+            a: ({ href, ...props }: { href?: string; [key: string]: any }) => {
               const found = source.getPageByHref(href ?? '');
 
               if (!found) return <Link href={href} {...props} />;

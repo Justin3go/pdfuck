@@ -333,6 +333,9 @@
       "docs": {
         "title": "文档"
       },
+      "tools": {
+        "title": "工具"
+      },
       "pages": {
         "title": "内置页面",
         "items": {
@@ -378,7 +381,8 @@
         "items": {
           "features": "功能",
           "pricing": "价格",
-          "faq": "常见问题"
+          "faq": "常见问题",
+          "tools": "PDF工具"
         }
       },
       "resources": {
@@ -955,6 +959,521 @@
       "description": "MkSaaS 可让您在几天内轻松构建您的 AI SaaS",
       "primaryButton": "开始使用",
       "secondaryButton": "查看演示"
+    }
+  },
+  "ToolsPage": {
+    "title": "PDF工具",
+    "description": "免费在线PDF工具，合并、分割、压缩、转换、旋转和编辑PDF文件。所有处理均在浏览器中完成。",
+    "metaTitle": "免费在线PDF工具 - 合并、分割、压缩等",
+    "metaDescription": "免费的浏览器端PDF工具。合并、分割、压缩、旋转PDF。将PDF转换为图片或将图片转换为PDF。无需上传，100%隐私保护。",
+    "hero": {
+      "title": "免费在线PDF工具",
+      "subtitle": "所有处理均在浏览器中完成，您的文件不会离开您的设备。"
+    },
+    "categories": {
+      "all": "所有工具",
+      "organize": "整理",
+      "convert": "转换",
+      "edit": "编辑"
+    },
+    "dropzone": {
+      "title": "将文件拖放到此处",
+      "subtitle": "或点击浏览文件",
+      "hint": "文件在浏览器中本地处理",
+      "invalidType": "文件类型无效",
+      "tooLarge": "文件过大"
+    },
+    "common": {
+      "selectFile": "选择文件",
+      "selectFiles": "选择文件",
+      "process": "处理",
+      "download": "下载",
+      "downloadAll": "全部下载",
+      "reset": "重新开始",
+      "processing": "处理中...",
+      "privacy": "您的文件在本地处理，不会上传到任何服务器。",
+      "faqTitle": "常见问题",
+      "useCasesTitle": "使用场景",
+      "pages": "页",
+      "page": "页",
+      "size": "大小",
+      "originalSize": "原始大小",
+      "compressedSize": "压缩后大小",
+      "reduction": "压缩率",
+      "noReduction": "文件已经是最优状态",
+      "dragToReorder": "拖拽排序"
+    },
+    "tools": {
+      "mergePdf": {
+        "name": "合并PDF",
+        "description": "将多个PDF文件合并为一个文档。",
+        "metaTitle": "免费在线合并PDF文件 - PDF合并器",
+        "metaDescription": "免费将多个PDF文件合并为一个文档。支持拖拽排序。基于浏览器处理，无需上传。",
+        "longDescription": "快速轻松地将多个PDF文档合并为一个文件。拖放您的PDF文件，按照您想要的顺序排列，然后合并。所有处理均在浏览器中本地完成。",
+        "faq": {
+          "item-1": {
+            "question": "一次可以合并多少个PDF文件？",
+            "answer": "没有硬性限制。但非常大的文件可能需要更长时间处理，取决于您设备的内存。"
+          },
+          "item-2": {
+            "question": "合并会降低PDF的质量吗？",
+            "answer": "不会。合并操作保留所有页面的原始质量，不会发生重新压缩或质量损失。"
+          },
+          "item-3": {
+            "question": "我的文件会上传到服务器吗？",
+            "answer": "不会。所有处理直接在您的浏览器中完成，您的文件永远不会离开您的设备。"
+          },
+          "item-4": {
+            "question": "合并前可以重新排序吗？",
+            "answer": "可以。您可以拖放文件来更改它们的顺序，然后再合并为一个PDF。"
+          },
+          "item-5": {
+            "question": "支持的最大文件大小是多少？",
+            "answer": "每个文件支持最大100MB。实际限制取决于您浏览器的可用内存。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "合并商业报告",
+            "description": "将月度报告、财务报表和附录合并为一份综合文档。"
+          },
+          "item-2": {
+            "title": "整理申请材料",
+            "description": "将求职信、简历、成绩单和证书合并为一个申请PDF。"
+          },
+          "item-3": {
+            "title": "制作课程材料",
+            "description": "将讲义、阅读材料和作业合并为统一的课程包。"
+          },
+          "item-4": {
+            "title": "文档归档",
+            "description": "将相关文档合并为有组织的归档文件，便于长期保存。"
+          }
+        }
+      },
+      "splitPdf": {
+        "name": "分割PDF",
+        "description": "将PDF分割为单独的页面或自定义范围。",
+        "metaTitle": "免费在线分割PDF - 提取PDF页面",
+        "metaDescription": "免费将PDF文件分割为单独页面或自定义页面范围。基于浏览器处理，无需上传。",
+        "longDescription": "将PDF文档分割为单独的页面或提取特定的页面范围。选择您要提取的页面，并将它们下载为单独的PDF文件。",
+        "faq": {
+          "item-1": {
+            "question": "可以将PDF分割为单独的页面吗？",
+            "answer": "可以。您可以将PDF分割为单独的单页文件，也可以定义自定义页面范围。"
+          },
+          "item-2": {
+            "question": "可以从PDF中提取特定页面吗？",
+            "answer": "可以。选择您要从原始文档中提取的确切页面或页面范围。"
+          },
+          "item-3": {
+            "question": "分割会影响页面质量吗？",
+            "answer": "不会。每个提取的页面都保持原始质量和格式。"
+          },
+          "item-4": {
+            "question": "如何定义自定义页面范围？",
+            "answer": "输入页面范围，如'1-3, 5, 7-9'，以将这些特定页面提取到单独的文件中。"
+          },
+          "item-5": {
+            "question": "有页面限制吗？",
+            "answer": "没有固定限制。该工具可以处理大型PDF，仅受浏览器内存限制。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "提取特定章节",
+            "description": "从大型文档中提取单独的章节，便于专注阅读或分享。"
+          },
+          "item-2": {
+            "title": "删除不需要的页面",
+            "description": "仅提取您需要的页面，有效删除不需要的内容。"
+          },
+          "item-3": {
+            "title": "制作讲义",
+            "description": "从演示文稿中提取特定幻灯片或页面以制作重点讲义。"
+          },
+          "item-4": {
+            "title": "拆分大型文档",
+            "description": "将冗长的报告分割为易于管理的部分，便于分发。"
+          }
+        }
+      },
+      "compressPdf": {
+        "name": "压缩PDF",
+        "description": "减小PDF文件大小，同时保持质量。",
+        "metaTitle": "免费在线压缩PDF - 减小PDF文件大小",
+        "metaDescription": "免费压缩PDF文件以减小文件大小。优化PDF以便于邮件发送和网络使用。基于浏览器处理，无需上传。",
+        "longDescription": "通过删除未使用的对象和优化文档结构来减小PDF文档的文件大小。适合通过电子邮件分享或上传到网站。",
+        "faq": {
+          "item-1": {
+            "question": "我的PDF可以压缩多少？",
+            "answer": "压缩结果因PDF内容而异。包含大型嵌入图像的文档压缩效果最明显。"
+          },
+          "item-2": {
+            "question": "压缩会降低视觉质量吗？",
+            "answer": "优化侧重于删除未使用的对象和精简文件结构。视觉质量得以保留。"
+          },
+          "item-3": {
+            "question": "可以同时压缩多个PDF吗？",
+            "answer": "目前一次可以压缩一个PDF。逐个处理每个文件以获得最佳效果。"
+          },
+          "item-4": {
+            "question": "如果压缩后文件大小相同怎么办？",
+            "answer": "如果PDF已经优化，压缩可能不会显著减小大小。工具会显示压缩前后的大小对比。"
+          },
+          "item-5": {
+            "question": "压缩是无损的吗？",
+            "answer": "是的。压缩删除冗余数据，不会影响文档的可见内容。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "邮件附件",
+            "description": "减小PDF大小以满足邮件附件限制，更轻松地发送文档。"
+          },
+          "item-2": {
+            "title": "网络上传",
+            "description": "优化PDF以在网站和在线表单上更快地上传和下载。"
+          },
+          "item-3": {
+            "title": "存储优化",
+            "description": "减少大型PDF档案所需的存储空间。"
+          },
+          "item-4": {
+            "title": "更快分享",
+            "description": "较小的文件通过即时通讯应用和文件共享服务传输更快。"
+          }
+        }
+      },
+      "rotatePdf": {
+        "name": "旋转PDF",
+        "description": "将PDF页面旋转到正确的方向。",
+        "metaTitle": "免费在线旋转PDF页面",
+        "metaDescription": "免费将PDF页面旋转90度、180度或270度。轻松修正页面方向。基于浏览器处理，无需上传。",
+        "longDescription": "旋转PDF文档中的单个页面或所有页面。通过旋转90度、180度或270度来修正方向不正确的页面。在应用更改之前预览每个页面。",
+        "faq": {
+          "item-1": {
+            "question": "可以旋转单个页面吗？",
+            "answer": "可以。您可以独立旋转每个页面，也可以一次对所有页面应用相同的旋转。"
+          },
+          "item-2": {
+            "question": "支持哪些旋转角度？",
+            "answer": "您可以将页面旋转90°（顺时针）、180°或270°（逆时针）。"
+          },
+          "item-3": {
+            "question": "旋转会影响内容质量吗？",
+            "answer": "不会。旋转仅更改页面方向，不会对内容质量产生任何影响。"
+          },
+          "item-4": {
+            "question": "可以在旋转前预览页面吗？",
+            "answer": "可以。您可以看到所有页面的缩略图，并在应用之前预览旋转效果。"
+          },
+          "item-5": {
+            "question": "可以撤消旋转吗？",
+            "answer": "可以。只需再次旋转页面即可恢复原始方向，或者重新开始。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "修正扫描文档",
+            "description": "纠正因送纸方向错误而导致方向不正确的扫描页面。"
+          },
+          "item-2": {
+            "title": "横版转竖版",
+            "description": "将横向页面旋转为纵向或反之亦然，以保持一致的格式。"
+          },
+          "item-3": {
+            "title": "演示文稿准备",
+            "description": "确保文档中所有页面在演示或打印之前方向正确。"
+          },
+          "item-4": {
+            "title": "混合方向文档",
+            "description": "修正某些页面方向与其他页面不同的文档。"
+          }
+        }
+      },
+      "pdfToImages": {
+        "name": "PDF转图片",
+        "description": "将PDF页面转换为JPG或PNG图片。",
+        "metaTitle": "免费在线将PDF转换为图片 - PDF转JPG/PNG",
+        "metaDescription": "免费将PDF页面转换为JPG或PNG图片。选择质量和格式。基于浏览器处理，无需上传。",
+        "longDescription": "将PDF文档的每一页转换为高质量的JPG或PNG图片。调整输出质量和分辨率以满足您的需求。适合将单独的页面作为图片分享。",
+        "faq": {
+          "item-1": {
+            "question": "支持哪些图片格式？",
+            "answer": "您可以将PDF页面转换为JPG（JPEG）或PNG格式。"
+          },
+          "item-2": {
+            "question": "可以调整图片质量吗？",
+            "answer": "可以。您可以选择从低到高的输出质量，并调整分辨率缩放比例。"
+          },
+          "item-3": {
+            "question": "可以只转换特定页面吗？",
+            "answer": "可以。您可以选择要转换的页面，而不是转换整个文档。"
+          },
+          "item-4": {
+            "question": "图片的分辨率是多少？",
+            "answer": "默认为2倍缩放（144 DPI）。您可以增加或减少缩放比例以获得更高或更低的分辨率。"
+          },
+          "item-5": {
+            "question": "可以转换多页PDF吗？",
+            "answer": "可以。每页将转换为单独的图片文件，您可以单独下载。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "社交媒体分享",
+            "description": "将PDF内容转换为图片以在社交媒体平台上发布。"
+          },
+          "item-2": {
+            "title": "演示文稿幻灯片",
+            "description": "将页面提取为图片以包含在演示文稿或其他文档中。"
+          },
+          "item-3": {
+            "title": "网站内容",
+            "description": "将PDF页面转换为图片以在网站和博客上使用。"
+          },
+          "item-4": {
+            "title": "预览生成",
+            "description": "创建PDF文档的图片预览以便快速查看。"
+          }
+        }
+      },
+      "imagesToPdf": {
+        "name": "图片转PDF",
+        "description": "将JPG、PNG或WebP图片转换为PDF文档。",
+        "metaTitle": "免费在线将图片转换为PDF - JPG/PNG转PDF",
+        "metaDescription": "免费将JPG、PNG和WebP图片转换为PDF。排列图片并创建PDF。基于浏览器处理，无需上传。",
+        "longDescription": "将您的图片转换为PDF文档。上传多个JPG、PNG或WebP图片，按照所需顺序排列，然后合并为一个PDF文件。",
+        "faq": {
+          "item-1": {
+            "question": "支持哪些图片格式？",
+            "answer": "支持JPG（JPEG）、PNG和WebP图片。"
+          },
+          "item-2": {
+            "question": "转换前可以重新排序图片吗？",
+            "answer": "可以。拖放以按您的首选顺序排列图片，然后再创建PDF。"
+          },
+          "item-3": {
+            "question": "图片质量会保留吗？",
+            "answer": "是的。图片以其原始分辨率嵌入PDF文档中。"
+          },
+          "item-4": {
+            "question": "一次可以转换多少张图片？",
+            "answer": "没有硬性限制。您可以处理的图片数量取决于您设备的内存。"
+          },
+          "item-5": {
+            "question": "页面大小是多少？",
+            "answer": "每页的大小与对应图片的尺寸匹配。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "相册",
+            "description": "将照片合并为一个PDF以便于分享和打印。"
+          },
+          "item-2": {
+            "title": "文档扫描",
+            "description": "将扫描的图片转换为有组织的PDF文档。"
+          },
+          "item-3": {
+            "title": "作品集制作",
+            "description": "将设计作品或艺术品图片编译为专业的PDF作品集。"
+          },
+          "item-4": {
+            "title": "收据整理",
+            "description": "将收据照片合并为一个PDF以便于费用报销。"
+          }
+        }
+      },
+      "watermarkPdf": {
+        "name": "添加水印",
+        "description": "为您的PDF文档添加文字水印。",
+        "metaTitle": "免费在线为PDF添加水印",
+        "metaDescription": "免费为PDF文档添加文字水印。自定义文字、大小、颜色和位置。基于浏览器处理，无需上传。",
+        "longDescription": "为您的PDF文档添加自定义文字水印。配置水印文字、字体大小、颜色、透明度、旋转角度和位置。一次性为所有页面添加水印。",
+        "faq": {
+          "item-1": {
+            "question": "可以自定义水印外观吗？",
+            "answer": "可以。您可以调整文字、字体大小、颜色、透明度、旋转角度和位置。"
+          },
+          "item-2": {
+            "question": "水印会应用到所有页面吗？",
+            "answer": "是的。水印会均匀地应用到文档中的每一页。"
+          },
+          "item-3": {
+            "question": "可以添加图片水印吗？",
+            "answer": "目前仅支持文字水印。图片水印支持可能会在未来添加。"
+          },
+          "item-4": {
+            "question": "添加后可以删除水印吗？",
+            "answer": "水印会永久嵌入新的PDF中。如果您可能需要无水印版本，请保留原始文件。"
+          },
+          "item-5": {
+            "question": "水印会覆盖现有内容吗？",
+            "answer": "您可以调整透明度使水印半透明，这样就不会遮挡底层内容。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "保护草稿",
+            "description": "为尚未最终定稿的文档添加'草稿'水印。"
+          },
+          "item-2": {
+            "title": "机密文档",
+            "description": "用'机密'水印标记敏感文档，表示受限访问。"
+          },
+          "item-3": {
+            "title": "品牌标识",
+            "description": "将公司名称或标志文字作为水印添加到品牌文档中。"
+          },
+          "item-4": {
+            "title": "版权保护",
+            "description": "添加版权声明以保护您的原创内容免受未经授权的使用。"
+          }
+        }
+      },
+      "pageNumbers": {
+        "name": "添加页码",
+        "description": "为您的PDF文档添加页码。",
+        "metaTitle": "免费在线为PDF添加页码",
+        "metaDescription": "免费为PDF文档添加页码。选择位置、格式和起始编号。基于浏览器处理，无需上传。",
+        "longDescription": "为您的PDF文档添加页码，完全控制位置、格式和样式。可选择数字、罗马数字或'第X页/共Y页'格式。将页码放置在任何角落或居中位置。",
+        "faq": {
+          "item-1": {
+            "question": "有哪些编号格式可用？",
+            "answer": "您可以选择数字（1, 2, 3）、罗马数字（I, II, III）或'第X页/共Y页'格式。"
+          },
+          "item-2": {
+            "question": "可以选择页码出现的位置吗？",
+            "answer": "可以。您可以将页码放置在页面的顶部或底部，左对齐、居中或右对齐。"
+          },
+          "item-3": {
+            "question": "可以从1以外的数字开始吗？",
+            "answer": "可以。您可以设置任何起始页码。"
+          },
+          "item-4": {
+            "question": "页码会与现有内容重叠吗？",
+            "answer": "页码放置在页边距区域。为获得最佳效果，请确保您的文档有足够的页边距。"
+          },
+          "item-5": {
+            "question": "可以跳过某些页面的编号吗？",
+            "answer": "目前，页码会添加到所有页面。如果需要，您可以使用提取工具分离页面。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "学术论文",
+            "description": "为学术论文和论文添加正确的页码。"
+          },
+          "item-2": {
+            "title": "法律文档",
+            "description": "为法律文档中的页面编号以便于引用和索引。"
+          },
+          "item-3": {
+            "title": "手册和指南",
+            "description": "为用户手册和使用指南添加页码以便于导航。"
+          },
+          "item-4": {
+            "title": "书籍手稿",
+            "description": "在提交前为书籍手稿添加专业的页码。"
+          }
+        }
+      },
+      "reorderPages": {
+        "name": "页面重排",
+        "description": "拖放重新排列PDF页面。",
+        "metaTitle": "免费在线重排PDF页面",
+        "metaDescription": "免费通过拖放重新排列PDF页面。可视化重排页面。基于浏览器处理，无需上传。",
+        "longDescription": "通过拖放页面缩略图来重新排列PDF文档中的页面。查看每个页面的可视化预览，轻松移动它们以创建您所需的页面顺序。",
+        "faq": {
+          "item-1": {
+            "question": "如何重新排列页面？",
+            "answer": "只需拖放页面缩略图即可按您所需的顺序重新排列。"
+          },
+          "item-2": {
+            "question": "可以看到页面预览吗？",
+            "answer": "可以。每个页面都以缩略图形式显示，便于您轻松识别和排列页面。"
+          },
+          "item-3": {
+            "question": "重排会影响页面内容吗？",
+            "answer": "不会。只有页面的顺序发生变化，每个页面的内容保持不变。"
+          },
+          "item-4": {
+            "question": "可以重排大型PDF的页面吗？",
+            "answer": "可以。该工具支持大型PDF，但为多页生成缩略图可能需要一些时间。"
+          },
+          "item-5": {
+            "question": "重排时也可以删除页面吗？",
+            "answer": "要删除页面，请使用提取页面工具，您可以在其中选择只保留您想要的页面。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "修正页面顺序",
+            "description": "纠正扫描或添加顺序错误的文档页面。"
+          },
+          "item-2": {
+            "title": "自定义演示",
+            "description": "重新排列演示幻灯片以为不同的受众创建自定义流程。"
+          },
+          "item-3": {
+            "title": "文档重组",
+            "description": "在报告和文档中移动部分以改善逻辑流程。"
+          },
+          "item-4": {
+            "title": "优先排序",
+            "description": "将最重要的页面移到文档的前面。"
+          }
+        }
+      },
+      "extractPages": {
+        "name": "提取页面",
+        "description": "从PDF中选择并提取特定页面。",
+        "metaTitle": "免费在线提取PDF页面",
+        "metaDescription": "免费从PDF文档中提取特定页面。可视化选择页面并下载。基于浏览器处理，无需上传。",
+        "longDescription": "从您的PDF文档中提取特定页面。查看页面缩略图，选择您要保留的页面，并创建仅包含这些页面的新PDF。",
+        "faq": {
+          "item-1": {
+            "question": "如何选择要提取的页面？",
+            "answer": "点击页面缩略图以选择或取消选择。选中的页面将被高亮显示。"
+          },
+          "item-2": {
+            "question": "可以提取不连续的页面吗？",
+            "answer": "可以。您可以选择任意组合的页面，无论是连续的还是分散在文档各处的。"
+          },
+          "item-3": {
+            "question": "提取的页面会保持格式吗？",
+            "answer": "是的。每个提取的页面都保持其原始格式、图片和文字。"
+          },
+          "item-4": {
+            "question": "可以从受保护的PDF中提取页面吗？",
+            "answer": "这取决于保护类型。某些加密的PDF可能无法在浏览器中处理。"
+          },
+          "item-5": {
+            "question": "可以提取的页面数量有限制吗？",
+            "answer": "没有。您可以从原始文档中提取任意数量的页面。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "选择关键页面",
+            "description": "从冗长的文档中仅提取最重要的页面。"
+          },
+          "item-2": {
+            "title": "创建摘要",
+            "description": "从报告中提取摘要或结论页面以便快速审阅。"
+          },
+          "item-3": {
+            "title": "移除敏感内容",
+            "description": "创建不包含机密页面的文档版本以便共享。"
+          },
+          "item-4": {
+            "title": "构建自定义文档",
+            "description": "从多个文档中提取页面以编制自定义参考资料。"
+          }
+        }
+      }
     }
   }
 }

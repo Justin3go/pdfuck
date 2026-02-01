@@ -56,6 +56,11 @@ export function useNavbarLinks(): NestedMenuItem[] {
       href: Routes.Features,
       external: false,
     },
+    {
+      title: t('tools.title'),
+      href: Routes.Tools,
+      external: false,
+    },
     ...(websiteConfig.blog.enable
       ? [
           {

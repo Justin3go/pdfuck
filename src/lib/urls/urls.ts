@@ -62,4 +62,3 @@ export function getMarkdownUrlWithLocale(url: string, locale: Locale): string {
   // Add current locale prefix and .mdx extension
   return `/${locale}${urlWithSlash}.mdx`;
 }
-

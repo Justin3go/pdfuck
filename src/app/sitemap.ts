@@ -1,3 +1,4 @@
+import { getAllPdfToolSlugs } from '@/config/pdf-tools';
 import { websiteConfig } from '@/config/website';
 import { getLocalePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
@@ -26,6 +27,7 @@ const staticRoutes = [
   '/auth/register',
   ...(websiteConfig.blog.enable ? ['/blog'] : []),
   ...(websiteConfig.docs.enable ? ['/docs'] : []),
+  '/tools',
 ];
 
 /**
@@ -143,6 +145,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       )
     );
   }
+
+  // add PDF tool routes
+  const pdfToolSlugs = getAllPdfToolSlugs();
+  sitemapList.push(
+    ...pdfToolSlugs.flatMap((slug) =>
+      routing.locales.map((locale) => ({
+        url: getUrl(`/tools/${slug}`, locale),
+        alternates: {
+          languages: generateHreflangUrls(`/tools/${slug}`),
+        },
+      }))
+    )
+  );
 
   return sitemapList;
 }

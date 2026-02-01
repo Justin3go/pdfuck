@@ -333,6 +333,9 @@
       "docs": {
         "title": "Docs"
       },
+      "tools": {
+        "title": "Tools"
+      },
       "pages": {
         "title": "Pages",
         "items": {
@@ -378,7 +381,8 @@
         "items": {
           "features": "Features",
           "pricing": "Pricing",
-          "faq": "FAQ"
+          "faq": "FAQ",
+          "tools": "PDF Tools"
         }
       },
       "resources": {
@@ -955,6 +959,521 @@
       "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
       "primaryButton": "Get Started",
       "secondaryButton": "See Demo"
+    }
+  },
+  "ToolsPage": {
+    "title": "PDF Tools",
+    "description": "Free online PDF tools to merge, split, compress, convert, rotate, and edit PDF files. All processing happens in your browser.",
+    "metaTitle": "Free Online PDF Tools - Merge, Split, Compress & More",
+    "metaDescription": "Free browser-based PDF tools. Merge, split, compress, rotate PDFs. Convert PDF to images and images to PDF. No uploads - 100% private.",
+    "hero": {
+      "title": "Free Online PDF Tools",
+      "subtitle": "All processing happens in your browser. Your files never leave your device."
+    },
+    "categories": {
+      "all": "All Tools",
+      "organize": "Organize",
+      "convert": "Convert",
+      "edit": "Edit"
+    },
+    "dropzone": {
+      "title": "Drop your files here",
+      "subtitle": "or click to browse",
+      "hint": "Files are processed locally in your browser",
+      "invalidType": "Invalid file type",
+      "tooLarge": "File is too large"
+    },
+    "common": {
+      "selectFile": "Select File",
+      "selectFiles": "Select Files",
+      "process": "Process",
+      "download": "Download",
+      "downloadAll": "Download All",
+      "reset": "Start Over",
+      "processing": "Processing...",
+      "privacy": "Your files are processed locally and never uploaded to any server.",
+      "faqTitle": "Frequently Asked Questions",
+      "useCasesTitle": "Use Cases",
+      "pages": "pages",
+      "page": "page",
+      "size": "Size",
+      "originalSize": "Original size",
+      "compressedSize": "Compressed size",
+      "reduction": "Reduction",
+      "noReduction": "File is already optimized",
+      "dragToReorder": "Drag to reorder"
+    },
+    "tools": {
+      "mergePdf": {
+        "name": "Merge PDF",
+        "description": "Combine multiple PDF files into a single document.",
+        "metaTitle": "Merge PDF Files Online Free - PDF Combiner",
+        "metaDescription": "Merge multiple PDF files into one document for free. Drag and drop to reorder. Browser-based, no uploads needed.",
+        "longDescription": "Combine multiple PDF documents into a single file quickly and easily. Drag and drop your PDF files, arrange them in your preferred order, and merge. All processing happens locally in your browser.",
+        "faq": {
+          "item-1": {
+            "question": "How many PDF files can I merge at once?",
+            "answer": "There is no hard limit on the number of files. However, very large files may take longer to process depending on your device's memory."
+          },
+          "item-2": {
+            "question": "Will merging reduce the quality of my PDFs?",
+            "answer": "No. The merge operation preserves the original quality of all pages. No recompression or quality loss occurs."
+          },
+          "item-3": {
+            "question": "Are my files uploaded to a server?",
+            "answer": "No. All processing happens directly in your browser. Your files never leave your device."
+          },
+          "item-4": {
+            "question": "Can I reorder pages before merging?",
+            "answer": "Yes. You can drag and drop files to change their order before merging them into a single PDF."
+          },
+          "item-5": {
+            "question": "What is the maximum file size?",
+            "answer": "Files up to 100MB each are supported. The actual limit depends on your browser's available memory."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Combining Business Reports",
+            "description": "Merge monthly reports, financial statements, and appendices into a single comprehensive document."
+          },
+          "item-2": {
+            "title": "Assembling Applications",
+            "description": "Combine cover letters, resumes, transcripts, and certificates into one application PDF."
+          },
+          "item-3": {
+            "title": "Creating Course Materials",
+            "description": "Merge lecture slides, reading materials, and assignments into unified course packets."
+          },
+          "item-4": {
+            "title": "Archiving Documents",
+            "description": "Combine related documents into organized archive files for long-term storage."
+          }
+        }
+      },
+      "splitPdf": {
+        "name": "Split PDF",
+        "description": "Separate a PDF into individual pages or custom ranges.",
+        "metaTitle": "Split PDF Online Free - Extract PDF Pages",
+        "metaDescription": "Split PDF files into individual pages or custom page ranges for free. Browser-based, no uploads needed.",
+        "longDescription": "Split a PDF document into individual pages or extract specific page ranges. Select which pages you want to extract, and download them as separate PDF files.",
+        "faq": {
+          "item-1": {
+            "question": "Can I split a PDF into individual pages?",
+            "answer": "Yes. You can split a PDF into individual single-page files or define custom page ranges."
+          },
+          "item-2": {
+            "question": "Can I extract specific pages from a PDF?",
+            "answer": "Yes. Select the exact pages or page ranges you want to extract from the original document."
+          },
+          "item-3": {
+            "question": "Will splitting affect the page quality?",
+            "answer": "No. Each extracted page maintains the original quality and formatting."
+          },
+          "item-4": {
+            "question": "How do I define custom page ranges?",
+            "answer": "Enter page ranges like '1-3, 5, 7-9' to extract those specific pages into separate files."
+          },
+          "item-5": {
+            "question": "Is there a page limit?",
+            "answer": "No fixed limit. The tool can handle large PDFs, limited only by your browser's memory."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Extracting Specific Chapters",
+            "description": "Pull individual chapters from a large document for focused reading or sharing."
+          },
+          "item-2": {
+            "title": "Removing Unwanted Pages",
+            "description": "Extract only the pages you need, effectively removing unwanted content."
+          },
+          "item-3": {
+            "title": "Creating Handouts",
+            "description": "Extract specific slides or pages from presentations to create focused handouts."
+          },
+          "item-4": {
+            "title": "Breaking Down Large Documents",
+            "description": "Split lengthy reports into manageable sections for easier distribution."
+          }
+        }
+      },
+      "compressPdf": {
+        "name": "Compress PDF",
+        "description": "Reduce PDF file size while preserving quality.",
+        "metaTitle": "Compress PDF Online Free - Reduce PDF File Size",
+        "metaDescription": "Compress PDF files to reduce file size for free. Optimize PDFs for email and web. Browser-based, no uploads needed.",
+        "longDescription": "Reduce the file size of your PDF documents by removing unused objects and optimizing the document structure. Perfect for making PDFs easier to share via email or upload to websites.",
+        "faq": {
+          "item-1": {
+            "question": "How much can my PDF be compressed?",
+            "answer": "Compression results vary depending on the PDF content. Documents with large embedded images see the most reduction."
+          },
+          "item-2": {
+            "question": "Will compression reduce the visual quality?",
+            "answer": "The optimization focuses on removing unused objects and streamlining the file structure. Visual quality is preserved."
+          },
+          "item-3": {
+            "question": "Can I compress multiple PDFs at once?",
+            "answer": "Currently, you can compress one PDF at a time. Process each file individually for best results."
+          },
+          "item-4": {
+            "question": "What if the compressed file is the same size?",
+            "answer": "If the PDF is already optimized, compression may not reduce the size significantly. The tool will show you the before and after sizes."
+          },
+          "item-5": {
+            "question": "Is the compression lossless?",
+            "answer": "Yes. The compression removes redundant data without affecting the visible content of the document."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Email Attachments",
+            "description": "Reduce PDF size to meet email attachment limits and send documents more easily."
+          },
+          "item-2": {
+            "title": "Web Upload",
+            "description": "Optimize PDFs for faster upload and download on websites and online forms."
+          },
+          "item-3": {
+            "title": "Storage Optimization",
+            "description": "Reduce the storage space needed for large PDF archives."
+          },
+          "item-4": {
+            "title": "Faster Sharing",
+            "description": "Smaller files transfer faster through messaging apps and file sharing services."
+          }
+        }
+      },
+      "rotatePdf": {
+        "name": "Rotate PDF",
+        "description": "Rotate PDF pages to the correct orientation.",
+        "metaTitle": "Rotate PDF Pages Online Free",
+        "metaDescription": "Rotate PDF pages by 90, 180, or 270 degrees for free. Fix page orientation easily. Browser-based, no uploads needed.",
+        "longDescription": "Rotate individual pages or all pages in your PDF document. Fix incorrectly oriented pages by rotating them 90, 180, or 270 degrees. Preview each page before applying changes.",
+        "faq": {
+          "item-1": {
+            "question": "Can I rotate individual pages?",
+            "answer": "Yes. You can rotate each page independently or apply the same rotation to all pages at once."
+          },
+          "item-2": {
+            "question": "What rotation angles are supported?",
+            "answer": "You can rotate pages by 90° (clockwise), 180°, or 270° (counter-clockwise)."
+          },
+          "item-3": {
+            "question": "Will rotation affect the content quality?",
+            "answer": "No. Rotation only changes the page orientation without any effect on content quality."
+          },
+          "item-4": {
+            "question": "Can I preview pages before rotating?",
+            "answer": "Yes. You can see thumbnails of all pages and preview the rotation before applying it."
+          },
+          "item-5": {
+            "question": "Can I undo a rotation?",
+            "answer": "Yes. Simply rotate the page again to return it to the original orientation, or start over."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Fixing Scanned Documents",
+            "description": "Correct the orientation of scanned pages that were fed in the wrong direction."
+          },
+          "item-2": {
+            "title": "Landscape to Portrait",
+            "description": "Rotate landscape pages to portrait orientation or vice versa for consistent formatting."
+          },
+          "item-3": {
+            "title": "Presentation Preparation",
+            "description": "Ensure all pages in a document are oriented correctly before presenting or printing."
+          },
+          "item-4": {
+            "title": "Mixed Orientation Documents",
+            "description": "Fix documents where some pages are rotated differently from others."
+          }
+        }
+      },
+      "pdfToImages": {
+        "name": "PDF to Images",
+        "description": "Convert PDF pages to JPG or PNG images.",
+        "metaTitle": "Convert PDF to Images Online Free - PDF to JPG/PNG",
+        "metaDescription": "Convert PDF pages to JPG or PNG images for free. Choose quality and format. Browser-based, no uploads needed.",
+        "longDescription": "Convert each page of your PDF document into high-quality JPG or PNG images. Adjust the output quality and resolution to meet your needs. Perfect for sharing individual pages as images.",
+        "faq": {
+          "item-1": {
+            "question": "What image formats are supported?",
+            "answer": "You can convert PDF pages to JPG (JPEG) or PNG format."
+          },
+          "item-2": {
+            "question": "Can I adjust the image quality?",
+            "answer": "Yes. You can choose the output quality from low to high, and adjust the resolution scale."
+          },
+          "item-3": {
+            "question": "Can I convert specific pages only?",
+            "answer": "Yes. You can select which pages to convert rather than converting the entire document."
+          },
+          "item-4": {
+            "question": "What resolution will the images be?",
+            "answer": "The default is 2x scale (144 DPI). You can increase or decrease the scale for higher or lower resolution."
+          },
+          "item-5": {
+            "question": "Can I convert a multi-page PDF?",
+            "answer": "Yes. Each page will be converted to a separate image file that you can download individually."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Social Media Sharing",
+            "description": "Convert PDF content to images for posting on social media platforms."
+          },
+          "item-2": {
+            "title": "Presentation Slides",
+            "description": "Extract pages as images to include in presentations or other documents."
+          },
+          "item-3": {
+            "title": "Website Content",
+            "description": "Convert PDF pages to images for use on websites and blogs."
+          },
+          "item-4": {
+            "title": "Preview Generation",
+            "description": "Create image previews of PDF documents for quick viewing."
+          }
+        }
+      },
+      "imagesToPdf": {
+        "name": "Images to PDF",
+        "description": "Convert JPG, PNG, or WebP images to a PDF document.",
+        "metaTitle": "Convert Images to PDF Online Free - JPG/PNG to PDF",
+        "metaDescription": "Convert JPG, PNG, and WebP images to PDF for free. Arrange images and create PDFs. Browser-based, no uploads needed.",
+        "longDescription": "Convert your images into a PDF document. Upload multiple JPG, PNG, or WebP images, arrange them in the desired order, and combine them into a single PDF file.",
+        "faq": {
+          "item-1": {
+            "question": "What image formats are supported?",
+            "answer": "JPG (JPEG), PNG, and WebP images are supported."
+          },
+          "item-2": {
+            "question": "Can I reorder images before converting?",
+            "answer": "Yes. Drag and drop to arrange images in your preferred order before creating the PDF."
+          },
+          "item-3": {
+            "question": "Will the image quality be preserved?",
+            "answer": "Yes. Images are embedded at their original resolution in the PDF document."
+          },
+          "item-4": {
+            "question": "How many images can I convert at once?",
+            "answer": "There is no hard limit. The number of images you can process depends on your device's memory."
+          },
+          "item-5": {
+            "question": "What will the page size be?",
+            "answer": "Each page is sized to match the dimensions of its corresponding image."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Photo Albums",
+            "description": "Combine photos into a single PDF for easy sharing and printing."
+          },
+          "item-2": {
+            "title": "Document Scanning",
+            "description": "Convert scanned images into a organized PDF document."
+          },
+          "item-3": {
+            "title": "Portfolio Creation",
+            "description": "Compile design work or artwork images into a professional PDF portfolio."
+          },
+          "item-4": {
+            "title": "Receipt Collection",
+            "description": "Combine photos of receipts into a single PDF for expense reporting."
+          }
+        }
+      },
+      "watermarkPdf": {
+        "name": "Add Watermark",
+        "description": "Add text watermarks to your PDF documents.",
+        "metaTitle": "Add Watermark to PDF Online Free",
+        "metaDescription": "Add text watermarks to PDF documents for free. Customize text, size, color, and position. Browser-based, no uploads needed.",
+        "longDescription": "Add custom text watermarks to your PDF documents. Configure the watermark text, font size, color, opacity, rotation, and position. Apply watermarks to all pages at once.",
+        "faq": {
+          "item-1": {
+            "question": "Can I customize the watermark appearance?",
+            "answer": "Yes. You can adjust the text, font size, color, opacity, rotation angle, and position."
+          },
+          "item-2": {
+            "question": "Is the watermark applied to all pages?",
+            "answer": "Yes. The watermark is applied uniformly to every page in the document."
+          },
+          "item-3": {
+            "question": "Can I add image watermarks?",
+            "answer": "Currently, only text watermarks are supported. Image watermark support may be added in the future."
+          },
+          "item-4": {
+            "question": "Can I remove a watermark after adding it?",
+            "answer": "The watermark is permanently embedded in the new PDF. Keep your original file if you may need the unwatermarked version."
+          },
+          "item-5": {
+            "question": "Will the watermark cover the existing content?",
+            "answer": "You can adjust the opacity to make the watermark semi-transparent so it doesn't obscure the underlying content."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Protecting Drafts",
+            "description": "Add 'DRAFT' watermarks to documents that are not yet finalized."
+          },
+          "item-2": {
+            "title": "Confidential Documents",
+            "description": "Mark sensitive documents with 'CONFIDENTIAL' watermarks to indicate restricted access."
+          },
+          "item-3": {
+            "title": "Branding",
+            "description": "Add your company name or logo text as a watermark to branded documents."
+          },
+          "item-4": {
+            "title": "Copyright Protection",
+            "description": "Add copyright notices to protect your original content from unauthorized use."
+          }
+        }
+      },
+      "pageNumbers": {
+        "name": "Add Page Numbers",
+        "description": "Add page numbers to your PDF documents.",
+        "metaTitle": "Add Page Numbers to PDF Online Free",
+        "metaDescription": "Add page numbers to PDF documents for free. Choose position, format, and starting number. Browser-based, no uploads needed.",
+        "longDescription": "Add page numbers to your PDF documents with full control over position, format, and styling. Choose from numeric, Roman numeral, or 'Page X of Y' formats. Place numbers at any corner or center position.",
+        "faq": {
+          "item-1": {
+            "question": "What number formats are available?",
+            "answer": "You can choose from numeric (1, 2, 3), Roman numerals (I, II, III), or 'Page X of Y' format."
+          },
+          "item-2": {
+            "question": "Can I choose where the numbers appear?",
+            "answer": "Yes. You can place page numbers at the top or bottom of the page, aligned left, center, or right."
+          },
+          "item-3": {
+            "question": "Can I start from a number other than 1?",
+            "answer": "Yes. You can set any starting page number."
+          },
+          "item-4": {
+            "question": "Will page numbers overlap existing content?",
+            "answer": "Page numbers are placed in the margin area. For best results, ensure your document has sufficient margins."
+          },
+          "item-5": {
+            "question": "Can I skip numbering on certain pages?",
+            "answer": "Currently, page numbers are added to all pages. You can use the extract tool to separate pages if needed."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Academic Papers",
+            "description": "Add proper page numbering to academic papers and theses."
+          },
+          "item-2": {
+            "title": "Legal Documents",
+            "description": "Number pages in legal documents for reference and indexing."
+          },
+          "item-3": {
+            "title": "Manuals and Guides",
+            "description": "Add page numbers to user manuals and instruction guides for easy navigation."
+          },
+          "item-4": {
+            "title": "Book Manuscripts",
+            "description": "Add professional page numbering to book manuscripts before submission."
+          }
+        }
+      },
+      "reorderPages": {
+        "name": "Reorder Pages",
+        "description": "Drag and drop to rearrange PDF pages.",
+        "metaTitle": "Reorder PDF Pages Online Free",
+        "metaDescription": "Rearrange PDF pages by dragging and dropping for free. Reorder pages visually. Browser-based, no uploads needed.",
+        "longDescription": "Rearrange the pages in your PDF document by dragging and dropping page thumbnails. See a visual preview of each page and easily move them to create your desired page order.",
+        "faq": {
+          "item-1": {
+            "question": "How do I reorder pages?",
+            "answer": "Simply drag and drop the page thumbnails to rearrange them in your desired order."
+          },
+          "item-2": {
+            "question": "Can I see page previews?",
+            "answer": "Yes. Each page is shown as a thumbnail so you can easily identify and arrange pages."
+          },
+          "item-3": {
+            "question": "Will reordering affect page content?",
+            "answer": "No. Only the order of pages changes. The content of each page remains identical."
+          },
+          "item-4": {
+            "question": "Can I reorder pages in a large PDF?",
+            "answer": "Yes. The tool supports large PDFs, though generating thumbnails for many pages may take a moment."
+          },
+          "item-5": {
+            "question": "Can I also delete pages while reordering?",
+            "answer": "For deleting pages, use the Extract Pages tool where you can select only the pages you want to keep."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Fixing Page Order",
+            "description": "Correct documents where pages were scanned or added in the wrong order."
+          },
+          "item-2": {
+            "title": "Custom Presentations",
+            "description": "Rearrange presentation slides to create a custom flow for different audiences."
+          },
+          "item-3": {
+            "title": "Document Reorganization",
+            "description": "Move sections around in reports and documents to improve logical flow."
+          },
+          "item-4": {
+            "title": "Priority Ordering",
+            "description": "Move the most important pages to the front of a document."
+          }
+        }
+      },
+      "extractPages": {
+        "name": "Extract Pages",
+        "description": "Select and extract specific pages from a PDF.",
+        "metaTitle": "Extract PDF Pages Online Free",
+        "metaDescription": "Extract specific pages from PDF documents for free. Select pages visually and download. Browser-based, no uploads needed.",
+        "longDescription": "Extract specific pages from your PDF document. View page thumbnails, select the pages you want to keep, and create a new PDF containing only those pages.",
+        "faq": {
+          "item-1": {
+            "question": "How do I select pages to extract?",
+            "answer": "Click on page thumbnails to select or deselect them. Selected pages will be highlighted."
+          },
+          "item-2": {
+            "question": "Can I extract non-consecutive pages?",
+            "answer": "Yes. You can select any combination of pages, whether consecutive or scattered throughout the document."
+          },
+          "item-3": {
+            "question": "Will extracted pages keep their formatting?",
+            "answer": "Yes. Each extracted page maintains its original formatting, images, and text."
+          },
+          "item-4": {
+            "question": "Can I extract pages from a protected PDF?",
+            "answer": "This depends on the type of protection. Some encrypted PDFs may not be processable in the browser."
+          },
+          "item-5": {
+            "question": "Is there a limit on the number of pages I can extract?",
+            "answer": "No. You can extract as many pages as you want from the original document."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Selecting Key Pages",
+            "description": "Extract only the most important pages from a lengthy document."
+          },
+          "item-2": {
+            "title": "Creating Summaries",
+            "description": "Pull out summary or conclusion pages from reports for quick review."
+          },
+          "item-3": {
+            "title": "Removing Sensitive Content",
+            "description": "Create a version of a document without confidential pages for sharing."
+          },
+          "item-4": {
+            "title": "Building Custom Documents",
+            "description": "Extract pages from multiple documents to compile a custom reference."
+          }
+        }
+      }
     }
   }
 }

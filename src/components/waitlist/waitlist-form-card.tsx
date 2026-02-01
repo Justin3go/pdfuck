@@ -91,10 +91,7 @@ export function WaitlistFormCard() {
             <FormError message={error} />
           </CardContent>
           <CardFooter className="mt-6 px-6 py-4 flex justify-between items-center bg-muted rounded-none">
-            <Button
-              type="submit"
-              className="cursor-pointer"
-            >
+            <Button type="submit" className="cursor-pointer">
               {t('subscribe')}
             </Button>
           </CardFooter>

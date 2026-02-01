@@ -32,6 +32,11 @@ export function useFooterLinks(): NestedMenuItem[] {
           href: Routes.FAQ,
           external: false,
         },
+        {
+          title: t('product.items.tools'),
+          href: Routes.Tools,
+          external: false,
+        },
       ],
     },
     {
