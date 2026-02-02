@@ -10,7 +10,12 @@ import {
 } from '@/components/ui/sortable';
 import type { PdfToolI18nKey } from '@/config/pdf-tools';
 import { convertImageToPng, imagesToPdf } from '@/lib/pdf/from-images';
-import { CheckCircleIcon, GripVerticalIcon, Trash2Icon } from 'lucide-react';
+import {
+  CheckCircleIcon,
+  FileIcon,
+  GripVerticalIcon,
+  Trash2Icon,
+} from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useCallback, useState } from 'react';
 
@@ -100,7 +105,9 @@ export function FormatToPdfTool({
           mimeType: img.mimeType,
         }))
       );
-      setResultBlob(new Blob([new Uint8Array(result)], { type: 'application/pdf' }));
+      setResultBlob(
+        new Blob([new Uint8Array(result)], { type: 'application/pdf' })
+      );
       setStatus('done');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Conversion failed');
@@ -128,21 +135,26 @@ export function FormatToPdfTool({
     setError(null);
   };
 
+  // 处理完成状态
   if (status === 'done' && resultBlob) {
     return (
-      <div className="flex flex-col items-center gap-4 rounded-xl border bg-card p-8">
+      <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-xl border bg-card p-8">
         <CheckCircleIcon className="size-12 text-green-500" />
-        <Button onClick={handleDownload}>{t('common.download')}</Button>
-        <Button variant="outline" onClick={handleReset}>
-          {t('common.reset')}
-        </Button>
+        <p className="text-lg font-medium">{t('common.completed')}</p>
+        <div className="flex gap-3">
+          <Button onClick={handleDownload}>{t('common.download')}</Button>
+          <Button variant="outline" onClick={handleReset}>
+            {t('common.reset')}
+          </Button>
+        </div>
       </div>
     );
   }
 
+  // 错误状态
   if (status === 'error') {
     return (
-      <div className="flex flex-col items-center gap-4 rounded-xl border border-destructive/50 bg-card p-8">
+      <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-xl border border-destructive/50 bg-card p-8">
         <p className="text-destructive">{error}</p>
         <Button variant="outline" onClick={handleReset}>
           {t('common.reset')}
@@ -151,65 +163,69 @@ export function FormatToPdfTool({
     );
   }
 
-  return (
-    <div className="space-y-6">
+  // 初始未传文件状态
+  if (images.length === 0) {
+    return (
       <FileDropzone
         acceptedMimeTypes={[acceptedMimeType]}
         multiple={true}
         onFilesSelected={loadImages}
       />
+    );
+  }
 
-      {images.length > 0 && (
-        <>
-          <Sortable
-            value={images}
-            getItemValue={(item) => item.id}
-            onValueChange={setImages}
-            orientation="vertical"
-          >
-            <SortableContent className="space-y-2">
-              {images.map((img) => (
-                <SortableItem
-                  key={img.id}
-                  value={img.id}
-                  asHandle
-                  className="flex items-center gap-3 rounded-lg border bg-card p-2"
+  // 上传文件后状态
+  return (
+    <div className="flex min-h-[320px] flex-col justify-between rounded-xl border bg-card p-6">
+      <div className="flex-1 overflow-auto">
+        <Sortable
+          value={images}
+          getItemValue={(item) => item.id}
+          onValueChange={setImages}
+          orientation="vertical"
+        >
+          <SortableContent className="space-y-2">
+            {images.map((img) => (
+              <SortableItem
+                key={img.id}
+                value={img.id}
+                asHandle
+                className="flex items-center gap-3 rounded-lg border bg-background p-2"
+              >
+                <GripVerticalIcon className="size-4 shrink-0 text-muted-foreground" />
+                <img
+                  src={img.previewUrl}
+                  alt={img.name}
+                  className="size-12 rounded object-cover"
+                />
+                <p className="flex-1 truncate text-sm">{img.name}</p>
+                <Button
+                  variant="ghost"
+                  size="icon-sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    removeImage(img.id);
+                  }}
                 >
-                  <GripVerticalIcon className="size-4 shrink-0 text-muted-foreground" />
-                  <img
-                    src={img.previewUrl}
-                    alt={img.name}
-                    className="size-12 rounded object-cover"
-                  />
-                  <p className="flex-1 truncate text-sm">{img.name}</p>
-                  <Button
-                    variant="ghost"
-                    size="icon-sm"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      removeImage(img.id);
-                    }}
-                  >
-                    <Trash2Icon className="size-4" />
-                  </Button>
-                </SortableItem>
-              ))}
-            </SortableContent>
-            <SortableOverlay />
-          </Sortable>
+                  <Trash2Icon className="size-4" />
+                </Button>
+              </SortableItem>
+            ))}
+          </SortableContent>
+          <SortableOverlay />
+        </Sortable>
+      </div>
 
-          <div className="flex justify-center gap-3">
-            <Button onClick={handleConvert} disabled={status === 'processing'}>
-              {status === 'processing'
-                ? t('common.processing')
-                : t(`tools.${i18nKey}.name`)}
-            </Button>
-            <Button variant="outline" onClick={handleReset}>
-              {t('common.reset')}
-            </Button>
-          </div>
-        </>
-      )}
+      <div className="mt-4 flex justify-center gap-3 border-t pt-4">
+        <Button onClick={handleConvert} disabled={status === 'processing'}>
+          {status === 'processing'
+            ? t('common.processing')
+            : t(`tools.${i18nKey}.name`)}
+        </Button>
+        <Button variant="outline" onClick={handleReset}>
+          {t('common.reset')}
+        </Button>
+      </div>
     </div>
   );
 }

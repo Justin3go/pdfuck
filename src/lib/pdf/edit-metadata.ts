@@ -9,9 +9,7 @@ export interface PdfMetadata {
   producer: string;
 }
 
-export async function getMetadata(
-  pdfBuffer: Uint8Array
-): Promise<PdfMetadata> {
+export async function getMetadata(pdfBuffer: Uint8Array): Promise<PdfMetadata> {
   const doc = await PDFDocument.load(pdfBuffer, {
     ignoreEncryption: true,
   });

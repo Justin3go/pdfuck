@@ -61,7 +61,7 @@ export function FileDropzone({
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       className={cn(
-        'flex flex-col items-center justify-center rounded-xl border-2 border-dashed p-12 text-center',
+        'flex min-h-[320px] flex-col items-center justify-center rounded-xl border-2 border-dashed p-12 text-center',
         isDragging
           ? 'border-primary bg-primary/5'
           : 'border-muted-foreground/25',

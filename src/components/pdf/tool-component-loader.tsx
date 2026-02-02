@@ -166,6 +166,48 @@ const toolComponents: Record<string, React.ComponentType> = {
       })),
     { ssr: false }
   ),
+  'pdf-to-word': dynamic(
+    () =>
+      import('@/components/pdf/tools/pdf-to-word').then((m) => ({
+        default: m.PdfToWordTool,
+      })),
+    { ssr: false }
+  ),
+  'pdf-to-excel': dynamic(
+    () =>
+      import('@/components/pdf/tools/pdf-to-excel').then((m) => ({
+        default: m.PdfToExcelTool,
+      })),
+    { ssr: false }
+  ),
+  'pdf-to-pptx': dynamic(
+    () =>
+      import('@/components/pdf/tools/pdf-to-pptx').then((m) => ({
+        default: m.PdfToPptxTool,
+      })),
+    { ssr: false }
+  ),
+  'word-to-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/word-to-pdf').then((m) => ({
+        default: m.WordToPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'excel-to-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/excel-to-pdf').then((m) => ({
+        default: m.ExcelToPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'pptx-to-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/pptx-to-pdf').then((m) => ({
+        default: m.PptxToPdfTool,
+      })),
+    { ssr: false }
+  ),
 };
 
 interface ToolComponentLoaderProps {

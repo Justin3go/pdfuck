@@ -4,7 +4,10 @@ import {
   CombineIcon,
   CropIcon,
   FileOutputIcon,
+  FileSpreadsheetIcon,
   FileTextIcon,
+  FileType2Icon,
+  FileTypeIcon,
   HashIcon,
   ImageIcon,
   ImagePlusIcon,
@@ -12,6 +15,7 @@ import {
   type LucideIcon,
   MinimizeIcon,
   PencilLineIcon,
+  PresentationIcon,
   RotateCwIcon,
   ScissorsIcon,
   StampIcon,
@@ -43,7 +47,13 @@ export type PdfToolI18nKey =
   | 'svgToPdf'
   | 'editMetadata'
   | 'cropPdf'
-  | 'flattenPdf';
+  | 'flattenPdf'
+  | 'pdfToWord'
+  | 'pdfToExcel'
+  | 'pdfToPptx'
+  | 'wordToPdf'
+  | 'excelToPdf'
+  | 'pptxToPdf';
 
 export interface PdfToolDefinition {
   slug: string;
@@ -285,6 +295,75 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
     faqCount: 5,
     useCaseCount: 4,
     acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'pdf-to-word',
+    icon: FileTypeIcon,
+    category: 'convert',
+    i18nKey: 'pdfToWord',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'pdf-to-excel',
+    icon: FileSpreadsheetIcon,
+    category: 'convert',
+    i18nKey: 'pdfToExcel',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'pdf-to-pptx',
+    icon: PresentationIcon,
+    category: 'convert',
+    i18nKey: 'pdfToPptx',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'word-to-pdf',
+    icon: FileType2Icon,
+    category: 'convert',
+    i18nKey: 'wordToPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: [
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      'application/msword',
+    ],
+    multipleFiles: false,
+  },
+  {
+    slug: 'excel-to-pdf',
+    icon: FileSpreadsheetIcon,
+    category: 'convert',
+    i18nKey: 'excelToPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: [
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      'application/vnd.ms-excel',
+    ],
+    multipleFiles: false,
+  },
+  {
+    slug: 'pptx-to-pdf',
+    icon: PresentationIcon,
+    category: 'convert',
+    i18nKey: 'pptxToPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: [
+      'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+      'application/vnd.ms-powerpoint',
+    ],
     multipleFiles: false,
   },
 ];

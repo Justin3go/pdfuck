@@ -861,6 +861,7 @@
       "compressedSize": "Compressed size",
       "reduction": "Reduction",
       "noReduction": "File is already optimized",
+      "completed": "Processing Complete",
       "dragToReorder": "Drag to reorder",
       "legal": "Legal",
       "privacyPolicy": "Privacy Policy",
@@ -1967,6 +1968,288 @@
           "item-4": {
             "title": "Archiving Official Documents",
             "description": "Flatten completed government forms, contracts, or official records for tamper-resistant long-term archival."
+          }
+        }
+      },
+      "pdfToWord": {
+        "name": "PDF to Word",
+        "description": "Convert PDF documents to editable Word documents.",
+        "metaTitle": "PDF to Word Online Free - PDF to DOCX Converter",
+        "metaDescription": "Convert PDF documents to editable Word documents (DOCX format) for free. Preserve text and formatting. Browser-based, no uploads needed.",
+        "longDescription": "Convert PDF documents to editable Microsoft Word (DOCX) format. Extract text content and preserve paragraph structure, allowing you to easily edit PDF content in Word.",
+        "faq": {
+          "item-1": {
+            "question": "Will the formatting be preserved in the converted Word document?",
+            "answer": "The conversion attempts to preserve text structure and paragraph formatting, but complex layouts, tables, and images may require manual adjustment."
+          },
+          "item-2": {
+            "question": "What types of PDFs are supported?",
+            "answer": "Text-based PDF documents are supported. Scanned PDFs or image-only PDFs require OCR processing first before they can be converted to editable Word documents."
+          },
+          "item-3": {
+            "question": "Can the converted document be opened in Microsoft Word?",
+            "answer": "Yes. The converted DOCX files are fully compatible with Microsoft Word, Google Docs, WPS Office, and other popular word processing software."
+          },
+          "item-4": {
+            "question": "Is there a file size limit?",
+            "answer": "PDF files up to 100MB are supported. The actual limit depends on your browser's available memory."
+          },
+          "item-5": {
+            "question": "Can the converted Word document be edited?",
+            "answer": "Yes. The converted DOCX file is a fully editable Word document. You can modify text and add content just like any regular Word document."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Contract Modification",
+            "description": "Convert PDF contracts to Word format for easy modification of terms and content before resending."
+          },
+          "item-2": {
+            "title": "Report Editing",
+            "description": "Convert PDF reports to editable Word documents for updating data and content."
+          },
+          "item-3": {
+            "title": "Document Repurposing",
+            "description": "Extract content from PDF documents into Word for creating new documents or consolidating materials."
+          },
+          "item-4": {
+            "title": "Collaborative Editing",
+            "description": "Convert PDFs to Word format for easier collaborative editing and review by team members."
+          }
+        }
+      },
+      "pdfToExcel": {
+        "name": "PDF to Excel",
+        "description": "Convert table data from PDFs to Excel spreadsheets.",
+        "metaTitle": "PDF to Excel Online Free - PDF to XLSX Converter",
+        "metaDescription": "Convert table data from PDFs to Excel spreadsheets (XLSX format) for free. Intelligently recognizes table structure. Browser-based, no uploads needed.",
+        "longDescription": "Extract and convert table data from PDF documents to Microsoft Excel (XLSX) format. Intelligently analyzes text layout to organize data into appropriate rows and columns for further analysis and processing.",
+        "faq": {
+          "item-1": {
+            "question": "Will tables in PDFs be accurately preserved?",
+            "answer": "The conversion attempts to recognize table structure and place data in appropriate cells, but complex tables may require manual adjustment."
+          },
+          "item-2": {
+            "question": "Are multi-page PDFs supported?",
+            "answer": "Yes. Each PDF page is converted to a separate Excel worksheet for easy management and viewing."
+          },
+          "item-3": {
+            "question": "Can the converted Excel file be edited?",
+            "answer": "Yes. The converted XLSX file is a fully editable Excel spreadsheet. You can modify data, add formulas, create charts, and more."
+          },
+          "item-4": {
+            "question": "Can tables in scanned PDFs be converted?",
+            "answer": "Scanned PDFs contain images rather than extractable text data, so they cannot be directly converted to Excel. OCR processing is required first."
+          },
+          "item-5": {
+            "question": "Will number formatting be preserved?",
+            "answer": "Numbers are extracted as text. You can use Excel's 'Convert to Number' feature to convert text numbers to numeric format."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Financial Report Analysis",
+            "description": "Convert PDF financial reports to Excel for data analysis and chart creation."
+          },
+          "item-2": {
+            "title": "Data Entry",
+            "description": "Extract table data from PDF invoices and orders to Excel, reducing manual input work."
+          },
+          "item-3": {
+            "title": "Inventory Management",
+            "description": "Convert PDF inventory lists to Excel spreadsheets for easy updating and tracking inventory changes."
+          },
+          "item-4": {
+            "title": "Research Data Processing",
+            "description": "Convert PDF research data tables to Excel format for statistical analysis."
+          }
+        }
+      },
+      "pdfToPptx": {
+        "name": "PDF to PPTX",
+        "description": "Convert PDF pages to PowerPoint presentations.",
+        "metaTitle": "PDF to PPTX Online Free - PDF to PowerPoint Converter",
+        "metaDescription": "Convert PDF documents to PowerPoint presentations (PPTX format) for free. Each PDF page becomes one slide. Browser-based, no uploads needed.",
+        "longDescription": "Convert PDF documents to Microsoft PowerPoint (PPTX) presentations. Each page of PDF content is converted to a slide, preserving text content for further editing and presentation in PowerPoint.",
+        "faq": {
+          "item-1": {
+            "question": "How are PDF pages converted to slides?",
+            "answer": "Each PDF page is converted to a PowerPoint slide, with text content extracted and placed on the slide."
+          },
+          "item-2": {
+            "question": "Will images be preserved?",
+            "answer": "The current version primarily extracts text content. Images and complex graphics may need to be manually added to the converted presentation."
+          },
+          "item-3": {
+            "question": "Can the converted PPTX be edited?",
+            "answer": "Yes. The converted PowerPoint file is fully editable. You can modify text, add animations, change themes, and more."
+          },
+          "item-4": {
+            "question": "What is the slide size?",
+            "answer": "Slide size is automatically adjusted based on PDF page dimensions to ensure optimal content display."
+          },
+          "item-5": {
+            "question": "Can it be opened in Google Slides?",
+            "answer": "Yes. The generated PPTX files are compatible with Microsoft PowerPoint, Google Slides, Keynote, and other major presentation software."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Presentation Editing",
+            "description": "Convert PDF format presentations to editable PowerPoint files for easy modification and updates."
+          },
+          "item-2": {
+            "title": "Teaching Materials",
+            "description": "Convert PDF handouts to PowerPoint for easy addition of animations and interactive elements in the classroom."
+          },
+          "item-3": {
+            "title": "Meeting Presentations",
+            "description": "Convert PDF reports to PPTX for easy presentation and explanation during meetings."
+          },
+          "item-4": {
+            "title": "Content Repurposing",
+            "description": "Extract content from PDF documents to create PowerPoint presentations for training or marketing."
+          }
+        }
+      },
+      "wordToPdf": {
+        "name": "Word to PDF",
+        "description": "Convert Word documents to PDF format.",
+        "metaTitle": "Word to PDF Online Free - DOCX to PDF Converter",
+        "metaDescription": "Convert Word documents (DOCX/DOC) to PDF format for free. Preserve formatting and layout. Browser-based, no uploads needed.",
+        "longDescription": "Convert Microsoft Word documents (DOCX or DOC format) to PDF format. Preserve document text formatting, paragraph structure, lists, and table layouts to ensure documents display consistently on any device.",
+        "faq": {
+          "item-1": {
+            "question": "Will formatting be preserved after conversion?",
+            "answer": "Document formatting will be preserved as much as possible, including font styles, paragraph alignment, lists, and table structures."
+          },
+          "item-2": {
+            "question": "Which Word formats are supported?",
+            "answer": ".docx format (Word 2007 and later) and .doc format (Word 97-2003) are supported."
+          },
+          "item-3": {
+            "question": "Can the converted PDF be printed?",
+            "answer": "Yes. The generated PDF files are optimized for printing and can be printed at high quality on any PDF-compatible printer."
+          },
+          "item-4": {
+            "question": "Will images in the document be preserved?",
+            "answer": "Yes. Images in the document are embedded in the PDF with display quality consistent with the original document."
+          },
+          "item-5": {
+            "question": "Is there a file size limit?",
+            "answer": "Word documents up to 100MB are supported. The actual limit depends on your browser's available memory."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Document Sharing",
+            "description": "Convert Word documents to PDF to ensure recipients see exactly the same content as the original document."
+          },
+          "item-2": {
+            "title": "Print Preparation",
+            "description": "Convert Word to PDF before printing to avoid format differences caused by different printers."
+          },
+          "item-3": {
+            "title": "Document Archiving",
+            "description": "Convert important Word documents to PDF format for long-term preservation and to prevent accidental modification."
+          },
+          "item-4": {
+            "title": "Online Publishing",
+            "description": "Convert Word content to PDF format for easy publication and sharing on websites."
+          }
+        }
+      },
+      "excelToPdf": {
+        "name": "Excel to PDF",
+        "description": "Convert Excel spreadsheets to PDF format.",
+        "metaTitle": "Excel to PDF Online Free - XLSX to PDF Converter",
+        "metaDescription": "Convert Excel spreadsheets (XLSX/XLS) to PDF format for free. Preserve table layouts and data. Browser-based, no uploads needed.",
+        "longDescription": "Convert Microsoft Excel spreadsheets (XLSX or XLS format) to PDF format. Present worksheet content in table format, preserving data and cell layout for easy viewing and printing.",
+        "faq": {
+          "item-1": {
+            "question": "Will all worksheets be converted?",
+            "answer": "Yes. All worksheets in the Excel file are converted to PDF, with each worksheet displayed as a separate table."
+          },
+          "item-2": {
+            "question": "Will table formatting be preserved?",
+            "answer": "Basic table structure and data layout will be preserved. Cell content is presented in table format."
+          },
+          "item-3": {
+            "question": "Which Excel formats are supported?",
+            "answer": ".xlsx format (Excel 2007 and later) and .xls format (Excel 97-2003) are supported."
+          },
+          "item-4": {
+            "question": "Will formulas be calculated?",
+            "answer": "The conversion extracts values from cells. For calculation results, ensure formulas in Excel are calculated before conversion."
+          },
+          "item-5": {
+            "question": "Can the converted PDF be printed?",
+            "answer": "Yes. The generated PDF is optimized for A4 paper and can be printed directly."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Report Sharing",
+            "description": "Convert Excel reports to PDF for easy sharing with people who don't use Excel."
+          },
+          "item-2": {
+            "title": "Data Archiving",
+            "description": "Convert important Excel data to PDF format for long-term preservation and archiving."
+          },
+          "item-3": {
+            "title": "Print Output",
+            "description": "Convert Excel spreadsheets to PDF for printing to ensure print results match screen display."
+          },
+          "item-4": {
+            "title": "Data Presentation",
+            "description": "Convert Excel data to PDF format for easy presentation in meetings or demonstrations."
+          }
+        }
+      },
+      "pptxToPdf": {
+        "name": "PPTX to PDF",
+        "description": "Convert PowerPoint presentations to PDF format.",
+        "metaTitle": "PPTX to PDF Online Free - PowerPoint to PDF Converter",
+        "metaDescription": "Convert PowerPoint presentations (PPTX/PPT) to PDF format for free. Each slide becomes one PDF page. Browser-based, no uploads needed.",
+        "longDescription": "Convert Microsoft PowerPoint presentations (PPTX or PPT format) to PDF format. Each slide is converted to a page in the PDF, preserving text content and basic layout for easy viewing, printing, and sharing.",
+        "faq": {
+          "item-1": {
+            "question": "Will all slides be converted?",
+            "answer": "Yes. All slides in the PowerPoint file are converted to PDF pages, maintaining the original order."
+          },
+          "item-2": {
+            "question": "Will animation effects be preserved?",
+            "answer": "Animation effects are not preserved. Each slide is converted to a static PDF page in its final state."
+          },
+          "item-3": {
+            "question": "Which PowerPoint formats are supported?",
+            "answer": ".pptx format (PowerPoint 2007 and later) and .ppt format (PowerPoint 97-2003) are supported."
+          },
+          "item-4": {
+            "question": "Can the converted PDF be printed?",
+            "answer": "Yes. The generated PDF is optimized for printing, with options to print multiple slides per page."
+          },
+          "item-5": {
+            "question": "Will slide notes be included?",
+            "answer": "The current version primarily converts slide content. Notes and speaker comments are not included in the converted PDF."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Presentation Sharing",
+            "description": "Convert PowerPoint to PDF for easy sharing of presentation content with people who don't use PowerPoint."
+          },
+          "item-2": {
+            "title": "Handout Creation",
+            "description": "Convert PPTX to PDF and print as handouts for audience note-taking."
+          },
+          "item-3": {
+            "title": "Document Archiving",
+            "description": "Convert important presentations to PDF format for long-term preservation."
+          },
+          "item-4": {
+            "title": "Online Preview",
+            "description": "Convert PowerPoint to PDF for easy sharing and preview via email or web pages."
           }
         }
       }

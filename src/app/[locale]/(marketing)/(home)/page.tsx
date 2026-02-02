@@ -184,7 +184,9 @@ export default async function HomePage({ params }: HomePageProps) {
       <section className="px-4 py-16">
         <div className="mx-auto max-w-3xl">
           <div className="mb-12 text-center">
-            <h2 className="text-2xl font-bold sm:text-3xl">{t('faqs.title')}</h2>
+            <h2 className="text-2xl font-bold sm:text-3xl">
+              {t('faqs.title')}
+            </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               {t('faqs.subtitle')}
             </p>
@@ -195,7 +197,9 @@ export default async function HomePage({ params }: HomePageProps) {
                 key={i}
                 className="rounded-lg border bg-card p-6 text-card-foreground"
               >
-                <h3 className="font-semibold">{t(`faqs.items.item-${i}.question`)}</h3>
+                <h3 className="font-semibold">
+                  {t(`faqs.items.item-${i}.question`)}
+                </h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   {t(`faqs.items.item-${i}.answer`)}
                 </p>

@@ -1,8 +1,6 @@
 import { PDFDocument } from 'pdf-lib';
 
-export async function reversePages(
-  pdfBuffer: Uint8Array
-): Promise<Uint8Array> {
+export async function reversePages(pdfBuffer: Uint8Array): Promise<Uint8Array> {
   const srcDoc = await PDFDocument.load(pdfBuffer, {
     ignoreEncryption: true,
   });

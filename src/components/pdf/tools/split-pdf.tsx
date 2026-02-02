@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
 import { splitPdf } from '@/lib/pdf/split';
-import { CheckCircleIcon } from 'lucide-react';
+import { CheckCircleIcon, FileIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -65,20 +65,22 @@ export function SplitPdfTool() {
           blob: new Blob([new Uint8Array(r)], { type: 'application/pdf' }),
         }))
       );
+      setStatus('done');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Split failed');
     }
   };
 
+  // 处理完成状态
   if (status === 'done' && resultBlobs.length > 0) {
     return (
-      <div className="flex flex-col items-center gap-4 rounded-xl border bg-card p-8">
+      <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-xl border bg-card p-8">
         <CheckCircleIcon className="size-12 text-green-500" />
         <p className="text-lg font-medium">
           {resultBlobs.length} {t('common.pages')}
         </p>
         <div className="flex flex-wrap justify-center gap-2">
-          {resultBlobs.map((r, i) => (
+          {resultBlobs.slice(0, 3).map((r, i) => (
             <Button
               key={i}
               variant="outline"
@@ -88,6 +90,11 @@ export function SplitPdfTool() {
               {r.name}
             </Button>
           ))}
+          {resultBlobs.length > 3 && (
+            <span className="flex items-center px-2 text-sm text-muted-foreground">
+              +{resultBlobs.length - 3} more
+            </span>
+          )}
         </div>
         <div className="flex gap-3">
           <Button onClick={() => downloadAll(resultBlobs)}>
@@ -101,9 +108,10 @@ export function SplitPdfTool() {
     );
   }
 
+  // 错误状态
   if (status === 'error') {
     return (
-      <div className="flex flex-col items-center gap-4 rounded-xl border border-destructive/50 bg-card p-8">
+      <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-xl border border-destructive/50 bg-card p-8">
         <p className="text-destructive">{error}</p>
         <Button variant="outline" onClick={reset}>
           {t('common.reset')}
@@ -112,6 +120,7 @@ export function SplitPdfTool() {
     );
   }
 
+  // 初始未传文件状态
   if (!file) {
     return (
       <FileDropzone
@@ -122,49 +131,63 @@ export function SplitPdfTool() {
     );
   }
 
+  // 上传文件后状态
   return (
-    <div className="space-y-6">
-      <div className="rounded-xl border bg-card p-4">
-        <p className="mb-2 text-sm font-medium">
-          {file.name} &middot; {file.pageCount} {t('common.pages')}
-        </p>
-        <PdfPreview thumbnails={file.thumbnails} />
+    <div className="flex min-h-[320px] flex-col justify-between rounded-xl border bg-card p-6">
+      <div className="flex-1 space-y-4 overflow-auto">
+        <div className="flex items-center gap-3 border-b pb-4">
+          <div className="flex size-10 items-center justify-center rounded-full bg-primary/10">
+            <FileIcon className="size-5 text-primary" />
+          </div>
+          <div className="flex-1">
+            <p className="text-sm font-medium">{file.name}</p>
+            <p className="text-xs text-muted-foreground">
+              {file.pageCount} {t('common.pages')}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <label className="flex items-center gap-2">
+            <input
+              type="radio"
+              name="split-mode"
+              checked={mode === 'each-page'}
+              onChange={() => setMode('each-page')}
+              className="size-4"
+            />
+            <span className="text-sm">
+              {t('tools.splitPdf.faq.item-1.question')}
+            </span>
+          </label>
+          <label className="flex items-center gap-2">
+            <input
+              type="radio"
+              name="split-mode"
+              checked={mode === 'ranges'}
+              onChange={() => setMode('ranges')}
+              className="size-4"
+            />
+            <span className="text-sm">Custom ranges</span>
+          </label>
+        </div>
+
+        {mode === 'ranges' && (
+          <Input
+            placeholder="e.g. 1-3, 5, 7-9"
+            value={rangeInput}
+            onChange={(e) => setRangeInput(e.target.value)}
+          />
+        )}
+
+        {file.thumbnails.length > 0 && (
+          <div className="max-h-40 overflow-auto rounded-lg border">
+            <PdfPreview thumbnails={file.thumbnails} />
+          </div>
+        )}
       </div>
 
-      <div className="flex items-center gap-4">
-        <label className="flex items-center gap-2">
-          <input
-            type="radio"
-            name="split-mode"
-            checked={mode === 'each-page'}
-            onChange={() => setMode('each-page')}
-          />
-          <span className="text-sm">
-            {t('tools.splitPdf.faq.item-1.question').includes('individual')
-              ? 'Split into individual pages'
-              : 'Split into individual pages'}
-          </span>
-        </label>
-        <label className="flex items-center gap-2">
-          <input
-            type="radio"
-            name="split-mode"
-            checked={mode === 'ranges'}
-            onChange={() => setMode('ranges')}
-          />
-          <span className="text-sm">Custom ranges</span>
-        </label>
-      </div>
-
-      {mode === 'ranges' && (
-        <Input
-          placeholder="e.g. 1-3, 5, 7-9"
-          value={rangeInput}
-          onChange={(e) => setRangeInput(e.target.value)}
-        />
-      )}
-
-      <div className="flex justify-center gap-3">
+      <div className="mt-4 flex justify-center gap-3 border-t pt-4">
         <Button onClick={handleSplit} disabled={status === 'processing'}>
           {status === 'processing'
             ? t('common.processing')

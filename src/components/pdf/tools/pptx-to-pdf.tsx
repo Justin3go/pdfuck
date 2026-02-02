@@ -3,12 +3,12 @@
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
-import { pdfToText } from '@/lib/pdf/to-text';
-import { CheckCircleIcon, CopyIcon, FileIcon } from 'lucide-react';
+import { pptxToPdf } from '@/lib/pdf/from-pptx';
+import { CheckCircleIcon, FileIcon, PresentationIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
-export function PdfToTextTool() {
+export function PptxToPdfTool() {
   const t = useTranslations('ToolsPage');
   const {
     files,
@@ -21,66 +21,43 @@ export function PdfToTextTool() {
     reset,
   } = usePdfProcessor();
 
-  const [extractedText, setExtractedText] = useState('');
-  const [copied, setCopied] = useState(false);
+  const [resultBlob, setResultBlob] = useState<Blob | null>(null);
 
   const file = files[0];
 
-  const handleExtract = async () => {
+  const handleConvert = async () => {
     if (!file) return;
     setStatus('processing');
     try {
-      const text = await pdfToText(file.buffer);
-      setExtractedText(text);
+      const pdfBytes = await pptxToPdf(file.buffer);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const blob = new Blob([pdfBytes as any], { type: 'application/pdf' });
+      setResultBlob(blob);
       setStatus('done');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Extraction failed');
+      setError(err instanceof Error ? err.message : 'Conversion failed');
     }
   };
 
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(extractedText);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  const handleDownloadTxt = () => {
-    const blob = new Blob([extractedText], { type: 'text/plain' });
-    const baseName = file?.name.replace(/\.pdf$/i, '') || 'extracted';
-    downloadBlob(blob, `${baseName}.txt`);
+  const handleDownload = () => {
+    if (!resultBlob || !file) return;
+    const baseName = file.name.replace(/\.(pptx|ppt)$/i, '');
+    downloadBlob(resultBlob, `${baseName}.pdf`);
   };
 
   const handleReset = () => {
-    setExtractedText('');
-    setCopied(false);
+    setResultBlob(null);
     reset();
   };
 
-  // 处理完成状态 - 使用卡片包裹
-  if (status === 'done' && extractedText) {
+  // 处理完成状态
+  if (status === 'done' && resultBlob) {
     return (
-      <div className="flex min-h-[320px] flex-col justify-between rounded-xl border bg-card p-6">
-        <div className="flex-1 space-y-4 overflow-auto">
-          <div className="flex items-center justify-center gap-2">
-            <CheckCircleIcon className="size-5 text-green-500" />
-            <p className="font-medium">{t('tools.pdfToText.extracted')}</p>
-          </div>
-
-          <textarea
-            readOnly
-            value={extractedText}
-            className="h-48 w-full rounded-lg border bg-muted p-4 font-mono text-sm"
-          />
-        </div>
-
-        <div className="mt-4 flex flex-wrap justify-center gap-3 border-t pt-4">
-          <Button onClick={handleCopy} variant="outline">
-            <CopyIcon className="mr-2 size-4" />
-            {copied ? t('tools.pdfToText.copied') : t('tools.pdfToText.copy')}
-          </Button>
-          <Button onClick={handleDownloadTxt}>
-            {t('tools.pdfToText.downloadTxt')}
-          </Button>
+      <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-xl border bg-card p-8">
+        <CheckCircleIcon className="size-12 text-green-500" />
+        <p className="text-lg font-medium">{t('common.completed')}</p>
+        <div className="flex gap-3">
+          <Button onClick={handleDownload}>{t('common.download')}</Button>
           <Button variant="outline" onClick={handleReset}>
             {t('common.reset')}
           </Button>
@@ -105,7 +82,10 @@ export function PdfToTextTool() {
   if (!file) {
     return (
       <FileDropzone
-        acceptedMimeTypes={['application/pdf']}
+        acceptedMimeTypes={[
+          'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+          'application/vnd.ms-powerpoint',
+        ]}
         multiple={false}
         onFilesSelected={loadFiles}
       />
@@ -122,15 +102,15 @@ export function PdfToTextTool() {
         <div className="text-center">
           <p className="font-medium">{file.name}</p>
           <p className="text-sm text-muted-foreground">
-            {file.pageCount} {t('common.pages')}
+            {(file.size / 1024 / 1024).toFixed(2)} MB
           </p>
         </div>
       </div>
       <div className="flex justify-center gap-3">
-        <Button onClick={handleExtract} disabled={status === 'processing'}>
+        <Button onClick={handleConvert} disabled={status === 'processing'}>
           {status === 'processing'
             ? t('common.processing')
-            : t('tools.pdfToText.name')}
+            : t('tools.pptxToPdf.name')}
         </Button>
         <Button variant="outline" onClick={handleReset}>
           {t('common.reset')}
