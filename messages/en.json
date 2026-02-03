@@ -834,7 +834,8 @@
       "all": "All Tools",
       "organize": "Organize",
       "convert": "Convert",
-      "edit": "Edit"
+      "edit": "Edit",
+      "security": "Security"
     },
     "dropzone": {
       "title": "Drop your files here",
@@ -2250,6 +2251,241 @@
           "item-4": {
             "title": "Online Preview",
             "description": "Convert PowerPoint to PDF for easy sharing and preview via email or web pages."
+          }
+        }
+      },
+      "signPdf": {
+        "name": "Sign PDF",
+        "description": "Add electronic or handwritten signatures to PDF documents.",
+        "metaTitle": "Sign PDF Online Free - Electronic Signature Tool",
+        "metaDescription": "Add electronic or handwritten signatures to PDF documents for free. Support text and image signatures. Browser-based, no uploads needed.",
+        "longDescription": "Add electronic signatures to your PDF documents. Support text signatures (customizable font, size, color) and handwritten signatures (draw on canvas). Place signatures anywhere to create legally binding signed documents.",
+        "faq": {
+          "item-1": {
+            "question": "What signature types are supported?",
+            "answer": "Text signatures (enter your name) and handwritten signatures (draw on canvas). Choose the signature method that best fits your needs."
+          },
+          "item-2": {
+            "question": "Where can I place the signature?",
+            "answer": "You can freely drag the signature to any position on the PDF page. The tool shows a page preview for precise signature placement."
+          },
+          "item-3": {
+            "question": "Can I add multiple signatures?",
+            "answer": "Yes. You can add multiple signatures at different locations in the same document, suitable for contracts or forms requiring multiple signatures."
+          },
+          "item-4": {
+            "question": "Is the signed PDF secure?",
+            "answer": "All processing happens in the browser; files are not uploaded to any server. Signatures are permanently embedded in the PDF and cannot be easily removed."
+          },
+          "item-5": {
+            "question": "What is the legal validity of signatures?",
+            "answer": "Signatures created by this tool are visual signatures. For advanced electronic signatures requiring digital certificates, please consult professional digital signature services."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Contract Signing",
+            "description": "Quickly add signatures to contracts and agreements without printing and scanning."
+          },
+          "item-2": {
+            "title": "Form Completion",
+            "description": "Add signatures to PDF forms, completing applications, authorizations, and other documents."
+          },
+          "item-3": {
+            "title": "Approval Workflow",
+            "description": "Add signatures to internal approval documents to streamline workflows."
+          },
+          "item-4": {
+            "title": "Personal Documents",
+            "description": "Add signatures to personal statements, letters of authorization, and other documents."
+          }
+        }
+      },
+      "unlockPdf": {
+        "name": "Unlock PDF",
+        "description": "Remove password protection from PDFs for unrestricted access.",
+        "metaTitle": "Unlock PDF Online Free - Remove PDF Password",
+        "metaDescription": "Remove password protection from PDFs for free. Enter password to unlock documents and gain unrestricted access. Browser-based, no uploads needed.",
+        "longDescription": "Remove password protection from PDF documents. If you have the password but want a password-free copy of the document, this tool can help you create an unlocked version. Note that you need to know the original password to unlock.",
+        "faq": {
+          "item-1": {
+            "question": "Can I unlock any PDF?",
+            "answer": "You need to know the original password of the PDF to unlock. This tool cannot crack or bypass password protection."
+          },
+          "item-2": {
+            "question": "Will unlocking change the document content?",
+            "answer": "No. Unlocking only removes password protection; document content, format, and layout remain completely unchanged."
+          },
+          "item-3": {
+            "question": "Can the unlocked PDF be encrypted again?",
+            "answer": "Yes. You can use the 'Protect PDF' tool to set a new password for the unlocked document."
+          },
+          "item-4": {
+            "question": "Is my password secure?",
+            "answer": "Absolutely secure. The password is only used in the browser and is never sent to any server."
+          },
+          "item-5": {
+            "question": "What types of password protection are supported?",
+            "answer": "Standard PDF open passwords (user passwords) are supported. Some advanced permission passwords may require additional processing."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Remove Old Passwords",
+            "description": "Remove password protection that is no longer needed for daily use."
+          },
+          "item-2": {
+            "title": "Create Backup Copies",
+            "description": "Create password-free backup copies to prevent being locked out if you forget the password."
+          },
+          "item-3": {
+            "title": "Internal Sharing",
+            "description": "Share unlocked documents internally to avoid the hassle of frequent password entry."
+          },
+          "item-4": {
+            "title": "Archive Preparation",
+            "description": "Create password-free versions for long-term archiving to ensure future accessibility."
+          }
+        }
+      },
+      "protectPdf": {
+        "name": "Protect PDF",
+        "description": "Add password protection to PDFs to prevent unauthorized access.",
+        "metaTitle": "Protect PDF Online Free - Add PDF Password",
+        "metaDescription": "Add password protection to PDF documents for free. Set open password to protect sensitive documents. Browser-based, no uploads needed.",
+        "longDescription": "Add password protection to your PDF documents. Set a strong password to prevent unauthorized access, protecting sensitive information, trade secrets, or personal privacy. Supports standard PDF encryption algorithms to ensure document security.",
+        "faq": {
+          "item-1": {
+            "question": "What encryption algorithm is used?",
+            "answer": "Standard PDF encryption algorithm (AES-256) is used, compatible with Adobe Acrobat and other mainstream PDF readers."
+          },
+          "item-2": {
+            "question": "Can the password be changed or removed?",
+            "answer": "Yes. Use the 'Unlock PDF' tool and enter the password to create a password-free version, then you can set a new password."
+          },
+          "item-3": {
+            "question": "How compatible are encrypted PDFs?",
+            "answer": "Encrypted PDFs are compatible with all mainstream PDF readers, including Adobe Acrobat, browser built-in readers, mobile PDF apps, etc."
+          },
+          "item-4": {
+            "question": "Are there password strength requirements?",
+            "answer": "It is recommended to use strong passwords of at least 8 characters, including uppercase and lowercase letters, numbers, and symbols for optimal security."
+          },
+          "item-5": {
+            "question": "What if I forget the password?",
+            "answer": "Please be sure to remember your password. If you forget the password, this tool cannot recover or crack it, and you will not be able to access the document content."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Protect Sensitive Documents",
+            "description": "Add password protection to financial reports, contract drafts, and other sensitive documents."
+          },
+          "item-2": {
+            "title": "Privacy Protection",
+            "description": "Set passwords for documents containing personal information, such as bank statements and medical records."
+          },
+          "item-3": {
+            "title": "Trade Secrets",
+            "description": "Protect confidential documents such as business plans and product designs, restricting access."
+          },
+          "item-4": {
+            "title": "Secure Sharing",
+            "description": "Add password protection when sharing documents through insecure channels such as email."
+          }
+        }
+      },
+      "comparePdf": {
+        "name": "Compare PDF",
+        "description": "Compare two PDF documents side-by-side to easily spot differences.",
+        "metaTitle": "Compare PDF Online Free - Document Comparison Tool",
+        "metaDescription": "Compare two PDF documents side-by-side for free. Highlight text differences, easily spot modifications. Browser-based, no uploads needed.",
+        "longDescription": "Compare two PDF documents side-by-side to quickly identify text content differences. The tool extracts text from both documents, highlighting added, deleted, and modified content. Suitable for reviewing contract revisions, verifying document versions, and other scenarios.",
+        "faq": {
+          "item-1": {
+            "question": "How does the comparison work?",
+            "answer": "The tool extracts text from both PDFs, compares line by line, highlighting differences: green for added content, red for deleted content."
+          },
+          "item-2": {
+            "question": "Can scanned PDFs be compared?",
+            "answer": "Scanned PDFs contain images rather than text, so text differences cannot be directly compared. Please use an OCR tool to convert to a searchable PDF first."
+          },
+          "item-3": {
+            "question": "How accurate are the comparison results?",
+            "answer": "The tool compares text content, ignoring format differences. If documents have the same content but different formatting, they will be shown as having no differences."
+          },
+          "item-4": {
+            "question": "Are multi-page documents supported?",
+            "answer": "Yes. The tool compares all pages of the entire document, showing an overall difference summary and detailed comparison."
+          },
+          "item-5": {
+            "question": "Can comparison results be exported?",
+            "answer": "The current version displays comparison results in the browser. You can take screenshots or use the browser print function to save as PDF."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Contract Review",
+            "description": "Compare different versions of contracts to quickly identify clause modifications and additions."
+          },
+          "item-2": {
+            "title": "Version Control",
+            "description": "Compare document drafts and final versions to ensure all modifications have been correctly applied."
+          },
+          "item-3": {
+            "title": "Collaborative Editing",
+            "description": "Compare documents edited by team members to understand the modifications each person made."
+          },
+          "item-4": {
+            "title": "Quality Verification",
+            "description": "Verify that converted documents retain the integrity of the original content."
+          }
+        }
+      },
+      "redactPdf": {
+        "name": "Redact PDF",
+        "description": "Permanently remove sensitive information from PDFs to protect privacy.",
+        "metaTitle": "Redact PDF Online Free - Permanently Remove Sensitive Info",
+        "metaDescription": "Permanently remove sensitive text and images from PDFs. Redacted information cannot be recovered, protecting privacy. Browser-based, no uploads needed.",
+        "longDescription": "Permanently remove sensitive information from PDF documents. Unlike overlaying, redaction permanently removes selected content, ensuring the information cannot be recovered by any means. Suitable for processing documents that need to be made public but contain confidential information.",
+        "faq": {
+          "item-1": {
+            "question": "What is the difference between redaction and overlaying?",
+            "answer": "Redaction permanently deletes content and cannot be recovered; overlaying only places a mask over the content, and the underlying data still exists. Redaction provides true secure deletion."
+          },
+          "item-2": {
+            "question": "Can redaction be undone?",
+            "answer": "No. Redaction is permanent. Please be sure to keep a backup of the original document in case you need the unredacted version."
+          },
+          "item-3": {
+            "question": "What content can be redacted?",
+            "answer": "Text, images, and page areas can be redacted. Select the content to redact, and the tool will permanently remove it from the document."
+          },
+          "item-4": {
+            "question": "What is the quality of the redacted document?",
+            "answer": "Redacted areas are replaced with black or white blocks, surrounding content remains unchanged, and the rest of the document quality is unaffected."
+          },
+          "item-5": {
+            "question": "How to ensure thorough redaction?",
+            "answer": "This tool uses the pdf-lib library to truly delete content, not just overlay it. Redacted content cannot be recovered by text extraction tools."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Information Disclosure",
+            "description": "Redact personally identifiable information, account numbers, and other sensitive content before making documents public."
+          },
+          "item-2": {
+            "title": "Legal Documents",
+            "description": "Redact privileged information, confidential terms, and other sensitive content in legal documents."
+          },
+          "item-3": {
+            "title": "Medical Records",
+            "description": "Redact patient names, ID numbers, and other personal health information (PHI) to comply with privacy regulations."
+          },
+          "item-4": {
+            "title": "Financial Reports",
+            "description": "Redact account numbers, transaction details, and other sensitive financial information before sharing financial reports."
           }
         }
       }

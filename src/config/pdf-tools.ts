@@ -3,26 +3,31 @@ import {
   ArrowUpDownIcon,
   CombineIcon,
   CropIcon,
+  EraserIcon,
   FileOutputIcon,
   FileSpreadsheetIcon,
   FileTextIcon,
   FileType2Icon,
   FileTypeIcon,
+  GitCompareIcon,
   HashIcon,
   ImageIcon,
   ImagePlusIcon,
   LayersIcon,
+  LockIcon,
+  LockOpenIcon,
   type LucideIcon,
   MinimizeIcon,
   PencilLineIcon,
   PresentationIcon,
   RotateCwIcon,
   ScissorsIcon,
+  ShieldCheckIcon,
   StampIcon,
   Trash2Icon,
 } from 'lucide-react';
 
-export type PdfToolCategory = 'organize' | 'convert' | 'edit';
+export type PdfToolCategory = 'organize' | 'convert' | 'edit' | 'security';
 
 export type PdfToolI18nKey =
   | 'mergePdf'
@@ -53,7 +58,12 @@ export type PdfToolI18nKey =
   | 'pdfToPptx'
   | 'wordToPdf'
   | 'excelToPdf'
-  | 'pptxToPdf';
+  | 'pptxToPdf'
+  | 'signPdf'
+  | 'unlockPdf'
+  | 'protectPdf'
+  | 'comparePdf'
+  | 'redactPdf';
 
 export interface PdfToolDefinition {
   slug: string;
@@ -366,6 +376,56 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
     ],
     multipleFiles: false,
   },
+  {
+    slug: 'sign-pdf',
+    icon: PencilLineIcon,
+    category: 'security',
+    i18nKey: 'signPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'unlock-pdf',
+    icon: LockOpenIcon,
+    category: 'security',
+    i18nKey: 'unlockPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'protect-pdf',
+    icon: LockIcon,
+    category: 'security',
+    i18nKey: 'protectPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'compare-pdf',
+    icon: GitCompareIcon,
+    category: 'security',
+    i18nKey: 'comparePdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: true,
+  },
+  {
+    slug: 'redact-pdf',
+    icon: EraserIcon,
+    category: 'security',
+    i18nKey: 'redactPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
 ];
 
 export function getPdfToolBySlug(slug: string): PdfToolDefinition | undefined {
@@ -380,4 +440,5 @@ export const PDF_TOOL_CATEGORIES = [
   { key: 'organize', i18nKey: 'organize' },
   { key: 'convert', i18nKey: 'convert' },
   { key: 'edit', i18nKey: 'edit' },
+  { key: 'security', i18nKey: 'security' },
 ] as const;

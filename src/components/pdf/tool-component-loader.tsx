@@ -208,6 +208,41 @@ const toolComponents: Record<string, React.ComponentType> = {
       })),
     { ssr: false }
   ),
+  'sign-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/sign-pdf').then((m) => ({
+        default: m.SignPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'unlock-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/unlock-pdf').then((m) => ({
+        default: m.UnlockPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'protect-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/protect-pdf').then((m) => ({
+        default: m.ProtectPdfTool,
+      })),
+    { ssr: false }
+  ),
+  'compare-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/compare-pdf').then((m) => ({
+        default: m.ComparePdfTool,
+      })),
+    { ssr: false }
+  ),
+  'redact-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/redact-pdf').then((m) => ({
+        default: m.RedactPdfTool,
+      })),
+    { ssr: false }
+  ),
 };
 
 interface ToolComponentLoaderProps {
