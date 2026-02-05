@@ -1005,7 +1005,13 @@
       "dragToReorder": "拖拽排序",
       "legal": "法律",
       "privacyPolicy": "隐私政策",
-      "termsOfService": "服务条款"
+      "termsOfService": "服务条款",
+      "options": "选项",
+      "mergeLongImage": "合并为长图（将所有页面合并成一张图片）",
+      "downloadAsZip": "打包为ZIP下载（避免多文件反复确认）",
+      "downloadZip": "下载ZIP",
+      "downloadMerged": "下载长图",
+      "mergedImageDesc": "已合并 {count} 页为一张长图"
     },
     "tools": {
       "mergePdf": {
@@ -1198,10 +1204,11 @@
       },
       "pdfToPng": {
         "name": "PDF转PNG",
-        "description": "将PDF页面转换为高质量的无损PNG图片。",
+        "description": "将PDF页面转换为高质量的无损PNG图片，支持合并为长图。",
         "metaTitle": "免费在线PDF转PNG - PDF转PNG转换器",
-        "metaDescription": "免费将PDF页面转换为PNG图片。高质量无损转换，可调节分辨率。基于浏览器处理，无需上传。",
-        "longDescription": "将PDF文档的每一页转换为高质量的PNG无损压缩图片。PNG格式能完美保留清晰的文字和图形，非常适合文档、截图以及需要透明背景的图片。",
+        "metaDescription": "免费将PDF页面转换为PNG图片，支持多页合并为一张长图。高质量无损转换，可调节分辨率。基于浏览器处理，无需上传。",
+        "longDescription": "将PDF文档的每一页转换为高质量的PNG无损压缩图片。PNG格式能完美保留清晰的文字和图形，非常适合文档、截图以及需要透明背景的图片。支持将多页PDF合并为一张长图，方便在社交媒体上分享。",
+
         "faq": {
           "item-1": {
             "question": "为什么选择PNG格式？",
@@ -1245,10 +1252,10 @@
       },
       "pdfToJpg": {
         "name": "PDF转JPG",
-        "description": "将PDF页面转换为可调质量的JPG图片。",
+        "description": "将PDF页面转换为可调质量的JPG图片，支持合并为长图。",
         "metaTitle": "免费在线PDF转JPG - PDF转JPEG转换器",
-        "metaDescription": "免费将PDF页面转换为JPG/JPEG图片。可调节质量和分辨率设置。基于浏览器处理，无需上传。",
-        "longDescription": "将PDF文档的每一页转换为JPG图片。调整质量和分辨率以平衡文件大小和视觉保真度。JPG是最广泛支持的图片格式，适合照片、网络使用和分享。",
+        "metaDescription": "免费将PDF页面转换为JPG图片，支持多页合并为一张长图。可调节质量和分辨率设置。基于浏览器处理，无需上传。",
+        "longDescription": "将PDF文档的每一页转换为JPG图片。调整质量和分辨率以平衡文件大小和视觉保真度。JPG是最广泛支持的图片格式，适合照片、网络使用和分享。支持将多页PDF合并为一张长图，方便在社交媒体上分享。",
         "faq": {
           "item-1": {
             "question": "可以调整JPG质量吗？",
@@ -1292,10 +1299,10 @@
       },
       "pdfToWebp": {
         "name": "PDF转WebP",
-        "description": "将PDF页面转换为现代WebP图片，压缩效果更优。",
+        "description": "将PDF页面转换为现代WebP图片，压缩效果更优，支持合并为长图。",
         "metaTitle": "免费在线PDF转WebP - PDF转WebP转换器",
-        "metaDescription": "免费将PDF页面转换为WebP图片。现代格式，压缩更优质量更高。基于浏览器处理，无需上传。",
-        "longDescription": "将PDF文档的每一页转换为WebP图片，这是Google开发的现代图片格式。WebP在保持优秀视觉质量的同时提供卓越的压缩效果，文件大小比JPG和PNG显著更小。",
+        "metaDescription": "免费将PDF页面转换为WebP图片，支持多页合并为一张长图。现代格式，压缩更优质量更高。基于浏览器处理，无需上传。",
+        "longDescription": "将PDF文档的每一页转换为WebP图片，这是Google开发的现代图片格式。WebP在保持优秀视觉质量的同时提供卓越的压缩效果，文件大小比JPG和PNG显著更小。支持将多页PDF合并为一张长图，方便在社交媒体上分享。",
         "faq": {
           "item-1": {
             "question": "什么是WebP格式？",

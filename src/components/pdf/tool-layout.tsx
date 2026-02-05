@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import type { PdfToolDefinition } from '@/config/pdf-tools';
-import { ShieldCheckIcon } from 'lucide-react';
+import { ArrowRightIcon, ShieldCheckIcon } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 interface FaqItem {
@@ -42,6 +42,7 @@ export function ToolLayout({
   children,
 }: ToolLayoutProps) {
   const Icon = tool.icon;
+  const Icon2 = tool.icon2;
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -70,8 +71,16 @@ export function ToolLayout({
         {/* Hero */}
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <div className="mb-4 flex justify-center">
-            <div className="flex size-16 items-center justify-center rounded-2xl bg-primary/10">
-              <Icon className="size-8 text-primary" />
+            <div className="flex h-16 items-center justify-center">
+              {Icon2 ? (
+                <>
+                  <Icon className="size-12" />
+                  <ArrowRightIcon className="mx-2 size-6 text-muted-foreground" />
+                  <Icon2 className="size-12" />
+                </>
+              ) : (
+                <Icon className="size-14" />
+              )}
             </div>
           </div>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">

@@ -1,33 +1,41 @@
+import type { SVGProps } from 'react';
+import type { LucideIcon } from 'lucide-react';
 import {
-  ArrowDownUpIcon,
-  ArrowUpDownIcon,
-  CombineIcon,
+  BmpIcon,
+  CompareIcon,
+  CompressIcon,
   CropIcon,
-  EraserIcon,
-  FileOutputIcon,
-  FileSpreadsheetIcon,
-  FileTextIcon,
-  FileType2Icon,
-  FileTypeIcon,
-  GitCompareIcon,
-  HashIcon,
-  ImageIcon,
-  ImagePlusIcon,
-  LayersIcon,
-  LockIcon,
-  LockOpenIcon,
-  type LucideIcon,
-  MinimizeIcon,
-  PencilLineIcon,
-  PresentationIcon,
-  RotateCwIcon,
-  ScissorsIcon,
-  ShieldCheckIcon,
-  StampIcon,
-  Trash2Icon,
-} from 'lucide-react';
+  DeletePagesIcon,
+  EditMetadataIcon,
+  ExcelIcon,
+  ExtractIcon,
+  FlattenIcon,
+  GifIcon,
+  JpgIcon,
+  MergeIcon,
+  PageNumberIcon,
+  PdfIcon,
+  PngIcon,
+  PowerPointIcon,
+  ProtectIcon,
+  RedactIcon,
+  ReorderIcon,
+  ReverseIcon,
+  RotateIcon,
+  SignIcon,
+  SplitIcon,
+  SvgIcon,
+  TxtIcon,
+  UnlockIcon,
+  WatermarkIcon,
+  WebpIcon,
+  WordIcon,
+} from '@/components/icons/file-icons';
 
 export type PdfToolCategory = 'organize' | 'convert' | 'edit' | 'security';
+
+// 支持 Lucide 图标和自定义彩色 SVG 图标
+type IconComponent = LucideIcon | React.ComponentType<SVGProps<SVGSVGElement>>;
 
 export type PdfToolI18nKey =
   | 'mergePdf'
@@ -67,7 +75,9 @@ export type PdfToolI18nKey =
 
 export interface PdfToolDefinition {
   slug: string;
-  icon: LucideIcon;
+  icon: IconComponent;
+  // 格式转换工具的第二个图标（如 PDF 转 Word 会显示 PDF + Word 两个图标）
+  icon2?: IconComponent;
   category: PdfToolCategory;
   i18nKey: PdfToolI18nKey;
   faqCount: number;
@@ -79,7 +89,7 @@ export interface PdfToolDefinition {
 export const PDF_TOOLS: PdfToolDefinition[] = [
   {
     slug: 'merge-pdf',
-    icon: CombineIcon,
+    icon: MergeIcon,
     category: 'organize',
     i18nKey: 'mergePdf',
     faqCount: 5,
@@ -89,7 +99,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'split-pdf',
-    icon: ScissorsIcon,
+    icon: SplitIcon,
     category: 'organize',
     i18nKey: 'splitPdf',
     faqCount: 5,
@@ -99,7 +109,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'compress-pdf',
-    icon: MinimizeIcon,
+    icon: CompressIcon,
     category: 'edit',
     i18nKey: 'compressPdf',
     faqCount: 5,
@@ -109,7 +119,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'rotate-pdf',
-    icon: RotateCwIcon,
+    icon: RotateIcon,
     category: 'organize',
     i18nKey: 'rotatePdf',
     faqCount: 5,
@@ -119,7 +129,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'pdf-to-png',
-    icon: ImageIcon,
+    icon: PdfIcon,
+    icon2: PngIcon,
     category: 'convert',
     i18nKey: 'pdfToPng',
     faqCount: 5,
@@ -129,7 +140,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'pdf-to-jpg',
-    icon: ImageIcon,
+    icon: PdfIcon,
+    icon2: JpgIcon,
     category: 'convert',
     i18nKey: 'pdfToJpg',
     faqCount: 5,
@@ -139,7 +151,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'pdf-to-webp',
-    icon: ImageIcon,
+    icon: PdfIcon,
+    icon2: WebpIcon,
     category: 'convert',
     i18nKey: 'pdfToWebp',
     faqCount: 5,
@@ -149,7 +162,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'png-to-pdf',
-    icon: ImagePlusIcon,
+    icon: PngIcon,
+    icon2: PdfIcon,
     category: 'convert',
     i18nKey: 'pngToPdf',
     faqCount: 5,
@@ -159,7 +173,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'jpg-to-pdf',
-    icon: ImagePlusIcon,
+    icon: JpgIcon,
+    icon2: PdfIcon,
     category: 'convert',
     i18nKey: 'jpgToPdf',
     faqCount: 5,
@@ -169,7 +184,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'webp-to-pdf',
-    icon: ImagePlusIcon,
+    icon: WebpIcon,
+    icon2: PdfIcon,
     category: 'convert',
     i18nKey: 'webpToPdf',
     faqCount: 5,
@@ -179,7 +195,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'watermark-pdf',
-    icon: StampIcon,
+    icon: WatermarkIcon,
     category: 'edit',
     i18nKey: 'watermarkPdf',
     faqCount: 5,
@@ -189,7 +205,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'page-numbers',
-    icon: HashIcon,
+    icon: PageNumberIcon,
     category: 'edit',
     i18nKey: 'pageNumbers',
     faqCount: 5,
@@ -199,7 +215,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'reorder-pages',
-    icon: ArrowUpDownIcon,
+    icon: ReorderIcon,
     category: 'organize',
     i18nKey: 'reorderPages',
     faqCount: 5,
@@ -209,7 +225,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'extract-pages',
-    icon: FileOutputIcon,
+    icon: ExtractIcon,
     category: 'organize',
     i18nKey: 'extractPages',
     faqCount: 5,
@@ -219,7 +235,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'delete-pages',
-    icon: Trash2Icon,
+    icon: DeletePagesIcon,
     category: 'organize',
     i18nKey: 'deletePages',
     faqCount: 5,
@@ -229,7 +245,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'reverse-pdf',
-    icon: ArrowDownUpIcon,
+    icon: ReverseIcon,
     category: 'organize',
     i18nKey: 'reversePdf',
     faqCount: 5,
@@ -239,7 +255,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'pdf-to-text',
-    icon: FileTextIcon,
+    icon: PdfIcon,
+    icon2: TxtIcon,
     category: 'convert',
     i18nKey: 'pdfToText',
     faqCount: 5,
@@ -249,7 +266,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'bmp-to-pdf',
-    icon: ImagePlusIcon,
+    icon: BmpIcon,
+    icon2: PdfIcon,
     category: 'convert',
     i18nKey: 'bmpToPdf',
     faqCount: 5,
@@ -259,7 +277,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'gif-to-pdf',
-    icon: ImagePlusIcon,
+    icon: GifIcon,
+    icon2: PdfIcon,
     category: 'convert',
     i18nKey: 'gifToPdf',
     faqCount: 5,
@@ -269,7 +288,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'svg-to-pdf',
-    icon: ImagePlusIcon,
+    icon: SvgIcon,
+    icon2: PdfIcon,
     category: 'convert',
     i18nKey: 'svgToPdf',
     faqCount: 5,
@@ -279,7 +299,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'edit-metadata',
-    icon: PencilLineIcon,
+    icon: EditMetadataIcon,
     category: 'edit',
     i18nKey: 'editMetadata',
     faqCount: 5,
@@ -299,7 +319,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'flatten-pdf',
-    icon: LayersIcon,
+    icon: FlattenIcon,
     category: 'edit',
     i18nKey: 'flattenPdf',
     faqCount: 5,
@@ -309,7 +329,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'pdf-to-word',
-    icon: FileTypeIcon,
+    icon: PdfIcon,
+    icon2: WordIcon,
     category: 'convert',
     i18nKey: 'pdfToWord',
     faqCount: 5,
@@ -319,7 +340,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'pdf-to-excel',
-    icon: FileSpreadsheetIcon,
+    icon: PdfIcon,
+    icon2: ExcelIcon,
     category: 'convert',
     i18nKey: 'pdfToExcel',
     faqCount: 5,
@@ -329,7 +351,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'pdf-to-pptx',
-    icon: PresentationIcon,
+    icon: PdfIcon,
+    icon2: PowerPointIcon,
     category: 'convert',
     i18nKey: 'pdfToPptx',
     faqCount: 5,
@@ -339,7 +362,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'word-to-pdf',
-    icon: FileType2Icon,
+    icon: WordIcon,
+    icon2: PdfIcon,
     category: 'convert',
     i18nKey: 'wordToPdf',
     faqCount: 5,
@@ -352,7 +376,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'excel-to-pdf',
-    icon: FileSpreadsheetIcon,
+    icon: ExcelIcon,
+    icon2: PdfIcon,
     category: 'convert',
     i18nKey: 'excelToPdf',
     faqCount: 5,
@@ -365,7 +390,8 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'pptx-to-pdf',
-    icon: PresentationIcon,
+    icon: PowerPointIcon,
+    icon2: PdfIcon,
     category: 'convert',
     i18nKey: 'pptxToPdf',
     faqCount: 5,
@@ -378,7 +404,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'sign-pdf',
-    icon: PencilLineIcon,
+    icon: SignIcon,
     category: 'security',
     i18nKey: 'signPdf',
     faqCount: 5,
@@ -388,7 +414,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'unlock-pdf',
-    icon: LockOpenIcon,
+    icon: UnlockIcon,
     category: 'security',
     i18nKey: 'unlockPdf',
     faqCount: 5,
@@ -398,7 +424,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'protect-pdf',
-    icon: LockIcon,
+    icon: ProtectIcon,
     category: 'security',
     i18nKey: 'protectPdf',
     faqCount: 5,
@@ -408,7 +434,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'compare-pdf',
-    icon: GitCompareIcon,
+    icon: CompareIcon,
     category: 'security',
     i18nKey: 'comparePdf',
     faqCount: 5,
@@ -418,7 +444,7 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
   },
   {
     slug: 'redact-pdf',
-    icon: EraserIcon,
+    icon: RedactIcon,
     category: 'security',
     i18nKey: 'redactPdf',
     faqCount: 5,

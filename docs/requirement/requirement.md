@@ -216,6 +216,38 @@
 4. **错误处理**: 添加更详细的错误提示和用户引导
 5. **SEO 监控**: 定期检查搜索排名，优化关键词
 
+## 2025-02-03 更新：PDF转图片增强功能
+
+### 新增功能
+1. **合并长图功能**
+   - 将PDF的多页合并成一张长图
+   - 页面垂直排列，宽度统一取最大宽度
+   - 窄页自动居中显示
+   - 支持PNG/JPG/WebP三种格式
+
+2. **ZIP打包下载**
+   - 多页PDF转换后可选ZIP打包下载
+   - 避免浏览器多次弹窗确认
+   - 适合页数较多的PDF文件
+
+### 修改文件
+- `src/lib/pdf/to-images.ts` - 添加合并长图功能
+- `src/components/pdf/tools/pdf-to-format-tool.tsx` - 添加选项UI和ZIP下载逻辑
+- `messages/zh.json` / `messages/en.json` - 添加新翻译键
+
+### 新增依赖
+- `@zip.js/zip.js` - ZIP文件创建库
+
+### 新翻译键
+- `ToolsPage.common.options` - 选项标题
+- `ToolsPage.common.mergeLongImage` - 合并长图选项
+- `ToolsPage.common.downloadAsZip` - ZIP下载选项
+- `ToolsPage.common.downloadZip` - 下载ZIP按钮
+- `ToolsPage.common.downloadMerged` - 下载长图按钮
+- `ToolsPage.common.mergedImageDesc` - 合并完成描述
+
+---
+
 ## 相关文件清单
 
 ### 核心配置
