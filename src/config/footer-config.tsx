@@ -35,22 +35,5 @@ export function useFooterLinks(): NestedMenuItem[] {
     });
   });
 
-  // Add legal section
-  footerLinks.push({
-    title: t('common.legal'),
-    items: [
-      {
-        title: t('common.privacyPolicy'),
-        href: Routes.PrivacyPolicy,
-        external: false,
-      },
-      {
-        title: t('common.termsOfService'),
-        href: Routes.TermsOfService,
-        external: false,
-      },
-    ],
-  });
-
   return footerLinks;
 }

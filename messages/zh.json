@@ -1011,7 +1011,37 @@
       "downloadAsZip": "打包为ZIP下载（避免多文件反复确认）",
       "downloadZip": "下载ZIP",
       "downloadMerged": "下载长图",
-      "mergedImageDesc": "已合并 {count} 页为一张长图"
+      "mergedImageDesc": "已合并 {count} 页为一张长图",
+      "pagesSelected": "页已选择",
+      "selectPagesToDuplicate": "选择要复制的页面",
+      "copiesCount": "复制份数",
+      "copies": "份",
+      "insertPosition": "插入位置",
+      "atStart": "文档开头",
+      "atEnd": "文档末尾",
+      "pagesDuplicated": "页已复制",
+      "selectAll": "全选",
+      "deselectAll": "取消全选",
+      "headerText": "页眉文本",
+      "footerText": "页脚文本",
+      "fontSize": "字体大小",
+      "alignment": "对齐方式",
+      "left": "左对齐",
+      "center": "居中",
+      "right": "右对齐",
+      "applyTo": "应用于",
+      "allPages": "所有页面",
+      "oddPages": "奇数页",
+      "evenPages": "偶数页",
+      "pageSize": "页面尺寸",
+      "scaleOption": "缩放选项",
+      "fitToSize": "缩放内容适应尺寸",
+      "keepOriginal": "保持原始内容大小",
+      "language": "语言",
+      "chinese": "中文",
+      "english": "英文",
+      "auto": "自动检测",
+      "recognizing": "识别中..."
     },
     "tools": {
       "mergePdf": {
@@ -2632,6 +2662,288 @@
           "item-4": {
             "title": "财务报告",
             "description": "在分享财务报告前编校账号、交易详情等敏感财务信息。"
+          }
+        }
+      },
+      "duplicatePages": {
+        "name": "复制页面",
+        "description": "复制PDF中的一个或多个页面到指定位置。",
+        "metaTitle": "免费在线复制PDF页面",
+        "metaDescription": "免费复制PDF中的特定页面。选择要复制的页面，指定插入位置和份数。基于浏览器处理，无需上传。",
+        "longDescription": "快速复制PDF文档中的页面。选择要复制的页面，设置份数，选择在文档开头或末尾插入副本。适合创建重复内容的文档或备份重要页面。",
+        "faq": {
+          "item-1": {
+            "question": "可以复制哪些页面？",
+            "answer": "您可以选择复制任意一个或多个页面。支持选择不连续的页面同时复制。"
+          },
+          "item-2": {
+            "question": "可以复制多份吗？",
+            "answer": "可以。您可以设置1-10份副本，选择的页面将按照设定份数复制。"
+          },
+          "item-3": {
+            "question": "副本会插入到哪里？",
+            "answer": "您可以选择在文档开头或末尾插入副本。默认是在文档末尾添加。"
+          },
+          "item-4": {
+            "question": "复制后原始页面会保留吗？",
+            "answer": "会。复制操作会保留所有原始页面，只是添加额外的副本。"
+          },
+          "item-5": {
+            "question": "复制后的页面质量如何？",
+            "answer": "副本与原始页面完全相同，保持原有的格式、图片和文字质量。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "重复内容模板",
+            "description": "复制包含标准格式或模板的页面，用于多页表单或合同。"
+          },
+          "item-2": {
+            "title": "备份重要页面",
+            "description": "在文档中创建重要信息页面的备份副本。"
+          },
+          "item-3": {
+            "title": "创建多份证书",
+            "description": "复制证书或奖状页面以生成多份相同内容的文档。"
+          },
+          "item-4": {
+            "title": "扩展表格",
+            "description": "复制表格页面以在文档中添加更多填写页。"
+          }
+        }
+      },
+      "headerFooter": {
+        "name": "页眉页脚",
+        "description": "为PDF添加自定义页眉和页脚文本。",
+        "metaTitle": "免费在线添加PDF页眉页脚",
+        "metaDescription": "免费为PDF文档添加页眉和页脚。自定义文本、位置和字体样式。基于浏览器处理，无需上传。",
+        "longDescription": "为PDF文档添加专业的页眉和页脚。支持自定义文本内容、字体大小、颜色和在页面上的位置。可以只在奇数页或偶数页显示，也可以应用于所有页面。",
+        "faq": {
+          "item-1": {
+            "question": "可以添加什么内容到页眉页脚？",
+            "answer": "您可以添加任何文本内容，如文档标题、章节名称、公司名称、日期等。"
+          },
+          "item-2": {
+            "question": "可以自定义样式吗？",
+            "answer": "可以。您可以设置字体大小、颜色，以及选择左对齐、居中或右对齐。"
+          },
+          "item-3": {
+            "question": "可以只对特定页面添加吗？",
+            "answer": "可以。您可以选择将页眉页脚应用于所有页面、仅奇数页或仅偶数页。"
+          },
+          "item-4": {
+            "question": "页眉页脚会覆盖原有内容吗？",
+            "answer": "页眉页脚会添加到页边距区域。建议确保文档有足够的页边距空间。"
+          },
+          "item-5": {
+            "question": "可以添加图片到页眉页脚吗？",
+            "answer": "当前版本仅支持文本。如需添加图片，请使用水印工具。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "品牌标识",
+            "description": "在每页添加公司名称和Logo，统一品牌形象。"
+          },
+          "item-2": {
+            "title": "文档标识",
+            "description": "添加文档标题、版本号和日期便于追踪。"
+          },
+          "item-3": {
+            "title": "保密声明",
+            "description": "在每页添加保密或版权声明水印。"
+          },
+          "item-4": {
+            "title": "章节导航",
+            "description": "在页眉添加章节名称帮助读者定位。"
+          }
+        }
+      },
+      "resizePdf": {
+        "name": "调整页面大小",
+        "description": "修改PDF页面尺寸为A4、Letter等标准大小。",
+        "metaTitle": "免费在线调整PDF页面大小",
+        "metaDescription": "免费修改PDF页面尺寸。支持A4、Letter、Legal等标准尺寸。基于浏览器处理，无需上传。",
+        "longDescription": "调整PDF文档的页面尺寸以适应不同用途。支持多种标准纸张尺寸，包括A4、Letter、Legal等。可以缩放内容以适应新尺寸或保持原始内容大小。",
+        "faq": {
+          "item-1": {
+            "question": "支持哪些页面尺寸？",
+            "answer": "支持A4、Letter、Legal、A3、A5等常见标准尺寸。"
+          },
+          "item-2": {
+            "question": "调整大小会影响内容吗？",
+            "answer": "您可以选择缩放内容以适应新尺寸，或保持内容原大小。缩放可能导致内容被裁切或留白。"
+          },
+          "item-3": {
+            "question": "所有页面会统一调整吗？",
+            "answer": "是的。该工具会将文档中所有页面调整为相同的指定尺寸。"
+          },
+          "item-4": {
+            "question": "可以自定义尺寸吗？",
+            "answer": "当前版本支持预设标准尺寸。如需特殊尺寸，请使用打印为PDF功能。"
+          },
+          "item-5": {
+            "question": "调整后质量会变化吗？",
+            "answer": "文本和矢量图形保持清晰。图片质量取决于原始分辨率和缩放比例。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "打印适配",
+            "description": "调整页面大小以匹配打印机支持的纸张尺寸。"
+          },
+          "item-2": {
+            "title": "标准归档",
+            "description": "将文档统一调整为标准A4尺寸便于归档管理。"
+          },
+          "item-3": {
+            "title": "邮件发送",
+            "description": "调整为大尺寸便于屏幕阅读，或调整为小尺寸减小文件体积。"
+          },
+          "item-4": {
+            "title": "出版印刷",
+            "description": "调整为印刷所需的标准尺寸如Letter或Legal。"
+          }
+        }
+      },
+      "ocrPdf": {
+        "name": "PDF OCR识别",
+        "description": "识别扫描版PDF中的文字，创建可搜索文档。",
+        "metaTitle": "免费在线PDF OCR文字识别",
+        "metaDescription": "免费识别扫描版PDF中的文字，转换为可搜索、可复制的文档。基于浏览器处理，无需上传。",
+        "longDescription": "使用OCR技术识别扫描版PDF或图片PDF中的文字。将不可搜索的图片文本转换为可搜索、可选择的文字层，保留原始图片外观的同时实现文本搜索功能。",
+        "faq": {
+          "item-1": {
+            "question": "OCR支持哪些语言？",
+            "answer": "支持中英文等多种语言。您可以选择文档中的主要语言以提高识别准确度。"
+          },
+          "item-2": {
+            "question": "识别准确度如何？",
+            "answer": "准确度取决于扫描质量和文字清晰度。清晰的打印文档通常能达到95%以上的准确度。"
+          },
+          "item-3": {
+            "question": "OCR后会改变文档外观吗？",
+            "answer": "不会。OCR在原始图片上添加透明文字层，文档外观保持不变，但文字变得可选择和搜索。"
+          },
+          "item-4": {
+            "question": "可以处理多页文档吗？",
+            "answer": "可以。工具会逐页处理多页PDF，每页都进行OCR识别。"
+          },
+          "item-5": {
+            "question": "处理速度如何？",
+            "answer": "取决于文档页数和复杂度。通常每页需要几秒钟的处理时间。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "档案数字化",
+            "description": "将纸质档案扫描件转换为可搜索的电子文档。"
+          },
+          "item-2": {
+            "title": "合同处理",
+            "description": "使扫描的合同文档支持关键词搜索，便于查找条款。"
+          },
+          "item-3": {
+            "title": "学术研究",
+            "description": "将扫描的论文和书籍页面转换为可复制引用的格式。"
+          },
+          "item-4": {
+            "title": "表格数据提取",
+            "description": "识别扫描表格中的文字内容，便于后续编辑和分析。"
+          }
+        }
+      },
+      "sanitizePdf": {
+        "name": "清理PDF",
+        "description": "删除PDF中的敏感元数据和隐藏内容，安全共享文档。",
+        "metaTitle": "免费在线清理PDF - 删除敏感元数据",
+        "metaDescription": "免费删除PDF中的元数据、JavaScript、批注等敏感信息。保护隐私，安全共享文档。基于浏览器处理，无需上传。",
+        "longDescription": "清理PDF文档中的敏感信息和隐藏内容。删除元数据（作者、创建者、时间戳）、JavaScript代码、超链接、批注注释、嵌入文件等。在共享文档前使用，保护您的隐私和敏感信息。",
+        "faq": {
+          "item-1": {
+            "question": "清理PDF会改变文档内容吗？",
+            "answer": "不会。清理只移除元数据和隐藏的附加内容，文档的可见页面内容保持不变。"
+          },
+          "item-2": {
+            "question": "可以只清理特定项目吗？",
+            "answer": "可以。您可以选择性地清理元数据、JavaScript、嵌入文件、超链接或批注中的任意组合。"
+          },
+          "item-3": {
+            "question": "清理后的文档还能恢复元数据吗？",
+            "answer": "不能。清理是永久性的，删除的元数据无法恢复。建议保留原始文档的备份。"
+          },
+          "item-4": {
+            "question": "为什么要清理PDF？",
+            "answer": "PDF可能包含创建者信息、编辑历史、隐藏注释等敏感数据。清理可以在共享前移除这些信息，保护隐私。"
+          },
+          "item-5": {
+            "question": "清理会减小文件大小吗？",
+            "answer": "可能会略有减小，特别是当移除嵌入文件或大量批注时。但主要目的是安全而非压缩。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "安全共享",
+            "description": "在对外共享文档前清理内部元数据和编辑痕迹。"
+          },
+          "item-2": {
+            "title": "隐私保护",
+            "description": "移除作者信息、创建时间等可能泄露身份的元数据。"
+          },
+          "item-3": {
+            "title": "去除恶意代码",
+            "description": "删除PDF中的JavaScript代码，防止潜在的安全风险。"
+          },
+          "item-4": {
+            "title": "文档归档",
+            "description": "创建干净的专业文档版本用于长期归档。"
+          }
+        }
+      },
+      "verifyPdf": {
+        "name": "验证PDF",
+        "description": "验证PDF文档的数字签名、完整性和安全性信息。",
+        "metaTitle": "免费在线验证PDF - 数字签名验证工具",
+        "metaDescription": "免费验证PDF的数字签名有效性和文档完整性。检查加密状态、JavaScript和嵌入文件。基于浏览器处理，无需上传。",
+        "longDescription": "全面验证PDF文档的安全性和完整性。检测数字签名信息（签名者、时间、位置）、验证文档结构完整性、检查加密状态、识别JavaScript代码和嵌入文件。帮助您确认文档的真实性和安全性。",
+        "faq": {
+          "item-1": {
+            "question": "验证工具能确认签名是否合法吗？",
+            "answer": "可以检测签名的存在和基本信息，但完整的加密验证需要证书链验证。工具会显示签名结构和完整性信息。"
+          },
+          "item-2": {
+            "question": "可以检测文档是否被篡改吗？",
+            "answer": "可以检测文档结构是否完整，以及数字签名是否完好。如果签名验证失败，可能表明文档被修改过。"
+          },
+          "item-3": {
+            "question": "什么是PDF中的JavaScript风险？",
+            "answer": "PDF中的JavaScript可以执行自动操作，虽然有用但也可能被滥用。验证工具会标识包含JavaScript的文档。"
+          },
+          "item-4": {
+            "question": "加密PDF能验证吗？",
+            "answer": "可以。工具会检测加密状态并显示相关信息，但完整内容分析需要解密。"
+          },
+          "item-5": {
+            "question": "验证结果中的嵌入文件是什么？",
+            "answer": "PDF可以嵌入其他文件（如附件）。验证工具会标识这些嵌入内容，帮助您了解文档包含的所有数据。"
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "合同验证",
+            "description": "验证签署合同的数字签名有效性和签署者身份。"
+          },
+          "item-2": {
+            "title": "安全检查",
+            "description": "检查收到的PDF是否包含可疑的JavaScript或嵌入文件。"
+          },
+          "item-3": {
+            "title": "文档审计",
+            "description": "审计文档的完整性和修改历史，确保文档未被篡改。"
+          },
+          "item-4": {
+            "title": "合规验证",
+            "description": "验证文档是否符合安全合规要求，如是否加密或签名。"
           }
         }
       }

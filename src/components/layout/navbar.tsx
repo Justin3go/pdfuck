@@ -113,18 +113,20 @@ export function Navbar({ scroll }: NavBarProps) {
                                         'bg-accent text-accent-foreground'
                                     )}
                                   >
-                                    <div
-                                      className={cn(
-                                        'flex size-8 shrink-0 items-center justify-center transition-colors',
-                                        'bg-transparent text-muted-foreground',
-                                        'group-hover:bg-transparent group-hover:text-accent-foreground',
-                                        'group-focus:bg-transparent group-focus:text-accent-foreground',
-                                        isSubItemActive &&
-                                          'bg-transparent text-accent-foreground'
-                                      )}
-                                    >
-                                      {subItem.icon ? subItem.icon : null}
-                                    </div>
+                                    {subItem.icon && (
+                                      <div
+                                        className={cn(
+                                          'flex size-8 shrink-0 items-center justify-center transition-colors',
+                                          'bg-transparent text-muted-foreground',
+                                          'group-hover:bg-transparent group-hover:text-accent-foreground',
+                                          'group-focus:bg-transparent group-focus:text-accent-foreground',
+                                          isSubItemActive &&
+                                            'bg-transparent text-accent-foreground'
+                                        )}
+                                      >
+                                        {subItem.icon}
+                                      </div>
+                                    )}
                                     <div className="flex-1">
                                       <div
                                         className={cn(

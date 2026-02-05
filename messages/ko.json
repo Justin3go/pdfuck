@@ -1,0 +1,454 @@
+{
+  "Metadata": {
+    "name": "PDFuck",
+    "title": "PDFuck - 묣�료 온라인 PDF 도구",
+    "description": "브라우저 기반 묣�료 PDF 도구. PDF 병합, 분할, 압축, 회전, 변환. 100% 프라이버시 보호 - 파일이 기기를 벗어나지 않습니다."
+  },
+  "Common": {
+    "premium": "프리미엄",
+    "login": "로그인",
+    "logout": "로그아웃",
+    "signUp": "회원가입",
+    "pdfTools": "PDF 도구",
+    "language": "언어 전환",
+    "mode": {
+      "label": "모드 전환",
+      "light": "라이트",
+      "dark": "다크",
+      "system": "시스템"
+    },
+    "copy": "복사",
+    "save": "저장",
+    "saving": "저장 중...",
+    "loading": "로딩 중...",
+    "cancel": "취소",
+    "logoutFailed": "로그아웃 실패",
+    "table": {
+      "totalRecords": "총 {count}개 레코드",
+      "noResults": "결과 없음",
+      "loading": "로딩 중...",
+      "columns": "열",
+      "rowsPerPage": "페이지당 행 수",
+      "page": "페이지",
+      "firstPage": "첫 페이지",
+      "lastPage": "마지막 페이지",
+      "nextPage": "다음 페이지",
+      "previousPage": "이전 페이지",
+      "ascending": "오름차순",
+      "descending": "내림차순",
+      "resetSorting": "재설정",
+      "hideColumn": "숨기기",
+      "viewOptions": "보기",
+      "toggleColumns": "열 전환",
+      "searchColumns": "열 검색...",
+      "noColumns": "열을 찾을 수 없습니다",
+      "clearFilters": "필터 지우기"
+    }
+  },
+  "PricingPage": {
+    "title": "가격",
+    "description": "가장 적합한 요금제를 선택하세요",
+    "subtitle": "가장 적합한 요금제를 선택하세요",
+    "monthly": "월간",
+    "yearly": "연간",
+    "PricingCard": {
+      "freePrice": "₩0",
+      "perMonth": "/월",
+      "perYear": "/년",
+      "popular": "인기",
+      "currentPlan": "현재 요금제",
+      "yourCurrentPlan": "현재 요금제",
+      "getStartedForFree": "묣�료로 시작하기",
+      "getLifetimeAccess": "평생 접근 권한 얻기",
+      "getStarted": "시작하기",
+      "notAvailable": "이용 불가",
+      "daysTrial": "{days}일 묣�료 체험"
+    },
+    "CheckoutButton": {
+      "loading": "로딩 중...",
+      "checkoutFailed": "결제 페이지를 열 수 없습니다"
+    }
+  },
+  "PricePlans": {
+    "free": {
+      "name": "묣�료",
+      "description": "개인용 기본 기능",
+      "features": {
+        "feature-1": "최대 3개 프로젝트",
+        "feature-2": "1GB 저장공간",
+        "feature-3": "기본 분석",
+        "feature-4": "커뮤니티 지원"
+      },
+      "limits": {
+        "limit-1": "커스텀 도메인",
+        "limit-2": "커스텀 브랜딩",
+        "limit-3": "평생 업데이트"
+      }
+    },
+    "pro": {
+      "name": "프로",
+      "description": "전문가용 고급 기능",
+      "features": {
+        "feature-1": "무제한 프로젝트",
+        "feature-2": "10GB 저장공간",
+        "feature-3": "고급 분석",
+        "feature-4": "우선 지원",
+        "feature-5": "커스텀 도메인"
+      },
+      "limits": {
+        "limit-1": "커스텀 브랜딩",
+        "limit-2": "평생 업데이트"
+      }
+    },
+    "lifetime": {
+      "name": "평생",
+      "description": "일회성 결제로 프리미엄 기능 이용",
+      "features": {
+        "feature-1": "모든 프로 기능",
+        "feature-2": "100GB 저장공간",
+        "feature-3": "전담 지원",
+        "feature-4": "엔터프라이즈급 보안",
+        "feature-5": "고급 통합",
+        "feature-6": "커스텀 브랜딩",
+        "feature-7": "평생 업데이트"
+      }
+    }
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "message": "죄송합니다. 찾으시는 페이지가 존재하지 않습니다.",
+    "backToHome": "홈으로 돌아가기"
+  },
+  "ErrorPage": {
+    "title": "오류가 발생했습니다",
+    "tryAgain": "다시 시도",
+    "backToHome": "홈으로 돌아가기"
+  },
+  "HomePage": {
+    "title": "PDFuck - 묣�료 온라인 PDF 도구",
+    "description": "브라우저 기반 묣�료 PDF 도구. PDF 병합, 분할, 압축, 회전, 변환. 100% 프라이버시 보호 - 파일이 기기를 벗어나지 않습니다.",
+    "hero": {
+      "title": "묣�료 온라인 PDF 도구",
+      "subtitle": "브라우저에서 직접 PDF 파일을 병합, 분할, 압축, 변환, 회전, 편집하세요. 업로드 없음, 가입 없음, 100% 프라이빗.",
+      "privacy": "파일이 기기를 벗어나지 않습니다 - 모든 처리는 브라우저에서 로컬로 이루어집니다."
+    },
+    "features": {
+      "fast": {
+        "title": "초고속",
+        "description": "업로드나 다운로드 대기 없이 브라우저에서 즉시 PDF를 처리하세요."
+      },
+      "secure": {
+        "title": "100% 프라이빗",
+        "description": "파일은 로컬에서 처리되며 서버에 업로드되지 않습니다."
+      },
+      "free": {
+        "title": "완전 묣�료",
+        "description": "모든 도구가 숨겨진 요금이나 구독 없이 묣�료입니다."
+      },
+      "title": "기능",
+      "subtitle": "강력한 PDF 도구",
+      "description": "브라우저에서 PDF 파일을 작업하는 데 필요한 모든 것",
+      "items": {
+        "item-1": {
+          "title": "브라우저 기반 처리",
+          "description": "모든 PDF 처리는 브라우저에서 로컬로 이루어집니다. 파일이 기기를 벗어나지 않아 완전한 프라이버시와 보안이 보장됩니다."
+        },
+        "item-2": {
+          "title": "100% 묣�료",
+          "description": "모든 도구는 가입 없이, 워터마크 없이, 제한 없이 완전히 묣�료입니다. 필요한 만큼 많은 파일을 처리하세요."
+        },
+        "item-3": {
+          "title": "빠르고 효율적",
+          "description": "업로드나 다운로드 대기 없이 즉시 PDF를 처리하세요. 최적화된 알고리즘이 파일을 빠르고 효율적으로 처리합니다."
+        },
+        "item-4": {
+          "title": "고품질 출력",
+          "description": "PDF의 원본 품질을 유지하세요. 모든 작업은 문서의 무결성을 보존하기 위해 정확하게 수행됩니다."
+        }
+      }
+    },
+    "tools": {
+      "title": "모든 PDF 도구",
+      "subtitle": "10개 이상의 묣�료 PDF 도구 컬렉션에서 작업에 맞는 도구를 선택하세요."
+    },
+    "howItWorks": {
+      "title": "작동 방식",
+      "subtitle": "3개의 간단한 단계로 PDF 작업 완료",
+      "step1": {
+        "title": "도구 선택",
+        "description": "컬렉션에서 필요에 맞는 PDF 도구를 선택하세요."
+      },
+      "step2": {
+        "title": "파일 업로드",
+        "description": "파일을 드래그 앤 드롭하거나 클릭하여 찾아보세요. 파일은 기기에 남아 있습니다."
+      },
+      "step3": {
+        "title": "결과 다운로드",
+        "description": "파일을 처리하고 즉시 결과를 다운로드하세요."
+      }
+    },
+    "features2": {
+      "title": "PDFuck을 선택하는 이유",
+      "subtitle": "최고의 PDF 도구",
+      "description": "모든 필요를 위한 강력하고 프라이빗하며 완전히 묣�료인 PDF 도구",
+      "feature-1": "브라우저에서 즉시 파일 처리",
+      "feature-2": "업로드 없음 - 파일이 기기를 벗어나지 않습니다",
+      "feature-3": "제한 없이 완전 묣�료",
+      "feature-4": "고품질 출력 보존"
+    },
+    "faqs": {
+      "title": "자주 묻는 질문",
+      "subtitle": "PDF 도구에 대해 알아야 할 모든 것",
+      "items": {
+        "item-1": {
+          "question": "파일이 서버에 업로드되나요?",
+          "answer": "아닙니다. 모든 처리는 JavaScript를 사용하여 브라우저에서 직접 이루어집니다. 파일이 기기를 벗어나지 않아 완전한 프라이버시가 보장됩니다."
+        },
+        "item-2": {
+          "question": "파일 크기 제한이 있나요?",
+          "answer": "최대 100MB까지의 파일을 지원합니다. 실제 제한은 브라우저의 사용 가능한 메모리와 기기 기능에 따라 다릅니다."
+        },
+        "item-3": {
+          "question": "도구가 정말 묣�료인가요?",
+          "answer": "네, 모든 PDF 도구는 가입 없이, 워터마크 없이, 제한 없이 완전히 묣�료입니다."
+        },
+        "item-4": {
+          "question": "PDF 품질에 영향을 주나요?",
+          "answer": "아니요, 도구는 PDF의 원본 품질을 보존합니다. 병합, 분할, 회전과 같은 작업은 무손실입니다."
+        },
+        "item-5": {
+          "question": "어떤 브라우저를 지원하나요?",
+          "answer": "Chrome, Firefox, Safari, Edge 등 모든 최신 브라우저에서 작동합니다. 최상의 경험을 위해 브라우저를 최신 버전으로 유지하세요."
+        }
+      }
+    },
+    "calltoaction": {
+      "title": "시작하기",
+      "description": "PDFuck으로 모든 PDF 필요를 몇 초 만에 처리하세요",
+      "primaryButton": "시작하기",
+      "secondaryButton": "데모 보기"
+    }
+  },
+  "ToolsPage": {
+    "title": "PDF 도구",
+    "description": "PDF 파일을 병합, 분할, 압축, 변환, 회전, 편집하기 위한 묣�료 온라인 PDF 도구. 모든 처리는 브라우저에서 이루어집니다.",
+    "metaTitle": "묣�료 온라인 PDF 도구 - 병합, 분할, 압축 등",
+    "metaDescription": "브라우저 기반 묣�료 PDF 도구. PDF 병합, 분할, 압축, 회전. PDF를 이미지로, 이미지를 PDF로 변환. 업로드 없음 - 100% 프라이빗.",
+    "hero": {
+      "title": "묣�료 온라인 PDF 도구",
+      "subtitle": "모든 처리는 브라우저에서 이루어집니다. 파일이 기기를 벗어나지 않습니다."
+    },
+    "categories": {
+      "all": "모든 도구",
+      "organize": "정리",
+      "convert": "변환",
+      "edit": "편집",
+      "security": "보안"
+    },
+    "dropzone": {
+      "title": "여기에 파일을 드롭하세요",
+      "subtitle": "또는 클릭하여 찾아보세요",
+      "hint": "파일은 브라우저에서 로컬로 처리됩니다",
+      "invalidType": "잘못된 파일 유형",
+      "tooLarge": "파일이 너무 큽니다"
+    },
+    "common": {
+      "selectFile": "파일 선택",
+      "selectFiles": "파일 선택",
+      "process": "처리",
+      "download": "다운로드",
+      "downloadAll": "모두 다운로드",
+      "reset": "다시 시작",
+      "processing": "처리 중...",
+      "privacy": "파일은 로컬에서 처리되며 서버에 업로드되지 않습니다.",
+      "faqTitle": "자주 묻는 질문",
+      "useCasesTitle": "사용 사례",
+      "pages": "페이지",
+      "page": "페이지",
+      "size": "크기",
+      "originalSize": "원본 크기",
+      "compressedSize": "압축된 크기",
+      "reduction": "감소율",
+      "noReduction": "파일이 이미 최적화되어 있습니다",
+      "completed": "처리 완료",
+      "dragToReorder": "드래그하여 재정렬",
+      "legal": "법적 사항",
+      "privacyPolicy": "개인정보 보호정책",
+      "termsOfService": "이용약관",
+      "options": "옵션",
+      "mergeLongImage": "긴 이미지로 병합(모든 페이지를 하나의 이미지로 결합)",
+      "downloadAsZip": "ZIP으로 다운로드(여러 다운로드 확인 회피)",
+      "downloadZip": "ZIP 다운로드",
+      "downloadMerged": "긴 이미지 다운로드",
+      "mergedImageDesc": "{count}페이지를 하나의 긴 이미지로 병합",
+      "pagesSelected": "페이지 선택됨",
+      "selectPagesToDuplicate": "복제할 페이지 선택",
+      "copiesCount": "복사본 수",
+      "copies": "복사본",
+      "insertPosition": "삽입 위치",
+      "atStart": "시작 부분",
+      "atEnd": "끝 부분",
+      "pagesDuplicated": "페이지 복제됨",
+      "selectAll": "모두 선택",
+      "deselectAll": "모두 선택 해제",
+      "headerText": "헤더 텍스트",
+      "footerText": "푸터 텍스트",
+      "fontSize": "글꼴 크기",
+      "alignment": "정렬",
+      "left": "왼쪽",
+      "center": "중앙",
+      "right": "오른쪽",
+      "applyTo": "적용 대상",
+      "allPages": "모든 페이지",
+      "oddPages": "홀수 페이지",
+      "evenPages": "짝수 페이지",
+      "pageSize": "페이지 크기",
+      "scaleOption": "스케일 옵션",
+      "fitToSize": "내용 크기 조정",
+      "keepOriginal": "원본 내용 크기 유지",
+      "language": "언어",
+      "chinese": "중국어",
+      "english": "영어",
+      "auto": "자동 감지",
+      "recognizing": "인식 중..."
+    },
+    "tools": {
+      "mergePdf": {
+        "name": "PDF 병합",
+        "description": "여러 PDF 파일을 하나의 문서로 결합합니다."
+      },
+      "splitPdf": {
+        "name": "PDF 분할",
+        "description": "PDF를 개별 페이지 또는 사용자 지정 범위로 분리합니다."
+      },
+      "compressPdf": {
+        "name": "PDF 압축",
+        "description": "품질을 유지하면서 PDF 파일 크기를 줄입니다."
+      },
+      "rotatePdf": {
+        "name": "PDF 회전",
+        "description": "PDF 페이지를 올바른 방향으로 회전합니다."
+      },
+      "pdfToPng": {
+        "name": "PDF를 PNG로 변환",
+        "description": "PDF 페이지를 무손실 압축의 고품질 PNG 이미지로 변환. 긴 이미지로 병합."
+      },
+      "pdfToJpg": {
+        "name": "PDF를 JPG로 변환",
+        "description": "PDF 페이지를 조절 가능한 품질의 JPG 이미지로 변환. 긴 이미지로 병합."
+      },
+      "pdfToWebp": {
+        "name": "PDF를 WebP로 변환",
+        "description": "PDF 페이지를 우수한 압축률의 최신 WebP 이미지로 변환. 긴 이미지로 병합."
+      },
+      "pngToPdf": {
+        "name": "PNG를 PDF로 변환",
+        "description": "PNG 이미지를 PDF 문서로 변환합니다."
+      },
+      "jpgToPdf": {
+        "name": "JPG를 PDF로 변환",
+        "description": "JPG 이미지를 PDF 문서로 변환합니다."
+      },
+      "webpToPdf": {
+        "name": "WebP를 PDF로 변환",
+        "description": "WebP 이미지를 PDF 문서로 변환합니다."
+      },
+      "watermarkPdf": {
+        "name": "워터마크 추가",
+        "description": "PDF 문서에 텍스트 워터마크를 추가합니다."
+      },
+      "pageNumbers": {
+        "name": "페이지 번호 추가",
+        "description": "PDF 문서에 페이지 번호를 추가합니다."
+      },
+      "reorderPages": {
+        "name": "페이지 재정렬",
+        "description": "드래그 앤 드롭으로 PDF 페이지를 재정렬합니다."
+      },
+      "extractPages": {
+        "name": "페이지 추출",
+        "description": "PDF에서 특정 페이지를 선택하여 추출합니다."
+      },
+      "deletePages": {
+        "name": "페이지 삭제",
+        "description": "PDF 문서에서 특정 페이지를 삭제합니다."
+      },
+      "reversePdf": {
+        "name": "PDF 역순",
+        "description": "PDF 문서의 페이지 순서를 뒤집습니다."
+      },
+      "pdfToText": {
+        "name": "PDF를 텍스트로 변환",
+        "description": "PDF 문서에서 텍스트 내용을 추출합니다."
+      },
+      "bmpToPdf": {
+        "name": "BMP를 PDF로 변환",
+        "description": "BMP 이미지를 PDF 문서로 변환합니다."
+      },
+      "gifToPdf": {
+        "name": "GIF를 PDF로 변환",
+        "description": "GIF 이미지를 PDF 문서로 변환합니다."
+      },
+      "svgToPdf": {
+        "name": "SVG를 PDF로 변환",
+        "description": "SVG 벡터 이미지를 PDF 문서로 변환합니다."
+      },
+      "editMetadata": {
+        "name": "메타데이터 편집",
+        "description": "제목, 저자, 키워드를 포함한 PDF 문서의 메타데이터를 편집합니다."
+      },
+      "cropPdf": {
+        "name": "PDF 자르기",
+        "description": "PDF 페이지 여백을 자르고 조정합니다."
+      },
+      "flattenPdf": {
+        "name": "PDF 평탄화",
+        "description": "PDF 양식 필드와 주석을 정적 콘텐츠로 변환합니다."
+      },
+      "signPdf": {
+        "name": "PDF 서명",
+        "description": "PDF 문서에 디지털 서명을 추가합니다."
+      },
+      "unlockPdf": {
+        "name": "PDF 잠금 해제",
+        "description": "PDF 파일의 비밀번호 보호를 제거합니다."
+      },
+      "protectPdf": {
+        "name": "PDF 보호",
+        "description": "PDF 파일에 비밀번호 보호를 추가합니다."
+      },
+      "comparePdf": {
+        "name": "PDF 비교",
+        "description": "두 PDF 문서를 비교하여 차이점을 찾습니다."
+      },
+      "redactPdf": {
+        "name": "PDF 편집",
+        "description": "PDF 문서에서 민감한 정보를 영구적으로 제거합니다."
+      },
+      "ocrPdf": {
+        "name": "PDF OCR",
+        "description": "스캔한 문서를 선택 가능한 텍스트가 있는 PDF로 변환합니다."
+      },
+      "resizePdf": {
+        "name": "PDF 크기 조정",
+        "description": "PDF 페이지 크기를 다른 페이지 크기로 변경합니다."
+      },
+      "sanitizePdf": {
+        "name": "PDF 살균",
+        "description": "PDF 문서에서 메타데이터와 숨겨진 정보를 제거합니다."
+      },
+      "headerFooter": {
+        "name": "머리글/바닥글",
+        "description": "PDF 문서에 머리글과 바닥글을 추가하거나 편집합니다."
+      },
+      "duplicatePages": {
+        "name": "페이지 복제",
+        "description": "PDF 문서에서 특정 페이지를 복제합니다."
+      },
+      "verifyPdf": {
+        "name": "PDF 검증",
+        "description": "PDF 문서의 무결성과 유효성을 검증합니다."
+      }
+    }
+  }
+}

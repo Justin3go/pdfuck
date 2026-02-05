@@ -1,0 +1,1448 @@
+{
+  "Metadata": {
+    "name": "PDFuck",
+    "title": "PDFuck - Kostenlose Online-PDF-Tools",
+    "description": "Kostenlose browserbasierte PDF-Tools. PDFs zusammenführen, aufteilen, komprimieren, drehen, konvertieren. 100% Datenschutz - Dateien verlassen nie Ihr Gerät."
+  },
+  "Common": {
+    "premium": "Premium",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "signUp": "Registrieren",
+    "pdfTools": "PDF-Tools",
+    "language": "Sprache wechseln",
+    "mode": {
+      "label": "Modus wechseln",
+      "light": "Hell",
+      "dark": "Dunkel",
+      "system": "System"
+    },
+    "copy": "Kopieren",
+    "saving": "Speichern...",
+    "save": "Speichern",
+    "loading": "Laden...",
+    "cancel": "Abbrechen",
+    "logoutFailed": "Abmeldung fehlgeschlagen",
+    "table": {
+      "totalRecords": "Insgesamt {count} Einträge",
+      "noResults": "Keine Ergebnisse",
+      "loading": "Laden...",
+      "columns": "Spalten",
+      "rowsPerPage": "Zeilen pro Seite",
+      "page": "Seite",
+      "firstPage": "Erste Seite",
+      "lastPage": "Letzte Seite",
+      "nextPage": "Nächste Seite",
+      "previousPage": "Vorherige Seite",
+      "ascending": "Aufsteigend",
+      "descending": "Absteigend",
+      "resetSorting": "Zurücksetzen",
+      "hideColumn": "Ausblenden",
+      "viewOptions": "Ansicht",
+      "toggleColumns": "Spalten umschalten",
+      "searchColumns": "Spalten suchen...",
+      "noColumns": "Keine Spalten gefunden.",
+      "clearFilters": "Filter löschen"
+    }
+  },
+  "PricingPage": {
+    "title": "Preise",
+    "description": "Wählen Sie den Plan, der am besten zu Ihnen passt",
+    "subtitle": "Wählen Sie den Plan, der am besten zu Ihnen passt",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "PricingCard": {
+      "freePrice": "0 €",
+      "perMonth": "/Monat",
+      "perYear": "/Jahr",
+      "popular": "Beliebt",
+      "currentPlan": "Aktueller Plan",
+      "yourCurrentPlan": "Ihr aktueller Plan",
+      "getStartedForFree": "Kostenlos starten",
+      "getLifetimeAccess": "Lebenslangen Zugriff erhalten",
+      "getStarted": "Loslegen",
+      "notAvailable": "Nicht verfügbar",
+      "lifetime": "Lebenslang",
+      "free": "Kostenlos",
+      "month": "Monat",
+      "year": "Jahr"
+    },
+    "FeatureList": {
+      "free": {
+        "title": "Kostenlos",
+        "description": "Für den persönlichen Gebrauch",
+        "features": {
+          "feature1": "Alle PDF-Tools",
+          "feature2": "Browserbasierte Verarbeitung",
+          "feature3": "Grundlegende Funktionen"
+        }
+      },
+      "premium": {
+        "title": "Premium",
+        "description": "Für Profis und Teams",
+        "features": {
+          "feature1": "Alle kostenlosen Funktionen",
+          "feature2": "Erweiterte Funktionen",
+          "feature3": "Prioritäts-Support"
+        }
+      }
+    }
+  },
+  "PricePlans": {
+    "free": {
+      "name": "Kostenlos",
+      "description": "Für den persönlichen Gebrauch",
+      "features": [
+        "Alle PDF-Tools",
+        "Browserbasierte Verarbeitung",
+        "Grundlegende Funktionen"
+      ]
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Für Profis und Teams",
+      "features": [
+        "Alle kostenlosen Funktionen",
+        "Erweiterte Funktionen",
+        "Prioritäts-Support"
+      ]
+    }
+  },
+  "NotFoundPage": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht.",
+    "backHome": "Zurück zur Startseite"
+  },
+  "ErrorPage": {
+    "title": "Etwas ist schiefgelaufen",
+    "description": "Ein unerwarteter Fehler ist aufgetreten.",
+    "tryAgain": "Erneut versuchen",
+    "backHome": "Zurück zur Startseite"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Kostenlose Online-PDF-Tools",
+      "description": "Kostenlose browserbasierte PDF-Tools. PDFs zusammenführen, aufteilen, komprimieren, drehen, konvertieren. 100% Datenschutz - Dateien verlassen nie Ihr Gerät.",
+      "cta": "Alle Tools erkunden",
+      "secondaryCta": "Mehr erfahren"
+    },
+    "features": {
+      "title": "Warum PDFuck wählen?",
+      "subtitle": "Leistungsstarke Funktionen für all Ihre PDF-Bedürfnisse",
+      "items": {
+        "privacy": {
+          "title": "100% Datenschutz",
+          "description": "Alle Verarbeitungen finden in Ihrem Browser statt. Ihre Dateien werden niemals auf unsere Server hochgeladen."
+        },
+        "free": {
+          "title": "Kostenlos zu verwenden",
+          "description": "Alle grundlegenden PDF-Tools sind kostenlos. Keine versteckten Gebühren, keine Registrierung erforderlich."
+        },
+        "fast": {
+          "title": "Schnell und effizient",
+          "description": "Verarbeiten Sie Ihre PDFs in Sekunden mit unseren optimierten Browser-basierten Tools."
+        },
+        "unlimited": {
+          "title": "Unbegrenzte Verarbeitung",
+          "description": "Keine Begrenzungen für Dateigröße oder Anzahl der Verarbeitungen. Nutzen Sie unsere Tools so oft Sie möchten."
+        }
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Finden Sie Antworten auf häufige Fragen zu unseren PDF-Tools",
+      "items": {
+        "item1": {
+          "question": "Ist PDFuck wirklich kostenlos?",
+          "answer": "Ja, alle grundlegenden PDF-Tools sind völlig kostenlos. Es gibt keine versteckten Gebühren und keine Registrierung ist erforderlich."
+        },
+        "item2": {
+          "question": "Sind meine Dateien sicher?",
+          "answer": "Absolut. Alle Verarbeitungen finden lokal in Ihrem Browser statt. Ihre Dateien verlassen niemals Ihr Gerät und werden nicht auf Servern gespeichert."
+        },
+        "item3": {
+          "question": "Welche Dateigrößen werden unterstützt?",
+          "answer": "Wir unterstützen PDF-Dateien bis zu 100 MB. Die tatsächliche Grenze hängt von den Fähigkeiten Ihres Browsers und Geräts ab."
+        },
+        "item4": {
+          "question": "Muss ich Software installieren?",
+          "answer": "Nein. PDFuck ist vollständig browserbasiert. Sie benötigen keine Installation - öffnen Sie einfach die Website und beginnen Sie mit der Verarbeitung Ihrer PDFs."
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihre PDFs zu verarbeiten?",
+      "description": "Beginnen Sie noch heute mit der Verwendung unserer kostenlosen PDF-Tools",
+      "button": "Jetzt starten"
+    }
+  },
+  "ToolsPage": {
+    "title": "PDF-Tools",
+    "description": "Alle verfügbaren PDF-Tools an einem Ort",
+    "searchPlaceholder": "Tools durchsuchen...",
+    "categories": {
+      "all": "Alle",
+      "convert": "Konvertieren",
+      "edit": "Bearbeiten",
+      "optimize": "Optimieren",
+      "organize": "Organisieren",
+      "protect": "Schützen"
+    }
+  },
+  "ToolPage": {
+    "common": {
+      "dropzone": {
+        "title": "PDF-Dateien hier ablegen",
+        "description": "oder klicken Sie zum Durchsuchen",
+        "accept": "Nur PDF-Dateien werden unterstützt"
+      },
+      "processing": {
+        "title": "Verarbeitung läuft...",
+        "description": "Bitte warten Sie, während wir Ihre Datei verarbeiten"
+      },
+      "success": {
+        "title": "Verarbeitung abgeschlossen!",
+        "description": "Ihre Datei ist bereit zum Download"
+      },
+      "error": {
+        "title": "Verarbeitung fehlgeschlagen",
+        "description": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+      },
+      "download": "Datei herunterladen",
+      "processAnother": "Weitere Datei verarbeiten",
+      "faq": "Häufig gestellte Fragen",
+      "useCases": "Anwendungsfälle"
+    },
+    "tools": {
+      "mergePdf": {
+        "name": "PDFs zusammenführen",
+        "description": "Mehrere PDF-Dateien zu einem einzigen Dokument kombinieren.",
+        "metaTitle": "PDFs kostenlos online zusammenführen - PDF-Kombinierer",
+        "metaDescription": "Kostenlos mehrere PDF-Dateien zu einem einzigen Dokument kombinieren. Einfach per Drag & Drop, Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Kombinieren Sie mehrere PDF-Dateien zu einem einzigen, zusammenhängenden Dokument. Perfekt für das Zusammenführen von Berichten, Verträgen oder Präsentationen. Sie können die Reihenfolge der Dateien vor dem Zusammenführen anpassen.",
+        "faq": {
+          "item-1": {
+            "question": "Wie viele PDFs kann ich gleichzeitig zusammenführen?",
+            "answer": "Sie können bis zu 20 PDF-Dateien gleichzeitig zusammenführen. Die kombinierte Dateigröße sollte 100 MB nicht überschreiten."
+          },
+          "item-2": {
+            "question": "Kann ich die Reihenfolge der Seiten ändern?",
+            "answer": "Ja, Sie können die Reihenfolge der PDF-Dateien per Drag & Drop anpassen, bevor Sie sie zusammenführen."
+          },
+          "item-3": {
+            "question": "Bleibt die Qualität erhalten?",
+            "answer": "Ja, die Qualität Ihrer PDFs bleibt vollständig erhalten. Das Tool fügt die Dateien zusammen, ohne die Inhalte zu komprimieren oder zu verändern."
+          },
+          "item-4": {
+            "question": "Werden Lesezeichen beibehalten?",
+            "answer": "Lesezeichen aus den Original-PDFs werden im zusammengeführten Dokument beibehalten."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Berichte zusammenführen",
+            "description": "Kombinieren Sie mehrere Monatsberichte zu einem umfassenden Jahresbericht."
+          },
+          "item-2": {
+            "title": "Vertragsdokumentation",
+            "description": "Fügen Sie Vertragsanlagen und Hauptdokumente zu einer vollständigen Vertragsdatei zusammen."
+          },
+          "item-3": {
+            "title": "Präsentationsmaterialien",
+            "description": "Kombinieren Sie verschiedene Präsentationsfolien zu einer Master-Präsentation."
+          },
+          "item-4": {
+            "title": "Akademische Arbeiten",
+            "description": "Fügen Sie Kapitel, Anhänge und Referenzen zu einer vollständigen Abschlussarbeit zusammen."
+          }
+        }
+      },
+      "splitPdf": {
+        "name": "PDF aufteilen",
+        "description": "PDF in mehrere Dateien aufteilen oder bestimmte Seiten extrahieren.",
+        "metaTitle": "PDF kostenlos online aufteilen - PDF-Teiler",
+        "metaDescription": "Kostenlos PDFs in mehrere Dateien aufteilen oder bestimmte Seiten extrahieren. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Teilen Sie große PDF-Dokumente in kleinere, handlichere Dateien auf. Extrahieren Sie bestimmte Seitenbereiche oder teilen Sie das Dokument nach einer festen Anzahl von Seiten pro Datei.",
+        "faq": {
+          "item-1": {
+            "question": "Kann ich bestimmte Seiten extrahieren?",
+            "answer": "Ja, Sie können bestimmte Seiten oder Seitenbereiche extrahieren, indem Sie die Seitenzahlen eingeben (z.B. 1,3,5-10)."
+          },
+          "item-2": {
+            "question": "Kann ich ein PDF in gleich große Teile aufteilen?",
+            "answer": "Ja, Sie können festlegen, wie viele Seiten jede Ausgabedatei haben soll, und das Tool teilt das PDF entsprechend auf."
+          },
+          "item-3": {
+            "question": "Bleiben die Dateinamen erhalten?",
+            "answer": "Die aufgeteilten Dateien erhalten nummerierte Namen basierend auf dem Originaldateinamen, z.B. document_1.pdf, document_2.pdf."
+          },
+          "item-4": {
+            "question": "Werden Formularfelder beibehalten?",
+            "answer": "Ja, Formularfelder, Anmerkungen und andere interaktive Elemente bleiben in den aufgeteilten Dateien erhalten."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Große Dokumente teilen",
+            "description": "Teilen Sie umfangreiche Berichte in kapitelweise Dateien für einfacheres Teilen."
+          },
+          "item-2": {
+            "title": "Seiten extrahieren",
+            "description": "Extrahieren Sie nur die benötigten Seiten aus einem großen Dokument."
+          },
+          "item-3": {
+            "title": "E-Mail-Anhänge",
+            "description": "Teilen Sie große PDFs in kleinere Dateien, die E-Mail-Größenbeschränkungen entsprechen."
+          },
+          "item-4": {
+            "title": "Dokumentenmanagement",
+            "description": "Organisieren Sie große Dokumentensammlungen in einzelne, kategorisierte Dateien."
+          }
+        }
+      },
+      "compressPdf": {
+        "name": "PDF komprimieren",
+        "description": "PDF-Dateigröße reduzieren, während die Qualität erhalten bleibt.",
+        "metaTitle": "PDF kostenlos online komprimieren - PDF-Kompressor",
+        "metaDescription": "Kostenlos PDF-Dateigröße reduzieren, während die Qualität erhalten bleibt. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Reduzieren Sie die Dateigröße Ihrer PDFs für einfacheres Teilen und schnelleres Hochladen. Unser intelligenter Kompressionsalgorithmus wählt die optimale Qualitätsstufe basierend auf Ihrem Dokumentinhalt.",
+        "faq": {
+          "item-1": {
+            "question": "Wie viel kann ich komprimieren?",
+            "answer": "Die Kompressionsrate hängt vom Inhalt Ihres PDFs ab. Textbasierte PDFs können oft um 50-70% reduziert werden, während bildreiche PDFs möglicherweise weniger komprimierbar sind."
+          },
+          "item-2": {
+            "question": "Beeinflusst die Komprimierung die Qualität?",
+            "answer": "Unser Tool verwendet intelligente Kompression, die die visuelle Qualität beibehält, während die Dateigröße reduziert wird. Text bleibt scharf und lesbar."
+          },
+          "item-3": {
+            "question": "Kann ich komprimierte PDFs wieder dekomprimieren?",
+            "answer": "Nein, die Komprimierung ist permanent. Bewahren Sie immer das Original auf, falls Sie die höchste Qualität später benötigen."
+          },
+          "item-4": {
+            "question": "Werden alle PDF-Elemente beibehalten?",
+            "answer": "Ja, alle Texte, Bilder, Schriftarten und Formatierungen bleiben erhalten. Nur die Bildqualität wird optimiert."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "E-Mail-Anhänge",
+            "description": "Komprimieren Sie PDFs, um E-Mail-Größenbeschränkungen einzuhalten."
+          },
+          "item-2": {
+            "title": "Web-Uploads",
+            "description": "Reduzieren Sie Dateigrößen für schnelleres Hochladen auf Websites und Cloud-Speicher."
+          },
+          "item-3": {
+            "title": "Mobiles Speichern",
+            "description": "Sparen Sie Speicherplatz auf Ihrem Telefon oder Tablet."
+          },
+          "item-4": {
+            "title": "Dokumentenarchivierung",
+            "description": "Erstellen Sie kompakte Archive von Dokumenten ohne Qualitätsverlust."
+          }
+        }
+      },
+      "rotatePdf": {
+        "name": "PDF drehen",
+        "description": "PDF-Seiten im Uhrzeigersinn oder gegen den Uhrzeigersinn drehen.",
+        "metaTitle": "PDF kostenlos online drehen - PDF-Rotator",
+        "metaDescription": "Kostenlos PDF-Seiten im Uhrzeigersinn oder gegen den Uhrzeigersinn drehen. Einzelne oder alle Seiten. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Drehen Sie PDF-Seiten einfach in die richtige Ausrichtung. Drehen Sie einzelne Seiten oder das gesamte Dokument im Uhrzeigersinn oder gegen den Uhrzeigersinn um 90 Grad.",
+        "faq": {
+          "item-1": {
+            "question": "Kann ich nur bestimmte Seiten drehen?",
+            "answer": "Ja, Sie können bestimmte Seiten auswählen oder alle Seiten auf einmal drehen."
+          },
+          "item-2": {
+            "question": "Welche Drehwinkel sind verfügbar?",
+            "answer": "Sie können Seiten um 90 Grad im Uhrzeigersinn, 90 Grad gegen den Uhrzeigersinn oder 180 Grad drehen."
+          },
+          "item-3": {
+            "question": "Werden die Originaldateien verändert?",
+            "answer": "Nein, das Original bleibt unverändert. Eine neue gedrehte PDF-Datei wird erstellt."
+          },
+          "item-4": {
+            "question": "Kann ich die Drehung rückgängig machen?",
+            "answer": "Ja, laden Sie einfach die gedrehte Datei erneut hoch und drehen Sie sie in die entgegengesetzte Richtung."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Gescannte Dokumente korrigieren",
+            "description": "Korrigieren Sie die Ausrichtung falsch gescannter Dokumente."
+          },
+          "item-2": {
+            "title": "Präsentationsfolien",
+            "description": "Drehen Sie Folien für die optimale Anzeige auf verschiedenen Geräten."
+          },
+          "item-3": {
+            "title": "Fotodokumente",
+            "description": "Richten Sie Fotos in PDFs korrekt aus."
+          },
+          "item-4": {
+            "title": "Tablet-Ansicht",
+            "description": "Optimieren Sie Dokumente für die Ansicht im Hoch- oder Querformat."
+          }
+        }
+      },
+      "pdfToImages": {
+        "name": "PDF in Bilder",
+        "description": "PDF-Seiten in hochwertige Bilder (PNG, JPG) konvertieren.",
+        "metaTitle": "PDF kostenlos online in Bilder konvertieren - PDF-zu-Bild",
+        "metaDescription": "Kostenlos PDF-Seiten in hochwertige PNG- oder JPG-Bilder konvertieren. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Konvertieren Sie PDF-Seiten in hochauflösende Bilddateien. Wählen Sie zwischen PNG für beste Qualität mit Transparenz oder JPG für kleinere Dateigrößen. Perfekt für die Verwendung von PDF-Inhalten in Präsentationen, Websites oder Grafikdesign.",
+        "faq": {
+          "item-1": {
+            "question": "Welche Bildformate werden unterstützt?",
+            "answer": "Wir unterstützen PNG (für beste Qualität mit Transparenz) und JPG (für kleinere Dateigrößen)."
+          },
+          "item-2": {
+            "question": "Welche Auflösung erhalte ich?",
+            "answer": "Die Bilder werden in hoher Auflösung (150 DPI) erstellt, die für die meisten Zwecke ausreicht."
+          },
+          "item-3": {
+            "question": "Kann ich alle Seiten auf einmal konvertieren?",
+            "answer": "Ja, alle Seiten werden konvertiert und als ZIP-Datei zum Download bereitgestellt."
+          },
+          "item-4": {
+            "question": "Bleiben Farben erhalten?",
+            "answer": "Ja, alle Farben und visuellen Elemente werden genau wie im Original-PDF beibehalten."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Präsentationen",
+            "description": "Verwenden Sie PDF-Inhalte als Folien in Präsentationen."
+          },
+          "item-2": {
+            "title": "Web-Inhalte",
+            "description": "Konvertieren Sie PDFs in webfreundliche Bildformate."
+          },
+          "item-3": {
+            "title": "Grafikdesign",
+            "description": "Verwenden Sie PDF-Inhalte in Designprojekten."
+          },
+          "item-4": {
+            "title": "Soziale Medien",
+            "description": "Teilen Sie PDF-Inhalte als Bilder in sozialen Medien."
+          }
+        }
+      },
+      "imagesToPdf": {
+        "name": "Bilder zu PDF",
+        "description": "Mehrere Bilder in eine einzige PDF-Datei konvertieren.",
+        "metaTitle": "Bilder kostenlos online zu PDF konvertieren - Bild-zu-PDF",
+        "metaDescription": "Kostenlos JPG, PNG und andere Bilder in PDF umwandeln. Mehrere Bilder zu einer PDF kombinieren. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Konvertieren Sie JPG, PNG, BMP, GIF und WEBP-Bilder in professionelle PDF-Dokumente. Kombinieren Sie mehrere Bilder zu einer PDF oder konvertieren Sie sie einzeln. Perfekt für das Erstellen von Fotobüchern, Dokumentenscans oder Bildsammlungen.",
+        "faq": {
+          "item-1": {
+            "question": "Welche Bildformate werden unterstützt?",
+            "answer": "Wir unterstützen JPG, PNG, BMP, GIF und WEBP-Formate."
+          },
+          "item-2": {
+            "question": "Kann ich mehrere Bilder zu einer PDF kombinieren?",
+            "answer": "Ja, Sie können mehrere Bilder auswählen und sie zu einer einzigen PDF-Datei zusammenführen."
+          },
+          "item-3": {
+            "question": "Werden die Bilder komprimiert?",
+            "answer": "Bilder werden in die PDF mit ihrer Originalqualität eingebettet. Optional können Sie die Qualität für kleinere Dateigrößen anpassen."
+          },
+          "item-4": {
+            "question": "Kann ich die Seitenreihenfolge ändern?",
+            "answer": "Ja, Sie können die Reihenfolge der Bilder per Drag & Drop anpassen, bevor Sie die PDF erstellen."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Dokumentenscans",
+            "description": "Wandeln Sie gescannte Dokumentenbilder in durchsuchbare PDFs um."
+          },
+          "item-2": {
+            "title": "Fotobücher",
+            "description": "Erstellen Sie PDF-Fotobücher aus Ihren Lieblingsbildern."
+          },
+          "item-3": {
+            "title": "Portfolio-Erstellung",
+            "description": "Kombinieren Sie Designarbeiten zu einem professionellen PDF-Portfolio."
+          },
+          "item-4": {
+            "title": "Rechnungsarchivierung",
+            "description": "Konvertieren Sie gescannte Rechnungen in archivierbare PDFs."
+          }
+        }
+      },
+      "watermarkPdf": {
+        "name": "Wasserzeichen hinzufügen",
+        "description": "Text- oder Bildwasserzeichen zu PDF-Dokumenten hinzufügen.",
+        "metaTitle": "Wasserzeichen kostenlos online zu PDF hinzufügen",
+        "metaDescription": "Kostenlos Text- oder Bildwasserzeichen zu PDFs hinzufügen. Anpassbare Position, Transparenz und Rotation. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Fügen Sie professionelle Wasserzeichen zu Ihren PDF-Dokumenten hinzu. Verwenden Sie Textwasserzeichen mit anpassbaren Schriftarten oder laden Sie Ihr eigenes Bild hoch. Kontrollieren Sie Position, Größe, Transparenz und Rotation für den perfekten Look.",
+        "faq": {
+          "item-1": {
+            "question": "Kann ich mehrere Wasserzeichen hinzufügen?",
+            "answer": "Ja, Sie können mehrere Wasserzeichen auf verschiedenen Seiten oder Positionen hinzufügen."
+          },
+          "item-2": {
+            "question": "Welche Bildformate werden für Bildwasserzeichen unterstützt?",
+            "answer": "Wir unterstützen PNG (empfohlen für Transparenz) und JPG-Bilder als Wasserzeichen."
+          },
+          "item-3": {
+            "question": "Kann ich Wasserzeichen auf bestimmte Seiten anwenden?",
+            "answer": "Ja, Sie können Wasserzeichen auf alle Seiten, ungerade Seiten, gerade Seiten oder bestimmte Seitenbereiche anwenden."
+          },
+          "item-4": {
+            "question": "Werden Wasserzeichen dauerhaft hinzugefügt?",
+            "answer": "Ja, Wasserzeichen werden dauerhaft in das PDF eingebettet und können nicht einfach entfernt werden."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Urheberrechtsschutz",
+            "description": "Fügen Sie Urheberrechtshinweise zu Ihren Dokumenten hinzu."
+          },
+          "item-2": {
+            "title": "Vertraulichkeitsmarkierung",
+            "description": "Markieren Sie Dokumente als vertraulich oder intern."
+          },
+          "item-3": {
+            "title": "Branding",
+            "description": "Fügen Sie Logos oder Firmennamen zu Geschäftsdokumenten hinzu."
+          },
+          "item-4": {
+            "title": "Entwurfsmarkierung",
+            "description": "Kennzeichnen Sie Dokumente als Entwurf oder zur Überprüfung."
+          }
+        }
+      },
+      "pageNumbersPdf": {
+        "name": "Seitenzahlen",
+        "description": "Seitenzahlen zu PDF-Dokumenten hinzufügen.",
+        "metaTitle": "Seitenzahlen kostenlos online zu PDF hinzufügen",
+        "metaDescription": "Kostenlos Seitenzahlen zu PDFs hinzufügen. Anpassbare Position, Schriftart und Format. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Fügen Sie professionelle Seitenzahlen zu Ihren PDF-Dokumenten hinzu. Wählen Sie Position (oben/unten, links/mitte/rechts), Schriftart, Größe und Format. Unterstützt verschiedene Nummerierungsstile wie 1, 2, 3 oder i, ii, iii.",
+        "faq": {
+          "item-1": {
+            "question": "Kann ich die Startseitenzahl festlegen?",
+            "answer": "Ja, Sie können festlegen, mit welcher Zahl die Nummerierung beginnen soll."
+          },
+          "item-2": {
+            "question": "Welche Nummerierungsformate werden unterstützt?",
+            "answer": "Wir unterstützen arabische Zahlen (1, 2, 3), römische Zahlen (i, ii, iii) und Buchstaben (a, b, c)."
+          },
+          "item-3": {
+            "question": "Kann ich die erste Seite überspringen?",
+            "answer": "Ja, Sie können festlegen, ab welcher Seite die Nummerierung beginnen soll."
+          },
+          "item-4": {
+            "question": "Kann ich die Position anpassen?",
+            "answer": "Ja, Sie können Seitenzahlen oben oder unten platzieren und links, mittig oder rechts ausrichten."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Berichte",
+            "description": "Fügen Sie Seitenzahlen zu Geschäftsberichten und Dokumenten hinzu."
+          },
+          "item-2": {
+            "title": "Abschlussarbeiten",
+            "description": "Nummerieren Sie akademische Arbeiten entsprechend den Anforderungen."
+          },
+          "item-3": {
+            "title": "E-Books",
+            "description": "Fügen Sie Seitenzahlen zu digitalen Büchern hinzu."
+          },
+          "item-4": {
+            "title": "Verträge",
+            "description": "Ermöglichen Sie einfache Referenzierung bestimmter Seiten in Verträgen."
+          }
+        }
+      },
+      "extractPagesPdf": {
+        "name": "Seiten extrahieren",
+        "description": "Bestimmte Seiten aus einem PDF extrahieren und als neue Datei speichern.",
+        "metaTitle": "PDF-Seiten kostenlos online extrahieren",
+        "metaDescription": "Kostenlos bestimmte Seiten aus PDFs extrahieren. Wählen Sie einzelne Seiten oder Bereiche. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Extrahieren Sie bestimmte Seiten aus einem PDF-Dokument und speichern Sie sie als separate Datei. Perfekt für das Erstellen von Auszügen, das Teilen bestimmter Abschnitte oder das Isolieren wichtiger Seiten.",
+        "faq": {
+          "item-1": {
+            "question": "Kann ich nicht aufeinanderfolgende Seiten extrahieren?",
+            "answer": "Ja, Sie können einzelne Seiten oder Bereiche auswählen, z.B. 1, 3, 5-10."
+          },
+          "item-2": {
+            "question": "Werden Links und Lesezeichen beibehalten?",
+            "answer": "Interne Links innerhalb der extrahierten Seiten bleiben erhalten, externe Links können angepasst werden."
+          },
+          "item-3": {
+            "question": "Kann ich Seiten in mehrere Dateien aufteilen?",
+            "answer": "Für das Aufteilen in mehrere Dateien verwenden Sie bitte unser PDF-Aufteilen-Tool."
+          },
+          "item-4": {
+            "question": "Bleibt die Qualität erhalten?",
+            "answer": "Ja, die extrahierten Seiten behalten ihre Originalqualität bei."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Auszüge erstellen",
+            "description": "Erstellen Sie Auszüge mit relevanten Seiten aus langen Dokumenten."
+          },
+          "item-2": {
+            "title": "Kapitel teilen",
+            "description": "Extrahieren Sie einzelne Kapitel aus Büchern oder Berichten."
+          },
+          "item-3": {
+            "title": "Formulare isolieren",
+            "description": "Extrahieren Sie bestimmte Formularseiten aus umfangreichen Dokumenten."
+          },
+          "item-4": {
+            "title": "Anhänge separieren",
+            "description": "Speichern Sie wichtige Anhänge als separate Dateien."
+          }
+        }
+      },
+      "flattenPdf": {
+        "name": "PDF flattenen",
+        "description": "Formularfelder und Anmerkungen in statischen Inhalt umwandeln.",
+        "metaTitle": "PDF kostenlos online flattenen - Formular-Flattener",
+        "metaDescription": "Kostenlos PDF-Formularfelder und Anmerkungen in statischen Inhalt umwandeln. Sicheres Flattening für endgültige Dokumente. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Wandeln Sie interaktive PDF-Elemente wie Formularfelder, Anmerkungen und Kommentare in statischen, nicht bearbeitbaren Inhalt um. Dies stellt sicher, dass Ihre Dokumente auf allen Geräten gleich aussehen und nicht mehr verändert werden können.",
+        "faq": {
+          "item-1": {
+            "question": "Was bedeutet Flattening?",
+            "answer": "Flattening wandelt interaktive Elemente wie Formularfelder und Anmerkungen in statische Bilder um, die nicht mehr bearbeitet werden können."
+          },
+          "item-2": {
+            "question": "Kann ich ein geflattetes PDF rückgängig machen?",
+            "answer": "Nein, das Flattening ist permanent. Bewahren Sie immer das Original auf, falls Sie später Änderungen vornehmen müssen."
+          },
+          "item-3": {
+            "question": "Werden alle Formularfelder geflattet?",
+            "answer": "Ja, alle Formularfelder, Anmerkungen, Kommentare und Stempel werden in statischen Inhalt umgewandelt."
+          },
+          "item-4": {
+            "question": "Bleibt die Qualität erhalten?",
+            "answer": "Ja, die visuelle Qualität bleibt erhalten. Nur die Interaktivität wird entfernt."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Formularfinalisierung",
+            "description": "Machen Sie ausgefüllte Formulare endgültig und manipulationssicher."
+          },
+          "item-2": {
+            "title": "Dokumentenverteilung",
+            "description": "Stellen Sie sicher, dass Empfänger genau das sehen, was Sie gesendet haben."
+          },
+          "item-3": {
+            "title": "Druckvorbereitung",
+            "description": "Bereiten Sie interaktive Dokumente für den Druck vor."
+          },
+          "item-4": {
+            "title": "Archivierung",
+            "description": "Erstellen Sie endgültige Versionen für die Langzeitarchivierung."
+          }
+        }
+      },
+      "pdfToWord": {
+        "name": "PDF zu Word",
+        "description": "PDF-Dokumente in bearbeitbare Word-Dokumente konvertieren.",
+        "metaTitle": "PDF kostenlos online zu Word konvertieren - PDF-zu-DOCX",
+        "metaDescription": "Kostenlos PDF-Dokumente in bearbeitbare Word-Dokumente (DOCX-Format) konvertieren. Text und Formatierung beibehalten. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Konvertieren Sie PDF-Dokumente in das bearbeitbare Microsoft Word (DOCX)-Format. Extrahieren Sie Textinhalte und bewahren Sie die Absatzstruktur bei, damit Sie PDF-Inhalte einfach in Word bearbeiten können.",
+        "faq": {
+          "item-1": {
+            "question": "Wird die Formatierung im konvertierten Word-Dokument beibehalten?",
+            "answer": "Die Konvertierung versucht, die Textstruktur und Absatzformatierung beizubehalten, aber komplexe Layouts, Tabellen und Bilder können manuelle Anpassungen erfordern."
+          },
+          "item-2": {
+            "question": "Welche PDF-Typen werden unterstützt?",
+            "answer": "Textbasierte PDF-Dokumente werden unterstützt. Gescannte PDFs oder bildbasierte PDFs erfordern zunächst eine OCR-Verarbeitung, bevor sie in bearbeitbare Word-Dokumente konvertiert werden können."
+          },
+          "item-3": {
+            "question": "Kann das konvertierte Dokument in Microsoft Word geöffnet werden?",
+            "answer": "Ja. Die konvertierten DOCX-Dateien sind voll kompatibel mit Microsoft Word, Google Docs, WPS Office und anderen gängigen Textverarbeitungsprogrammen."
+          },
+          "item-4": {
+            "question": "Gibt es eine Dateigrößenbeschränkung?",
+            "answer": "PDF-Dateien bis zu 100 MB werden unterstützt. Die tatsächliche Grenze hängt vom verfügbaren Speicher Ihres Browsers ab."
+          },
+          "item-5": {
+            "question": "Kann das konvertierte Word-Dokument bearbeitet werden?",
+            "answer": "Ja. Die konvertierte DOCX-Datei ist ein vollständig bearbeitbares Word-Dokument. Sie können Text ändern und Inhalte hinzufügen wie bei jedem normalen Word-Dokument."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Vertragsänderung",
+            "description": "Konvertieren Sie PDF-Verträge in Word-Format für einfache Änderung von Bedingungen und Inhalten vor dem erneuten Versenden."
+          },
+          "item-2": {
+            "title": "Berichtsbearbeitung",
+            "description": "Konvertieren Sie PDF-Berichte in bearbeitbare Word-Dokumente zum Aktualisieren von Daten und Inhalten."
+          },
+          "item-3": {
+            "title": "Dokumentenwiederverwendung",
+            "description": "Extrahieren Sie Inhalte aus PDF-Dokumenten in Word zum Erstellen neuer Dokumente oder Zusammenführen von Materialien."
+          },
+          "item-4": {
+            "title": "Kollaborative Bearbeitung",
+            "description": "Konvertieren Sie PDFs in Word-Format für einfachere kollaborative Bearbeitung und Überprüfung durch Teammitglieder."
+          }
+        }
+      },
+      "pdfToExcel": {
+        "name": "PDF zu Excel",
+        "description": "Tabellendaten aus PDFs in Excel-Tabellen konvertieren.",
+        "metaTitle": "PDF kostenlos online zu Excel konvertieren - PDF-zu-XLSX",
+        "metaDescription": "Kostenlos Tabellendaten aus PDFs in Excel-Tabellen (XLSX-Format) konvertieren. Erkennt Tabellenstruktur intelligent. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Extrahieren und konvertieren Sie Tabellendaten aus PDF-Dokumenten in das Microsoft Excel (XLSX)-Format. Analysiert Textlayouts intelligent, um Daten in entsprechende Zeilen und Spalten zu organisieren für weitere Analyse und Verarbeitung.",
+        "faq": {
+          "item-1": {
+            "question": "Werden Tabellen in PDFs genau beibehalten?",
+            "answer": "Die Konvertierung versucht, die Tabellenstruktur zu erkennen und Daten in entsprechende Zellen zu platzieren, aber komplexe Tabellen können manuelle Anpassungen erfordern."
+          },
+          "item-2": {
+            "question": "Werden mehrseitige PDFs unterstützt?",
+            "answer": "Ja. Jede PDF-Seite wird in ein separates Excel-Arbeitsblatt konvertiert für einfache Verwaltung und Anzeige."
+          },
+          "item-3": {
+            "question": "Kann die konvertierte Excel-Datei bearbeitet werden?",
+            "answer": "Ja. Die konvertierte XLSX-Datei ist eine vollständig bearbeitbare Excel-Tabelle. Sie können Daten ändern, Formeln hinzufügen, Diagramme erstellen und mehr."
+          },
+          "item-4": {
+            "question": "Können Tabellen in gescannten PDFs konvertiert werden?",
+            "answer": "Gescannte PDFs enthalten Bilder statt extrahierbarer Textdaten, daher können sie nicht direkt in Excel konvertiert werden. Zuerst ist eine OCR-Verarbeitung erforderlich."
+          },
+          "item-5": {
+            "question": "Wird die Zahlenformatierung beibehalten?",
+            "answer": "Zahlen werden als Text extrahiert. Sie können die Funktion 'In Zahl umwandeln' von Excel verwenden, um Textzahlen in Zahlenformat zu konvertieren."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Finanzberichtsanalyse",
+            "description": "Konvertieren Sie PDF-Finanzberichte in Excel für Datenanalyse und Diagrammerstellung."
+          },
+          "item-2": {
+            "title": "Dateneingabe",
+            "description": "Extrahieren Sie Tabellendaten aus PDF-Rechnungen und Bestellungen nach Excel, um manuelle Eingabearbeit zu reduzieren."
+          },
+          "item-3": {
+            "title": "Bestandsverwaltung",
+            "description": "Konvertieren Sie PDF-Bestandslisten in Excel-Tabellen für einfache Aktualisierung und Verfolgung von Bestandsänderungen."
+          },
+          "item-4": {
+            "title": "Forschungsdatenverarbeitung",
+            "description": "Konvertieren Sie PDF-Forschungsdatentabellen in Excel-Format für statistische Analyse."
+          }
+        }
+      },
+      "pdfToPptx": {
+        "name": "PDF zu PPTX",
+        "description": "PDF-Seiten in PowerPoint-Präsentationen konvertieren.",
+        "metaTitle": "PDF kostenlos online zu PPTX konvertieren - PDF-zu-PowerPoint",
+        "metaDescription": "Kostenlos PDF-Dokumente in PowerPoint-Präsentationen (PPTX-Format) konvertieren. Jede PDF-Seite wird zu einer Folie. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Konvertieren Sie PDF-Dokumente in Microsoft PowerPoint (PPTX)-Präsentationen. Jede Seite des PDF-Inhalts wird in eine Folie konvertiert, wobei Textinhalte für weitere Bearbeitung und Präsentation in PowerPoint beibehalten werden.",
+        "faq": {
+          "item-1": {
+            "question": "Wie werden PDF-Seiten in Folien konvertiert?",
+            "answer": "Jede PDF-Seite wird in eine PowerPoint-Folie konvertiert, wobei Textinhalte extrahiert und auf der Folie platziert werden."
+          },
+          "item-2": {
+            "question": "Werden Bilder beibehalten?",
+            "answer": "Die aktuelle Version extrahiert hauptsächlich Textinhalte. Bilder und komplexe Grafiken müssen möglicherweise manuell zur konvertierten Präsentation hinzugefügt werden."
+          },
+          "item-3": {
+            "question": "Kann die konvertierte PPTX bearbeitet werden?",
+            "answer": "Ja. Die konvertierte PowerPoint-Datei ist vollständig bearbeitbar. Sie können Text ändern, Animationen hinzufügen, Designs wechseln und mehr."
+          },
+          "item-4": {
+            "question": "Wie groß sind die Folien?",
+            "answer": "Die Foliengröße wird automatisch basierend auf den PDF-Seitenabmessungen angepasst, um eine optimale Inhaltsanzeige zu gewährleisten."
+          },
+          "item-5": {
+            "question": "Kann sie in Google Slides geöffnet werden?",
+            "answer": "Ja. Die generierten PPTX-Dateien sind kompatibel mit Microsoft PowerPoint, Google Slides, Keynote und anderen gängigen Präsentationssoftwares."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Präsentationsbearbeitung",
+            "description": "Konvertieren Sie PDF-Format-Präsentationen in bearbeitbare PowerPoint-Dateien für einfache Änderung und Aktualisierungen."
+          },
+          "item-2": {
+            "title": "Lehrmaterialien",
+            "description": "Konvertieren Sie PDF-Handouts in PowerPoint für einfache Hinzufügung von Animationen und interaktiven Elementen im Klassenzimmer."
+          },
+          "item-3": {
+            "title": "Besprechungspräsentationen",
+            "description": "Konvertieren Sie PDF-Berichte in PPTX für einfache Präsentation und Erklärung während Besprechungen."
+          },
+          "item-4": {
+            "title": "Inhaltswiederverwendung",
+            "description": "Extrahieren Sie Inhalte aus PDF-Dokumenten, um PowerPoint-Präsentationen für Schulungen oder Marketing zu erstellen."
+          }
+        }
+      },
+      "wordToPdf": {
+        "name": "Word zu PDF",
+        "description": "Word-Dokumente in PDF-Format konvertieren.",
+        "metaTitle": "Word kostenlos online zu PDF konvertieren - DOCX-zu-PDF",
+        "metaDescription": "Kostenlos Word-Dokumente (DOCX/DOC) in PDF-Format konvertieren. Formatierung und Layout beibehalten. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Konvertieren Sie Microsoft Word-Dokumente (DOCX- oder DOC-Format) in PDF-Format. Bewahren Sie die Dokumententextformatierung, Absatzstruktur, Listen und Tabellenlayouts auf, um sicherzustellen, dass Dokumente auf jedem Gerät konsistent angezeigt werden.",
+        "faq": {
+          "item-1": {
+            "question": "Wird die Formatierung nach der Konvertierung beibehalten?",
+            "answer": "Die Dokumentenformatierung wird so weit wie möglich beibehalten, einschließlich Schriftstilen, Absatzausrichtung, Listen und Tabellenstrukturen."
+          },
+          "item-2": {
+            "question": "Welche Word-Formate werden unterstützt?",
+            "answer": "Das .docx-Format (Word 2007 und später) und das .doc-Format (Word 97-2003) werden unterstützt."
+          },
+          "item-3": {
+            "question": "Kann das konvertierte PDF gedruckt werden?",
+            "answer": "Ja. Die generierten PDF-Dateien sind für den Druck optimiert und können in hoher Qualität auf jedem PDF-kompatiblen Drucker gedruckt werden."
+          },
+          "item-4": {
+            "question": "Werden Bilder im Dokument beibehalten?",
+            "answer": "Ja. Bilder im Dokument werden mit einer der Originaldatei entsprechenden Anzeigequalität in das PDF eingebettet."
+          },
+          "item-5": {
+            "question": "Gibt es eine Dateigrößenbeschränkung?",
+            "answer": "Word-Dokumente bis zu 100 MB werden unterstützt. Die tatsächliche Grenze hängt vom verfügbaren Speicher Ihres Browsers ab."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Dokumentenfreigabe",
+            "description": "Konvertieren Sie Word-Dokumente in PDF, um sicherzustellen, dass Empfänger genau denselben Inhalt wie das Originaldokument sehen."
+          },
+          "item-2": {
+            "title": "Druckvorbereitung",
+            "description": "Konvertieren Sie Word in PDF vor dem Drucken, um Formatunterschiede zu vermeiden, die durch verschiedene Drucker verursacht werden."
+          },
+          "item-3": {
+            "title": "Dokumentenarchivierung",
+            "description": "Konvertieren Sie wichtige Word-Dokumente in PDF-Format für Langzeitaufbewahrung und um versehentliche Änderungen zu verhindern."
+          },
+          "item-4": {
+            "title": "Online-Veröffentlichung",
+            "description": "Konvertieren Sie Word-Inhalte in PDF-Format für einfache Veröffentlichung und Freigabe auf Websites."
+          }
+        }
+      },
+      "excelToPdf": {
+        "name": "Excel zu PDF",
+        "description": "Excel-Tabellen in PDF-Format konvertieren.",
+        "metaTitle": "Excel kostenlos online zu PDF konvertieren - XLSX-zu-PDF",
+        "metaDescription": "Kostenlos Excel-Tabellen (XLSX/XLS) in PDF-Format konvertieren. Tabellenlayouts und Daten beibehalten. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Konvertieren Sie Microsoft Excel-Tabellen (XLSX- oder XLS-Format) in PDF-Format. Präsentieren Sie Arbeitsblattinhalte im Tabellenformat, wobei Daten und Zellenlayout für einfache Anzeige und Druck beibehalten werden.",
+        "faq": {
+          "item-1": {
+            "question": "Werden alle Arbeitsblätter konvertiert?",
+            "answer": "Ja. Alle Arbeitsblätter in der Excel-Datei werden in PDF konvertiert, wobei jedes Arbeitsblatt als separate Tabelle angezeigt wird."
+          },
+          "item-2": {
+            "question": "Wird die Tabellenformatierung beibehalten?",
+            "answer": "Die grundlegende Tabellenstruktur und das Datenlayout werden beibehalten. Zelleninhalte werden im Tabellenformat präsentiert."
+          },
+          "item-3": {
+            "question": "Welche Excel-Formate werden unterstützt?",
+            "answer": "Das .xlsx-Format (Excel 2007 und später) und das .xls-Format (Excel 97-2003) werden unterstützt."
+          },
+          "item-4": {
+            "question": "Werden Formeln berechnet?",
+            "answer": "Die Konvertierung extrahiert Werte aus Zellen. Stellen Sie für Berechnungsergebnisse sicher, dass Formeln in Excel vor der Konvertierung berechnet werden."
+          },
+          "item-5": {
+            "question": "Kann das konvertierte PDF gedruckt werden?",
+            "answer": "Ja. Das generierte PDF ist für A4-Papier optimiert und kann direkt gedruckt werden."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Berichtsfreigabe",
+            "description": "Konvertieren Sie Excel-Berichte in PDF für einfache Freigabe mit Personen, die Excel nicht verwenden."
+          },
+          "item-2": {
+            "title": "Datenarchivierung",
+            "description": "Konvertieren Sie wichtige Excel-Daten in PDF-Format für Langzeitaufbewahrung und Archivierung."
+          },
+          "item-3": {
+            "title": "Druckausgabe",
+            "description": "Konvertieren Sie Excel-Tabellen in PDF zum Drucken, um sicherzustellen, dass Druckergebnisse der Bildschirmanzeige entsprechen."
+          },
+          "item-4": {
+            "title": "Datenpräsentation",
+            "description": "Konvertieren Sie Excel-Daten in PDF-Format für einfache Präsentation in Besprechungen oder Demonstrationen."
+          }
+        }
+      },
+      "pptxToPdf": {
+        "name": "PPTX zu PDF",
+        "description": "PowerPoint-Präsentationen in PDF-Format konvertieren.",
+        "metaTitle": "PPTX kostenlos online zu PDF konvertieren - PowerPoint-zu-PDF",
+        "metaDescription": "Kostenlos PowerPoint-Präsentationen (PPTX/PPT) in PDF-Format konvertieren. Jede Folie wird zu einer PDF-Seite. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Konvertieren Sie Microsoft PowerPoint-Präsentationen (PPTX- oder PPT-Format) in PDF-Format. Jede Folie wird zu einer Seite im PDF konvertiert, wobei Textinhalte und das grundlegende Layout für einfache Anzeige, Druck und Freigabe beibehalten werden.",
+        "faq": {
+          "item-1": {
+            "question": "Werden alle Folien konvertiert?",
+            "answer": "Ja. Alle Folien in der PowerPoint-Datei werden in PDF-Seiten konvertiert, wobei die ursprüngliche Reihenfolge beibehalten wird."
+          },
+          "item-2": {
+            "question": "Werden Animationseffekte beibehalten?",
+            "answer": "Animationseffekte werden nicht beibehalten. Jede Folie wird in ihrem Endzustand als statische PDF-Seite konvertiert."
+          },
+          "item-3": {
+            "question": "Welche PowerPoint-Formate werden unterstützt?",
+            "answer": "Das .pptx-Format (PowerPoint 2007 und später) und das .ppt-Format (PowerPoint 97-2003) werden unterstützt."
+          },
+          "item-4": {
+            "question": "Kann das konvertierte PDF gedruckt werden?",
+            "answer": "Ja. Das generierte PDF ist für den Druck optimiert, mit Optionen zum Drucken mehrerer Folien pro Seite."
+          },
+          "item-5": {
+            "question": "Werden Foliennotizen einbezogen?",
+            "answer": "Die aktuelle Version konvertiert hauptsächlich Folieninhalte. Notizen und Sprechkommentare sind in der konvertierten PDF nicht enthalten."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Präsentationsfreigabe",
+            "description": "Konvertieren Sie PowerPoint in PDF für einfache Freigabe von Präsentationsinhalten mit Personen, die PowerPoint nicht verwenden."
+          },
+          "item-2": {
+            "title": "Handout-Erstellung",
+            "description": "Konvertieren Sie PPTX in PDF und drucken Sie als Handouts für Notizen des Publikums."
+          },
+          "item-3": {
+            "title": "Dokumentenarchivierung",
+            "description": "Konvertieren Sie wichtige Präsentationen in PDF-Format für Langzeitaufbewahrung."
+          },
+          "item-4": {
+            "title": "Online-Vorschau",
+            "description": "Konvertieren Sie PowerPoint in PDF für einfache Freigabe und Vorschau per E-Mail oder Webseiten."
+          }
+        }
+      },
+      "signPdf": {
+        "name": "PDF signieren",
+        "description": "Elektronische oder handschriftliche Signaturen zu PDF-Dokumenten hinzufügen.",
+        "metaTitle": "PDF kostenlos online signieren - Elektronisches Signatur-Tool",
+        "metaDescription": "Kostenlos elektronische oder handschriftliche Signaturen zu PDF-Dokumenten hinzufügen. Unterstützung für Text- und Bildsignaturen. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Fügen Sie elektronische Signaturen zu Ihren PDF-Dokumenten hinzu. Unterstützung für Textsignaturen (anpassbare Schriftart, Größe, Farbe) und handschriftliche Signaturen (auf Leinwand zeichnen). Platzieren Sie Signaturen überall, um rechtsgültig signierte Dokumente zu erstellen.",
+        "faq": {
+          "item-1": {
+            "question": "Welche Signaturtypen werden unterstützt?",
+            "answer": "Textsignaturen (Namen eingeben) und handschriftliche Signaturen (auf Leinwand zeichnen). Wählen Sie die Signaturmethode, die am besten zu Ihren Bedürfnissen passt."
+          },
+          "item-2": {
+            "question": "Wo kann ich die Signatur platzieren?",
+            "answer": "Sie können die Signatur frei an jede Position auf der PDF-Seite ziehen. Das Tool zeigt eine Seitenvorschau für präzise Signaturplatzierung."
+          },
+          "item-3": {
+            "question": "Kann ich mehrere Signaturen hinzufügen?",
+            "answer": "Ja. Sie können mehrere Signaturen an verschiedenen Stellen im selben Dokument hinzufügen, geeignet für Verträge oder Formulare, die mehrere Signaturen erfordern."
+          },
+          "item-4": {
+            "question": "Ist das signierte PDF sicher?",
+            "answer": "Die gesamte Verarbeitung findet im Browser statt; Dateien werden auf keinen Server hochgeladen. Signaturen werden dauerhaft in das PDF eingebettet und können nicht einfach entfernt werden."
+          },
+          "item-5": {
+            "question": "Was ist die Rechtsgültigkeit von Signaturen?",
+            "answer": "Mit diesem Tool erstellte Signaturen sind visuelle Signaturen. Für erweiterte elektronische Signaturen mit digitalen Zertifikaten konsultieren Sie bitte professionelle digitale Signaturdienste."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Vertragssignierung",
+            "description": "Fügen Sie Verträgen und Vereinbarungen schnell Signaturen hinzu, ohne Drucken und Scannen."
+          },
+          "item-2": {
+            "title": "Formularvervollständigung",
+            "description": "Fügen Sie PDF-Formularen Signaturen hinzu und vervollständigen Sie Anträge, Vollmachten und andere Dokumente."
+          },
+          "item-3": {
+            "title": "Genehmigungsworkflow",
+            "description": "Fügen Sie internen Genehmigungsdokumenten Signaturen hinzu, um Workflows zu optimieren."
+          },
+          "item-4": {
+            "title": "Persönliche Dokumente",
+            "description": "Fügen Sie persönlichen Erklärungen, Vollmachten und anderen Dokumenten Signaturen hinzu."
+          }
+        }
+      },
+      "unlockPdf": {
+        "name": "PDF entsperren",
+        "description": "Passwortschutz von PDFs entfernen für uneingeschränkten Zugriff.",
+        "metaTitle": "PDF kostenlos online entsperren - PDF-Passwort entfernen",
+        "metaDescription": "Kostenlos Passwortschutz von PDFs entfernen. Passwort eingeben, um Dokumente zu entsperren und uneingeschränkten Zugriff zu erhalten. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Entfernen Sie den Passwortschutz von PDF-Dokumenten. Wenn Sie das Passwort haben, aber eine passwortfreie Kopie des Dokuments möchten, kann Ihnen dieses Tool helfen, eine entsperrte Version zu erstellen. Beachten Sie, dass Sie das ursprüngliche Passwort kennen müssen, um zu entsperren.",
+        "faq": {
+          "item-1": {
+            "question": "Kann ich jedes PDF entsperren?",
+            "answer": "Sie müssen das ursprüngliche Passwort des PDFs kennen, um zu entsperren. Dieses Tool kann Passwortschutz nicht knacken oder umgehen."
+          },
+          "item-2": {
+            "question": "Verändert das Entsperren den Dokumenteninhalt?",
+            "answer": "Nein. Das Entsperren entfernt nur den Passwortschutz; Dokumenteninhalt, Format und Layout bleiben vollständig unverändert."
+          },
+          "item-3": {
+            "question": "Kann das entsperrte PDF erneut verschlüsselt werden?",
+            "answer": "Ja. Sie können das Tool 'PDF schützen' verwenden, um ein neues Passwort für das entsperrte Dokument festzulegen."
+          },
+          "item-4": {
+            "question": "Ist mein Passwort sicher?",
+            "answer": "Absolut sicher. Das Passwort wird nur im Browser verwendet und niemals an einen Server gesendet."
+          },
+          "item-5": {
+            "question": "Welche Passwortschutztypen werden unterstützt?",
+            "answer": "Standard-PDF-Öffnungspasswörter (Benutzerpasswörter) werden unterstützt. Einige erweiterte Berechtigungspasswörter können zusätzliche Verarbeitung erfordern."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Alte Passwörter entfernen",
+            "description": "Entfernen Sie Passwortschutz, der für den täglichen Gebrauch nicht mehr benötigt wird."
+          },
+          "item-2": {
+            "title": "Sicherungskopien erstellen",
+            "description": "Erstellen Sie passwortfreie Sicherungskopien, um ausgeschlossen zu werden, falls Sie das Passwort vergessen."
+          },
+          "item-3": {
+            "title": "Interne Freigabe",
+            "description": "Teilen Sie entsperrte Dokumente intern, um den Ärger mit häufiger Passworteingabe zu vermeiden."
+          },
+          "item-4": {
+            "title": "Archivierungsvorbereitung",
+            "description": "Erstellen Sie passwortfreie Versionen für Langzeitarchivierung, um zukünftige Zugänglichkeit zu gewährleisten."
+          }
+        }
+      },
+      "protectPdf": {
+        "name": "PDF schützen",
+        "description": "Passwortschutz zu PDFs hinzufügen, um unbefugten Zugriff zu verhindern.",
+        "metaTitle": "PDF kostenlos online schützen - PDF-Passwort hinzufügen",
+        "metaDescription": "Kostenlos Passwortschutz zu PDF-Dokumenten hinzufügen. Öffnungspasswort festlegen, um vertrauliche Dokumente zu schützen. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Fügen Sie Passwortschutz zu Ihren PDF-Dokumenten hinzu. Legen Sie ein starkes Passwort fest, um unbefugten Zugriff zu verhindern und sensible Informationen, Geschäftsgeheimnisse oder persönliche Privatsphäre zu schützen. Unterstützt standardmäßige PDF-Verschlüsselungsalgorithmen, um Dokumentensicherheit zu gewährleisten.",
+        "faq": {
+          "item-1": {
+            "question": "Welcher Verschlüsselungsalgorithmus wird verwendet?",
+            "answer": "Es wird ein standardmäßiger PDF-Verschlüsselungsalgorithmus (AES-256) verwendet, kompatibel mit Adobe Acrobat und anderen gängigen PDF-Readern."
+          },
+          "item-2": {
+            "question": "Kann das Passwort geändert oder entfernt werden?",
+            "answer": "Ja. Verwenden Sie das Tool 'PDF entsperren' und geben Sie das Passwort ein, um eine passwortfreie Version zu erstellen, dann können Sie ein neues Passwort festlegen."
+          },
+          "item-3": {
+            "question": "Wie kompatibel sind verschlüsselte PDFs?",
+            "answer": "Verschlüsselte PDFs sind mit allen gängigen PDF-Readern kompatibel, einschließlich Adobe Acrobat, integrierten Browser-Readern, mobilen PDF-Apps usw."
+          },
+          "item-4": {
+            "question": "Gibt es Passwortstärkeanforderungen?",
+            "answer": "Es wird empfohlen, starke Passwörter mit mindestens 8 Zeichen zu verwenden, einschließlich Groß- und Kleinbuchstaben, Zahlen und Symbolen für optimale Sicherheit."
+          },
+          "item-5": {
+            "question": "Was, wenn ich das Passwort vergesse?",
+            "answer": "Bitte merken Sie sich unbedingt Ihr Passwort. Wenn Sie das Passwort vergessen, kann dieses Tool es nicht wiederherstellen oder knacken, und Sie können nicht auf den Dokumenteninhalt zugreifen."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Vertrauliche Dokumente schützen",
+            "description": "Fügen Sie Passwortschutz zu Finanzberichten, Vertragsentwürfen und anderen vertraulichen Dokumenten hinzu."
+          },
+          "item-2": {
+            "title": "Privatsphärenschutz",
+            "description": "Legen Sie Passwörter für Dokumente mit persönlichen Informationen fest, wie Kontoauszüge und medizinische Unterlagen."
+          },
+          "item-3": {
+            "title": "Geschäftsgeheimnisse",
+            "description": "Schützen Sie vertrauliche Dokumente wie Geschäftspläne und Produktdesigns, beschränken Sie den Zugriff."
+          },
+          "item-4": {
+            "title": "Sichere Freigabe",
+            "description": "Fügen Sie Passwortschutz hinzu, wenn Sie Dokumente über unsichere Kanäle wie E-Mail freigeben."
+          }
+        }
+      },
+      "comparePdf": {
+        "name": "PDF vergleichen",
+        "description": "Zwei PDF-Dokumente nebeneinander vergleichen, um Unterschiede leicht zu erkennen.",
+        "metaTitle": "PDF kostenlos online vergleichen - Dokumentenvergleichs-Tool",
+        "metaDescription": "Kostenlos zwei PDF-Dokumente nebeneinander vergleichen. Textunterschiede hervorheben, Änderungen leicht erkennen. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Vergleichen Sie zwei PDF-Dokumente nebeneinander, um Textinhaltsunterschiede schnell zu identifizieren. Das Tool extrahiert Text aus beiden Dokumenten, hebt hinzugefügte, gelöschte und geänderte Inhalte hervor. Geeignet für die Überprüfung von Vertragsrevisionen, Überprüfung von Dokumentenversionen und andere Szenarien.",
+        "faq": {
+          "item-1": {
+            "question": "Wie funktioniert der Vergleich?",
+            "answer": "Das Tool extrahiert Text aus beiden PDFs, vergleicht zeilenweise, hebt Unterschiede hervor: grün für hinzugefügte Inhalte, rot für gelöschte Inhalte."
+          },
+          "item-2": {
+            "question": "Können gescannte PDFs verglichen werden?",
+            "answer": "Gescannte PDFs enthalten Bilder statt Text, daher können Textunterschiede nicht direkt verglichen werden. Bitte verwenden Sie zuerst ein OCR-Tool, um in ein durchsuchbares PDF zu konvertieren."
+          },
+          "item-3": {
+            "question": "Wie genau sind die Vergleichsergebnisse?",
+            "answer": "Das Tool vergleicht Textinhalte und ignoriert Formatunterschiede. Wenn Dokumente denselben Inhalt, aber unterschiedliche Formatierung haben, werden sie als keine Unterschiede aufweisend angezeigt."
+          },
+          "item-4": {
+            "question": "Werden mehrseitige Dokumente unterstützt?",
+            "answer": "Ja. Das Tool vergleicht alle Seiten des gesamten Dokuments und zeigt eine Gesamtunterschiedszusammenfassung und detaillierten Vergleich."
+          },
+          "item-5": {
+            "question": "Können Vergleichsergebnisse exportiert werden?",
+            "answer": "Die aktuelle Version zeigt Vergleichsergebnisse im Browser. Sie können Screenshots machen oder die Browser-Druckfunktion verwenden, um als PDF zu speichern."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Vertragsüberprüfung",
+            "description": "Vergleichen Sie verschiedene Versionen von Verträgen, um Klauseländerungen und Ergänzungen schnell zu identifizieren."
+          },
+          "item-2": {
+            "title": "Versionskontrolle",
+            "description": "Vergleichen Sie Dokumentenentwürfe und endgültige Versionen, um sicherzustellen, dass alle Änderungen korrekt angewendet wurden."
+          },
+          "item-3": {
+            "title": "Kollaborative Bearbeitung",
+            "description": "Vergleichen Sie von Teammitgliedern bearbeitete Dokumente, um die Änderungen zu verstehen, die jede Person vorgenommen hat."
+          },
+          "item-4": {
+            "title": "Qualitätsüberprüfung",
+            "description": "Überprüfen Sie, ob konvertierte Dokumente die Integrität des Originalinhalts beibehalten."
+          }
+        }
+      },
+      "redactPdf": {
+        "name": "PDF schwärzen",
+        "description": "Sensible Informationen dauerhaft aus PDFs entfernen, um Privatsphäre zu schützen.",
+        "metaTitle": "PDF kostenlos online schwärzen - Sensible Info dauerhaft entfernen",
+        "metaDescription": "Kostenlos sensiblen Text und Bilder dauerhaft aus PDFs entfernen. Geschwärzte Informationen können nicht wiederhergestellt werden, schützen Sie Privatsphäre. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Entfernen Sie sensible Informationen dauerhaft aus PDF-Dokumenten. Im Gegensatz zu Überlagerungen entfernt das Schwärzen ausgewählte Inhalte dauerhaft und stellt sicher, dass die Informationen durch keine Mittel wiederhergestellt werden können. Geeignet für die Verarbeitung von Dokumenten, die veröffentlicht, aber vertrauliche Informationen enthalten.",
+        "faq": {
+          "item-1": {
+            "question": "Was ist der Unterschied zwischen Schwärzen und Überlagern?",
+            "answer": "Schwärzen löscht Inhalte dauerhaft und kann nicht wiederhergestellt werden; Überlagern platziert nur eine Maske über den Inhalten, und die zugrunde liegenden Daten existieren immer noch. Schwärzen bietet echte sichere Löschung."
+          },
+          "item-2": {
+            "question": "Kann das Schwärzen rückgängig gemacht werden?",
+            "answer": "Nein. Das Schwärzen ist dauerhaft. Bitte stellen Sie sicher, dass Sie eine Sicherung des Originaldokuments aufbewahren, falls Sie die ungeschwärzte Version benötigen."
+          },
+          "item-3": {
+            "question": "Welche Inhalte können geschwärzt werden?",
+            "answer": "Text, Bilder und Seitenbereiche können geschwärzt werden. Wählen Sie die zu schwärzenden Inhalte aus, und das Tool entfernt sie dauerhaft aus dem Dokument."
+          },
+          "item-4": {
+            "question": "Wie ist die Qualität des geschwärzten Dokuments?",
+            "answer": "Geschwärzte Bereiche werden durch schwarze oder weiße Blöcke ersetzt, umgebende Inhalte bleiben unverändert, und die Qualität des restlichen Dokuments ist unbeeinträchtigt."
+          },
+          "item-5": {
+            "question": "Wie stellt man sicher, dass das Schwärzen gründlich ist?",
+            "answer": "Dieses Tool verwendet die pdf-lib-Bibliothek, um Inhalte wirklich zu löschen, nicht nur zu überlagern. Geschwärzte Inhalte können nicht durch Textextraktionstools wiederhergestellt werden."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Informationsfreigabe",
+            "description": "Schwärzen Sie persönlich identifizierbare Informationen, Kontonummern und andere sensible Inhalte, bevor Sie Dokumente veröffentlichen."
+          },
+          "item-2": {
+            "title": "Rechtsdokumente",
+            "description": "Schwärzen Sie privilegierte Informationen, vertrauliche Bedingungen und andere sensible Inhalte in Rechtsdokumenten."
+          },
+          "item-3": {
+            "title": "Medizinische Unterlagen",
+            "description": "Schwärzen Sie Patientennamen, ID-Nummern und andere persönliche Gesundheitsinformationen (PHI), um Datenschutzvorschriften einzuhalten."
+          },
+          "item-4": {
+            "title": "Finanzberichte",
+            "description": "Schwärzen Sie Kontonummern, Transaktionsdetails und andere sensible Finanzinformationen, bevor Sie Finanzberichte teilen."
+          }
+        }
+      },
+      "duplicatePages": {
+        "name": "Seiten duplizieren",
+        "description": "Eine oder mehrere Seiten in einem PDF an eine bestimmte Position kopieren.",
+        "metaTitle": "PDF-Seiten kostenlos online duplizieren",
+        "metaDescription": "Kostenlos bestimmte Seiten in PDFs duplizieren. Wählen Sie Seiten zum Kopieren, geben Sie Einfügeposition und Anzahl der Kopien an. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Kopieren Sie schnell Seiten aus PDF-Dokumenten. Wählen Sie die zu kopierenden Seiten aus, legen Sie die Anzahl der Kopien fest und wählen Sie, ob Kopien am Anfang oder Ende des Dokuments eingefügt werden sollen. Ideal für das Erstellen von Dokumenten mit wiederholtem Inhalt oder das Sichern wichtiger Seiten.",
+        "faq": {
+          "item-1": {
+            "question": "Welche Seiten können kopiert werden?",
+            "answer": "Sie können eine oder mehrere beliebige Seiten auswählen und kopieren. Unterstützt die Auswahl nicht aufeinanderfolgender Seiten für gleichzeitiges Kopieren."
+          },
+          "item-2": {
+            "question": "Kann ich mehrere Kopien erstellen?",
+            "answer": "Ja. Sie können 1-10 Kopien festlegen, und die ausgewählten Seiten werden entsprechend der angegebenen Anzahl dupliziert."
+          },
+          "item-3": {
+            "question": "Wo werden die Kopien eingefügt?",
+            "answer": "Sie können wählen, ob Kopien am Anfang oder Ende des Dokuments eingefügt werden. Standardmäßig werden Kopien am Ende hinzugefügt."
+          },
+          "item-4": {
+            "question": "Werden die Originalseiten beibehalten?",
+            "answer": "Ja. Der Duplizierungsvorgang bewahrt alle Originalseiten und fügt einfach zusätzliche Kopien hinzu."
+          },
+          "item-5": {
+            "question": "Wie ist die Qualität duplizierter Seiten?",
+            "answer": "Die Kopien sind identisch mit den Originalseiten und behalten die ursprüngliche Formatierung, Bilder und Textqualität bei."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Wiederholte Inhaltsvorlagen",
+            "description": "Duplizieren Sie Seiten mit Standardformaten oder Vorlagen für mehrseitige Formulare oder Verträge."
+          },
+          "item-2": {
+            "title": "Wichtige Seiten sichern",
+            "description": "Erstellen Sie Sicherungskopien wichtiger Informationsseiten innerhalb des Dokuments."
+          },
+          "item-3": {
+            "title": "Mehrere Zertifikate erstellen",
+            "description": "Duplizieren Sie Zertifikat- oder Auszeichnungsseiten, um mehrere Dokumente mit demselben Inhalt zu generieren."
+          },
+          "item-4": {
+            "title": "Formulare erweitern",
+            "description": "Duplizieren Sie Formularseiten, um dem Dokument mehr ausfüllbare Seiten hinzuzufügen."
+          }
+        }
+      },
+      "headerFooter": {
+        "name": "Kopf- und Fußzeile",
+        "description": "Benutzerdefinierte Kopf- und Fußzeilentexte zu PDFs hinzufügen.",
+        "metaTitle": "Kopf- und Fußzeile kostenlos online zu PDF hinzufügen",
+        "metaDescription": "Kostenlos Kopf- und Fußzeilen zu PDF-Dokumenten hinzufügen. Text, Position und Schriftstile anpassen. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Fügen Sie professionelle Kopf- und Fußzeilen zu PDF-Dokumenten hinzu. Unterstützung für benutzerdefinierte Textinhalte, Schriftgröße, Farbe und Position auf der Seite. Kann nur auf ungeraden Seiten, nur auf geraden Seiten oder auf allen Seiten angezeigt werden.",
+        "faq": {
+          "item-1": {
+            "question": "Welche Inhalte können zu Kopf- und Fußzeilen hinzugefügt werden?",
+            "answer": "Sie können beliebige Textinhalte wie Dokumententitel, Kapitelnamen, Firmennamen, Daten usw. hinzufügen."
+          },
+          "item-2": {
+            "question": "Kann ich den Stil anpassen?",
+            "answer": "Ja. Sie können Schriftgröße, Farbe festlegen und zwischen linker, mittiger oder rechter Ausrichtung wählen."
+          },
+          "item-3": {
+            "question": "Kann ich nur auf bestimmte Seiten anwenden?",
+            "answer": "Ja. Sie können wählen, ob Kopf- und Fußzeilen auf alle Seiten, nur ungerade Seiten oder nur gerade Seiten angewendet werden."
+          },
+          "item-4": {
+            "question": "Werden Kopf- und Fußzeilen bestehende Inhalte überlappen?",
+            "answer": "Kopf- und Fußzeilen werden im Seitenrandbereich hinzugefügt. Es wird empfohlen, sicherzustellen, dass das Dokument ausreichend Seitenrand hat."
+          },
+          "item-5": {
+            "question": "Kann ich Bilder zu Kopf- und Fußzeilen hinzufügen?",
+            "answer": "Die aktuelle Version unterstützt nur Text. Für Bilder verwenden Sie bitte das Wasserzeichen-Tool."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Markenidentität",
+            "description": "Fügen Sie Firmennamen und Logo zu jeder Seite hinzu für konsistentes Markenbild."
+          },
+          "item-2": {
+            "title": "Dokumentenidentifikation",
+            "description": "Fügen Sie Dokumententitel, Versionsnummer und Datum für einfache Nachverfolgung hinzu."
+          },
+          "item-3": {
+            "title": "Vertraulichkeitshinweis",
+            "description": "Fügen Sie Vertraulichkeits- oder Urheberrechtshinweise als Wasserzeichen auf jeder Seite hinzu."
+          },
+          "item-4": {
+            "title": "Kapitelnavigation",
+            "description": "Fügen Sie Kapitelnamen in Kopfzeilen hinzu, um Lesern die Navigation zu erleichtern."
+          }
+        }
+      },
+      "resizePdf": {
+        "name": "PDF-Größe ändern",
+        "description": "PDF-Seitengröße auf A4, Letter und andere Standardgrößen ändern.",
+        "metaTitle": "PDF-Seitengröße kostenlos online ändern",
+        "metaDescription": "Kostenlos PDF-Seitengröße ändern. Unterstützt A4, Letter, Legal und andere Standardgrößen. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Passen Sie die Seitengröße von PDF-Dokumenten für verschiedene Verwendungszwecke an. Unterstützt verschiedene Standardpapiergrößen einschließlich A4, Letter, Legal usw. Kann Inhalte skalieren, um in neue Größe zu passen oder ursprüngliche Inhaltsgröße beibehalten.",
+        "faq": {
+          "item-1": {
+            "question": "Welche Seitengrößen werden unterstützt?",
+            "answer": "Unterstützt gängige Standardgrößen einschließlich A4, Letter, Legal, A3, A5 usw."
+          },
+          "item-2": {
+            "question": "Wirkt sich die Größenänderung auf Inhalte aus?",
+            "answer": "Sie können wählen, ob Inhalte skaliert werden, um in die neue Größe zu passen, oder die ursprüngliche Inhaltsgröße beibehalten wird. Das Skalieren kann dazu führen, dass Inhalte abgeschnitten werden oder Leerflächen erscheinen."
+          },
+          "item-3": {
+            "question": "Werden alle Seiten einheitlich in der Größe geändert?",
+            "answer": "Ja. Dieses Tool passt alle Seiten im Dokument auf dieselbe angegebene Größe an."
+          },
+          "item-4": {
+            "question": "Kann ich benutzerdefinierte Größen festlegen?",
+            "answer": "Die aktuelle Version unterstützt voreingestellte Standardgrößen. Für Sondergrößen verwenden Sie bitte die Funktion 'Als PDF drucken'."
+          },
+          "item-5": {
+            "question": "Wird sich die Qualität nach der Größenänderung ändern?",
+            "answer": "Text und Vektorgrafiken bleiben klar. Die Bildqualität hängt von der ursprünglichen Auflösung und dem Skalierungsverhältnis ab."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Druckanpassung",
+            "description": "Passen Sie die Seitengröße an Papiergrößen an, die von Ihrem Drucker unterstützt werden."
+          },
+          "item-2": {
+            "title": "Standardarchivierung",
+            "description": "Standardisieren Sie Dokumente auf A4-Größe für konsistente Archivierung."
+          },
+          "item-3": {
+            "title": "E-Mail-Verteilung",
+            "description": "Passen Sie an größere Größen für Bildschirmlesen an oder kleinere Größen, um Dateigröße für E-Mail zu reduzieren."
+          },
+          "item-4": {
+            "title": "Veröffentlichung",
+            "description": "Passen Sie an Standardgrößen an, die für den Druck wie Letter oder Legal erforderlich sind."
+          }
+        }
+      },
+      "ocrPdf": {
+        "name": "PDF-OCR",
+        "description": "Text in gescannten PDFs erkennen und durchsuchbare Dokumente erstellen.",
+        "metaTitle": "PDF-OCR kostenlos online - Texterkennung",
+        "metaDescription": "Kostenlos Text in gescannten PDFs erkennen und in durchsuchbare, kopierbare Dokumente konvertieren. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Verwenden Sie OCR-Technologie, um Text in gescannten PDFs oder bildbasierten PDFs zu erkennen. Konvertieren Sie nicht durchsuchbaren Bildtext in durchsuchbare, auswählbare Textebene, während das ursprüngliche Bilderscheinungsbild beibehalten wird.",
+        "faq": {
+          "item-1": {
+            "question": "Welche Sprachen unterstützt OCR?",
+            "answer": "Unterstützt mehrere Sprachen einschließlich Chinesisch und Englisch. Sie können die Hauptsprache im Dokument auswählen, um die Erkennungsgenauigkeit zu verbessern."
+          },
+          "item-2": {
+            "question": "Wie hoch ist die Erkennungsgenauigkeit?",
+            "answer": "Die Genauigkeit hängt von der Scanqualität und Textklarheit ab. Klare gedruckte Dokumente erreichen typischerweise über 95% Genauigkeit."
+          },
+          "item-3": {
+            "question": "Verändert OCR das Dokumenterscheinungsbild?",
+            "answer": "Nein. OCR fügt eine transparente Textebene über dem Originalbild hinzu. Das Dokumenterscheinungsbild bleibt unverändert, aber Text wird auswählbar und durchsuchbar."
+          },
+          "item-4": {
+            "question": "Kann es mehrseitige Dokumente verarbeiten?",
+            "answer": "Ja. Das Tool verarbeitet mehrseitige PDFs seitenweise und führt OCR-Erkennung auf jeder Seite durch."
+          },
+          "item-5": {
+            "question": "Wie ist die Verarbeitungsgeschwindigkeit?",
+            "answer": "Hängt von Dokumentseitenanzahl und Komplexität ab. Typischerweise dauert es einige Sekunden pro Seite."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Archivdigitalisierung",
+            "description": "Konvertieren Sie gescannte Papierarchive in durchsuchbare elektronische Dokumente."
+          },
+          "item-2": {
+            "title": "Vertragsverarbeitung",
+            "description": "Machen Sie gescannte Vertragsdokumente durchsuchbar nach Schlüsselwörtern für einfache Klauselsuche."
+          },
+          "item-3": {
+            "title": "Akademische Forschung",
+            "description": "Konvertieren Sie gescannte Papier- und Buchseiten in kopierbares Format für Zitate."
+          },
+          "item-4": {
+            "title": "Formulardatenextraktion",
+            "description": "Erkennen Sie Textinhalte in gescannten Formularen für nachfolgende Bearbeitung und Analyse."
+          }
+        }
+      },
+      "sanitizePdf": {
+        "name": "PDF bereinigen",
+        "description": "Sensible Metadaten und versteckte Inhalte aus PDFs für sichere Freigabe entfernen.",
+        "metaTitle": "PDF kostenlos online bereinigen - Metadaten entfernen",
+        "metaDescription": "Kostenlos Metadaten, JavaScript, Anmerkungen aus PDFs entfernen. Schützen Sie Privatsphäre und teilen Sie Dokumente sicher. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Bereinigen Sie sensible Informationen und versteckte Inhalte aus PDF-Dokumenten. Entfernen Sie Metadaten (Autor, Ersteller, Zeitstempel), JavaScript-Code, Hyperlinks, Kommentare, eingebettete Dateien usw. Verwenden Sie vor der Freigabe von Dokumenten, um Ihre Privatsphäre und sensible Informationen zu schützen.",
+        "faq": {
+          "item-1": {
+            "question": "Verändert das Bereinigen von PDFs den Dokumenteninhalt?",
+            "answer": "Nein. Die Bereinigung entfernt nur Metadaten und versteckte zusätzliche Inhalte. Der sichtbare Seiteninhalt des Dokuments bleibt unverändert."
+          },
+          "item-2": {
+            "question": "Kann ich nur bestimmte Elemente bereinigen?",
+            "answer": "Ja. Sie können wahlweise Metadaten, JavaScript, eingebettete Dateien, Hyperlinks oder Kommentare in beliebiger Kombination bereinigen."
+          },
+          "item-3": {
+            "question": "Können Metadaten nach der Bereinigung wiederhergestellt werden?",
+            "answer": "Nein. Die Bereinigung ist dauerhaft. Gelöschte Metadaten können nicht wiederhergestellt werden. Es wird empfohlen, eine Sicherung des Originaldokuments aufzubewahren."
+          },
+          "item-4": {
+            "question": "Warum sollte ich PDFs bereinigen?",
+            "answer": "PDFs können Erstellerinformationen, Bearbeitungshistorie, versteckte Anmerkungen und andere sensible Daten enthalten. Die Bereinigung entfernt diese Informationen vor der Freigabe und schützt Ihre Privatsphäre."
+          },
+          "item-5": {
+            "question": "Wird die Bereinigung die Dateigröße reduzieren?",
+            "answer": "Es kann sie leicht reduzieren, besonders beim Entfernen eingebetteter Dateien oder großer Mengen von Anmerkungen. Aber der Hauptzweck ist Sicherheit statt Komprimierung."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Sichere Freigabe",
+            "description": "Bereinigen Sie interne Metadaten und Bearbeitungsspuren, bevor Sie Dokumente extern freigeben."
+          },
+          "item-2": {
+            "title": "Privatsphärenschutz",
+            "description": "Entfernen Sie Autorinformationen, Erstellungszeit und andere Metadaten, die die Identität offenbaren könnten."
+          },
+          "item-3": {
+            "title": "Bösartigen Code entfernen",
+            "description": "Löschen Sie JavaScript-Code aus PDFs, um potenzielle Sicherheitsrisiken zu verhindern."
+          },
+          "item-4": {
+            "title": "Dokumentenarchivierung",
+            "description": "Erstellen Sie saubere professionelle Dokumentenversionen für Langzeitarchivierung."
+          }
+        }
+      },
+      "verifyPdf": {
+        "name": "PDF überprüfen",
+        "description": "PDF-Digitalsignaturen, Integrität und Sicherheitsinformationen überprüfen.",
+        "metaTitle": "PDF kostenlos online überprüfen - Digitale Signatur-Prüfer",
+        "metaDescription": "Kostenlos Gültigkeit von PDF-Digitalsignaturen und Dokumentenintegrität überprüfen. Verschlüsselungsstatus, JavaScript und eingebettete Dateien prüfen. Browser-basiert, keine Uploads erforderlich.",
+        "longDescription": "Überprüfen Sie umfassend die Sicherheit und Integrität von PDF-Dokumenten. Erkennen Sie Digitalsignaturinformationen (Unterzeichner, Zeit, Ort), überprüfen Sie die Dokumentenstrukturintegrität, prüfen Sie den Verschlüsselungsstatus, identifizieren Sie JavaScript-Code und eingebettete Dateien. Helfen Sie Ihnen, die Authentizität und Sicherheit von Dokumenten zu bestätigen.",
+        "faq": {
+          "item-1": {
+            "question": "Kann das Überprüfungstool bestätigen, ob eine Signatur rechtsgültig ist?",
+            "answer": "Es kann die Präsenz und grundlegende Informationen von Signaturen erkennen, aber die vollständige kryptographische Überprüfung erfordert Zertifikatskettenvalidierung. Das Tool zeigt Signaturstruktur und Integritätsinformationen."
+          },
+          "item-2": {
+            "question": "Kann es erkennen, ob ein Dokument manipuliert wurde?",
+            "answer": "Es kann erkennen, ob die Dokumentenstruktur vollständig ist und ob die Digitalsignatur intakt ist. Wenn die Signaturüberprüfung fehlschlägt, kann dies darauf hindeuten, dass das Dokument geändert wurde."
+          },
+          "item-3": {
+            "question": "Was ist das JavaScript-Risiko in PDFs?",
+            "answer": "JavaScript in PDFs kann automatische Aktionen ausführen, was zwar nützlich, aber auch missbraucht werden kann. Das Überprüfungstool identifiziert Dokumente, die JavaScript enthalten."
+          },
+          "item-4": {
+            "question": "Können verschlüsselte PDFs überprüft werden?",
+            "answer": "Ja. Das Tool erkennt den Verschlüsselungsstatus und zeigt relevante Informationen an, aber die vollständige Inhaltsanalyse erfordert Entschlüsselung."
+          },
+          "item-5": {
+            "question": "Was sind eingebettete Dateien in den Überprüfungsergebnissen?",
+            "answer": "PDFs können andere Dateien einbetten (wie Anhänge). Das Überprüfungstool identifiziert diese eingebetteten Inhalte, um Ihnen zu helfen, alle im Dokument enthaltenen Daten zu verstehen."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Vertragsüberprüfung",
+            "description": "Überprüfen Sie die Gültigkeit von Digitalsignaturen und Unterzeichneridentität für signierte Verträge."
+          },
+          "item-2": {
+            "title": "Sicherheitsprüfung",
+            "description": "Prüfen Sie, ob empfangene PDFs verdächtiges JavaScript oder eingebettete Dateien enthalten."
+          },
+          "item-3": {
+            "title": "Dokumentenprüfung",
+            "description": "Prüfen Sie Dokumentenintegrität und Änderungshistorie, um sicherzustellen, dass Dokumente nicht manipuliert wurden."
+          },
+          "item-4": {
+            "title": "Compliance-Überprüfung",
+            "description": "Überprüfen Sie, ob Dokumente Sicherheitscompliance-Anforderungen erfüllen, wie Verschlüsselung oder Signaturen."
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,13 +6,16 @@ import {
   CompressIcon,
   CropIcon,
   DeletePagesIcon,
+  DuplicateIcon,
   EditMetadataIcon,
   ExcelIcon,
   ExtractIcon,
   FlattenIcon,
   GifIcon,
+  HeaderFooterIcon,
   JpgIcon,
   MergeIcon,
+  OcrIcon,
   PageNumberIcon,
   PdfIcon,
   PngIcon,
@@ -20,13 +23,16 @@ import {
   ProtectIcon,
   RedactIcon,
   ReorderIcon,
+  ResizeIcon,
   ReverseIcon,
   RotateIcon,
+  SanitizeIcon,
   SignIcon,
   SplitIcon,
   SvgIcon,
   TxtIcon,
   UnlockIcon,
+  VerifyIcon,
   WatermarkIcon,
   WebpIcon,
   WordIcon,
@@ -71,7 +77,13 @@ export type PdfToolI18nKey =
   | 'unlockPdf'
   | 'protectPdf'
   | 'comparePdf'
-  | 'redactPdf';
+  | 'redactPdf'
+  | 'duplicatePages'
+  | 'headerFooter'
+  | 'resizePdf'
+  | 'ocrPdf'
+  | 'sanitizePdf'
+  | 'verifyPdf';
 
 export interface PdfToolDefinition {
   slug: string;
@@ -447,6 +459,66 @@ export const PDF_TOOLS: PdfToolDefinition[] = [
     icon: RedactIcon,
     category: 'security',
     i18nKey: 'redactPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'duplicate-pages',
+    icon: DuplicateIcon,
+    category: 'organize',
+    i18nKey: 'duplicatePages',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'header-footer',
+    icon: HeaderFooterIcon,
+    category: 'edit',
+    i18nKey: 'headerFooter',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'resize-pdf',
+    icon: ResizeIcon,
+    category: 'edit',
+    i18nKey: 'resizePdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'ocr-pdf',
+    icon: OcrIcon,
+    category: 'security',
+    i18nKey: 'ocrPdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'sanitize-pdf',
+    icon: SanitizeIcon,
+    category: 'security',
+    i18nKey: 'sanitizePdf',
+    faqCount: 5,
+    useCaseCount: 4,
+    acceptedMimeTypes: ['application/pdf'],
+    multipleFiles: false,
+  },
+  {
+    slug: 'verify-pdf',
+    icon: VerifyIcon,
+    category: 'security',
+    i18nKey: 'verifyPdf',
     faqCount: 5,
     useCaseCount: 4,
     acceptedMimeTypes: ['application/pdf'],

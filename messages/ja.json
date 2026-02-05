@@ -1,0 +1,454 @@
+{
+  "Metadata": {
+    "name": "PDFuck",
+    "title": "PDFuck - 無料オンラインPDFツール",
+    "description": "ブラウザベースの無料PDFツール。PDFの結合、分割、圧縮、回転、変換。100%プライバシー保護 - ファイルはデバイスから出ません。"
+  },
+  "Common": {
+    "premium": "プレミアム",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "signUp": "新規登録",
+    "pdfTools": "PDFツール",
+    "language": "言語を切り替え",
+    "mode": {
+      "label": "モードを切り替え",
+      "light": "ライト",
+      "dark": "ダーク",
+      "system": "システム"
+    },
+    "copy": "コピー",
+    "save": "保存",
+    "saving": "保存中...",
+    "loading": "読み込み中...",
+    "cancel": "キャンセル",
+    "logoutFailed": "ログアウトに失敗しました",
+    "table": {
+      "totalRecords": "合計 {count} 件のレコード",
+      "noResults": "結果がありません",
+      "loading": "読み込み中...",
+      "columns": "列",
+      "rowsPerPage": "1ページあたりの行数",
+      "page": "ページ",
+      "firstPage": "最初のページ",
+      "lastPage": "最後のページ",
+      "nextPage": "次のページ",
+      "previousPage": "前のページ",
+      "ascending": "昇順",
+      "descending": "降順",
+      "resetSorting": "リセット",
+      "hideColumn": "非表示",
+      "viewOptions": "表示",
+      "toggleColumns": "列の切り替え",
+      "searchColumns": "列を検索...",
+      "noColumns": "列が見つかりません",
+      "clearFilters": "フィルターをクリア"
+    }
+  },
+  "PricingPage": {
+    "title": "料金",
+    "description": "最適なプランを選択してください",
+    "subtitle": "最適なプランを選択してください",
+    "monthly": "月額",
+    "yearly": "年額",
+    "PricingCard": {
+      "freePrice": "¥0",
+      "perMonth": "/月",
+      "perYear": "/年",
+      "popular": "人気",
+      "currentPlan": "現在のプラン",
+      "yourCurrentPlan": "現在のプラン",
+      "getStartedForFree": "無料で始める",
+      "getLifetimeAccess": "永久アクセスを取得",
+      "getStarted": "始める",
+      "notAvailable": "利用不可",
+      "daysTrial": "{days}日間の無料トライアル"
+    },
+    "CheckoutButton": {
+      "loading": "読み込み中...",
+      "checkoutFailed": "チェックアウトページを開けませんでした"
+    }
+  },
+  "PricePlans": {
+    "free": {
+      "name": "無料",
+      "description": "個人利用のための基本機能",
+      "features": {
+        "feature-1": "最大3プロジェクト",
+        "feature-2": "1GBのストレージ",
+        "feature-3": "基本分析",
+        "feature-4": "コミュニティサポート"
+      },
+      "limits": {
+        "limit-1": "カスタムドメイン",
+        "limit-2": "カスタムブランディング",
+        "limit-3": "永久アップデート"
+      }
+    },
+    "pro": {
+      "name": "プロ",
+      "description": "プロフェッショナルのための高度な機能",
+      "features": {
+        "feature-1": "無制限のプロジェクト",
+        "feature-2": "10GBのストレージ",
+        "feature-3": "高度な分析",
+        "feature-4": "優先サポート",
+        "feature-5": "カスタムドメイン"
+      },
+      "limits": {
+        "limit-1": "カスタムブランディング",
+        "limit-2": "永久アップデート"
+      }
+    },
+    "lifetime": {
+      "name": "永久",
+      "description": "一度の支払いでプレミアム機能を取得",
+      "features": {
+        "feature-1": "すべてのプロ機能",
+        "feature-2": "100GBのストレージ",
+        "feature-3": "専用サポート",
+        "feature-4": "エンタープライズグレードのセキュリティ",
+        "feature-5": "高度な統合",
+        "feature-6": "カスタムブランディング",
+        "feature-7": "永久アップデート"
+      }
+    }
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "message": "申し訳ありませんが、お探しのページは存在しません。",
+    "backToHome": "ホームに戻る"
+  },
+  "ErrorPage": {
+    "title": "エラーが発生しました",
+    "tryAgain": "再試行",
+    "backToHome": "ホームに戻る"
+  },
+  "HomePage": {
+    "title": "PDFuck - 無料オンラインPDFツール",
+    "description": "ブラウザベースの無料PDFツール。PDFの結合、分割、圧縮、回転、変換。100%プライバシー保護 - ファイルはデバイスから出ません。",
+    "hero": {
+      "title": "無料オンラインPDFツール",
+      "subtitle": "ブラウザで直接PDFファイルを結合、分割、圧縮、変換、回転、編集。アップロード不要、登録不要、100%プライベート。",
+      "privacy": "ファイルはデバイスから出ません - すべての処理はブラウザでローカルに行われます。"
+    },
+    "features": {
+      "fast": {
+        "title": "超高速",
+        "description": "アップロードやダウンロードを待たずに、ブラウザで即座にPDFを処理。"
+      },
+      "secure": {
+        "title": "100%プライベート",
+        "description": "ファイルはローカルで処理され、サーバーにアップロードされることはありません。"
+      },
+      "free": {
+        "title": "完全無料",
+        "description": "すべてのツールが無料で、隠れた料金やサブスクリプションはありません。"
+      },
+      "title": "機能",
+      "subtitle": "強力なPDFツール",
+      "description": "ブラウザで直接PDFファイルを操作するために必要なすべて",
+      "items": {
+        "item-1": {
+          "title": "ブラウザベースの処理",
+          "description": "すべてのPDF処理はブラウザでローカルに行われます。ファイルはデバイスから出ないため、完全なプライバシーとセキュリティが保証されます。"
+        },
+        "item-2": {
+          "title": "100%無料",
+          "description": "すべてのツールは登録不要、ウォーターマークなし、制限なしで完全に無料です。必要なだけ多くのファイルを処理できます。"
+        },
+        "item-3": {
+          "title": "高速かつ効率的",
+          "description": "アップロードやダウンロードを待たずに即座にPDFを処理。最適化されたアルゴリズムでファイルを高速かつ効率的に処理します。"
+        },
+        "item-4": {
+          "title": "高品質な出力",
+          "description": "PDFの元の品質を維持。すべての操作は文書の整合性を保つために正確に実行されます。"
+        }
+      }
+    },
+    "tools": {
+      "title": "すべてのPDFツール",
+      "subtitle": "10以上の無料PDFツールから、あらゆるタスクに対応するツールを選択してください。"
+    },
+    "howItWorks": {
+      "title": "使い方",
+      "subtitle": "3つの簡単なステップでPDFタスクを完了",
+      "step1": {
+        "title": "ツールを選択",
+        "description": "コレクションからニーズに合ったPDFツールを選択してください。"
+      },
+      "step2": {
+        "title": "ファイルをアップロード",
+        "description": "ファイルをドラッグ＆ドロップするか、クリックして参照。ファイルはデバイスに留まります。"
+      },
+      "step3": {
+        "title": "結果をダウンロード",
+        "description": "ファイルを処理し、すぐに結果をダウンロード。"
+      }
+    },
+    "features2": {
+      "title": "PDFuckを選ぶ理由",
+      "subtitle": "最高のPDFツール",
+      "description": "すべてのニーズに対応する、強力でプライベートで完全に無料のPDFツール",
+      "feature-1": "ブラウザで即座にファイルを処理",
+      "feature-2": "アップロードなし - ファイルはデバイスから出ません",
+      "feature-3": "制限なしで完全無料",
+      "feature-4": "高品質な出力を保持"
+    },
+    "faqs": {
+      "title": "よくある質問",
+      "subtitle": "PDFツールについて知っておくべきすべて",
+      "items": {
+        "item-1": {
+          "question": "ファイルはサーバーにアップロードされますか？",
+          "answer": "いいえ。すべての処理はJavaScriptを使用してブラウザで直接行われます。ファイルはデバイスから出ないため、完全なプライバシーが保証されます。"
+        },
+        "item-2": {
+          "question": "ファイルサイズに制限はありますか？",
+          "answer": "最大100MBまでのファイルに対応しています。実際の制限は、ブラウザの利用可能なメモリとデバイスの機能に依存します。"
+        },
+        "item-3": {
+          "question": "ツールは本当に無料ですか？",
+          "answer": "はい、すべてのPDFツールは登録不要、ウォーターマークなし、制限なしで完全に無料です。"
+        },
+        "item-4": {
+          "question": "PDFの品質は影響を受けますか？",
+          "answer": "いいえ、ツールはPDFの元の品質を保持します。結合、分割、回転などの操作はロスレスです。"
+        },
+        "item-5": {
+          "question": "どのブラウザに対応していますか？",
+          "answer": "Chrome、Firefox、Safari、Edgeなど、すべての最新ブラウザで動作します。最高の体験のため、ブラウザを最新版にしてください。"
+        }
+      }
+    },
+    "calltoaction": {
+      "title": "始める",
+      "description": "PDFuckで、PDFのニーズを数秒で処理できます",
+      "primaryButton": "始める",
+      "secondaryButton": "デモを見る"
+    }
+  },
+  "ToolsPage": {
+    "title": "PDFツール",
+    "description": "PDFファイルを結合、分割、圧縮、変換、回転、編集するための無料オンラインPDFツール。すべての処理はブラウザで行われます。",
+    "metaTitle": "無料オンラインPDFツール - 結合、分割、圧縮など",
+    "metaDescription": "ブラウザベースの無料PDFツール。PDFの結合、分割、圧縮、回転。PDFを画像に、画像をPDFに変換。アップロードなし - 100%プライベート。",
+    "hero": {
+      "title": "無料オンラインPDFツール",
+      "subtitle": "すべての処理はブラウザで行われます。ファイルはデバイスから出ません。"
+    },
+    "categories": {
+      "all": "すべてのツール",
+      "organize": "整理",
+      "convert": "変換",
+      "edit": "編集",
+      "security": "セキュリティ"
+    },
+    "dropzone": {
+      "title": "ファイルをここにドロップ",
+      "subtitle": "またはクリックして参照",
+      "hint": "ファイルはブラウザでローカルに処理されます",
+      "invalidType": "無効なファイルタイプ",
+      "tooLarge": "ファイルが大きすぎます"
+    },
+    "common": {
+      "selectFile": "ファイルを選択",
+      "selectFiles": "ファイルを選択",
+      "process": "処理",
+      "download": "ダウンロード",
+      "downloadAll": "すべてダウンロード",
+      "reset": "最初からやり直す",
+      "processing": "処理中...",
+      "privacy": "ファイルはローカルで処理され、サーバーにアップロードされることはありません。",
+      "faqTitle": "よくある質問",
+      "useCasesTitle": "使用例",
+      "pages": "ページ",
+      "page": "ページ",
+      "size": "サイズ",
+      "originalSize": "元のサイズ",
+      "compressedSize": "圧縮後のサイズ",
+      "reduction": "削減率",
+      "noReduction": "ファイルはすでに最適化されています",
+      "completed": "処理完了",
+      "dragToReorder": "ドラッグして並べ替え",
+      "legal": "法的事項",
+      "privacyPolicy": "プライバシーポリシー",
+      "termsOfService": "利用規約",
+      "options": "オプション",
+      "mergeLongImage": "長い画像に結合（すべてのページを1つの画像に）",
+      "downloadAsZip": "ZIPとしてダウンロード（複数のダウンロード確認を回避）",
+      "downloadZip": "ZIPをダウンロード",
+      "downloadMerged": "長い画像をダウンロード",
+      "mergedImageDesc": "{count}ページを1つの長い画像に結合しました",
+      "pagesSelected": "ページ選択済み",
+      "selectPagesToDuplicate": "複製するページを選択",
+      "copiesCount": "コピー数",
+      "copies": "コピー",
+      "insertPosition": "挿入位置",
+      "atStart": "先頭",
+      "atEnd": "末尾",
+      "pagesDuplicated": "ページを複製しました",
+      "selectAll": "すべて選択",
+      "deselectAll": "すべて選択解除",
+      "headerText": "ヘッダーテキスト",
+      "footerText": "フッターテキスト",
+      "fontSize": "フォントサイズ",
+      "alignment": "配置",
+      "left": "左",
+      "center": "中央",
+      "right": "右",
+      "applyTo": "適用対象",
+      "allPages": "すべてのページ",
+      "oddPages": "奇数ページ",
+      "evenPages": "偶数ページ",
+      "pageSize": "ページサイズ",
+      "scaleOption": "スケールオプション",
+      "fitToSize": "コンテンツを拡大縮小",
+      "keepOriginal": "元のコンテンツサイズを保持",
+      "language": "言語",
+      "chinese": "中国語",
+      "english": "英語",
+      "auto": "自動検出",
+      "recognizing": "認識中..."
+    },
+    "tools": {
+      "mergePdf": {
+        "name": "PDF結合",
+        "description": "複数のPDFファイルを1つのドキュメントに結合します。"
+      },
+      "splitPdf": {
+        "name": "PDF分割",
+        "description": "PDFを個別のページまたはカスタム範囲に分割します。"
+      },
+      "compressPdf": {
+        "name": "PDF圧縮",
+        "description": "品質を保持しながらPDFファイルサイズを縮小します。"
+      },
+      "rotatePdf": {
+        "name": "PDF回転",
+        "description": "PDFページを正しい向きに回転します。"
+      },
+      "pdfToPng": {
+        "name": "PDFをPNGに変換",
+        "description": "PDFページをロスレス圧縮の高品質PNG画像に変換。長い画像に結合。"
+      },
+      "pdfToJpg": {
+        "name": "PDFをJPGに変換",
+        "description": "PDFページを品質調整可能なJPG画像に変換。長い画像に結合。"
+      },
+      "pdfToWebp": {
+        "name": "PDFをWebPに変換",
+        "description": "PDFページを高圧縮の最新WebP画像に変換。長い画像に結合。"
+      },
+      "pngToPdf": {
+        "name": "PNGをPDFに変換",
+        "description": "PNG画像をPDFドキュメントに変換します。"
+      },
+      "jpgToPdf": {
+        "name": "JPGをPDFに変換",
+        "description": "JPG画像をPDFドキュメントに変換します。"
+      },
+      "webpToPdf": {
+        "name": "WebPをPDFに変換",
+        "description": "WebP画像をPDFドキュメントに変換します。"
+      },
+      "watermarkPdf": {
+        "name": "ウォーターマーク追加",
+        "description": "PDFドキュメントにテキストウォーターマークを追加します。"
+      },
+      "pageNumbers": {
+        "name": "ページ番号追加",
+        "description": "PDFドキュメントにページ番号を追加します。"
+      },
+      "reorderPages": {
+        "name": "ページ並べ替え",
+        "description": "ドラッグ＆ドロップでPDFページを並べ替えます。"
+      },
+      "extractPages": {
+        "name": "ページ抽出",
+        "description": "PDFから特定のページを選択して抽出します。"
+      },
+      "deletePages": {
+        "name": "ページ削除",
+        "description": "PDFドキュメントから特定のページを削除します。"
+      },
+      "reversePdf": {
+        "name": "PDF逆順",
+        "description": "PDFドキュメントのページ順序を逆にします。"
+      },
+      "pdfToText": {
+        "name": "PDFをテキストに変換",
+        "description": "PDFドキュメントからテキストコンテンツを抽出します。"
+      },
+      "bmpToPdf": {
+        "name": "BMPをPDFに変換",
+        "description": "BMP画像をPDFドキュメントに変換します。"
+      },
+      "gifToPdf": {
+        "name": "GIFをPDFに変換",
+        "description": "GIF画像をPDFドキュメントに変換します。"
+      },
+      "svgToPdf": {
+        "name": "SVGをPDFに変換",
+        "description": "SVGベクター画像をPDFドキュメントに変換します。"
+      },
+      "editMetadata": {
+        "name": "メタデータ編集",
+        "description": "タイトル、著者、キーワードを含むPDFドキュメントのメタデータを編集します。"
+      },
+      "cropPdf": {
+        "name": "PDFトリミング",
+        "description": "PDFページの余白をトリミングして調整します。"
+      },
+      "flattenPdf": {
+        "name": "PDFフラット化",
+        "description": "PDFフォームフィールドと注釈を静的コンテンツに変換します。"
+      },
+      "signPdf": {
+        "name": "PDF署名",
+        "description": "PDFドキュメントに電子署名を追加します。"
+      },
+      "unlockPdf": {
+        "name": "PDFロック解除",
+        "description": "PDFファイルのパスワード保護を削除します。"
+      },
+      "protectPdf": {
+        "name": "PDF保護",
+        "description": "PDFファイルにパスワード保護を追加します。"
+      },
+      "comparePdf": {
+        "name": "PDF比較",
+        "description": "2つのPDFドキュメントを比較して違いを見つけます。"
+      },
+      "redactPdf": {
+        "name": "PDF編集",
+        "description": "PDFドキュメントから機密情報を完全に削除します。"
+      },
+      "ocrPdf": {
+        "name": "PDF OCR",
+        "description": "スキャンしたドキュメントを選択可能なテキストのPDFに変換します。"
+      },
+      "resizePdf": {
+        "name": "PDFサイズ変更",
+        "description": "PDFページのサイズを異なるページサイズに変更します。"
+      },
+      "sanitizePdf": {
+        "name": "PDFサニタイズ",
+        "description": "PDFドキュメントからメタデータと隠し情報を削除します。"
+      },
+      "headerFooter": {
+        "name": "ヘッダー/フッター",
+        "description": "PDFドキュメントにヘッダーとフッターを追加または編集します。"
+      },
+      "duplicatePages": {
+        "name": "ページ複製",
+        "description": "PDFドキュメント内の特定のページを複製します。"
+      },
+      "verifyPdf": {
+        "name": "PDF検証",
+        "description": "PDFドキュメントの整合性と有効性を検証します。"
+      }
+    }
+  }
+}

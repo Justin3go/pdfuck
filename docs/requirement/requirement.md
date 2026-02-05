@@ -5,21 +5,53 @@
 
 ## 功能需求
 
-### 工具列表（14个）
+### 工具列表（38个）
+
+#### 整理 (Organize)
 1. **Merge PDF** - 合并多个 PDF 文件
 2. **Split PDF** - 拆分 PDF（按页或自定义范围）
-3. **Compress PDF** - 压缩 PDF 文件
-4. **Rotate PDF** - 旋转 PDF 页面
-5. **PDF to PNG** - 将 PDF 转换为无损 PNG 图片
-6. **PDF to JPG** - 将 PDF 转换为可调质量的 JPG 图片
-7. **PDF to WebP** - 将 PDF 转换为现代 WebP 图片
-8. **PNG to PDF** - 将 PNG 图片转换为 PDF
-9. **JPG to PDF** - 将 JPG 图片转换为 PDF
-10. **WebP to PDF** - 将 WebP 图片转换为 PDF
-11. **Watermark PDF** - 添加文字水印
-12. **Page Numbers** - 添加页码
-13. **Reorder Pages** - 重新排序页面
-14. **Extract Pages** - 提取指定页面
+3. **Rotate PDF** - 旋转 PDF 页面
+4. **Reorder Pages** - 重新排序页面
+5. **Extract Pages** - 提取指定页面
+6. **Delete Pages** - 删除指定页面
+7. **Reverse PDF** - 反转页面顺序
+8. **Duplicate Pages** - 复制页面
+
+#### 转换 (Convert)
+9. **PDF to PNG** - 将 PDF 转换为无损 PNG 图片
+10. **PDF to JPG** - 将 PDF 转换为可调质量的 JPG 图片
+11. **PDF to WebP** - 将 PDF 转换为现代 WebP 图片
+12. **PNG to PDF** - 将 PNG 图片转换为 PDF
+13. **JPG to PDF** - 将 JPG 图片转换为 PDF
+14. **WebP to PDF** - 将 WebP 图片转换为 PDF
+15. **BMP to PDF** - 将 BMP 图片转换为 PDF
+16. **GIF to PDF** - 将 GIF 图片转换为 PDF
+17. **SVG to PDF** - 将 SVG 图片转换为 PDF
+18. **PDF to Text** - 将 PDF 转换为纯文本
+19. **PDF to Word** - 将 PDF 转换为 Word 文档
+20. **PDF to Excel** - 将 PDF 转换为 Excel 表格
+21. **PDF to PowerPoint** - 将 PDF 转换为 PPT 演示文稿
+22. **Word to PDF** - 将 Word 文档转换为 PDF
+23. **Excel to PDF** - 将 Excel 表格转换为 PDF
+24. **PowerPoint to PDF** - 将 PPT 演示文稿转换为 PDF
+
+#### 编辑 (Edit)
+25. **Compress PDF** - 压缩 PDF 文件
+26. **Watermark PDF** - 添加文字水印
+27. **Page Numbers** - 添加页码
+28. **Edit Metadata** - 编辑 PDF 元数据
+29. **Crop PDF** - 裁剪 PDF 页面
+30. **Flatten PDF** - 展平 PDF 表单
+31. **Header & Footer** - 添加页眉页脚
+32. **Resize PDF** - 调整页面大小
+
+#### 安全 (Security)
+33. **Sign PDF** - 添加数字签名
+34. **Unlock PDF** - 移除 PDF 密码保护
+35. **Protect PDF** - 添加 PDF 密码保护
+36. **Compare PDF** - 比较两个 PDF 文档
+37. **Redact PDF** - 永久编校敏感信息
+38. **OCR PDF** - 识别扫描版 PDF 文字
 
 ### 页面需求
 - **工具列表页** (`/tools`): 展示所有工具的卡片网格，按分类组织
@@ -246,6 +278,62 @@
 - `ToolsPage.common.downloadMerged` - 下载长图按钮
 - `ToolsPage.common.mergedImageDesc` - 合并完成描述
 
+## 2025-02-04 更新：新增6个PDF工具
+
+### 新增工具列表
+
+#### 整理类别
+1. **Duplicate Pages (复制页面)**
+   - 复制PDF中的一个或多个页面到指定位置
+   - 支持设置复制份数（1-10份）
+   - 支持在文档开头或末尾插入副本
+
+#### 编辑类别
+2. **Header & Footer (页眉页脚)**
+   - 为PDF添加自定义页眉和页脚文本
+   - 支持自定义字体大小、对齐方式
+   - 可选择应用于所有页面、奇数页或偶数页
+
+3. **Resize PDF (调整页面大小)**
+   - 修改PDF页面尺寸为A4、Letter、Legal等标准大小
+   - 支持保持原始内容或缩放内容适应新尺寸
+   - 保留原始文档的元数据
+
+#### 安全类别
+4. **OCR PDF (文字识别)**
+   - 识别扫描版PDF中的文字
+   - 使用 Tesseract.js 进行OCR识别
+   - 添加可搜索的透明文字层，保留原始图片外观
+   - 支持中文、英文双语识别
+
+### 新增依赖
+- `tesseract.js` - OCR文字识别库
+
+### 新增文件
+
+#### PDF处理库 (`src/lib/pdf/`)
+- `duplicate-pages.ts` - 页面复制功能
+- `header-footer.ts` - 页眉页脚添加
+- `resize.ts` - 页面大小调整
+- `ocr.ts` - OCR文字识别
+
+#### 工具组件 (`src/components/pdf/tools/`)
+- `duplicate-pages-pdf.tsx` - 复制页面工具组件
+- `header-footer-pdf.tsx` - 页眉页脚工具组件
+- `resize-pdf.tsx` - 调整大小工具组件
+- `ocr-pdf.tsx` - OCR工具组件
+
+#### 图标 (`src/components/icons/file-icons.tsx`)
+- `DuplicateIcon` - 复制页面图标
+- `HeaderFooterIcon` - 页眉页脚图标
+- `ResizeIcon` - 调整大小图标
+- `OcrIcon` - OCR识别图标
+
+### 修改文件
+- `src/config/pdf-tools.ts` - 注册新工具
+- `src/components/pdf/tool-component-loader.tsx` - 添加动态导入
+- `messages/zh.json` / `messages/en.json` - 添加翻译
+
 ---
 
 ## 相关文件清单
@@ -256,11 +344,11 @@
 - `src/app/sitemap.ts`
 
 ### 处理库
-- `src/lib/pdf/*.ts` (12个文件)
+- `src/lib/pdf/*.ts` (30个文件)
 
 ### 组件
 - `src/components/pdf/*.tsx` (5个共享组件)
-- `src/components/pdf/tools/*.tsx` (16个工具组件，含2个共享组件+8个薄包装+6个独立组件)
+- `src/components/pdf/tools/*.tsx` (20个工具组件)
 
 ### 页面
 - `src/app/[locale]/(marketing)/tools/page.tsx`

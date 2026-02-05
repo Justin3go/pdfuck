@@ -252,6 +252,48 @@ const toolComponents: Record<string, React.ComponentType> = {
       })),
     { ssr: false, loading: ToolSkeleton }
   ),
+  'duplicate-pages': dynamic(
+    () =>
+      import('@/components/pdf/tools/duplicate-pages-pdf').then((m) => ({
+        default: m.DuplicatePagesPdfTool,
+      })),
+    { ssr: false, loading: ToolSkeleton }
+  ),
+  'header-footer': dynamic(
+    () =>
+      import('@/components/pdf/tools/header-footer-pdf').then((m) => ({
+        default: m.HeaderFooterPdfTool,
+      })),
+    { ssr: false, loading: ToolSkeleton }
+  ),
+  'resize-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/resize-pdf').then((m) => ({
+        default: m.ResizePdfTool,
+      })),
+    { ssr: false, loading: ToolSkeleton }
+  ),
+  'ocr-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/ocr-pdf').then((m) => ({
+        default: m.OcrPdfTool,
+      })),
+    { ssr: false, loading: ToolSkeleton }
+  ),
+  'sanitize-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/sanitize-pdf').then((m) => ({
+        default: m.SanitizePdfTool,
+      })),
+    { ssr: false, loading: ToolSkeleton }
+  ),
+  'verify-pdf': dynamic(
+    () =>
+      import('@/components/pdf/tools/verify-pdf').then((m) => ({
+        default: m.VerifyPdfTool,
+      })),
+    { ssr: false, loading: ToolSkeleton }
+  ),
 };
 
 interface ToolComponentLoaderProps {

@@ -1,0 +1,454 @@
+{
+  "Metadata": {
+    "name": "PDFuck",
+    "title": "PDFuck - Outils PDF Gratuits en Ligne",
+    "description": "Outils PDF gratuits basés sur le navigateur. Fusionner, diviser, compresser, faire pivoter, convertir des PDF. 100% confidentialité - les fichiers ne quittent jamais votre appareil."
+  },
+  "Common": {
+    "premium": "Premium",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "signUp": "S'inscrire",
+    "pdfTools": "Outils PDF",
+    "language": "Changer de langue",
+    "mode": {
+      "label": "Changer de mode",
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Système"
+    },
+    "copy": "Copier",
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "loading": "Chargement...",
+    "cancel": "Annuler",
+    "logoutFailed": "Échec de la déconnexion",
+    "table": {
+      "totalRecords": "Total de {count} enregistrements",
+      "noResults": "Aucun résultat",
+      "loading": "Chargement...",
+      "columns": "Colonnes",
+      "rowsPerPage": "Lignes par page",
+      "page": "Page",
+      "firstPage": "Première page",
+      "lastPage": "Dernière page",
+      "nextPage": "Page suivante",
+      "previousPage": "Page précédente",
+      "ascending": "Croissant",
+      "descending": "Décroissant",
+      "resetSorting": "Réinitialiser",
+      "hideColumn": "Masquer",
+      "viewOptions": "Vue",
+      "toggleColumns": "Basculer les colonnes",
+      "searchColumns": "Rechercher des colonnes...",
+      "noColumns": "Aucune colonne trouvée",
+      "clearFilters": "Effacer les filtres"
+    }
+  },
+  "PricingPage": {
+    "title": "Tarification",
+    "description": "Choisissez le plan qui vous convient le mieux",
+    "subtitle": "Choisissez le plan qui vous convient le mieux",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "PricingCard": {
+      "freePrice": "0 €",
+      "perMonth": "/mois",
+      "perYear": "/an",
+      "popular": "Populaire",
+      "currentPlan": "Plan actuel",
+      "yourCurrentPlan": "Votre plan actuel",
+      "getStartedForFree": "Commencer gratuitement",
+      "getLifetimeAccess": "Obtenir un accès à vie",
+      "getStarted": "Commencer",
+      "notAvailable": "Non disponible",
+      "daysTrial": "Essai gratuit de {days} jours"
+    },
+    "CheckoutButton": {
+      "loading": "Chargement...",
+      "checkoutFailed": "Échec de l'ouverture de la page de paiement"
+    }
+  },
+  "PricePlans": {
+    "free": {
+      "name": "Gratuit",
+      "description": "Fonctionnalités de base pour un usage personnel",
+      "features": {
+        "feature-1": "Jusqu'à 3 projets",
+        "feature-2": "1 Go de stockage",
+        "feature-3": "Analyses de base",
+        "feature-4": "Support communautaire"
+      },
+      "limits": {
+        "limit-1": "Domaines personnalisés",
+        "limit-2": "Personnalisation de marque",
+        "limit-3": "Mises à jour à vie"
+      }
+    },
+    "pro": {
+      "name": "Pro",
+      "description": "Fonctionnalités avancées pour les professionnels",
+      "features": {
+        "feature-1": "Projets illimités",
+        "feature-2": "10 Go de stockage",
+        "feature-3": "Analyses avancées",
+        "feature-4": "Support prioritaire",
+        "feature-5": "Domaines personnalisés"
+      },
+      "limits": {
+        "limit-1": "Personnalisation de marque",
+        "limit-2": "Mises à jour à vie"
+      }
+    },
+    "lifetime": {
+      "name": "À vie",
+      "description": "Fonctionnalités premium avec paiement unique",
+      "features": {
+        "feature-1": "Toutes les fonctionnalités Pro",
+        "feature-2": "100 Go de stockage",
+        "feature-3": "Support dédié",
+        "feature-4": "Sécurité entreprise",
+        "feature-5": "Intégrations avancées",
+        "feature-6": "Personnalisation de marque",
+        "feature-7": "Mises à jour à vie"
+      }
+    }
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "message": "Désolé, la page que vous recherchez n'existe pas.",
+    "backToHome": "Retour à l'accueil"
+  },
+  "ErrorPage": {
+    "title": "Oups ! Une erreur s'est produite",
+    "tryAgain": "Réessayer",
+    "backToHome": "Retour à l'accueil"
+  },
+  "HomePage": {
+    "title": "PDFuck - Outils PDF Gratuits en Ligne",
+    "description": "Outils PDF gratuits basés sur le navigateur. Fusionner, diviser, compresser, faire pivoter, convertir des PDF. 100% confidentialité - les fichiers ne quittent jamais votre appareil.",
+    "hero": {
+      "title": "Outils PDF Gratuits en Ligne",
+      "subtitle": "Fusionnez, divisez, compressez, convertissez, faites pivoter et modifiez des fichiers PDF directement dans votre navigateur. Sans téléchargement, sans inscription, 100% privé.",
+      "privacy": "Vos fichiers ne quittent jamais votre appareil - tout le traitement se fait localement dans votre navigateur."
+    },
+    "features": {
+      "fast": {
+        "title": "Ultra Rapide",
+        "description": "Traitez les PDF instantanément dans votre navigateur sans attendre de téléchargements."
+      },
+      "secure": {
+        "title": "100% Privé",
+        "description": "Vos fichiers sont traités localement et ne sont jamais téléchargés sur un serveur."
+      },
+      "free": {
+        "title": "Complètement Gratuit",
+        "description": "Tous les outils sont gratuits sans frais cachés ni abonnements."
+      },
+      "title": "Fonctionnalités",
+      "subtitle": "Outils PDF Puissants",
+      "description": "Tout ce dont vous avez besoin pour travailler avec des fichiers PDF, directement dans votre navigateur",
+      "items": {
+        "item-1": {
+          "title": "Traitement dans le Navigateur",
+          "description": "Tout le traitement PDF se fait localement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil, garantissant une confidentialité et une sécurité complètes."
+        },
+        "item-2": {
+          "title": "100% Gratuit",
+          "description": "Tous les outils sont complètement gratuits sans inscription, sans filigrane et sans limitations. Traitez autant de fichiers que vous en avez besoin."
+        },
+        "item-3": {
+          "title": "Rapide et Efficace",
+          "description": "Traitez les PDF instantanément sans attendre de téléchargements. Nos algorithmes optimisés traitent vos fichiers rapidement et efficacement."
+        },
+        "item-4": {
+          "title": "Sortie de Haute Qualité",
+          "description": "Conservez la qualité originale de vos PDF. Toutes les opérations sont effectuées avec précision pour préserver l'intégrité de votre document."
+        }
+      }
+    },
+    "tools": {
+      "title": "Tous les Outils PDF",
+      "subtitle": "Choisissez parmi notre collection de plus de 10 outils PDF gratuits pour toute tâche."
+    },
+    "howItWorks": {
+      "title": "Comment Ça Marche",
+      "subtitle": "Accomplissez vos tâches PDF en trois étapes simples",
+      "step1": {
+        "title": "Sélectionner l'Outil",
+        "description": "Choisissez l'outil PDF qui correspond à vos besoins dans notre collection."
+      },
+      "step2": {
+        "title": "Télécharger les Fichiers",
+        "description": "Glissez-déposez vos fichiers ou cliquez pour parcourir. Les fichiers restent sur votre appareil."
+      },
+      "step3": {
+        "title": "Télécharger le Résultat",
+        "description": "Traitez vos fichiers et téléchargez le résultat instantanément."
+      }
+    },
+    "features2": {
+      "title": "Pourquoi Choisir PDFuck",
+      "subtitle": "Les Meilleurs Outils PDF",
+      "description": "Outils PDF puissants, privés et complètement gratuits pour tous vos besoins",
+      "feature-1": "Traitez les fichiers instantanément dans votre navigateur",
+      "feature-2": "Sans téléchargement - vos fichiers ne quittent jamais votre appareil",
+      "feature-3": "Complètement gratuit sans limitations",
+      "feature-4": "Sortie de haute qualité préservée"
+    },
+    "faqs": {
+      "title": "Questions Fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur nos outils PDF",
+      "items": {
+        "item-1": {
+          "question": "Mes fichiers sont-ils téléchargés sur un serveur ?",
+          "answer": "Non. Tout le traitement se fait directement dans votre navigateur en utilisant JavaScript. Vos fichiers ne quittent jamais votre appareil, garantissant une confidentialité complète."
+        },
+        "item-2": {
+          "question": "Y a-t-il une limite de taille de fichier ?",
+          "answer": "Les fichiers jusqu'à 100 Mo sont pris en charge. La limite réelle dépend de la mémoire disponible de votre navigateur et des capacités de l'appareil."
+        },
+        "item-3": {
+          "question": "Les outils sont-ils vraiment gratuits ?",
+          "answer": "Oui, tous les outils PDF sont complètement gratuits sans inscription, sans filigrane et sans limitations."
+        },
+        "item-4": {
+          "question": "La qualité de mes PDF sera-t-elle affectée ?",
+          "answer": "Non, nos outils préservent la qualité originale de vos PDF. Les opérations comme la fusion, la division et la rotation sont sans perte."
+        },
+        "item-5": {
+          "question": "Quels navigateurs sont pris en charge ?",
+          "answer": "Nos outils fonctionnent dans tous les navigateurs modernes y compris Chrome, Firefox, Safari et Edge. Assurez-vous que votre navigateur est à jour pour la meilleure expérience."
+        }
+      }
+    },
+    "calltoaction": {
+      "title": "Commencer",
+      "description": "PDFuck vous permet de gérer tous vos besoins PDF en quelques secondes",
+      "primaryButton": "Commencer",
+      "secondaryButton": "Voir la Démo"
+    }
+  },
+  "ToolsPage": {
+    "title": "Outils PDF",
+    "description": "Outils PDF gratuits en ligne pour fusionner, diviser, compresser, convertir, faire pivoter et modifier des fichiers PDF. Tout le traitement se fait dans votre navigateur.",
+    "metaTitle": "Outils PDF Gratuits en Ligne - Fusionner, Diviser, Compresser et Plus",
+    "metaDescription": "Outils PDF gratuits basés sur le navigateur. Fusionner, diviser, compresser, faire pivoter des PDF. Convertir PDF en images et images en PDF. Sans téléchargement - 100% privé.",
+    "hero": {
+      "title": "Outils PDF Gratuits en Ligne",
+      "subtitle": "Tout le traitement se fait dans votre navigateur. Vos fichiers ne quittent jamais votre appareil."
+    },
+    "categories": {
+      "all": "Tous les Outils",
+      "organize": "Organiser",
+      "convert": "Convertir",
+      "edit": "Modifier",
+      "security": "Sécurité"
+    },
+    "dropzone": {
+      "title": "Déposez vos fichiers ici",
+      "subtitle": "ou cliquez pour parcourir",
+      "hint": "Les fichiers sont traités localement dans votre navigateur",
+      "invalidType": "Type de fichier invalide",
+      "tooLarge": "Le fichier est trop volumineux"
+    },
+    "common": {
+      "selectFile": "Sélectionner un Fichier",
+      "selectFiles": "Sélectionner des Fichiers",
+      "process": "Traiter",
+      "download": "Télécharger",
+      "downloadAll": "Tout Télécharger",
+      "reset": "Recommencer",
+      "processing": "Traitement en cours...",
+      "privacy": "Vos fichiers sont traités localement et ne sont jamais téléchargés sur un serveur.",
+      "faqTitle": "Questions Fréquentes",
+      "useCasesTitle": "Cas d'Utilisation",
+      "pages": "pages",
+      "page": "page",
+      "size": "Taille",
+      "originalSize": "Taille originale",
+      "compressedSize": "Taille compressée",
+      "reduction": "Réduction",
+      "noReduction": "Le fichier est déjà optimisé",
+      "completed": "Traitement Terminé",
+      "dragToReorder": "Glisser-déposer pour réorganiser",
+      "legal": "Légal",
+      "privacyPolicy": "Politique de Confidentialité",
+      "termsOfService": "Conditions d'Utilisation",
+      "options": "Options",
+      "mergeLongImage": "Fusionner en image longue (combiner toutes les pages en une image)",
+      "downloadAsZip": "Télécharger au format ZIP (éviter les confirmations multiples)",
+      "downloadZip": "Télécharger le ZIP",
+      "downloadMerged": "Télécharger l'Image Longue",
+      "mergedImageDesc": "{count} pages fusionnées en une image longue",
+      "pagesSelected": "pages sélectionnées",
+      "selectPagesToDuplicate": "Sélectionner les pages à dupliquer",
+      "copiesCount": "Nombre de copies",
+      "copies": "copies",
+      "insertPosition": "Position d'insertion",
+      "atStart": "Au début",
+      "atEnd": "À la fin",
+      "pagesDuplicated": "pages dupliquées",
+      "selectAll": "Tout Sélectionner",
+      "deselectAll": "Tout Désélectionner",
+      "headerText": "Texte d'en-tête",
+      "footerText": "Texte de pied de page",
+      "fontSize": "Taille de police",
+      "alignment": "Alignement",
+      "left": "Gauche",
+      "center": "Centre",
+      "right": "Droite",
+      "applyTo": "Appliquer à",
+      "allPages": "Toutes les pages",
+      "oddPages": "Pages impaires",
+      "evenPages": "Pages paires",
+      "pageSize": "Taille de page",
+      "scaleOption": "Option d'échelle",
+      "fitToSize": "Redimensionner le contenu",
+      "keepOriginal": "Conserver la taille originale",
+      "language": "Langue",
+      "chinese": "Chinois",
+      "english": "Anglais",
+      "auto": "Détection automatique",
+      "recognizing": "Reconnaissance en cours..."
+    },
+    "tools": {
+      "mergePdf": {
+        "name": "Fusionner PDF",
+        "description": "Combinez plusieurs fichiers PDF en un seul document."
+      },
+      "splitPdf": {
+        "name": "Diviser PDF",
+        "description": "Séparez un PDF en pages individuelles ou plages personnalisées."
+      },
+      "compressPdf": {
+        "name": "Compresser PDF",
+        "description": "Réduisez la taille du fichier PDF tout en préservant la qualité."
+      },
+      "rotatePdf": {
+        "name": "Faire Pivoter PDF",
+        "description": "Faites pivoter les pages PDF dans la bonne orientation."
+      },
+      "pdfToPng": {
+        "name": "PDF en PNG",
+        "description": "Convertissez les pages PDF en images PNG de haute qualité avec compression sans perte. Fusionner en image longue."
+      },
+      "pdfToJpg": {
+        "name": "PDF en JPG",
+        "description": "Convertissez les pages PDF en images JPG avec qualité ajustable. Fusionner en image longue."
+      },
+      "pdfToWebp": {
+        "name": "PDF en WebP",
+        "description": "Convertissez les pages PDF en images WebP modernes avec compression supérieure. Fusionner en image longue."
+      },
+      "pngToPdf": {
+        "name": "PNG en PDF",
+        "description": "Convertissez des images PNG en un document PDF."
+      },
+      "jpgToPdf": {
+        "name": "JPG en PDF",
+        "description": "Convertissez des images JPG en un document PDF."
+      },
+      "webpToPdf": {
+        "name": "WebP en PDF",
+        "description": "Convertissez des images WebP en un document PDF."
+      },
+      "watermarkPdf": {
+        "name": "Ajouter un Filigrane",
+        "description": "Ajoutez des filigranes texte à vos documents PDF."
+      },
+      "pageNumbers": {
+        "name": "Ajouter des Numéros de Page",
+        "description": "Ajoutez des numéros de page à vos documents PDF."
+      },
+      "reorderPages": {
+        "name": "Réorganiser les Pages",
+        "description": "Glissez-déposez pour réorganiser les pages PDF."
+      },
+      "extractPages": {
+        "name": "Extraire des Pages",
+        "description": "Sélectionnez et extrayez des pages spécifiques d'un PDF."
+      },
+      "deletePages": {
+        "name": "Supprimer des Pages",
+        "description": "Supprimez des pages spécifiques d'un document PDF."
+      },
+      "reversePdf": {
+        "name": "Inverser PDF",
+        "description": "Inversez l'ordre des pages d'un document PDF."
+      },
+      "pdfToText": {
+        "name": "PDF en Texte",
+        "description": "Extrayez le contenu texte des documents PDF."
+      },
+      "bmpToPdf": {
+        "name": "BMP en PDF",
+        "description": "Convertissez des images BMP en un document PDF."
+      },
+      "gifToPdf": {
+        "name": "GIF en PDF",
+        "description": "Convertissez des images GIF en un document PDF."
+      },
+      "svgToPdf": {
+        "name": "SVG en PDF",
+        "description": "Convertissez des images vectorielles SVG en un document PDF."
+      },
+      "editMetadata": {
+        "name": "Modifier les Métadonnées",
+        "description": "Modifiez les métadonnées des documents PDF incluant le titre, l'auteur et les mots-clés."
+      },
+      "cropPdf": {
+        "name": "Rogner PDF",
+        "description": "Rognez et ajustez les marges des pages PDF."
+      },
+      "flattenPdf": {
+        "name": "Aplatir PDF",
+        "description": "Aplatissez les champs de formulaire et annotations PDF en contenu statique."
+      },
+      "signPdf": {
+        "name": "Signer PDF",
+        "description": "Ajoutez des signatures numériques à vos documents PDF."
+      },
+      "unlockPdf": {
+        "name": "Déverrouiller PDF",
+        "description": "Supprimez la protection par mot de passe des fichiers PDF."
+      },
+      "protectPdf": {
+        "name": "Protéger PDF",
+        "description": "Ajoutez une protection par mot de passe à vos fichiers PDF."
+      },
+      "comparePdf": {
+        "name": "Comparer PDF",
+        "description": "Comparez deux documents PDF pour trouver les différences."
+      },
+      "redactPdf": {
+        "name": "Rédiger PDF",
+        "description": "Supprimez définitivement les informations sensibles des documents PDF."
+      },
+      "ocrPdf": {
+        "name": "OCR PDF",
+        "description": "Convertissez les documents numérisés en PDF avec texte sélectionnable."
+      },
+      "resizePdf": {
+        "name": "Redimensionner PDF",
+        "description": "Changez la taille des pages PDF vers une taille de page différente."
+      },
+      "sanitizePdf": {
+        "name": "Sanitiser PDF",
+        "description": "Supprimez les métadonnées et informations cachées des documents PDF."
+      },
+      "headerFooter": {
+        "name": "En-tête/Pied de Page",
+        "description": "Ajoutez ou modifiez les en-têtes et pieds de page dans les documents PDF."
+      },
+      "duplicatePages": {
+        "name": "Dupliquer des Pages",
+        "description": "Dupliquez des pages spécifiques dans un document PDF."
+      },
+      "verifyPdf": {
+        "name": "Vérifier PDF",
+        "description": "Vérifiez l'intégrité et la validité des documents PDF."
+      }
+    }
+  }
+}

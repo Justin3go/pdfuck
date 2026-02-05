@@ -872,7 +872,37 @@
       "downloadAsZip": "Download as ZIP (avoid multiple download confirmations)",
       "downloadZip": "Download ZIP",
       "downloadMerged": "Download Long Image",
-      "mergedImageDesc": "Merged {count} pages into one long image"
+      "mergedImageDesc": "Merged {count} pages into one long image",
+      "pagesSelected": "pages selected",
+      "selectPagesToDuplicate": "Select pages to duplicate",
+      "copiesCount": "Number of copies",
+      "copies": "copies",
+      "insertPosition": "Insert position",
+      "atStart": "At beginning",
+      "atEnd": "At end",
+      "pagesDuplicated": "pages duplicated",
+      "selectAll": "Select All",
+      "deselectAll": "Deselect All",
+      "headerText": "Header text",
+      "footerText": "Footer text",
+      "fontSize": "Font size",
+      "alignment": "Alignment",
+      "left": "Left",
+      "center": "Center",
+      "right": "Right",
+      "applyTo": "Apply to",
+      "allPages": "All pages",
+      "oddPages": "Odd pages",
+      "evenPages": "Even pages",
+      "pageSize": "Page size",
+      "scaleOption": "Scale option",
+      "fitToSize": "Scale content to fit",
+      "keepOriginal": "Keep original content size",
+      "language": "Language",
+      "chinese": "Chinese",
+      "english": "English",
+      "auto": "Auto detect",
+      "recognizing": "Recognizing..."
     },
     "tools": {
       "mergePdf": {
@@ -2492,6 +2522,288 @@
           "item-4": {
             "title": "Financial Reports",
             "description": "Redact account numbers, transaction details, and other sensitive financial information before sharing financial reports."
+          }
+        }
+      },
+      "duplicatePages": {
+        "name": "Duplicate Pages",
+        "description": "Copy one or more pages in a PDF to a specified position.",
+        "metaTitle": "Duplicate PDF Pages Online Free",
+        "metaDescription": "Free duplicate specific pages in PDF. Select pages to copy, specify insertion position and number of copies. Browser-based, no uploads needed.",
+        "longDescription": "Quickly copy pages from PDF documents. Select the pages to copy, set the number of copies, and choose to insert copies at the beginning or end of the document. Ideal for creating documents with repeated content or backing up important pages.",
+        "faq": {
+          "item-1": {
+            "question": "Which pages can be copied?",
+            "answer": "You can select and copy any one or more pages. Supports selecting non-consecutive pages for simultaneous copying."
+          },
+          "item-2": {
+            "question": "Can I create multiple copies?",
+            "answer": "Yes. You can set 1-10 copies, and the selected pages will be duplicated according to the specified number."
+          },
+          "item-3": {
+            "question": "Where will the copies be inserted?",
+            "answer": "You can choose to insert copies at the beginning or end of the document. By default, copies are added at the end."
+          },
+          "item-4": {
+            "question": "Will the original pages be preserved?",
+            "answer": "Yes. The duplicate operation preserves all original pages and simply adds additional copies."
+          },
+          "item-5": {
+            "question": "What is the quality of duplicated pages?",
+            "answer": "The copies are identical to the original pages, maintaining the original formatting, images, and text quality."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Repeated Content Templates",
+            "description": "Duplicate pages containing standard formats or templates for multi-page forms or contracts."
+          },
+          "item-2": {
+            "title": "Backup Important Pages",
+            "description": "Create backup copies of important information pages within the document."
+          },
+          "item-3": {
+            "title": "Create Multiple Certificates",
+            "description": "Duplicate certificate or award pages to generate multiple documents with the same content."
+          },
+          "item-4": {
+            "title": "Expand Forms",
+            "description": "Duplicate form pages to add more fillable pages to the document."
+          }
+        }
+      },
+      "headerFooter": {
+        "name": "Header & Footer",
+        "description": "Add custom header and footer text to PDFs.",
+        "metaTitle": "Add Header & Footer to PDF Online Free",
+        "metaDescription": "Free add headers and footers to PDF documents. Customize text, position, and font styles. Browser-based, no uploads needed.",
+        "longDescription": "Add professional headers and footers to PDF documents. Support for custom text content, font size, color, and position on the page. Can be displayed on odd pages only, even pages only, or applied to all pages.",
+        "faq": {
+          "item-1": {
+            "question": "What content can be added to headers and footers?",
+            "answer": "You can add any text content such as document titles, chapter names, company names, dates, etc."
+          },
+          "item-2": {
+            "question": "Can I customize the style?",
+            "answer": "Yes. You can set font size, color, and choose left alignment, center alignment, or right alignment."
+          },
+          "item-3": {
+            "question": "Can I apply to specific pages only?",
+            "answer": "Yes. You can choose to apply headers and footers to all pages, odd pages only, or even pages only."
+          },
+          "item-4": {
+            "question": "Will headers and footers overlap existing content?",
+            "answer": "Headers and footers are added in the margin area. It is recommended to ensure the document has sufficient margin space."
+          },
+          "item-5": {
+            "question": "Can I add images to headers and footers?",
+            "answer": "Current version only supports text. For images, please use the watermark tool."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Brand Identity",
+            "description": "Add company name and logo to every page for consistent brand image."
+          },
+          "item-2": {
+            "title": "Document Identification",
+            "description": "Add document title, version number, and date for easy tracking."
+          },
+          "item-3": {
+            "title": "Confidentiality Notice",
+            "description": "Add confidentiality or copyright notices as watermarks on every page."
+          },
+          "item-4": {
+            "title": "Chapter Navigation",
+            "description": "Add chapter names in headers to help readers navigate."
+          }
+        }
+      },
+      "resizePdf": {
+        "name": "Resize PDF",
+        "description": "Change PDF page size to A4, Letter, and other standard sizes.",
+        "metaTitle": "Resize PDF Pages Online Free",
+        "metaDescription": "Free change PDF page size. Supports A4, Letter, Legal, and other standard sizes. Browser-based, no uploads needed.",
+        "longDescription": "Adjust the page size of PDF documents for different uses. Supports various standard paper sizes including A4, Letter, Legal, etc. Can scale content to fit new size or maintain original content size.",
+        "faq": {
+          "item-1": {
+            "question": "What page sizes are supported?",
+            "answer": "Supports common standard sizes including A4, Letter, Legal, A3, A5, etc."
+          },
+          "item-2": {
+            "question": "Will resizing affect content?",
+            "answer": "You can choose to scale content to fit the new size or maintain original content size. Scaling may result in content being cropped or white space appearing."
+          },
+          "item-3": {
+            "question": "Will all pages be resized uniformly?",
+            "answer": "Yes. This tool adjusts all pages in the document to the same specified size."
+          },
+          "item-4": {
+            "question": "Can I set custom sizes?",
+            "answer": "Current version supports preset standard sizes. For special sizes, please use the print to PDF function."
+          },
+          "item-5": {
+            "question": "Will quality change after resizing?",
+            "answer": "Text and vector graphics remain clear. Image quality depends on original resolution and scaling ratio."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Print Adaptation",
+            "description": "Adjust page size to match paper sizes supported by your printer."
+          },
+          "item-2": {
+            "title": "Standard Archiving",
+            "description": "Standardize documents to A4 size for consistent archiving."
+          },
+          "item-3": {
+            "title": "Email Distribution",
+            "description": "Adjust to larger sizes for screen reading, or smaller sizes to reduce file size for email."
+          },
+          "item-4": {
+            "title": "Publishing",
+            "description": "Adjust to standard sizes required for printing such as Letter or Legal."
+          }
+        }
+      },
+      "ocrPdf": {
+        "name": "PDF OCR",
+        "description": "Recognize text in scanned PDFs and create searchable documents.",
+        "metaTitle": "PDF OCR Online Free - Text Recognition",
+        "metaDescription": "Free recognize text in scanned PDFs and convert to searchable, copyable documents. Browser-based, no uploads needed.",
+        "longDescription": "Use OCR technology to recognize text in scanned PDFs or image-based PDFs. Convert non-searchable image text to searchable, selectable text layer while preserving the original image appearance.",
+        "faq": {
+          "item-1": {
+            "question": "What languages does OCR support?",
+            "answer": "Supports multiple languages including Chinese and English. You can select the primary language in the document to improve recognition accuracy."
+          },
+          "item-2": {
+            "question": "How accurate is the recognition?",
+            "answer": "Accuracy depends on scan quality and text clarity. Clear printed documents typically achieve over 95% accuracy."
+          },
+          "item-3": {
+            "question": "Will OCR change the document appearance?",
+            "answer": "No. OCR adds a transparent text layer over the original image. The document appearance remains unchanged, but text becomes selectable and searchable."
+          },
+          "item-4": {
+            "question": "Can it process multi-page documents?",
+            "answer": "Yes. The tool processes multi-page PDFs page by page, performing OCR recognition on each page."
+          },
+          "item-5": {
+            "question": "What is the processing speed?",
+            "answer": "Depends on document page count and complexity. Typically takes a few seconds per page."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Archive Digitization",
+            "description": "Convert scanned paper archives to searchable electronic documents."
+          },
+          "item-2": {
+            "title": "Contract Processing",
+            "description": "Make scanned contract documents searchable by keyword for easy clause lookup."
+          },
+          "item-3": {
+            "title": "Academic Research",
+            "description": "Convert scanned paper and book pages to copyable format for citations."
+          },
+          "item-4": {
+            "title": "Form Data Extraction",
+            "description": "Recognize text content in scanned forms for subsequent editing and analysis."
+          }
+        }
+      },
+      "sanitizePdf": {
+        "name": "Sanitize PDF",
+        "description": "Remove sensitive metadata and hidden content from PDFs for secure sharing.",
+        "metaTitle": "Free PDF Sanitization Online - Remove Metadata",
+        "metaDescription": "Free remove metadata, JavaScript, annotations from PDFs. Protect privacy and share documents securely. Browser-based, no uploads needed.",
+        "longDescription": "Clean sensitive information and hidden content from PDF documents. Remove metadata (author, creator, timestamps), JavaScript code, hyperlinks, comments, embedded files, etc. Use before sharing documents to protect your privacy and sensitive information.",
+        "faq": {
+          "item-1": {
+            "question": "Will sanitizing PDF change the document content?",
+            "answer": "No. Sanitization only removes metadata and hidden additional content. The visible page content of the document remains unchanged."
+          },
+          "item-2": {
+            "question": "Can I sanitize only specific items?",
+            "answer": "Yes. You can selectively clean metadata, JavaScript, embedded files, hyperlinks, or comments in any combination."
+          },
+          "item-3": {
+            "question": "Can metadata be recovered after sanitization?",
+            "answer": "No. Sanitization is permanent. Deleted metadata cannot be recovered. It's recommended to keep a backup of the original document."
+          },
+          "item-4": {
+            "question": "Why should I sanitize PDFs?",
+            "answer": "PDFs may contain creator information, edit history, hidden annotations and other sensitive data. Sanitization removes this information before sharing, protecting your privacy."
+          },
+          "item-5": {
+            "question": "Will sanitization reduce file size?",
+            "answer": "It may reduce slightly, especially when removing embedded files or large numbers of annotations. But the main purpose is security rather than compression."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Secure Sharing",
+            "description": "Clean internal metadata and edit traces before sharing documents externally."
+          },
+          "item-2": {
+            "title": "Privacy Protection",
+            "description": "Remove author information, creation time and other metadata that could reveal identity."
+          },
+          "item-3": {
+            "title": "Remove Malicious Code",
+            "description": "Delete JavaScript code from PDFs to prevent potential security risks."
+          },
+          "item-4": {
+            "title": "Document Archiving",
+            "description": "Create clean professional document versions for long-term archiving."
+          }
+        }
+      },
+      "verifyPdf": {
+        "name": "Verify PDF",
+        "description": "Verify PDF digital signatures, integrity and security information.",
+        "metaTitle": "Free PDF Verification Online - Digital Signature Checker",
+        "metaDescription": "Free verify PDF digital signature validity and document integrity. Check encryption status, JavaScript and embedded files. Browser-based, no uploads needed.",
+        "longDescription": "Comprehensively verify the security and integrity of PDF documents. Detect digital signature information (signer, time, location), verify document structure integrity, check encryption status, identify JavaScript code and embedded files. Help you confirm the authenticity and security of documents.",
+        "faq": {
+          "item-1": {
+            "question": "Can the verification tool confirm if a signature is legally valid?",
+            "answer": "It can detect the presence and basic information of signatures, but complete cryptographic verification requires certificate chain validation. The tool displays signature structure and integrity information."
+          },
+          "item-2": {
+            "question": "Can it detect if a document has been tampered with?",
+            "answer": "It can detect whether the document structure is complete and whether the digital signature is intact. If signature verification fails, it may indicate the document has been modified."
+          },
+          "item-3": {
+            "question": "What is the JavaScript risk in PDFs?",
+            "answer": "JavaScript in PDFs can execute automatic actions, which while useful can also be misused. The verification tool identifies documents containing JavaScript."
+          },
+          "item-4": {
+            "question": "Can encrypted PDFs be verified?",
+            "answer": "Yes. The tool detects encryption status and displays relevant information, but full content analysis requires decryption."
+          },
+          "item-5": {
+            "question": "What are embedded files in the verification results?",
+            "answer": "PDFs can embed other files (like attachments). The verification tool identifies these embedded contents to help you understand all data contained in the document."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Contract Verification",
+            "description": "Verify the validity of digital signatures and signer identity for signed contracts."
+          },
+          "item-2": {
+            "title": "Security Check",
+            "description": "Check if received PDFs contain suspicious JavaScript or embedded files."
+          },
+          "item-3": {
+            "title": "Document Audit",
+            "description": "Audit document integrity and modification history to ensure documents haven't been tampered with."
+          },
+          "item-4": {
+            "title": "Compliance Verification",
+            "description": "Verify if documents meet security compliance requirements, such as encryption or signatures."
           }
         }
       }

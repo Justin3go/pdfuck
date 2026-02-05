@@ -1,0 +1,454 @@
+{
+  "Metadata": {
+    "name": "PDFuck",
+    "title": "PDFuck - Herramientas PDF Gratuitas en Línea",
+    "description": "Herramientas PDF gratuitas basadas en el navegador. Fusiona, divide, comprime, rota y convierte PDF. 100% privacidad - los archivos nunca salen de tu dispositivo."
+  },
+  "Common": {
+    "premium": "Premium",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "signUp": "Registrarse",
+    "pdfTools": "Herramientas PDF",
+    "language": "Cambiar idioma",
+    "mode": {
+      "label": "Cambiar modo",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
+    },
+    "copy": "Copiar",
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "loading": "Cargando...",
+    "cancel": "Cancelar",
+    "logoutFailed": "Error al cerrar sesión",
+    "table": {
+      "totalRecords": "Total de {count} registros",
+      "noResults": "Sin resultados",
+      "loading": "Cargando...",
+      "columns": "Columnas",
+      "rowsPerPage": "Filas por página",
+      "page": "Página",
+      "firstPage": "Primera página",
+      "lastPage": "Última página",
+      "nextPage": "Siguiente página",
+      "previousPage": "Página anterior",
+      "ascending": "Asc",
+      "descending": "Desc",
+      "resetSorting": "Restablecer",
+      "hideColumn": "Ocultar",
+      "viewOptions": "Vista",
+      "toggleColumns": "Alternar columnas",
+      "searchColumns": "Buscar columnas...",
+      "noColumns": "No se encontraron columnas",
+      "clearFilters": "Borrar filtros"
+    }
+  },
+  "PricingPage": {
+    "title": "Precios",
+    "description": "Elige el plan que mejor se adapte a ti",
+    "subtitle": "Elige el plan que mejor se adapte a ti",
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "PricingCard": {
+      "freePrice": "$0",
+      "perMonth": "/mes",
+      "perYear": "/año",
+      "popular": "Popular",
+      "currentPlan": "Plan actual",
+      "yourCurrentPlan": "Tu plan actual",
+      "getStartedForFree": "Comenzar gratis",
+      "getLifetimeAccess": "Obtener acceso de por vida",
+      "getStarted": "Comenzar",
+      "notAvailable": "No disponible",
+      "daysTrial": "Prueba gratuita de {days} días"
+    },
+    "CheckoutButton": {
+      "loading": "Cargando...",
+      "checkoutFailed": "Error al abrir la página de pago"
+    }
+  },
+  "PricePlans": {
+    "free": {
+      "name": "Gratis",
+      "description": "Funciones básicas para uso personal",
+      "features": {
+        "feature-1": "Hasta 3 proyectos",
+        "feature-2": "1 GB de almacenamiento",
+        "feature-3": "Análisis básico",
+        "feature-4": "Soporte de la comunidad"
+      },
+      "limits": {
+        "limit-1": "Dominios personalizados",
+        "limit-2": "Marca personalizada",
+        "limit-3": "Actualizaciones de por vida"
+      }
+    },
+    "pro": {
+      "name": "Pro",
+      "description": "Funciones avanzadas para profesionales",
+      "features": {
+        "feature-1": "Proyectos ilimitados",
+        "feature-2": "10 GB de almacenamiento",
+        "feature-3": "Análisis avanzado",
+        "feature-4": "Soporte prioritario",
+        "feature-5": "Dominios personalizados"
+      },
+      "limits": {
+        "limit-1": "Marca personalizada",
+        "limit-2": "Actualizaciones de por vida"
+      }
+    },
+    "lifetime": {
+      "name": "De por vida",
+      "description": "Funciones premium con pago único",
+      "features": {
+        "feature-1": "Todas las funciones Pro",
+        "feature-2": "100 GB de almacenamiento",
+        "feature-3": "Soporte dedicado",
+        "feature-4": "Seguridad empresarial",
+        "feature-5": "Integraciones avanzadas",
+        "feature-6": "Marca personalizada",
+        "feature-7": "Actualizaciones de por vida"
+      }
+    }
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "message": "Lo sentimos, la página que buscas no existe.",
+    "backToHome": "Volver al inicio"
+  },
+  "ErrorPage": {
+    "title": "¡Ups! Algo salió mal",
+    "tryAgain": "Intentar de nuevo",
+    "backToHome": "Volver al inicio"
+  },
+  "HomePage": {
+    "title": "PDFuck - Herramientas PDF Gratuitas en Línea",
+    "description": "Herramientas PDF gratuitas basadas en el navegador. Fusiona, divide, comprime, rota y convierte PDF. 100% privacidad - los archivos nunca salen de tu dispositivo.",
+    "hero": {
+      "title": "Herramientas PDF Gratuitas en Línea",
+      "subtitle": "Fusiona, divide, comprime, convierte, rota y edita archivos PDF directamente en tu navegador. Sin subidas, sin registro, 100% privado.",
+      "privacy": "Tus archivos nunca salen de tu dispositivo - todo el procesamiento ocurre localmente en tu navegador."
+    },
+    "features": {
+      "fast": {
+        "title": "Ultra Rápido",
+        "description": "Procesa PDF al instante en tu navegador sin esperar subidas o descargas."
+      },
+      "secure": {
+        "title": "100% Privado",
+        "description": "Tus archivos se procesan localmente y nunca se suben a ningún servidor."
+      },
+      "free": {
+        "title": "Completamente Gratis",
+        "description": "Todas las herramientas son gratuitas sin tarifas ocultas ni suscripciones."
+      },
+      "title": "Características",
+      "subtitle": "Herramientas PDF Potentes",
+      "description": "Todo lo que necesitas para trabajar con archivos PDF, directamente en tu navegador",
+      "items": {
+        "item-1": {
+          "title": "Procesamiento en el Navegador",
+          "description": "Todo el procesamiento de PDF ocurre localmente en tu navegador. Tus archivos nunca salen de tu dispositivo, garantizando privacidad y seguridad completas."
+        },
+        "item-2": {
+          "title": "100% Gratis",
+          "description": "Todas las herramientas son completamente gratuitas sin registro, sin marcas de agua y sin limitaciones. Procesa tantos archivos como necesites."
+        },
+        "item-3": {
+          "title": "Rápido y Eficiente",
+          "description": "Procesa PDF al instante sin esperar subidas o descargas. Nuestros algoritmos optimizados manejan tus archivos rápida y eficientemente."
+        },
+        "item-4": {
+          "title": "Salida de Alta Calidad",
+          "description": "Mantén la calidad original de tus PDF. Todas las operaciones se realizan con precisión para preservar la integridad de tu documento."
+        }
+      }
+    },
+    "tools": {
+      "title": "Todas las Herramientas PDF",
+      "subtitle": "Elige de nuestra colección de más de 10 herramientas PDF gratuitas para cualquier tarea."
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "subtitle": "Realiza tus tareas PDF en tres simples pasos",
+      "step1": {
+        "title": "Seleccionar Herramienta",
+        "description": "Elige la herramienta PDF que se adapte a tus necesidades de nuestra colección."
+      },
+      "step2": {
+        "title": "Subir Archivos",
+        "description": "Arrastra y suelta tus archivos o haz clic para explorar. Los archivos permanecen en tu dispositivo."
+      },
+      "step3": {
+        "title": "Descargar Resultado",
+        "description": "Procesa tus archivos y descarga el resultado al instante."
+      }
+    },
+    "features2": {
+      "title": "Por qué Elegir PDFuck",
+      "subtitle": "Las Mejores Herramientas PDF",
+      "description": "Herramientas PDF potentes, privadas y completamente gratuitas para todas tus necesidades",
+      "feature-1": "Procesa archivos al instante en tu navegador",
+      "feature-2": "Sin subidas - tus archivos nunca salen de tu dispositivo",
+      "feature-3": "Completamente gratis sin limitaciones",
+      "feature-4": "Salida de alta calidad preservada"
+    },
+    "faqs": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestras herramientas PDF",
+      "items": {
+        "item-1": {
+          "question": "¿Mis archivos se suben a un servidor?",
+          "answer": "No. Todo el procesamiento ocurre directamente en tu navegador usando JavaScript. Tus archivos nunca salen de tu dispositivo, garantizando privacidad completa."
+        },
+        "item-2": {
+          "question": "¿Hay un límite de tamaño de archivo?",
+          "answer": "Se admiten archivos de hasta 100MB. El límite real depende de la memoria disponible de tu navegador y las capacidades del dispositivo."
+        },
+        "item-3": {
+          "question": "¿Las herramientas son realmente gratis?",
+          "answer": "Sí, todas las herramientas PDF son completamente gratuitas sin registro, sin marcas de agua y sin limitaciones."
+        },
+        "item-4": {
+          "question": "¿Se verá afectada la calidad de mis PDF?",
+          "answer": "No, nuestras herramientas preservan la calidad original de tus PDF. Operaciones como fusionar, dividir y rotar son sin pérdida de calidad."
+        },
+        "item-5": {
+          "question": "¿Qué navegadores son compatibles?",
+          "answer": "Nuestras herramientas funcionan en todos los navegadores modernos incluyendo Chrome, Firefox, Safari y Edge. Asegúrate de tener tu navegador actualizado para la mejor experiencia."
+        }
+      }
+    },
+    "calltoaction": {
+      "title": "Comenzar",
+      "description": "PDFuck te permite manejar todas tus necesidades PDF en segundos",
+      "primaryButton": "Comenzar",
+      "secondaryButton": "Ver Demo"
+    }
+  },
+  "ToolsPage": {
+    "title": "Herramientas PDF",
+    "description": "Herramientas PDF gratuitas en línea para fusionar, dividir, comprimir, convertir, rotar y editar archivos PDF. Todo el procesamiento ocurre en tu navegador.",
+    "metaTitle": "Herramientas PDF Gratuitas en Línea - Fusionar, Dividir, Comprimir y Más",
+    "metaDescription": "Herramientas PDF gratuitas basadas en el navegador. Fusiona, divide, comprime, rota PDF. Convierte PDF a imágenes e imágenes a PDF. Sin subidas - 100% privado.",
+    "hero": {
+      "title": "Herramientas PDF Gratuitas en Línea",
+      "subtitle": "Todo el procesamiento ocurre en tu navegador. Tus archivos nunca salen de tu dispositivo."
+    },
+    "categories": {
+      "all": "Todas las Herramientas",
+      "organize": "Organizar",
+      "convert": "Convertir",
+      "edit": "Editar",
+      "security": "Seguridad"
+    },
+    "dropzone": {
+      "title": "Suelta tus archivos aquí",
+      "subtitle": "o haz clic para explorar",
+      "hint": "Los archivos se procesan localmente en tu navegador",
+      "invalidType": "Tipo de archivo inválido",
+      "tooLarge": "El archivo es demasiado grande"
+    },
+    "common": {
+      "selectFile": "Seleccionar Archivo",
+      "selectFiles": "Seleccionar Archivos",
+      "process": "Procesar",
+      "download": "Descargar",
+      "downloadAll": "Descargar Todo",
+      "reset": "Comenzar de Nuevo",
+      "processing": "Procesando...",
+      "privacy": "Tus archivos se procesan localmente y nunca se suben a ningún servidor.",
+      "faqTitle": "Preguntas Frecuentes",
+      "useCasesTitle": "Casos de Uso",
+      "pages": "páginas",
+      "page": "página",
+      "size": "Tamaño",
+      "originalSize": "Tamaño original",
+      "compressedSize": "Tamaño comprimido",
+      "reduction": "Reducción",
+      "noReduction": "El archivo ya está optimizado",
+      "completed": "Procesamiento Completo",
+      "dragToReorder": "Arrastra para reordenar",
+      "legal": "Legal",
+      "privacyPolicy": "Política de Privacidad",
+      "termsOfService": "Términos de Servicio",
+      "options": "Opciones",
+      "mergeLongImage": "Fusionar en imagen larga (combinar todas las páginas en una imagen)",
+      "downloadAsZip": "Descargar como ZIP (evitar múltiples confirmaciones de descarga)",
+      "downloadZip": "Descargar ZIP",
+      "downloadMerged": "Descargar Imagen Larga",
+      "mergedImageDesc": "Fusionadas {count} páginas en una imagen larga",
+      "pagesSelected": "páginas seleccionadas",
+      "selectPagesToDuplicate": "Seleccionar páginas para duplicar",
+      "copiesCount": "Número de copias",
+      "copies": "copias",
+      "insertPosition": "Posición de inserción",
+      "atStart": "Al principio",
+      "atEnd": "Al final",
+      "pagesDuplicated": "páginas duplicadas",
+      "selectAll": "Seleccionar Todo",
+      "deselectAll": "Deseleccionar Todo",
+      "headerText": "Texto de encabezado",
+      "footerText": "Texto de pie de página",
+      "fontSize": "Tamaño de fuente",
+      "alignment": "Alineación",
+      "left": "Izquierda",
+      "center": "Centro",
+      "right": "Derecha",
+      "applyTo": "Aplicar a",
+      "allPages": "Todas las páginas",
+      "oddPages": "Páginas impares",
+      "evenPages": "Páginas pares",
+      "pageSize": "Tamaño de página",
+      "scaleOption": "Opción de escala",
+      "fitToSize": "Escalar contenido para ajustar",
+      "keepOriginal": "Mantener tamaño original del contenido",
+      "language": "Idioma",
+      "chinese": "Chino",
+      "english": "Inglés",
+      "auto": "Detección automática",
+      "recognizing": "Reconociendo..."
+    },
+    "tools": {
+      "mergePdf": {
+        "name": "Fusionar PDF",
+        "description": "Combina múltiples archivos PDF en un solo documento."
+      },
+      "splitPdf": {
+        "name": "Dividir PDF",
+        "description": "Separa un PDF en páginas individuales o rangos personalizados."
+      },
+      "compressPdf": {
+        "name": "Comprimir PDF",
+        "description": "Reduce el tamaño del archivo PDF preservando la calidad."
+      },
+      "rotatePdf": {
+        "name": "Rotar PDF",
+        "description": "Rota páginas PDF a la orientación correcta."
+      },
+      "pdfToPng": {
+        "name": "PDF a PNG",
+        "description": "Convierte páginas PDF a imágenes PNG de alta calidad con compresión sin pérdida. Fusionar en imagen larga."
+      },
+      "pdfToJpg": {
+        "name": "PDF a JPG",
+        "description": "Convierte páginas PDF a imágenes JPG con calidad ajustable. Fusionar en imagen larga."
+      },
+      "pdfToWebp": {
+        "name": "PDF a WebP",
+        "description": "Convierte páginas PDF a imágenes WebP modernas con compresión superior. Fusionar en imagen larga."
+      },
+      "pngToPdf": {
+        "name": "PNG a PDF",
+        "description": "Convierte imágenes PNG a un documento PDF."
+      },
+      "jpgToPdf": {
+        "name": "JPG a PDF",
+        "description": "Convierte imágenes JPG a un documento PDF."
+      },
+      "webpToPdf": {
+        "name": "WebP a PDF",
+        "description": "Convierte imágenes WebP a un documento PDF."
+      },
+      "watermarkPdf": {
+        "name": "Agregar Marca de Agua",
+        "description": "Agrega marcas de agua de texto a tus documentos PDF."
+      },
+      "pageNumbers": {
+        "name": "Agregar Números de Página",
+        "description": "Agrega números de página a tus documentos PDF."
+      },
+      "reorderPages": {
+        "name": "Reordenar Páginas",
+        "description": "Arrastra y suelta para reorganizar páginas PDF."
+      },
+      "extractPages": {
+        "name": "Extraer Páginas",
+        "description": "Selecciona y extrae páginas específicas de un PDF."
+      },
+      "deletePages": {
+        "name": "Eliminar Páginas",
+        "description": "Elimina páginas específicas de un documento PDF."
+      },
+      "reversePdf": {
+        "name": "Invertir PDF",
+        "description": "Invierte el orden de páginas de un documento PDF."
+      },
+      "pdfToText": {
+        "name": "PDF a Texto",
+        "description": "Extrae contenido de texto de documentos PDF."
+      },
+      "bmpToPdf": {
+        "name": "BMP a PDF",
+        "description": "Convierte imágenes BMP a un documento PDF."
+      },
+      "gifToPdf": {
+        "name": "GIF a PDF",
+        "description": "Convierte imágenes GIF a un documento PDF."
+      },
+      "svgToPdf": {
+        "name": "SVG a PDF",
+        "description": "Convierte imágenes vectoriales SVG a un documento PDF."
+      },
+      "editMetadata": {
+        "name": "Editar Metadatos",
+        "description": "Edita metadatos de documentos PDF incluyendo título, autor y palabras clave."
+      },
+      "cropPdf": {
+        "name": "Recortar PDF",
+        "description": "Recorta y ajusta márgenes de páginas PDF."
+      },
+      "flattenPdf": {
+        "name": "Aplanar PDF",
+        "description": "Aplana campos de formulario y anotaciones de PDF en contenido estático."
+      },
+      "signPdf": {
+        "name": "Firmar PDF",
+        "description": "Agrega firmas digitales a tus documentos PDF."
+      },
+      "unlockPdf": {
+        "name": "Desbloquear PDF",
+        "description": "Elimina protección por contraseña de archivos PDF."
+      },
+      "protectPdf": {
+        "name": "Proteger PDF",
+        "description": "Agrega protección por contraseña a tus archivos PDF."
+      },
+      "comparePdf": {
+        "name": "Comparar PDF",
+        "description": "Compara dos documentos PDF para encontrar diferencias."
+      },
+      "redactPdf": {
+        "name": "Redactar PDF",
+        "description": "Elimina permanentemente información sensible de documentos PDF."
+      },
+      "ocrPdf": {
+        "name": "OCR PDF",
+        "description": "Convierte documentos escaneados a PDF con texto seleccionable."
+      },
+      "resizePdf": {
+        "name": "Redimensionar PDF",
+        "description": "Cambia el tamaño de páginas PDF a un tamaño de página diferente."
+      },
+      "sanitizePdf": {
+        "name": "Sanitizar PDF",
+        "description": "Elimina metadatos e información oculta de documentos PDF."
+      },
+      "headerFooter": {
+        "name": "Encabezado/Pie de Página",
+        "description": "Agrega o edita encabezados y pies de página en documentos PDF."
+      },
+      "duplicatePages": {
+        "name": "Duplicar Páginas",
+        "description": "Duplica páginas específicas en un documento PDF."
+      },
+      "verifyPdf": {
+        "name": "Verificar PDF",
+        "description": "Verifica la integridad y validez de documentos PDF."
+      }
+    }
+  }
+}
