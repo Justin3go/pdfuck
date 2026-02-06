@@ -315,140 +315,2482 @@
     "tools": {
       "mergePdf": {
         "name": "Fusionner PDF",
-        "description": "Combinez plusieurs fichiers PDF en un seul document."
+        "description": "Combinez plusieurs fichiers PDF en un seul document.",
+        "metaTitle": "Merge PDF Files Online Free - PDF Combiner",
+        "metaDescription": "Merge multiple PDF files into one document for free. Drag and drop to reorder. Browser-based, no uploads needed.",
+        "longDescription": "Combine multiple PDF documents into a single file quickly and easily. Drag and drop your PDF files, arrange them in your preferred order, and merge. All processing happens locally in your browser.",
+        "faq": {
+          "item-1": {
+            "question": "How many PDF files can I merge at once?",
+            "answer": "There is no hard limit on the number of files. However, very large files may take longer to process depending on your device's memory."
+          },
+          "item-2": {
+            "question": "Will merging reduce the quality of my PDFs?",
+            "answer": "No. The merge operation preserves the original quality of all pages. No recompression or quality loss occurs."
+          },
+          "item-3": {
+            "question": "Are my files uploaded to a server?",
+            "answer": "No. All processing happens directly in your browser. Your files never leave your device."
+          },
+          "item-4": {
+            "question": "Can I reorder pages before merging?",
+            "answer": "Yes. You can drag and drop files to change their order before merging them into a single PDF."
+          },
+          "item-5": {
+            "question": "What is the maximum file size?",
+            "answer": "Files up to 100MB each are supported. The actual limit depends on your browser's available memory."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Combining Business Reports",
+            "description": "Merge monthly reports, financial statements, and appendices into a single comprehensive document."
+          },
+          "item-2": {
+            "title": "Assembling Applications",
+            "description": "Combine cover letters, resumes, transcripts, and certificates into one application PDF."
+          },
+          "item-3": {
+            "title": "Creating Course Materials",
+            "description": "Merge lecture slides, reading materials, and assignments into unified course packets."
+          },
+          "item-4": {
+            "title": "Archiving Documents",
+            "description": "Combine related documents into organized archive files for long-term storage."
+          }
+        }
       },
       "splitPdf": {
         "name": "Diviser PDF",
-        "description": "Séparez un PDF en pages individuelles ou plages personnalisées."
+        "description": "Séparez un PDF en pages individuelles ou plages personnalisées.",
+        "metaTitle": "Split PDF Online Free - Extract PDF Pages",
+        "metaDescription": "Split PDF files into individual pages or custom page ranges for free. Browser-based, no uploads needed.",
+        "longDescription": "Split a PDF document into individual pages or extract specific page ranges. Select which pages you want to extract, and download them as separate PDF files.",
+        "faq": {
+          "item-1": {
+            "question": "Can I split a PDF into individual pages?",
+            "answer": "Yes. You can split a PDF into individual single-page files or define custom page ranges."
+          },
+          "item-2": {
+            "question": "Can I extract specific pages from a PDF?",
+            "answer": "Yes. Select the exact pages or page ranges you want to extract from the original document."
+          },
+          "item-3": {
+            "question": "Will splitting affect the page quality?",
+            "answer": "No. Each extracted page maintains the original quality and formatting."
+          },
+          "item-4": {
+            "question": "How do I define custom page ranges?",
+            "answer": "Enter page ranges like '1-3, 5, 7-9' to extract those specific pages into separate files."
+          },
+          "item-5": {
+            "question": "Is there a page limit?",
+            "answer": "No fixed limit. The tool can handle large PDFs, limited only by your browser's memory."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Extracting Specific Chapters",
+            "description": "Pull individual chapters from a large document for focused reading or sharing."
+          },
+          "item-2": {
+            "title": "Removing Unwanted Pages",
+            "description": "Extract only the pages you need, effectively removing unwanted content."
+          },
+          "item-3": {
+            "title": "Creating Handouts",
+            "description": "Extract specific slides or pages from presentations to create focused handouts."
+          },
+          "item-4": {
+            "title": "Breaking Down Large Documents",
+            "description": "Split lengthy reports into manageable sections for easier distribution."
+          }
+        }
       },
       "compressPdf": {
         "name": "Compresser PDF",
-        "description": "Réduisez la taille du fichier PDF tout en préservant la qualité."
+        "description": "Réduisez la taille du fichier PDF tout en préservant la qualité.",
+        "metaTitle": "Compress PDF Online Free - Reduce PDF File Size",
+        "metaDescription": "Compress PDF files to reduce file size for free. Optimize PDFs for email and web. Browser-based, no uploads needed.",
+        "longDescription": "Reduce the file size of your PDF documents by removing unused objects and optimizing the document structure. Perfect for making PDFs easier to share via email or upload to websites.",
+        "faq": {
+          "item-1": {
+            "question": "How much can my PDF be compressed?",
+            "answer": "Compression results vary depending on the PDF content. Documents with large embedded images see the most reduction."
+          },
+          "item-2": {
+            "question": "Will compression reduce the visual quality?",
+            "answer": "The optimization focuses on removing unused objects and streamlining the file structure. Visual quality is preserved."
+          },
+          "item-3": {
+            "question": "Can I compress multiple PDFs at once?",
+            "answer": "Currently, you can compress one PDF at a time. Process each file individually for best results."
+          },
+          "item-4": {
+            "question": "What if the compressed file is the same size?",
+            "answer": "If the PDF is already optimized, compression may not reduce the size significantly. The tool will show you the before and after sizes."
+          },
+          "item-5": {
+            "question": "Is the compression lossless?",
+            "answer": "Yes. The compression removes redundant data without affecting the visible content of the document."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Email Attachments",
+            "description": "Reduce PDF size to meet email attachment limits and send documents more easily."
+          },
+          "item-2": {
+            "title": "Web Upload",
+            "description": "Optimize PDFs for faster upload and download on websites and online forms."
+          },
+          "item-3": {
+            "title": "Storage Optimization",
+            "description": "Reduce the storage space needed for large PDF archives."
+          },
+          "item-4": {
+            "title": "Faster Sharing",
+            "description": "Smaller files transfer faster through messaging apps and file sharing services."
+          }
+        }
       },
       "rotatePdf": {
         "name": "Faire Pivoter PDF",
-        "description": "Faites pivoter les pages PDF dans la bonne orientation."
+        "description": "Faites pivoter les pages PDF dans la bonne orientation.",
+        "metaTitle": "Rotate PDF Pages Online Free",
+        "metaDescription": "Rotate PDF pages by 90, 180, or 270 degrees for free. Fix page orientation easily. Browser-based, no uploads needed.",
+        "longDescription": "Rotate individual pages or all pages in your PDF document. Fix incorrectly oriented pages by rotating them 90, 180, or 270 degrees. Preview each page before applying changes.",
+        "faq": {
+          "item-1": {
+            "question": "Can I rotate individual pages?",
+            "answer": "Yes. You can rotate each page independently or apply the same rotation to all pages at once."
+          },
+          "item-2": {
+            "question": "What rotation angles are supported?",
+            "answer": "You can rotate pages by 90° (clockwise), 180°, or 270° (counter-clockwise)."
+          },
+          "item-3": {
+            "question": "Will rotation affect the content quality?",
+            "answer": "No. Rotation only changes the page orientation without any effect on content quality."
+          },
+          "item-4": {
+            "question": "Can I preview pages before rotating?",
+            "answer": "Yes. You can see thumbnails of all pages and preview the rotation before applying it."
+          },
+          "item-5": {
+            "question": "Can I undo a rotation?",
+            "answer": "Yes. Simply rotate the page again to return it to the original orientation, or start over."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Fixing Scanned Documents",
+            "description": "Correct the orientation of scanned pages that were fed in the wrong direction."
+          },
+          "item-2": {
+            "title": "Landscape to Portrait",
+            "description": "Rotate landscape pages to portrait orientation or vice versa for consistent formatting."
+          },
+          "item-3": {
+            "title": "Presentation Preparation",
+            "description": "Ensure all pages in a document are oriented correctly before presenting or printing."
+          },
+          "item-4": {
+            "title": "Mixed Orientation Documents",
+            "description": "Fix documents where some pages are rotated differently from others."
+          }
+        }
       },
       "pdfToPng": {
         "name": "PDF en PNG",
-        "description": "Convertissez les pages PDF en images PNG de haute qualité avec compression sans perte. Fusionner en image longue."
+        "description": "Convertissez les pages PDF en images PNG de haute qualité avec compression sans perte. Fusionner en image longue.",
+        "metaTitle": "Convert PDF to PNG Online Free - PDF to PNG Converter",
+        "metaDescription": "Convert PDF pages to PNG images for free. Merge multiple pages into one long image. High-quality lossless conversion with adjustable resolution. Browser-based, no uploads needed.",
+        "longDescription": "Convert each page of your PDF document into high-quality PNG images with lossless compression. PNG preserves sharp text and graphics perfectly, making it ideal for documents, screenshots, and images requiring transparency support. Option to merge all pages into a single long image for easy social media sharing.",
+        "faq": {
+          "item-1": {
+            "question": "Why choose PNG over other formats?",
+            "answer": "PNG uses lossless compression, meaning no quality is lost during conversion. It preserves sharp text, clean lines, and supports transparency — ideal for documents and graphics."
+          },
+          "item-2": {
+            "question": "Can I adjust the image resolution?",
+            "answer": "Yes. Use the scale slider to set the output resolution from 1x to 4x. The default is 2x (144 DPI), suitable for most use cases."
+          },
+          "item-3": {
+            "question": "Will PNG files be larger than JPG?",
+            "answer": "Generally yes, because PNG uses lossless compression. However, for text-heavy documents, the difference is often minimal while the quality is noticeably better."
+          },
+          "item-4": {
+            "question": "Does PNG support transparency?",
+            "answer": "Yes. PNG supports alpha transparency, so any transparent areas in your PDF will be preserved in the output images."
+          },
+          "item-5": {
+            "question": "Can I convert a multi-page PDF?",
+            "answer": "Yes. Each page is converted to a separate PNG file that you can download individually."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Document Archiving",
+            "description": "Convert important documents to PNG for lossless archival storage."
+          },
+          "item-2": {
+            "title": "Web Publishing",
+            "description": "Create crisp PNG images from PDF content for websites and blogs."
+          },
+          "item-3": {
+            "title": "Design Assets",
+            "description": "Extract pages as high-quality PNG files for use in graphic design projects."
+          },
+          "item-4": {
+            "title": "Presentation Materials",
+            "description": "Convert PDF slides to PNG images for embedding in presentations."
+          }
+        }
       },
       "pdfToJpg": {
         "name": "PDF en JPG",
-        "description": "Convertissez les pages PDF en images JPG avec qualité ajustable. Fusionner en image longue."
+        "description": "Convertissez les pages PDF en images JPG avec qualité ajustable. Fusionner en image longue.",
+        "metaTitle": "Convert PDF to JPG Online Free - PDF to JPEG Converter",
+        "metaDescription": "Convert PDF pages to JPG images for free. Merge multiple pages into one long image. Adjustable quality and resolution settings. Browser-based, no uploads needed.",
+        "longDescription": "Convert each page of your PDF document into JPG images. Adjust the quality and resolution to balance file size and visual fidelity. JPG is the most widely supported image format, ideal for photos, web use, and sharing. Option to merge all pages into a single long image for easy social media sharing.",
+        "faq": {
+          "item-1": {
+            "question": "Can I adjust the JPG quality?",
+            "answer": "Yes. Use the quality slider to set output quality from 10% to 100%. Higher quality means larger file sizes but better visual fidelity."
+          },
+          "item-2": {
+            "question": "What resolution will the images be?",
+            "answer": "The default is 2x scale (144 DPI). You can increase up to 4x for high-resolution output or decrease to 1x for smaller files."
+          },
+          "item-3": {
+            "question": "What is the difference between JPG and PNG?",
+            "answer": "JPG uses lossy compression for smaller files, best for photos. PNG uses lossless compression for perfect quality, best for text and graphics."
+          },
+          "item-4": {
+            "question": "Can I convert a multi-page PDF?",
+            "answer": "Yes. Each page is converted to a separate JPG file that you can download individually."
+          },
+          "item-5": {
+            "question": "Will colors be preserved accurately?",
+            "answer": "Yes. JPG supports millions of colors and handles photographs and gradient-rich documents very well."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Social Media Sharing",
+            "description": "Convert PDF content to JPG for posting on social media platforms."
+          },
+          "item-2": {
+            "title": "Email Attachments",
+            "description": "Create compact JPG images from PDFs for easy email sharing."
+          },
+          "item-3": {
+            "title": "Website Thumbnails",
+            "description": "Generate lightweight JPG previews of PDF documents for web display."
+          },
+          "item-4": {
+            "title": "Photo Printing",
+            "description": "Convert photo-rich PDF pages to JPG for professional printing services."
+          }
+        }
       },
       "pdfToWebp": {
         "name": "PDF en WebP",
-        "description": "Convertissez les pages PDF en images WebP modernes avec compression supérieure. Fusionner en image longue."
+        "description": "Convertissez les pages PDF en images WebP modernes avec compression supérieure. Fusionner en image longue.",
+        "metaTitle": "Convert PDF to WebP Online Free - PDF to WebP Converter",
+        "metaDescription": "Convert PDF pages to WebP images for free. Merge multiple pages into one long image. Modern format with superior compression and quality. Browser-based, no uploads needed.",
+        "longDescription": "Convert each page of your PDF document into WebP images, the modern image format developed by Google. WebP offers superior compression with excellent visual quality, resulting in significantly smaller file sizes compared to JPG and PNG. Option to merge all pages into a single long image for easy social media sharing.",
+        "faq": {
+          "item-1": {
+            "question": "What is WebP format?",
+            "answer": "WebP is a modern image format developed by Google that provides superior lossy and lossless compression. It produces smaller files than JPG and PNG while maintaining comparable quality."
+          },
+          "item-2": {
+            "question": "Is WebP supported by all browsers?",
+            "answer": "WebP is supported by all modern browsers including Chrome, Firefox, Edge, and Safari 16+. It has over 97% global browser support."
+          },
+          "item-3": {
+            "question": "Can I adjust the WebP quality?",
+            "answer": "Yes. Use the quality slider to balance file size and visual quality. Lower quality produces smaller files, while higher quality preserves more detail."
+          },
+          "item-4": {
+            "question": "How does WebP compare to JPG?",
+            "answer": "WebP typically produces files 25-35% smaller than JPG at equivalent visual quality, making it ideal for web use where bandwidth matters."
+          },
+          "item-5": {
+            "question": "Can I convert a multi-page PDF?",
+            "answer": "Yes. Each page is converted to a separate WebP file that you can download individually."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Web Optimization",
+            "description": "Create WebP images for faster website loading with smaller file sizes."
+          },
+          "item-2": {
+            "title": "Bandwidth Reduction",
+            "description": "Convert PDFs to WebP for efficient delivery in bandwidth-constrained environments."
+          },
+          "item-3": {
+            "title": "CDN & Hosting",
+            "description": "Generate WebP images to reduce storage and delivery costs on CDNs."
+          },
+          "item-4": {
+            "title": "Modern Web Development",
+            "description": "Produce WebP assets from PDF source files for modern web applications."
+          }
+        }
       },
       "pngToPdf": {
         "name": "PNG en PDF",
-        "description": "Convertissez des images PNG en un document PDF."
+        "description": "Convertissez des images PNG en un document PDF.",
+        "metaTitle": "Convert PNG to PDF Online Free - PNG to PDF Converter",
+        "metaDescription": "Convert PNG images to PDF for free. Arrange and combine multiple PNGs into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your PNG images into a PDF document. Upload multiple PNG files, arrange them in the desired order with drag-and-drop, and combine them into a single PDF. Image quality is preserved at the original resolution.",
+        "faq": {
+          "item-1": {
+            "question": "Will PNG quality be preserved in the PDF?",
+            "answer": "Yes. PNG images are embedded at their original resolution in the PDF. No compression is applied during conversion."
+          },
+          "item-2": {
+            "question": "Can I reorder images before converting?",
+            "answer": "Yes. Drag and drop to arrange your PNG images in the preferred order before creating the PDF."
+          },
+          "item-3": {
+            "question": "Is transparency preserved in the PDF?",
+            "answer": "PNG transparency is preserved when the image is embedded in the PDF, though the PDF viewer may display transparent areas as white."
+          },
+          "item-4": {
+            "question": "How many PNG images can I combine?",
+            "answer": "There is no hard limit. The number of images you can process depends on your device's available memory."
+          },
+          "item-5": {
+            "question": "What will the page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions of its corresponding PNG image."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Screenshot Compilation",
+            "description": "Combine multiple screenshots into a single organized PDF document."
+          },
+          "item-2": {
+            "title": "Design Portfolio",
+            "description": "Compile PNG design assets into a professional PDF portfolio."
+          },
+          "item-3": {
+            "title": "Document Scanning",
+            "description": "Convert scanned PNG images into a well-organized PDF document."
+          },
+          "item-4": {
+            "title": "Report Creation",
+            "description": "Assemble PNG charts, diagrams, and graphics into a PDF report."
+          }
+        }
       },
       "jpgToPdf": {
         "name": "JPG en PDF",
-        "description": "Convertissez des images JPG en un document PDF."
+        "description": "Convertissez des images JPG en un document PDF.",
+        "metaTitle": "Convert JPG to PDF Online Free - JPEG to PDF Converter",
+        "metaDescription": "Convert JPG/JPEG images to PDF for free. Combine multiple photos into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your JPG images into a PDF document. Upload multiple JPEG files, arrange them in your preferred order with drag-and-drop, and combine them into a single PDF. Perfect for creating photo books, document compilations, and more.",
+        "faq": {
+          "item-1": {
+            "question": "Will JPG quality be preserved in the PDF?",
+            "answer": "Yes. JPG images are embedded at their original quality in the PDF document. No additional compression is applied."
+          },
+          "item-2": {
+            "question": "Can I reorder photos before converting?",
+            "answer": "Yes. Drag and drop to arrange your JPG images in the preferred order before creating the PDF."
+          },
+          "item-3": {
+            "question": "Does it accept both .jpg and .jpeg files?",
+            "answer": "Yes. Both .jpg and .jpeg file extensions are accepted — they are the same format."
+          },
+          "item-4": {
+            "question": "How many JPG images can I combine?",
+            "answer": "There is no hard limit. The number of images depends on your device's available memory."
+          },
+          "item-5": {
+            "question": "What will the page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions of its corresponding JPG image."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Photo Albums",
+            "description": "Combine vacation or event photos into a single PDF album for sharing."
+          },
+          "item-2": {
+            "title": "Receipt Collection",
+            "description": "Merge receipt photos into one PDF for organized expense reporting."
+          },
+          "item-3": {
+            "title": "Real Estate Listings",
+            "description": "Compile property photos into a professional PDF presentation."
+          },
+          "item-4": {
+            "title": "Travel Documentation",
+            "description": "Combine travel document photos into a single PDF for easy access."
+          }
+        }
       },
       "webpToPdf": {
         "name": "WebP en PDF",
-        "description": "Convertissez des images WebP en un document PDF."
+        "description": "Convertissez des images WebP en un document PDF.",
+        "metaTitle": "Convert WebP to PDF Online Free - WebP to PDF Converter",
+        "metaDescription": "Convert WebP images to PDF for free. Combine multiple WebP files into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your WebP images into a PDF document. Upload multiple WebP files, arrange them in your preferred order with drag-and-drop, and combine them into a single PDF. WebP images are automatically converted for maximum PDF compatibility.",
+        "faq": {
+          "item-1": {
+            "question": "How are WebP images handled in the PDF?",
+            "answer": "WebP images are automatically converted to PNG format before being embedded in the PDF. This ensures maximum compatibility with all PDF viewers."
+          },
+          "item-2": {
+            "question": "Will image quality be preserved?",
+            "answer": "Yes. The conversion process preserves the visual quality of your WebP images in the resulting PDF document."
+          },
+          "item-3": {
+            "question": "Can I reorder images before converting?",
+            "answer": "Yes. Drag and drop to arrange your WebP images in the preferred order before creating the PDF."
+          },
+          "item-4": {
+            "question": "How many WebP images can I combine?",
+            "answer": "There is no hard limit. The number of images depends on your device's available memory."
+          },
+          "item-5": {
+            "question": "What will the page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions of its corresponding WebP image."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Web Asset Archiving",
+            "description": "Convert downloaded WebP images from websites into archived PDF documents."
+          },
+          "item-2": {
+            "title": "Image Format Conversion",
+            "description": "Bridge WebP images into PDF format for sharing with users who lack WebP support."
+          },
+          "item-3": {
+            "title": "Design Documentation",
+            "description": "Compile WebP design assets into a professional PDF for client review."
+          },
+          "item-4": {
+            "title": "Cross-Platform Sharing",
+            "description": "Convert WebP files to universally accessible PDF for sharing across platforms."
+          }
+        }
       },
       "watermarkPdf": {
         "name": "Ajouter un Filigrane",
-        "description": "Ajoutez des filigranes texte à vos documents PDF."
+        "description": "Ajoutez des filigranes texte à vos documents PDF.",
+        "metaTitle": "Add Watermark to PDF Online Free",
+        "metaDescription": "Add text watermarks to PDF documents for free. Customize text, size, color, and position. Browser-based, no uploads needed.",
+        "longDescription": "Add custom text watermarks to your PDF documents. Configure the watermark text, font size, color, opacity, rotation, and position. Apply watermarks to all pages at once.",
+        "faq": {
+          "item-1": {
+            "question": "Can I customize the watermark appearance?",
+            "answer": "Yes. You can adjust the text, font size, color, opacity, rotation angle, and position."
+          },
+          "item-2": {
+            "question": "Is the watermark applied to all pages?",
+            "answer": "Yes. The watermark is applied uniformly to every page in the document."
+          },
+          "item-3": {
+            "question": "Can I add image watermarks?",
+            "answer": "Currently, only text watermarks are supported. Image watermark support may be added in the future."
+          },
+          "item-4": {
+            "question": "Can I remove a watermark after adding it?",
+            "answer": "The watermark is permanently embedded in the new PDF. Keep your original file if you may need the unwatermarked version."
+          },
+          "item-5": {
+            "question": "Will the watermark cover the existing content?",
+            "answer": "You can adjust the opacity to make the watermark semi-transparent so it doesn't obscure the underlying content."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Protecting Drafts",
+            "description": "Add 'DRAFT' watermarks to documents that are not yet finalized."
+          },
+          "item-2": {
+            "title": "Confidential Documents",
+            "description": "Mark sensitive documents with 'CONFIDENTIAL' watermarks to indicate restricted access."
+          },
+          "item-3": {
+            "title": "Branding",
+            "description": "Add your company name or logo text as a watermark to branded documents."
+          },
+          "item-4": {
+            "title": "Copyright Protection",
+            "description": "Add copyright notices to protect your original content from unauthorized use."
+          }
+        }
       },
       "pageNumbers": {
         "name": "Ajouter des Numéros de Page",
-        "description": "Ajoutez des numéros de page à vos documents PDF."
+        "description": "Ajoutez des numéros de page à vos documents PDF.",
+        "metaTitle": "Add Page Numbers to PDF Online Free",
+        "metaDescription": "Add page numbers to PDF documents for free. Choose position, format, and starting number. Browser-based, no uploads needed.",
+        "longDescription": "Add page numbers to your PDF documents with full control over position, format, and styling. Choose from numeric, Roman numeral, or 'Page X of Y' formats. Place numbers at any corner or center position.",
+        "faq": {
+          "item-1": {
+            "question": "What number formats are available?",
+            "answer": "You can choose from numeric (1, 2, 3), Roman numerals (I, II, III), or 'Page X of Y' format."
+          },
+          "item-2": {
+            "question": "Can I choose where the numbers appear?",
+            "answer": "Yes. You can place page numbers at the top or bottom of the page, aligned left, center, or right."
+          },
+          "item-3": {
+            "question": "Can I start from a number other than 1?",
+            "answer": "Yes. You can set any starting page number."
+          },
+          "item-4": {
+            "question": "Will page numbers overlap existing content?",
+            "answer": "Page numbers are placed in the margin area. For best results, ensure your document has sufficient margins."
+          },
+          "item-5": {
+            "question": "Can I skip numbering on certain pages?",
+            "answer": "Currently, page numbers are added to all pages. You can use the extract tool to separate pages if needed."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Academic Papers",
+            "description": "Add proper page numbering to academic papers and theses."
+          },
+          "item-2": {
+            "title": "Legal Documents",
+            "description": "Number pages in legal documents for reference and indexing."
+          },
+          "item-3": {
+            "title": "Manuals and Guides",
+            "description": "Add page numbers to user manuals and instruction guides for easy navigation."
+          },
+          "item-4": {
+            "title": "Book Manuscripts",
+            "description": "Add professional page numbering to book manuscripts before submission."
+          }
+        }
       },
       "reorderPages": {
         "name": "Réorganiser les Pages",
-        "description": "Glissez-déposez pour réorganiser les pages PDF."
+        "description": "Glissez-déposez pour réorganiser les pages PDF.",
+        "metaTitle": "Reorder PDF Pages Online Free",
+        "metaDescription": "Rearrange PDF pages by dragging and dropping for free. Reorder pages visually. Browser-based, no uploads needed.",
+        "longDescription": "Rearrange the pages in your PDF document by dragging and dropping page thumbnails. See a visual preview of each page and easily move them to create your desired page order.",
+        "faq": {
+          "item-1": {
+            "question": "How do I reorder pages?",
+            "answer": "Simply drag and drop the page thumbnails to rearrange them in your desired order."
+          },
+          "item-2": {
+            "question": "Can I see page previews?",
+            "answer": "Yes. Each page is shown as a thumbnail so you can easily identify and arrange pages."
+          },
+          "item-3": {
+            "question": "Will reordering affect page content?",
+            "answer": "No. Only the order of pages changes. The content of each page remains identical."
+          },
+          "item-4": {
+            "question": "Can I reorder pages in a large PDF?",
+            "answer": "Yes. The tool supports large PDFs, though generating thumbnails for many pages may take a moment."
+          },
+          "item-5": {
+            "question": "Can I also delete pages while reordering?",
+            "answer": "For deleting pages, use the Extract Pages tool where you can select only the pages you want to keep."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Fixing Page Order",
+            "description": "Correct documents where pages were scanned or added in the wrong order."
+          },
+          "item-2": {
+            "title": "Custom Presentations",
+            "description": "Rearrange presentation slides to create a custom flow for different audiences."
+          },
+          "item-3": {
+            "title": "Document Reorganization",
+            "description": "Move sections around in reports and documents to improve logical flow."
+          },
+          "item-4": {
+            "title": "Priority Ordering",
+            "description": "Move the most important pages to the front of a document."
+          }
+        }
       },
       "extractPages": {
         "name": "Extraire des Pages",
-        "description": "Sélectionnez et extrayez des pages spécifiques d'un PDF."
+        "description": "Sélectionnez et extrayez des pages spécifiques d'un PDF.",
+        "metaTitle": "Extract PDF Pages Online Free",
+        "metaDescription": "Extract specific pages from PDF documents for free. Select pages visually and download. Browser-based, no uploads needed.",
+        "longDescription": "Extract specific pages from your PDF document. View page thumbnails, select the pages you want to keep, and create a new PDF containing only those pages.",
+        "faq": {
+          "item-1": {
+            "question": "How do I select pages to extract?",
+            "answer": "Click on page thumbnails to select or deselect them. Selected pages will be highlighted."
+          },
+          "item-2": {
+            "question": "Can I extract non-consecutive pages?",
+            "answer": "Yes. You can select any combination of pages, whether consecutive or scattered throughout the document."
+          },
+          "item-3": {
+            "question": "Will extracted pages keep their formatting?",
+            "answer": "Yes. Each extracted page maintains its original formatting, images, and text."
+          },
+          "item-4": {
+            "question": "Can I extract pages from a protected PDF?",
+            "answer": "This depends on the type of protection. Some encrypted PDFs may not be processable in the browser."
+          },
+          "item-5": {
+            "question": "Is there a limit on the number of pages I can extract?",
+            "answer": "No. You can extract as many pages as you want from the original document."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Selecting Key Pages",
+            "description": "Extract only the most important pages from a lengthy document."
+          },
+          "item-2": {
+            "title": "Creating Summaries",
+            "description": "Pull out summary or conclusion pages from reports for quick review."
+          },
+          "item-3": {
+            "title": "Removing Sensitive Content",
+            "description": "Create a version of a document without confidential pages for sharing."
+          },
+          "item-4": {
+            "title": "Building Custom Documents",
+            "description": "Extract pages from multiple documents to compile a custom reference."
+          }
+        }
       },
       "deletePages": {
         "name": "Supprimer des Pages",
-        "description": "Supprimez des pages spécifiques d'un document PDF."
+        "description": "Supprimez des pages spécifiques d'un document PDF.",
+        "metaTitle": "Delete PDF Pages Online Free - Remove Pages from PDF",
+        "metaDescription": "Delete specific pages from PDF documents for free. Select and remove unwanted pages visually. Browser-based, no uploads needed.",
+        "longDescription": "Remove unwanted pages from your PDF document quickly and easily. View page thumbnails, select the pages you want to delete, and create a clean PDF without them. All processing happens locally in your browser for complete privacy.",
+        "faq": {
+          "item-1": {
+            "question": "How do I select pages to delete?",
+            "answer": "Click on page thumbnails to mark them for deletion. Selected pages will be highlighted. You can also use the Select All or Deselect All buttons for bulk selection."
+          },
+          "item-2": {
+            "question": "Can I delete non-consecutive pages?",
+            "answer": "Yes. You can select any combination of pages to delete, whether they are consecutive or scattered throughout the document."
+          },
+          "item-3": {
+            "question": "Will the remaining pages keep their formatting?",
+            "answer": "Yes. All pages that are not deleted retain their original formatting, images, text, and hyperlinks."
+          },
+          "item-4": {
+            "question": "Can I undo the deletion after downloading?",
+            "answer": "The original file is never modified. If you need the deleted pages later, simply process the original file again."
+          },
+          "item-5": {
+            "question": "Is there a limit to how many pages I can delete?",
+            "answer": "You can delete any number of pages, but at least one page must remain in the final document."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Removing Cover Pages",
+            "description": "Delete unnecessary cover pages, blank pages, or filler pages from documents before sharing."
+          },
+          "item-2": {
+            "title": "Cleaning Up Scanned Documents",
+            "description": "Remove accidentally scanned blank or duplicate pages from scanned PDF files."
+          },
+          "item-3": {
+            "title": "Redacting Confidential Sections",
+            "description": "Delete pages containing sensitive or confidential information before distributing a document."
+          },
+          "item-4": {
+            "title": "Streamlining Reports",
+            "description": "Remove appendix pages, outdated sections, or irrelevant content to create a concise report."
+          }
+        }
       },
       "reversePdf": {
         "name": "Inverser PDF",
-        "description": "Inversez l'ordre des pages d'un document PDF."
+        "description": "Inversez l'ordre des pages d'un document PDF.",
+        "metaTitle": "Reverse PDF Page Order Online Free",
+        "metaDescription": "Reverse the page order of PDF documents for free. Flip your PDF pages from last to first instantly. Browser-based, no uploads needed.",
+        "longDescription": "Reverse the entire page order of your PDF document so the last page becomes the first and vice versa. This is useful for correcting print order issues, reversing chronological documents, or preparing files for specific binding requirements.",
+        "faq": {
+          "item-1": {
+            "question": "What does reversing a PDF do?",
+            "answer": "Reversing a PDF flips the page order so the last page becomes the first page, the second-to-last becomes the second, and so on through the entire document."
+          },
+          "item-2": {
+            "question": "Will reversing affect the content on each page?",
+            "answer": "No. Only the order of pages changes. The content, formatting, and orientation of each individual page remain exactly the same."
+          },
+          "item-3": {
+            "question": "Can I reverse a PDF with hundreds of pages?",
+            "answer": "Yes. The tool handles PDFs of any length. Larger documents may take a few moments to process depending on your device."
+          },
+          "item-4": {
+            "question": "Is there a way to reverse only some pages?",
+            "answer": "This tool reverses the entire document. To rearrange specific pages, use the Reorder Pages tool instead."
+          },
+          "item-5": {
+            "question": "Can I reverse the PDF back to its original order?",
+            "answer": "Yes. Simply run the reversed PDF through the tool again to restore the original page order."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Correcting Print Order",
+            "description": "Reverse page order when a printer outputs pages in the wrong sequence."
+          },
+          "item-2": {
+            "title": "Chronological Adjustment",
+            "description": "Flip date-ordered documents so the most recent entries appear first."
+          },
+          "item-3": {
+            "title": "Booklet Preparation",
+            "description": "Reverse page order to prepare documents for specific booklet binding or duplex printing."
+          },
+          "item-4": {
+            "title": "Presentation Reordering",
+            "description": "Quickly reverse a slide deck to review content from end to beginning."
+          }
+        }
       },
       "pdfToText": {
         "name": "PDF en Texte",
-        "description": "Extrayez le contenu texte des documents PDF."
+        "description": "Extrayez le contenu texte des documents PDF.",
+        "metaTitle": "Extract Text from PDF Online Free - PDF to Text Converter",
+        "metaDescription": "Extract text content from PDF documents for free. Copy text or download as TXT file. Browser-based, no uploads needed.",
+        "longDescription": "Extract all readable text content from your PDF documents. View the extracted text, copy it to your clipboard, or download it as a plain text file. Ideal for repurposing PDF content, text analysis, and accessibility conversion.",
+        "faq": {
+          "item-1": {
+            "question": "Can this tool extract text from scanned PDFs?",
+            "answer": "This tool extracts embedded text data from PDFs. Scanned documents that consist of images without embedded text layers will not yield readable text. OCR functionality is not currently supported."
+          },
+          "item-2": {
+            "question": "Will the extracted text preserve the original formatting?",
+            "answer": "The extracted text is plain text without formatting such as bold, italic, or font styles. The text order follows the logical reading order of the PDF content."
+          },
+          "item-3": {
+            "question": "Can I extract text from a specific page only?",
+            "answer": "Currently, the tool extracts text from all pages at once. You can then copy the portion you need from the extracted results."
+          },
+          "item-4": {
+            "question": "What languages are supported?",
+            "answer": "The tool extracts text in any language that is embedded in the PDF, including Latin, CJK (Chinese, Japanese, Korean), Arabic, and other scripts."
+          },
+          "item-5": {
+            "question": "Can I download the extracted text?",
+            "answer": "Yes. You can copy the text to your clipboard or download it as a .txt file for further use."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Content Repurposing",
+            "description": "Extract text from PDF reports, articles, or e-books to reuse content in other formats."
+          },
+          "item-2": {
+            "title": "Data Entry and Analysis",
+            "description": "Pull text from PDF invoices, forms, or tables for data entry into spreadsheets or databases."
+          },
+          "item-3": {
+            "title": "Accessibility Conversion",
+            "description": "Convert PDF documents to plain text for screen readers and other assistive technologies."
+          },
+          "item-4": {
+            "title": "Search and Indexing",
+            "description": "Extract text from PDF archives to create searchable indexes or full-text search databases."
+          }
+        }
       },
       "bmpToPdf": {
         "name": "BMP en PDF",
-        "description": "Convertissez des images BMP en un document PDF."
+        "description": "Convertissez des images BMP en un document PDF.",
+        "metaTitle": "Convert BMP to PDF Online Free - BMP to PDF Converter",
+        "metaDescription": "Convert BMP bitmap images to PDF for free. Combine multiple BMP files into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your BMP (Bitmap) images into a PDF document. Upload multiple BMP files, arrange them in your preferred order with drag-and-drop, and combine them into a single PDF. BMP images are embedded with full quality preservation.",
+        "faq": {
+          "item-1": {
+            "question": "Will BMP image quality be preserved in the PDF?",
+            "answer": "Yes. BMP images are embedded at their original resolution and quality in the PDF document without any compression loss."
+          },
+          "item-2": {
+            "question": "Can I combine multiple BMP files into one PDF?",
+            "answer": "Yes. Upload as many BMP files as you need, arrange them in your desired order with drag-and-drop, and convert them into a single PDF."
+          },
+          "item-3": {
+            "question": "Why are BMP files so large?",
+            "answer": "BMP is an uncompressed raster format, so files are typically much larger than JPG or PNG. Converting to PDF can make them easier to share and organize."
+          },
+          "item-4": {
+            "question": "What will the PDF page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions of its corresponding BMP image."
+          },
+          "item-5": {
+            "question": "Are my files uploaded to a server?",
+            "answer": "No. All processing happens directly in your browser. Your BMP files never leave your device."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Legacy Image Conversion",
+            "description": "Convert older BMP screenshots or graphics into modern, shareable PDF documents."
+          },
+          "item-2": {
+            "title": "Medical and Scientific Imaging",
+            "description": "Compile BMP images from diagnostic equipment or scientific instruments into organized PDF reports."
+          },
+          "item-3": {
+            "title": "Archiving Bitmap Graphics",
+            "description": "Convert collections of BMP files into compact PDF archives for long-term storage."
+          },
+          "item-4": {
+            "title": "Print Preparation",
+            "description": "Convert BMP artwork or graphics into PDF format for reliable printing across different devices."
+          }
+        }
       },
       "gifToPdf": {
         "name": "GIF en PDF",
-        "description": "Convertissez des images GIF en un document PDF."
+        "description": "Convertissez des images GIF en un document PDF.",
+        "metaTitle": "Convert GIF to PDF Online Free - GIF to PDF Converter",
+        "metaDescription": "Convert GIF images to PDF for free. Combine multiple GIF files into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your GIF images into a PDF document. Upload multiple GIF files, arrange them in your preferred order with drag-and-drop, and combine them into a single PDF. Static GIF images are embedded with full quality preservation.",
+        "faq": {
+          "item-1": {
+            "question": "Does this tool support animated GIFs?",
+            "answer": "The tool converts the first frame of animated GIFs into the PDF. For animated GIFs, only the static first frame is captured."
+          },
+          "item-2": {
+            "question": "Will GIF image quality be preserved?",
+            "answer": "Yes. GIF images are embedded at their original resolution in the PDF document without quality loss."
+          },
+          "item-3": {
+            "question": "Can I combine multiple GIF files into one PDF?",
+            "answer": "Yes. Upload multiple GIF files, reorder them with drag-and-drop, and convert them into a single PDF document."
+          },
+          "item-4": {
+            "question": "What will the PDF page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions of its corresponding GIF image."
+          },
+          "item-5": {
+            "question": "Are my files uploaded to a server?",
+            "answer": "No. All processing happens directly in your browser. Your GIF files never leave your device."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Diagram Collection",
+            "description": "Compile GIF diagrams, flowcharts, or infographics into a single organized PDF."
+          },
+          "item-2": {
+            "title": "Web Asset Documentation",
+            "description": "Convert GIF icons, banners, or web graphics into a PDF reference document."
+          },
+          "item-3": {
+            "title": "Storyboard Creation",
+            "description": "Arrange GIF frames or illustrations into a sequential PDF storyboard."
+          },
+          "item-4": {
+            "title": "Archiving Simple Graphics",
+            "description": "Convert GIF logos, icons, and simple artwork into a PDF for organized digital archiving."
+          }
+        }
       },
       "svgToPdf": {
         "name": "SVG en PDF",
-        "description": "Convertissez des images vectorielles SVG en un document PDF."
+        "description": "Convertissez des images vectorielles SVG en un document PDF.",
+        "metaTitle": "Convert SVG to PDF Online Free - SVG to PDF Converter",
+        "metaDescription": "Convert SVG vector images to PDF for free. Combine multiple SVG files into one PDF. Browser-based, no uploads needed.",
+        "longDescription": "Convert your SVG (Scalable Vector Graphics) images into a PDF document. Upload multiple SVG files, arrange them in your preferred order with drag-and-drop, and combine them into a single PDF. SVG vector quality is preserved at any scale.",
+        "faq": {
+          "item-1": {
+            "question": "Will vector quality be preserved in the PDF?",
+            "answer": "SVG images are rasterized at high resolution during conversion. The resulting PDF images are sharp and clear, though they become raster-based rather than vector."
+          },
+          "item-2": {
+            "question": "Can I combine multiple SVG files into one PDF?",
+            "answer": "Yes. Upload multiple SVG files, arrange them in your preferred order, and convert them all into a single PDF document."
+          },
+          "item-3": {
+            "question": "What SVG features are supported?",
+            "answer": "Standard SVG elements including shapes, paths, text, gradients, and transforms are supported. Complex filters or animations may not render identically."
+          },
+          "item-4": {
+            "question": "What will the PDF page size be?",
+            "answer": "Each PDF page is automatically sized to match the dimensions defined in the SVG file's viewBox or width/height attributes."
+          },
+          "item-5": {
+            "question": "Are my files uploaded to a server?",
+            "answer": "No. All processing happens directly in your browser. Your SVG files never leave your device."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Design Portfolio",
+            "description": "Compile SVG illustrations, logos, and design work into a professional PDF portfolio."
+          },
+          "item-2": {
+            "title": "Technical Drawings",
+            "description": "Convert SVG technical diagrams, schematics, or blueprints into shareable PDF documents."
+          },
+          "item-3": {
+            "title": "Brand Asset Sheets",
+            "description": "Create PDF brand guides by compiling SVG logos, icons, and brand elements."
+          },
+          "item-4": {
+            "title": "Print-Ready Graphics",
+            "description": "Convert SVG artwork to PDF format for high-quality printing and reproduction."
+          }
+        }
       },
       "editMetadata": {
         "name": "Modifier les Métadonnées",
-        "description": "Modifiez les métadonnées des documents PDF incluant le titre, l'auteur et les mots-clés."
+        "description": "Modifiez les métadonnées des documents PDF incluant le titre, l'auteur et les mots-clés.",
+        "metaTitle": "Edit PDF Metadata Online Free - PDF Metadata Editor",
+        "metaDescription": "Edit PDF metadata including title, author, subject, and keywords for free. Update document properties easily. Browser-based, no uploads needed.",
+        "longDescription": "Edit the metadata properties of your PDF documents. Update the title, author, subject, keywords, creator, and producer fields to improve document organization, searchability, and professional presentation. All changes are applied instantly in your browser.",
+        "faq": {
+          "item-1": {
+            "question": "What is PDF metadata?",
+            "answer": "PDF metadata includes document properties like title, author, subject, keywords, creator, and producer. This information helps organize, search, and identify PDF files."
+          },
+          "item-2": {
+            "question": "Which metadata fields can I edit?",
+            "answer": "You can edit six fields: Title, Author, Subject, Keywords, Creator, and Producer. All fields are optional and can be left blank."
+          },
+          "item-3": {
+            "question": "Will editing metadata change the document content?",
+            "answer": "No. Editing metadata only changes the document properties. The visible content, formatting, and pages remain completely unchanged."
+          },
+          "item-4": {
+            "question": "How do keywords help with searchability?",
+            "answer": "Keywords are indexed by search engines and document management systems, making it easier to find your PDF when searching for specific terms."
+          },
+          "item-5": {
+            "question": "Can I view the current metadata before editing?",
+            "answer": "Yes. When you upload a PDF, the existing metadata fields are automatically populated so you can see and modify the current values."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Professional Document Preparation",
+            "description": "Set proper title and author fields before sharing reports, proposals, or contracts with clients."
+          },
+          "item-2": {
+            "title": "Document Library Management",
+            "description": "Add consistent metadata to PDFs for better organization in document management systems."
+          },
+          "item-3": {
+            "title": "SEO for Published PDFs",
+            "description": "Add descriptive titles, subjects, and keywords to PDFs published online for better search engine visibility."
+          },
+          "item-4": {
+            "title": "Compliance and Record Keeping",
+            "description": "Update author and producer fields to meet regulatory or organizational documentation requirements."
+          }
+        }
       },
       "cropPdf": {
         "name": "Rogner PDF",
-        "description": "Rognez et ajustez les marges des pages PDF."
+        "description": "Rognez et ajustez les marges des pages PDF.",
+        "metaTitle": "Crop PDF Pages Online Free - Adjust PDF Margins",
+        "metaDescription": "Crop PDF page margins for free. Adjust top, bottom, left, and right margins precisely. Browser-based, no uploads needed.",
+        "longDescription": "Crop the margins of your PDF pages to remove unwanted whitespace or adjust the visible area. Set precise margin values for top, right, bottom, and left sides. Apply cropping to all pages uniformly for a clean, professional result.",
+        "faq": {
+          "item-1": {
+            "question": "How does PDF cropping work?",
+            "answer": "Cropping adjusts the visible area of each page by setting new margin boundaries. Content outside the crop area is hidden but not permanently deleted from the file."
+          },
+          "item-2": {
+            "question": "Can I set different margins for each side?",
+            "answer": "Yes. You can independently adjust the top, right, bottom, and left margins to crop each side precisely."
+          },
+          "item-3": {
+            "question": "Will cropping affect all pages?",
+            "answer": "Yes. The crop settings are applied uniformly to all pages in the document for consistent results."
+          },
+          "item-4": {
+            "question": "Can I undo the cropping?",
+            "answer": "The original file is never modified. If you need to adjust the cropping, simply process the original file again with different margin values."
+          },
+          "item-5": {
+            "question": "What units are the margin values in?",
+            "answer": "Margin values are specified in points (1 point = 1/72 inch). You can enter precise values for exact control over the crop area."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Removing Excess Whitespace",
+            "description": "Trim large margins and unnecessary whitespace around PDF content for a tighter layout."
+          },
+          "item-2": {
+            "title": "Standardizing Page Margins",
+            "description": "Apply uniform margins to documents with inconsistent spacing for a professional appearance."
+          },
+          "item-3": {
+            "title": "Print Preparation",
+            "description": "Adjust margins to fit specific paper sizes or printing requirements before sending to press."
+          },
+          "item-4": {
+            "title": "Removing Headers and Footers",
+            "description": "Crop out existing headers, footers, or watermarks by trimming the top or bottom margins."
+          }
+        }
       },
       "flattenPdf": {
         "name": "Aplatir PDF",
-        "description": "Aplatissez les champs de formulaire et annotations PDF en contenu statique."
+        "description": "Aplatissez les champs de formulaire et annotations PDF en contenu statique.",
+        "metaTitle": "Flatten PDF Online Free - Flatten Forms & Annotations",
+        "metaDescription": "Flatten PDF form fields and annotations for free. Convert interactive elements to static content. Browser-based, no uploads needed.",
+        "longDescription": "Flatten your PDF documents to convert all interactive form fields, annotations, and comments into static, non-editable content. This ensures the document appears identically on every device and prevents further modifications to form data.",
+        "faq": {
+          "item-1": {
+            "question": "What does flattening a PDF mean?",
+            "answer": "Flattening a PDF converts all interactive elements such as form fields, checkboxes, dropdown menus, and annotations into static content that is permanently embedded in the page."
+          },
+          "item-2": {
+            "question": "Why would I want to flatten a PDF?",
+            "answer": "Flattening ensures the document looks the same on every device and PDF viewer. It also prevents accidental or intentional changes to form data and annotations."
+          },
+          "item-3": {
+            "question": "Can I edit form fields after flattening?",
+            "answer": "No. Once flattened, form fields become part of the static page content and can no longer be edited. Keep your original file if you may need to make changes later."
+          },
+          "item-4": {
+            "question": "Will flattening reduce the file size?",
+            "answer": "In many cases, yes. Flattening removes the interactive form structure and can reduce file size, especially for forms with many fields."
+          },
+          "item-5": {
+            "question": "Does flattening affect the visual appearance?",
+            "answer": "No. The visual appearance remains identical. All filled form values and annotations are preserved exactly as they appear, just as non-editable content."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Finalizing Completed Forms",
+            "description": "Flatten filled PDF forms to lock in responses and prevent accidental edits before submission or archiving."
+          },
+          "item-2": {
+            "title": "Ensuring Display Consistency",
+            "description": "Flatten PDFs to guarantee they render identically across all PDF viewers, devices, and operating systems."
+          },
+          "item-3": {
+            "title": "Preparing for Digital Signatures",
+            "description": "Flatten annotations and form fields before applying digital signatures to ensure document integrity."
+          },
+          "item-4": {
+            "title": "Archiving Official Documents",
+            "description": "Flatten completed government forms, contracts, or official records for tamper-resistant long-term archival."
+          }
+        }
       },
       "signPdf": {
         "name": "Signer PDF",
-        "description": "Ajoutez des signatures numériques à vos documents PDF."
+        "description": "Ajoutez des signatures numériques à vos documents PDF.",
+        "metaTitle": "Sign PDF Online Free - Electronic Signature Tool",
+        "metaDescription": "Add electronic or handwritten signatures to PDF documents for free. Support text and image signatures. Browser-based, no uploads needed.",
+        "longDescription": "Add electronic signatures to your PDF documents. Support text signatures (customizable font, size, color) and handwritten signatures (draw on canvas). Place signatures anywhere to create legally binding signed documents.",
+        "faq": {
+          "item-1": {
+            "question": "What signature types are supported?",
+            "answer": "Text signatures (enter your name) and handwritten signatures (draw on canvas). Choose the signature method that best fits your needs."
+          },
+          "item-2": {
+            "question": "Where can I place the signature?",
+            "answer": "You can freely drag the signature to any position on the PDF page. The tool shows a page preview for precise signature placement."
+          },
+          "item-3": {
+            "question": "Can I add multiple signatures?",
+            "answer": "Yes. You can add multiple signatures at different locations in the same document, suitable for contracts or forms requiring multiple signatures."
+          },
+          "item-4": {
+            "question": "Is the signed PDF secure?",
+            "answer": "All processing happens in the browser; files are not uploaded to any server. Signatures are permanently embedded in the PDF and cannot be easily removed."
+          },
+          "item-5": {
+            "question": "What is the legal validity of signatures?",
+            "answer": "Signatures created by this tool are visual signatures. For advanced electronic signatures requiring digital certificates, please consult professional digital signature services."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Contract Signing",
+            "description": "Quickly add signatures to contracts and agreements without printing and scanning."
+          },
+          "item-2": {
+            "title": "Form Completion",
+            "description": "Add signatures to PDF forms, completing applications, authorizations, and other documents."
+          },
+          "item-3": {
+            "title": "Approval Workflow",
+            "description": "Add signatures to internal approval documents to streamline workflows."
+          },
+          "item-4": {
+            "title": "Personal Documents",
+            "description": "Add signatures to personal statements, letters of authorization, and other documents."
+          }
+        }
       },
       "unlockPdf": {
         "name": "Déverrouiller PDF",
-        "description": "Supprimez la protection par mot de passe des fichiers PDF."
+        "description": "Supprimez la protection par mot de passe des fichiers PDF.",
+        "metaTitle": "Unlock PDF Online Free - Remove PDF Password",
+        "metaDescription": "Remove password protection from PDFs for free. Enter password to unlock documents and gain unrestricted access. Browser-based, no uploads needed.",
+        "longDescription": "Remove password protection from PDF documents. If you have the password but want a password-free copy of the document, this tool can help you create an unlocked version. Note that you need to know the original password to unlock.",
+        "faq": {
+          "item-1": {
+            "question": "Can I unlock any PDF?",
+            "answer": "You need to know the original password of the PDF to unlock. This tool cannot crack or bypass password protection."
+          },
+          "item-2": {
+            "question": "Will unlocking change the document content?",
+            "answer": "No. Unlocking only removes password protection; document content, format, and layout remain completely unchanged."
+          },
+          "item-3": {
+            "question": "Can the unlocked PDF be encrypted again?",
+            "answer": "Yes. You can use the 'Protect PDF' tool to set a new password for the unlocked document."
+          },
+          "item-4": {
+            "question": "Is my password secure?",
+            "answer": "Absolutely secure. The password is only used in the browser and is never sent to any server."
+          },
+          "item-5": {
+            "question": "What types of password protection are supported?",
+            "answer": "Standard PDF open passwords (user passwords) are supported. Some advanced permission passwords may require additional processing."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Remove Old Passwords",
+            "description": "Remove password protection that is no longer needed for daily use."
+          },
+          "item-2": {
+            "title": "Create Backup Copies",
+            "description": "Create password-free backup copies to prevent being locked out if you forget the password."
+          },
+          "item-3": {
+            "title": "Internal Sharing",
+            "description": "Share unlocked documents internally to avoid the hassle of frequent password entry."
+          },
+          "item-4": {
+            "title": "Archive Preparation",
+            "description": "Create password-free versions for long-term archiving to ensure future accessibility."
+          }
+        }
       },
       "protectPdf": {
         "name": "Protéger PDF",
-        "description": "Ajoutez une protection par mot de passe à vos fichiers PDF."
+        "description": "Ajoutez une protection par mot de passe à vos fichiers PDF.",
+        "metaTitle": "Protect PDF Online Free - Add PDF Password",
+        "metaDescription": "Add password protection to PDF documents for free. Set open password to protect sensitive documents. Browser-based, no uploads needed.",
+        "longDescription": "Add password protection to your PDF documents. Set a strong password to prevent unauthorized access, protecting sensitive information, trade secrets, or personal privacy. Supports standard PDF encryption algorithms to ensure document security.",
+        "faq": {
+          "item-1": {
+            "question": "What encryption algorithm is used?",
+            "answer": "Standard PDF encryption algorithm (AES-256) is used, compatible with Adobe Acrobat and other mainstream PDF readers."
+          },
+          "item-2": {
+            "question": "Can the password be changed or removed?",
+            "answer": "Yes. Use the 'Unlock PDF' tool and enter the password to create a password-free version, then you can set a new password."
+          },
+          "item-3": {
+            "question": "How compatible are encrypted PDFs?",
+            "answer": "Encrypted PDFs are compatible with all mainstream PDF readers, including Adobe Acrobat, browser built-in readers, mobile PDF apps, etc."
+          },
+          "item-4": {
+            "question": "Are there password strength requirements?",
+            "answer": "It is recommended to use strong passwords of at least 8 characters, including uppercase and lowercase letters, numbers, and symbols for optimal security."
+          },
+          "item-5": {
+            "question": "What if I forget the password?",
+            "answer": "Please be sure to remember your password. If you forget the password, this tool cannot recover or crack it, and you will not be able to access the document content."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Protect Sensitive Documents",
+            "description": "Add password protection to financial reports, contract drafts, and other sensitive documents."
+          },
+          "item-2": {
+            "title": "Privacy Protection",
+            "description": "Set passwords for documents containing personal information, such as bank statements and medical records."
+          },
+          "item-3": {
+            "title": "Trade Secrets",
+            "description": "Protect confidential documents such as business plans and product designs, restricting access."
+          },
+          "item-4": {
+            "title": "Secure Sharing",
+            "description": "Add password protection when sharing documents through insecure channels such as email."
+          }
+        }
       },
       "comparePdf": {
         "name": "Comparer PDF",
-        "description": "Comparez deux documents PDF pour trouver les différences."
+        "description": "Comparez deux documents PDF pour trouver les différences.",
+        "metaTitle": "Compare PDF Online Free - Document Comparison Tool",
+        "metaDescription": "Compare two PDF documents side-by-side for free. Highlight text differences, easily spot modifications. Browser-based, no uploads needed.",
+        "longDescription": "Compare two PDF documents side-by-side to quickly identify text content differences. The tool extracts text from both documents, highlighting added, deleted, and modified content. Suitable for reviewing contract revisions, verifying document versions, and other scenarios.",
+        "faq": {
+          "item-1": {
+            "question": "How does the comparison work?",
+            "answer": "The tool extracts text from both PDFs, compares line by line, highlighting differences: green for added content, red for deleted content."
+          },
+          "item-2": {
+            "question": "Can scanned PDFs be compared?",
+            "answer": "Scanned PDFs contain images rather than text, so text differences cannot be directly compared. Please use an OCR tool to convert to a searchable PDF first."
+          },
+          "item-3": {
+            "question": "How accurate are the comparison results?",
+            "answer": "The tool compares text content, ignoring format differences. If documents have the same content but different formatting, they will be shown as having no differences."
+          },
+          "item-4": {
+            "question": "Are multi-page documents supported?",
+            "answer": "Yes. The tool compares all pages of the entire document, showing an overall difference summary and detailed comparison."
+          },
+          "item-5": {
+            "question": "Can comparison results be exported?",
+            "answer": "The current version displays comparison results in the browser. You can take screenshots or use the browser print function to save as PDF."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Contract Review",
+            "description": "Compare different versions of contracts to quickly identify clause modifications and additions."
+          },
+          "item-2": {
+            "title": "Version Control",
+            "description": "Compare document drafts and final versions to ensure all modifications have been correctly applied."
+          },
+          "item-3": {
+            "title": "Collaborative Editing",
+            "description": "Compare documents edited by team members to understand the modifications each person made."
+          },
+          "item-4": {
+            "title": "Quality Verification",
+            "description": "Verify that converted documents retain the integrity of the original content."
+          }
+        }
       },
       "redactPdf": {
         "name": "Rédiger PDF",
-        "description": "Supprimez définitivement les informations sensibles des documents PDF."
+        "description": "Supprimez définitivement les informations sensibles des documents PDF.",
+        "metaTitle": "Redact PDF Online Free - Permanently Remove Sensitive Info",
+        "metaDescription": "Permanently remove sensitive text and images from PDFs. Redacted information cannot be recovered, protecting privacy. Browser-based, no uploads needed.",
+        "longDescription": "Permanently remove sensitive information from PDF documents. Unlike overlaying, redaction permanently removes selected content, ensuring the information cannot be recovered by any means. Suitable for processing documents that need to be made public but contain confidential information.",
+        "faq": {
+          "item-1": {
+            "question": "What is the difference between redaction and overlaying?",
+            "answer": "Redaction permanently deletes content and cannot be recovered; overlaying only places a mask over the content, and the underlying data still exists. Redaction provides true secure deletion."
+          },
+          "item-2": {
+            "question": "Can redaction be undone?",
+            "answer": "No. Redaction is permanent. Please be sure to keep a backup of the original document in case you need the unredacted version."
+          },
+          "item-3": {
+            "question": "What content can be redacted?",
+            "answer": "Text, images, and page areas can be redacted. Select the content to redact, and the tool will permanently remove it from the document."
+          },
+          "item-4": {
+            "question": "What is the quality of the redacted document?",
+            "answer": "Redacted areas are replaced with black or white blocks, surrounding content remains unchanged, and the rest of the document quality is unaffected."
+          },
+          "item-5": {
+            "question": "How to ensure thorough redaction?",
+            "answer": "This tool uses the pdf-lib library to truly delete content, not just overlay it. Redacted content cannot be recovered by text extraction tools."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Information Disclosure",
+            "description": "Redact personally identifiable information, account numbers, and other sensitive content before making documents public."
+          },
+          "item-2": {
+            "title": "Legal Documents",
+            "description": "Redact privileged information, confidential terms, and other sensitive content in legal documents."
+          },
+          "item-3": {
+            "title": "Medical Records",
+            "description": "Redact patient names, ID numbers, and other personal health information (PHI) to comply with privacy regulations."
+          },
+          "item-4": {
+            "title": "Financial Reports",
+            "description": "Redact account numbers, transaction details, and other sensitive financial information before sharing financial reports."
+          }
+        }
       },
       "ocrPdf": {
         "name": "OCR PDF",
-        "description": "Convertissez les documents numérisés en PDF avec texte sélectionnable."
+        "description": "Convertissez les documents numérisés en PDF avec texte sélectionnable.",
+        "metaTitle": "PDF OCR Online Free - Text Recognition",
+        "metaDescription": "Free recognize text in scanned PDFs and convert to searchable, copyable documents. Browser-based, no uploads needed.",
+        "longDescription": "Use OCR technology to recognize text in scanned PDFs or image-based PDFs. Convert non-searchable image text to searchable, selectable text layer while preserving the original image appearance.",
+        "faq": {
+          "item-1": {
+            "question": "What languages does OCR support?",
+            "answer": "Supports multiple languages including Chinese and English. You can select the primary language in the document to improve recognition accuracy."
+          },
+          "item-2": {
+            "question": "How accurate is the recognition?",
+            "answer": "Accuracy depends on scan quality and text clarity. Clear printed documents typically achieve over 95% accuracy."
+          },
+          "item-3": {
+            "question": "Will OCR change the document appearance?",
+            "answer": "No. OCR adds a transparent text layer over the original image. The document appearance remains unchanged, but text becomes selectable and searchable."
+          },
+          "item-4": {
+            "question": "Can it process multi-page documents?",
+            "answer": "Yes. The tool processes multi-page PDFs page by page, performing OCR recognition on each page."
+          },
+          "item-5": {
+            "question": "What is the processing speed?",
+            "answer": "Depends on document page count and complexity. Typically takes a few seconds per page."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Archive Digitization",
+            "description": "Convert scanned paper archives to searchable electronic documents."
+          },
+          "item-2": {
+            "title": "Contract Processing",
+            "description": "Make scanned contract documents searchable by keyword for easy clause lookup."
+          },
+          "item-3": {
+            "title": "Academic Research",
+            "description": "Convert scanned paper and book pages to copyable format for citations."
+          },
+          "item-4": {
+            "title": "Form Data Extraction",
+            "description": "Recognize text content in scanned forms for subsequent editing and analysis."
+          }
+        }
       },
       "resizePdf": {
         "name": "Redimensionner PDF",
-        "description": "Changez la taille des pages PDF vers une taille de page différente."
+        "description": "Changez la taille des pages PDF vers une taille de page différente.",
+        "metaTitle": "Resize PDF Pages Online Free",
+        "metaDescription": "Free change PDF page size. Supports A4, Letter, Legal, and other standard sizes. Browser-based, no uploads needed.",
+        "longDescription": "Adjust the page size of PDF documents for different uses. Supports various standard paper sizes including A4, Letter, Legal, etc. Can scale content to fit new size or maintain original content size.",
+        "faq": {
+          "item-1": {
+            "question": "What page sizes are supported?",
+            "answer": "Supports common standard sizes including A4, Letter, Legal, A3, A5, etc."
+          },
+          "item-2": {
+            "question": "Will resizing affect content?",
+            "answer": "You can choose to scale content to fit the new size or maintain original content size. Scaling may result in content being cropped or white space appearing."
+          },
+          "item-3": {
+            "question": "Will all pages be resized uniformly?",
+            "answer": "Yes. This tool adjusts all pages in the document to the same specified size."
+          },
+          "item-4": {
+            "question": "Can I set custom sizes?",
+            "answer": "Current version supports preset standard sizes. For special sizes, please use the print to PDF function."
+          },
+          "item-5": {
+            "question": "Will quality change after resizing?",
+            "answer": "Text and vector graphics remain clear. Image quality depends on original resolution and scaling ratio."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Print Adaptation",
+            "description": "Adjust page size to match paper sizes supported by your printer."
+          },
+          "item-2": {
+            "title": "Standard Archiving",
+            "description": "Standardize documents to A4 size for consistent archiving."
+          },
+          "item-3": {
+            "title": "Email Distribution",
+            "description": "Adjust to larger sizes for screen reading, or smaller sizes to reduce file size for email."
+          },
+          "item-4": {
+            "title": "Publishing",
+            "description": "Adjust to standard sizes required for printing such as Letter or Legal."
+          }
+        }
       },
       "sanitizePdf": {
         "name": "Sanitiser PDF",
-        "description": "Supprimez les métadonnées et informations cachées des documents PDF."
+        "description": "Supprimez les métadonnées et informations cachées des documents PDF.",
+        "metaTitle": "Free PDF Sanitization Online - Remove Metadata",
+        "metaDescription": "Free remove metadata, JavaScript, annotations from PDFs. Protect privacy and share documents securely. Browser-based, no uploads needed.",
+        "longDescription": "Clean sensitive information and hidden content from PDF documents. Remove metadata (author, creator, timestamps), JavaScript code, hyperlinks, comments, embedded files, etc. Use before sharing documents to protect your privacy and sensitive information.",
+        "faq": {
+          "item-1": {
+            "question": "Will sanitizing PDF change the document content?",
+            "answer": "No. Sanitization only removes metadata and hidden additional content. The visible page content of the document remains unchanged."
+          },
+          "item-2": {
+            "question": "Can I sanitize only specific items?",
+            "answer": "Yes. You can selectively clean metadata, JavaScript, embedded files, hyperlinks, or comments in any combination."
+          },
+          "item-3": {
+            "question": "Can metadata be recovered after sanitization?",
+            "answer": "No. Sanitization is permanent. Deleted metadata cannot be recovered. It's recommended to keep a backup of the original document."
+          },
+          "item-4": {
+            "question": "Why should I sanitize PDFs?",
+            "answer": "PDFs may contain creator information, edit history, hidden annotations and other sensitive data. Sanitization removes this information before sharing, protecting your privacy."
+          },
+          "item-5": {
+            "question": "Will sanitization reduce file size?",
+            "answer": "It may reduce slightly, especially when removing embedded files or large numbers of annotations. But the main purpose is security rather than compression."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Secure Sharing",
+            "description": "Clean internal metadata and edit traces before sharing documents externally."
+          },
+          "item-2": {
+            "title": "Privacy Protection",
+            "description": "Remove author information, creation time and other metadata that could reveal identity."
+          },
+          "item-3": {
+            "title": "Remove Malicious Code",
+            "description": "Delete JavaScript code from PDFs to prevent potential security risks."
+          },
+          "item-4": {
+            "title": "Document Archiving",
+            "description": "Create clean professional document versions for long-term archiving."
+          }
+        }
       },
       "headerFooter": {
         "name": "En-tête/Pied de Page",
-        "description": "Ajoutez ou modifiez les en-têtes et pieds de page dans les documents PDF."
+        "description": "Ajoutez ou modifiez les en-têtes et pieds de page dans les documents PDF.",
+        "metaTitle": "Add Header & Footer to PDF Online Free",
+        "metaDescription": "Free add headers and footers to PDF documents. Customize text, position, and font styles. Browser-based, no uploads needed.",
+        "longDescription": "Add professional headers and footers to PDF documents. Support for custom text content, font size, color, and position on the page. Can be displayed on odd pages only, even pages only, or applied to all pages.",
+        "faq": {
+          "item-1": {
+            "question": "What content can be added to headers and footers?",
+            "answer": "You can add any text content such as document titles, chapter names, company names, dates, etc."
+          },
+          "item-2": {
+            "question": "Can I customize the style?",
+            "answer": "Yes. You can set font size, color, and choose left alignment, center alignment, or right alignment."
+          },
+          "item-3": {
+            "question": "Can I apply to specific pages only?",
+            "answer": "Yes. You can choose to apply headers and footers to all pages, odd pages only, or even pages only."
+          },
+          "item-4": {
+            "question": "Will headers and footers overlap existing content?",
+            "answer": "Headers and footers are added in the margin area. It is recommended to ensure the document has sufficient margin space."
+          },
+          "item-5": {
+            "question": "Can I add images to headers and footers?",
+            "answer": "Current version only supports text. For images, please use the watermark tool."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Brand Identity",
+            "description": "Add company name and logo to every page for consistent brand image."
+          },
+          "item-2": {
+            "title": "Document Identification",
+            "description": "Add document title, version number, and date for easy tracking."
+          },
+          "item-3": {
+            "title": "Confidentiality Notice",
+            "description": "Add confidentiality or copyright notices as watermarks on every page."
+          },
+          "item-4": {
+            "title": "Chapter Navigation",
+            "description": "Add chapter names in headers to help readers navigate."
+          }
+        }
       },
       "duplicatePages": {
         "name": "Dupliquer des Pages",
-        "description": "Dupliquez des pages spécifiques dans un document PDF."
+        "description": "Dupliquez des pages spécifiques dans un document PDF.",
+        "metaTitle": "Duplicate PDF Pages Online Free",
+        "metaDescription": "Free duplicate specific pages in PDF. Select pages to copy, specify insertion position and number of copies. Browser-based, no uploads needed.",
+        "longDescription": "Quickly copy pages from PDF documents. Select the pages to copy, set the number of copies, and choose to insert copies at the beginning or end of the document. Ideal for creating documents with repeated content or backing up important pages.",
+        "faq": {
+          "item-1": {
+            "question": "Which pages can be copied?",
+            "answer": "You can select and copy any one or more pages. Supports selecting non-consecutive pages for simultaneous copying."
+          },
+          "item-2": {
+            "question": "Can I create multiple copies?",
+            "answer": "Yes. You can set 1-10 copies, and the selected pages will be duplicated according to the specified number."
+          },
+          "item-3": {
+            "question": "Where will the copies be inserted?",
+            "answer": "You can choose to insert copies at the beginning or end of the document. By default, copies are added at the end."
+          },
+          "item-4": {
+            "question": "Will the original pages be preserved?",
+            "answer": "Yes. The duplicate operation preserves all original pages and simply adds additional copies."
+          },
+          "item-5": {
+            "question": "What is the quality of duplicated pages?",
+            "answer": "The copies are identical to the original pages, maintaining the original formatting, images, and text quality."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Repeated Content Templates",
+            "description": "Duplicate pages containing standard formats or templates for multi-page forms or contracts."
+          },
+          "item-2": {
+            "title": "Backup Important Pages",
+            "description": "Create backup copies of important information pages within the document."
+          },
+          "item-3": {
+            "title": "Create Multiple Certificates",
+            "description": "Duplicate certificate or award pages to generate multiple documents with the same content."
+          },
+          "item-4": {
+            "title": "Expand Forms",
+            "description": "Duplicate form pages to add more fillable pages to the document."
+          }
+        }
       },
       "verifyPdf": {
         "name": "Vérifier PDF",
-        "description": "Vérifiez l'intégrité et la validité des documents PDF."
+        "description": "Vérifiez l'intégrité et la validité des documents PDF.",
+        "metaTitle": "Free PDF Verification Online - Digital Signature Checker",
+        "metaDescription": "Free verify PDF digital signature validity and document integrity. Check encryption status, JavaScript and embedded files. Browser-based, no uploads needed.",
+        "longDescription": "Comprehensively verify the security and integrity of PDF documents. Detect digital signature information (signer, time, location), verify document structure integrity, check encryption status, identify JavaScript code and embedded files. Help you confirm the authenticity and security of documents.",
+        "faq": {
+          "item-1": {
+            "question": "Can the verification tool confirm if a signature is legally valid?",
+            "answer": "It can detect the presence and basic information of signatures, but complete cryptographic verification requires certificate chain validation. The tool displays signature structure and integrity information."
+          },
+          "item-2": {
+            "question": "Can it detect if a document has been tampered with?",
+            "answer": "It can detect whether the document structure is complete and whether the digital signature is intact. If signature verification fails, it may indicate the document has been modified."
+          },
+          "item-3": {
+            "question": "What is the JavaScript risk in PDFs?",
+            "answer": "JavaScript in PDFs can execute automatic actions, which while useful can also be misused. The verification tool identifies documents containing JavaScript."
+          },
+          "item-4": {
+            "question": "Can encrypted PDFs be verified?",
+            "answer": "Yes. The tool detects encryption status and displays relevant information, but full content analysis requires decryption."
+          },
+          "item-5": {
+            "question": "What are embedded files in the verification results?",
+            "answer": "PDFs can embed other files (like attachments). The verification tool identifies these embedded contents to help you understand all data contained in the document."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Contract Verification",
+            "description": "Verify the validity of digital signatures and signer identity for signed contracts."
+          },
+          "item-2": {
+            "title": "Security Check",
+            "description": "Check if received PDFs contain suspicious JavaScript or embedded files."
+          },
+          "item-3": {
+            "title": "Document Audit",
+            "description": "Audit document integrity and modification history to ensure documents haven't been tampered with."
+          },
+          "item-4": {
+            "title": "Compliance Verification",
+            "description": "Verify if documents meet security compliance requirements, such as encryption or signatures."
+          }
+        }
+      },
+      "pdfToWord": {
+        "name": "PDF en Word",
+        "description": "Convertissez des documents PDF en documents Word modifiables.",
+        "metaTitle": "PDF to Word Online Free - PDF to DOCX Converter",
+        "metaDescription": "Convert PDF documents to editable Word documents (DOCX format) for free. Preserve text and formatting. Browser-based, no uploads needed.",
+        "longDescription": "Convert PDF documents to editable Microsoft Word (DOCX) format. Extract text content and preserve paragraph structure, allowing you to easily edit PDF content in Word.",
+        "faq": {
+          "item-1": {
+            "question": "Will the formatting be preserved in the converted Word document?",
+            "answer": "The conversion attempts to preserve text structure and paragraph formatting, but complex layouts, tables, and images may require manual adjustment."
+          },
+          "item-2": {
+            "question": "What types of PDFs are supported?",
+            "answer": "Text-based PDF documents are supported. Scanned PDFs or image-only PDFs require OCR processing first before they can be converted to editable Word documents."
+          },
+          "item-3": {
+            "question": "Can the converted document be opened in Microsoft Word?",
+            "answer": "Yes. The converted DOCX files are fully compatible with Microsoft Word, Google Docs, WPS Office, and other popular word processing software."
+          },
+          "item-4": {
+            "question": "Is there a file size limit?",
+            "answer": "PDF files up to 100MB are supported. The actual limit depends on your browser's available memory."
+          },
+          "item-5": {
+            "question": "Can the converted Word document be edited?",
+            "answer": "Yes. The converted DOCX file is a fully editable Word document. You can modify text and add content just like any regular Word document."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Contract Modification",
+            "description": "Convert PDF contracts to Word format for easy modification of terms and content before resending."
+          },
+          "item-2": {
+            "title": "Report Editing",
+            "description": "Convert PDF reports to editable Word documents for updating data and content."
+          },
+          "item-3": {
+            "title": "Document Repurposing",
+            "description": "Extract content from PDF documents into Word for creating new documents or consolidating materials."
+          },
+          "item-4": {
+            "title": "Collaborative Editing",
+            "description": "Convert PDFs to Word format for easier collaborative editing and review by team members."
+          }
+        }
+      },
+      "pdfToExcel": {
+        "name": "PDF en Excel",
+        "description": "Extrayez des données de tableaux de PDF vers des feuilles de calcul Excel.",
+        "metaTitle": "PDF to Excel Online Free - PDF to XLSX Converter",
+        "metaDescription": "Convert table data from PDFs to Excel spreadsheets (XLSX format) for free. Intelligently recognizes table structure. Browser-based, no uploads needed.",
+        "longDescription": "Extract and convert table data from PDF documents to Microsoft Excel (XLSX) format. Intelligently analyzes text layout to organize data into appropriate rows and columns for further analysis and processing.",
+        "faq": {
+          "item-1": {
+            "question": "Will tables in PDFs be accurately preserved?",
+            "answer": "The conversion attempts to recognize table structure and place data in appropriate cells, but complex tables may require manual adjustment."
+          },
+          "item-2": {
+            "question": "Are multi-page PDFs supported?",
+            "answer": "Yes. Each PDF page is converted to a separate Excel worksheet for easy management and viewing."
+          },
+          "item-3": {
+            "question": "Can the converted Excel file be edited?",
+            "answer": "Yes. The converted XLSX file is a fully editable Excel spreadsheet. You can modify data, add formulas, create charts, and more."
+          },
+          "item-4": {
+            "question": "Can tables in scanned PDFs be converted?",
+            "answer": "Scanned PDFs contain images rather than extractable text data, so they cannot be directly converted to Excel. OCR processing is required first."
+          },
+          "item-5": {
+            "question": "Will number formatting be preserved?",
+            "answer": "Numbers are extracted as text. You can use Excel's 'Convert to Number' feature to convert text numbers to numeric format."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Financial Report Analysis",
+            "description": "Convert PDF financial reports to Excel for data analysis and chart creation."
+          },
+          "item-2": {
+            "title": "Data Entry",
+            "description": "Extract table data from PDF invoices and orders to Excel, reducing manual input work."
+          },
+          "item-3": {
+            "title": "Inventory Management",
+            "description": "Convert PDF inventory lists to Excel spreadsheets for easy updating and tracking inventory changes."
+          },
+          "item-4": {
+            "title": "Research Data Processing",
+            "description": "Convert PDF research data tables to Excel format for statistical analysis."
+          }
+        }
+      },
+      "pdfToPptx": {
+        "name": "PDF en PPTX",
+        "description": "Convertissez des pages PDF en présentations PowerPoint.",
+        "metaTitle": "PDF to PPTX Online Free - PDF to PowerPoint Converter",
+        "metaDescription": "Convert PDF documents to PowerPoint presentations (PPTX format) for free. Each PDF page becomes one slide. Browser-based, no uploads needed.",
+        "longDescription": "Convert PDF documents to Microsoft PowerPoint (PPTX) presentations. Each page of PDF content is converted to a slide, preserving text content for further editing and presentation in PowerPoint.",
+        "faq": {
+          "item-1": {
+            "question": "How are PDF pages converted to slides?",
+            "answer": "Each PDF page is converted to a PowerPoint slide, with text content extracted and placed on the slide."
+          },
+          "item-2": {
+            "question": "Will images be preserved?",
+            "answer": "The current version primarily extracts text content. Images and complex graphics may need to be manually added to the converted presentation."
+          },
+          "item-3": {
+            "question": "Can the converted PPTX be edited?",
+            "answer": "Yes. The converted PowerPoint file is fully editable. You can modify text, add animations, change themes, and more."
+          },
+          "item-4": {
+            "question": "What is the slide size?",
+            "answer": "Slide size is automatically adjusted based on PDF page dimensions to ensure optimal content display."
+          },
+          "item-5": {
+            "question": "Can it be opened in Google Slides?",
+            "answer": "Yes. The generated PPTX files are compatible with Microsoft PowerPoint, Google Slides, Keynote, and other major presentation software."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Presentation Editing",
+            "description": "Convert PDF format presentations to editable PowerPoint files for easy modification and updates."
+          },
+          "item-2": {
+            "title": "Teaching Materials",
+            "description": "Convert PDF handouts to PowerPoint for easy addition of animations and interactive elements in the classroom."
+          },
+          "item-3": {
+            "title": "Meeting Presentations",
+            "description": "Convert PDF reports to PPTX for easy presentation and explanation during meetings."
+          },
+          "item-4": {
+            "title": "Content Repurposing",
+            "description": "Extract content from PDF documents to create PowerPoint presentations for training or marketing."
+          }
+        }
+      },
+      "wordToPdf": {
+        "name": "Word en PDF",
+        "description": "Convertissez des documents Word au format PDF.",
+        "metaTitle": "Word to PDF Online Free - DOCX to PDF Converter",
+        "metaDescription": "Convert Word documents (DOCX/DOC) to PDF format for free. Preserve formatting and layout. Browser-based, no uploads needed.",
+        "longDescription": "Convert Microsoft Word documents (DOCX or DOC format) to PDF format. Preserve document text formatting, paragraph structure, lists, and table layouts to ensure documents display consistently on any device.",
+        "faq": {
+          "item-1": {
+            "question": "Will formatting be preserved after conversion?",
+            "answer": "Document formatting will be preserved as much as possible, including font styles, paragraph alignment, lists, and table structures."
+          },
+          "item-2": {
+            "question": "Which Word formats are supported?",
+            "answer": ".docx format (Word 2007 and later) and .doc format (Word 97-2003) are supported."
+          },
+          "item-3": {
+            "question": "Can the converted PDF be printed?",
+            "answer": "Yes. The generated PDF files are optimized for printing and can be printed at high quality on any PDF-compatible printer."
+          },
+          "item-4": {
+            "question": "Will images in the document be preserved?",
+            "answer": "Yes. Images in the document are embedded in the PDF with display quality consistent with the original document."
+          },
+          "item-5": {
+            "question": "Is there a file size limit?",
+            "answer": "Word documents up to 100MB are supported. The actual limit depends on your browser's available memory."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Document Sharing",
+            "description": "Convert Word documents to PDF to ensure recipients see exactly the same content as the original document."
+          },
+          "item-2": {
+            "title": "Print Preparation",
+            "description": "Convert Word to PDF before printing to avoid format differences caused by different printers."
+          },
+          "item-3": {
+            "title": "Document Archiving",
+            "description": "Convert important Word documents to PDF format for long-term preservation and to prevent accidental modification."
+          },
+          "item-4": {
+            "title": "Online Publishing",
+            "description": "Convert Word content to PDF format for easy publication and sharing on websites."
+          }
+        }
+      },
+      "excelToPdf": {
+        "name": "Excel en PDF",
+        "description": "Convertissez des feuilles de calcul Excel en documents PDF.",
+        "metaTitle": "Excel to PDF Online Free - XLSX to PDF Converter",
+        "metaDescription": "Convert Excel spreadsheets (XLSX/XLS) to PDF format for free. Preserve table layouts and data. Browser-based, no uploads needed.",
+        "longDescription": "Convert Microsoft Excel spreadsheets (XLSX or XLS format) to PDF format. Present worksheet content in table format, preserving data and cell layout for easy viewing and printing.",
+        "faq": {
+          "item-1": {
+            "question": "Will all worksheets be converted?",
+            "answer": "Yes. All worksheets in the Excel file are converted to PDF, with each worksheet displayed as a separate table."
+          },
+          "item-2": {
+            "question": "Will table formatting be preserved?",
+            "answer": "Basic table structure and data layout will be preserved. Cell content is presented in table format."
+          },
+          "item-3": {
+            "question": "Which Excel formats are supported?",
+            "answer": ".xlsx format (Excel 2007 and later) and .xls format (Excel 97-2003) are supported."
+          },
+          "item-4": {
+            "question": "Will formulas be calculated?",
+            "answer": "The conversion extracts values from cells. For calculation results, ensure formulas in Excel are calculated before conversion."
+          },
+          "item-5": {
+            "question": "Can the converted PDF be printed?",
+            "answer": "Yes. The generated PDF is optimized for A4 paper and can be printed directly."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Report Sharing",
+            "description": "Convert Excel reports to PDF for easy sharing with people who don't use Excel."
+          },
+          "item-2": {
+            "title": "Data Archiving",
+            "description": "Convert important Excel data to PDF format for long-term preservation and archiving."
+          },
+          "item-3": {
+            "title": "Print Output",
+            "description": "Convert Excel spreadsheets to PDF for printing to ensure print results match screen display."
+          },
+          "item-4": {
+            "title": "Data Presentation",
+            "description": "Convert Excel data to PDF format for easy presentation in meetings or demonstrations."
+          }
+        }
+      },
+      "pptxToPdf": {
+        "name": "PPTX en PDF",
+        "description": "Convertissez des présentations PowerPoint en documents PDF.",
+        "metaTitle": "PPTX to PDF Online Free - PowerPoint to PDF Converter",
+        "metaDescription": "Convert PowerPoint presentations (PPTX/PPT) to PDF format for free. Each slide becomes one PDF page. Browser-based, no uploads needed.",
+        "longDescription": "Convert Microsoft PowerPoint presentations (PPTX or PPT format) to PDF format. Each slide is converted to a page in the PDF, preserving text content and basic layout for easy viewing, printing, and sharing.",
+        "faq": {
+          "item-1": {
+            "question": "Will all slides be converted?",
+            "answer": "Yes. All slides in the PowerPoint file are converted to PDF pages, maintaining the original order."
+          },
+          "item-2": {
+            "question": "Will animation effects be preserved?",
+            "answer": "Animation effects are not preserved. Each slide is converted to a static PDF page in its final state."
+          },
+          "item-3": {
+            "question": "Which PowerPoint formats are supported?",
+            "answer": ".pptx format (PowerPoint 2007 and later) and .ppt format (PowerPoint 97-2003) are supported."
+          },
+          "item-4": {
+            "question": "Can the converted PDF be printed?",
+            "answer": "Yes. The generated PDF is optimized for printing, with options to print multiple slides per page."
+          },
+          "item-5": {
+            "question": "Will slide notes be included?",
+            "answer": "The current version primarily converts slide content. Notes and speaker comments are not included in the converted PDF."
+          }
+        },
+        "useCases": {
+          "item-1": {
+            "title": "Presentation Sharing",
+            "description": "Convert PowerPoint to PDF for easy sharing of presentation content with people who don't use PowerPoint."
+          },
+          "item-2": {
+            "title": "Handout Creation",
+            "description": "Convert PPTX to PDF and print as handouts for audience note-taking."
+          },
+          "item-3": {
+            "title": "Document Archiving",
+            "description": "Convert important presentations to PDF format for long-term preservation."
+          },
+          "item-4": {
+            "title": "Online Preview",
+            "description": "Convert PowerPoint to PDF for easy sharing and preview via email or web pages."
+          }
+        }
       }
+    }
+  },
+  "AboutPage": {
+    "title": "À propos",
+    "description": "PDFuck - Outils PDF gratuits en ligne pour tous. 100% confidentialité, traitement basé sur le navigateur.",
+    "authorName": "PDFuck",
+    "authorBio": "Outils PDF gratuits",
+    "introduction": "👋 Bonjour ! PDFuck est une collection d'outils PDF gratuits en ligne. Tout le traitement se fait dans votre navigateur - vos fichiers ne quittent jamais votre appareil.",
+    "talkWithMe": "Contactez-nous",
+    "followMe": "Suivez-nous sur X"
+  },
+  "ChangelogPage": {
+    "title": "Journal des modifications",
+    "description": "Restez informé des derniers changements de notre produit",
+    "subtitle": "Restez informé des derniers changements de notre produit"
+  },
+  "RoadmapPage": {
+    "title": "Feuille de route",
+    "description": "Explorez nos plans futurs et fonctionnalités à venir",
+    "subtitle": "Explorez nos plans futurs et fonctionnalités à venir"
+  },
+  "ContactPage": {
+    "title": "Contact",
+    "description": "Nous vous aiderons à trouver le plan adapté à votre entreprise",
+    "subtitle": "Nous vous aiderons à trouver le plan adapté à votre entreprise",
+    "form": {
+      "title": "Contactez-nous",
+      "description": "Si vous avez des questions ou des commentaires, veuillez contacter notre équipe",
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Envoyer",
+      "submitting": "Envoi en cours...",
+      "success": "Message envoyé avec succès",
+      "fail": "Échec de l'envoi du message",
+      "nameMinLength": "Le nom doit contenir au moins 3 caractères",
+      "nameMaxLength": "Le nom ne doit pas dépasser 30 caractères",
+      "emailValidation": "Veuillez entrer une adresse email valide",
+      "messageMinLength": "Le message doit contenir au moins 10 caractères",
+      "messageMaxLength": "Le message ne doit pas dépasser 500 caractères"
+    }
+  },
+  "WaitlistPage": {
+    "title": "Liste d'attente",
+    "description": "Rejoignez notre liste d'attente pour le lancement de notre produit",
+    "subtitle": "Rejoignez notre liste d'attente pour le lancement de notre produit",
+    "form": {
+      "title": "Rejoindre la liste d'attente",
+      "description": "Nous vous notifierons lors du lancement de notre produit",
+      "email": "Email",
+      "subscribe": "S'abonner",
+      "subscribing": "Abonnement en cours...",
+      "success": "Abonnement réussi",
+      "fail": "Échec de l'abonnement",
+      "emailValidation": "Veuillez entrer une adresse email valide"
+    }
+  },
+  "Newsletter": {
+    "title": "Newsletter",
+    "subtitle": "Rejoignez la communauté",
+    "description": "Abonnez-vous à notre newsletter pour recevoir les dernières actualités et mises à jour",
+    "form": {
+      "email": "Email",
+      "subscribe": "S'abonner",
+      "subscribing": "Abonnement en cours...",
+      "success": "Abonnement réussi",
+      "fail": "Échec de l'abonnement",
+      "emailValidation": "Veuillez entrer une adresse email valide"
+    }
+  },
+  "AuthPage": {
+    "login": {
+      "title": "Connexion",
+      "welcomeBack": "Bon retour",
+      "email": "Email",
+      "password": "Mot de passe",
+      "signIn": "Se connecter",
+      "signUpHint": "Pas de compte ? Inscrivez-vous",
+      "forgotPassword": "Mot de passe oublié ?",
+      "signInWithGoogle": "Se connecter avec Google",
+      "signInWithGitHub": "Se connecter avec GitHub",
+      "showPassword": "Afficher le mot de passe",
+      "hidePassword": "Masquer le mot de passe",
+      "or": "Ou continuer avec",
+      "emailRequired": "Veuillez entrer votre email",
+      "passwordRequired": "Veuillez entrer votre mot de passe",
+      "captchaInvalid": "Échec de la vérification captcha",
+      "captchaError": "Erreur de vérification captcha"
+    },
+    "register": {
+      "title": "Inscription",
+      "createAccount": "Créer un compte",
+      "name": "Nom",
+      "email": "Email",
+      "password": "Mot de passe",
+      "signUp": "S'inscrire",
+      "signInHint": "Déjà un compte ? Connectez-vous",
+      "checkEmail": "Veuillez vérifier votre boîte de réception",
+      "showPassword": "Afficher le mot de passe",
+      "hidePassword": "Masquer le mot de passe",
+      "nameRequired": "Veuillez entrer votre nom",
+      "emailRequired": "Veuillez entrer votre email",
+      "passwordRequired": "Veuillez entrer votre mot de passe",
+      "captchaInvalid": "Échec de la vérification captcha",
+      "captchaError": "Erreur de vérification captcha"
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "email": "Email",
+      "send": "Envoyer le lien de réinitialisation",
+      "backToLogin": "Retour à la connexion",
+      "checkEmail": "Veuillez vérifier votre boîte de réception",
+      "emailRequired": "Veuillez entrer votre email"
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "password": "Mot de passe",
+      "reset": "Réinitialiser le mot de passe",
+      "backToLogin": "Retour à la connexion",
+      "showPassword": "Afficher le mot de passe",
+      "hidePassword": "Masquer le mot de passe",
+      "minLength": "Le mot de passe doit contenir au moins 8 caractères"
+    },
+    "error": {
+      "title": "Oups ! Une erreur s'est produite",
+      "tryAgain": "Veuillez réessayer.",
+      "backToLogin": "Retour à la connexion",
+      "checkEmail": "Veuillez vérifier votre boîte de réception"
+    },
+    "common": {
+      "termsOfService": "Conditions d'utilisation",
+      "privacyPolicy": "Politique de confidentialité",
+      "byClickingContinue": "En cliquant sur continuer, vous acceptez nos ",
+      "and": " et "
+    }
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "description": "Dernières actualités et mises à jour de notre équipe",
+    "subtitle": "Dernières actualités et mises à jour de notre équipe",
+    "author": "Auteur",
+    "categories": "Catégories",
+    "tableOfContents": "Table des matières",
+    "readTime": "{minutes} min de lecture",
+    "all": "Tout",
+    "noPostsFound": "Aucun article trouvé",
+    "allPosts": "Tous les articles",
+    "morePosts": "Plus d'articles"
+  },
+  "DocsPage": {
+    "toc": "Table des matières",
+    "search": "Rechercher dans la documentation",
+    "lastUpdate": "Dernière mise à jour le",
+    "searchNoResult": "Aucun résultat",
+    "previousPage": "Précédent",
+    "nextPage": "Suivant",
+    "chooseLanguage": "Choisir la langue",
+    "title": "Documentation PDFuck",
+    "homepage": "Accueil",
+    "PageActions": {
+      "copyMarkdown": "Copier le Markdown",
+      "open": "Ouvrir",
+      "openInChatGPT": "Ouvrir dans ChatGPT",
+      "openInClaude": "Ouvrir dans Claude",
+      "queryHint": "Lisez {url}, je veux poser des questions à ce sujet."
+    }
+  },
+  "PremiumContent": {
+    "title": "Débloquer le contenu premium",
+    "description": "Abonnez-vous à notre plan Pro pour accéder à tout le contenu premium et exclusif.",
+    "upgradeCta": "Mettre à niveau maintenant",
+    "benefit1": "Tout le contenu premium",
+    "benefit2": "Contenu exclusif",
+    "benefit3": "Annulation à tout moment",
+    "signIn": "Se connecter",
+    "loginRequired": "Connectez-vous pour continuer la lecture",
+    "loginDescription": "Ceci est du contenu premium. Connectez-vous à votre compte pour accéder au contenu complet.",
+    "checkingAccess": "Vérification de l'accès...",
+    "loadingContent": "Chargement du contenu complet..."
+  },
+  "Marketing": {
+    "navbar": {
+      "features": {
+        "title": "Fonctionnalités"
+      },
+      "pricing": {
+        "title": "Tarification"
+      },
+      "blog": {
+        "title": "Blog"
+      },
+      "docs": {
+        "title": "Docs"
+      },
+      "tools": {
+        "title": "Outils"
+      },
+      "pages": {
+        "title": "Pages",
+        "items": {
+          "about": {
+            "title": "À propos",
+            "description": "En savoir plus sur notre entreprise, mission et valeurs"
+          },
+          "contact": {
+            "title": "Contact",
+            "description": "Contactez notre équipe pour le support ou les demandes"
+          },
+          "waitlist": {
+            "title": "Liste d'attente",
+            "description": "Rejoignez notre liste d'attente pour les dernières actualités"
+          },
+          "changelog": {
+            "title": "Journal des modifications",
+            "description": "Voir les dernières mises à jour de nos produits"
+          },
+          "roadmap": {
+            "title": "Feuille de route",
+            "description": "Explorez nos plans futurs et fonctionnalités à venir"
+          },
+          "cookiePolicy": {
+            "title": "Politique des cookies",
+            "description": "Comment nous utilisons les cookies sur notre site"
+          },
+          "privacyPolicy": {
+            "title": "Politique de confidentialité",
+            "description": "Comment nous protégeons et gérons vos données"
+          },
+          "termsOfService": {
+            "title": "Conditions d'utilisation",
+            "description": "L'accord légal entre vous et notre entreprise"
+          }
+        }
+      }
+    },
+    "footer": {
+      "tagline": "Outils PDF gratuits basés sur le navigateur - 100% privés et sécurisés",
+      "product": {
+        "title": "Produit",
+        "items": {
+          "features": "Fonctionnalités",
+          "pricing": "Tarification",
+          "faq": "FAQ",
+          "tools": "Outils PDF"
+        }
+      },
+      "resources": {
+        "title": "Ressources",
+        "items": {
+          "blog": "Blog",
+          "docs": "Documentation",
+          "changelog": "Journal des modifications",
+          "roadmap": "Feuille de route"
+        }
+      },
+      "company": {
+        "title": "Entreprise",
+        "items": {
+          "about": "À propos",
+          "contact": "Contact",
+          "waitlist": "Liste d'attente"
+        }
+      },
+      "legal": {
+        "title": "Légal",
+        "items": {
+          "cookiePolicy": "Politique des cookies",
+          "privacyPolicy": "Politique de confidentialité",
+          "termsOfService": "Conditions d'utilisation"
+        }
+      }
+    },
+    "avatar": {
+      "dashboard": "Tableau de bord",
+      "billing": "Facturation",
+      "credits": "Crédits",
+      "settings": "Paramètres"
+    }
+  },
+  "CreditPackages": {
+    "basic": {
+      "name": "Basique",
+      "description": "Forfait de crédits basique"
+    },
+    "standard": {
+      "name": "Standard",
+      "description": "Forfait de crédits standard"
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Forfait de crédits premium"
+    },
+    "enterprise": {
+      "name": "Entreprise",
+      "description": "Forfait de crédits entreprise"
+    }
+  },
+  "Mail": {
+    "common": {
+      "team": "Équipe {name}",
+      "copyright": "©️ {year} Tous droits réservés."
+    },
+    "verifyEmail": {
+      "title": "Bonjour, {name}.",
+      "body": "Veuillez cliquer sur le lien ci-dessous pour vérifier votre adresse email.",
+      "confirmEmail": "Confirmer l'email",
+      "subject": "Vérifiez votre email"
+    },
+    "forgotPassword": {
+      "title": "Bonjour, {name}.",
+      "body": "Veuillez cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe.",
+      "resetPassword": "Réinitialiser le mot de passe",
+      "subject": "Réinitialisez votre mot de passe"
+    },
+    "subscribeNewsletter": {
+      "body": "Merci de vous être abonné à la newsletter. Nous vous tiendrons informé des dernières actualités et mises à jour.",
+      "subject": "Merci pour votre abonnement"
+    },
+    "contactMessage": {
+      "name": "Nom : {name}",
+      "email": "Email : {email}",
+      "message": "Message : {message}",
+      "subject": "Message de contact du site web"
+    }
+  },
+  "Dashboard": {
+    "dashboard": {
+      "title": "Tableau de bord"
+    },
+    "admin": {
+      "title": "Admin",
+      "users": {
+        "title": "Utilisateurs",
+        "fakeData": "Note : Données simulées pour démonstration, certaines fonctionnalités sont désactivées",
+        "error": "Échec de la récupération des utilisateurs",
+        "search": "Rechercher des utilisateurs...",
+        "noResults": "Aucun utilisateur trouvé",
+        "columns": {
+          "columns": "Colonnes",
+          "name": "Nom",
+          "email": "Email",
+          "role": "Rôle",
+          "createdAt": "Créé le",
+          "customerId": "ID client",
+          "status": "Statut",
+          "banReason": "Raison du blocage",
+          "banExpires": "Expiration du blocage"
+        },
+        "admin": "Admin",
+        "user": "Utilisateur",
+        "email": {
+          "verified": "Email vérifié",
+          "unverified": "Email non vérifié"
+        },
+        "emailCopied": "Email copié dans le presse-papiers",
+        "banned": "Bloqué",
+        "active": "Actif",
+        "inactive": "Inactif",
+        "clearSearch": "Effacer la recherche",
+        "joined": "Inscrit le",
+        "updated": "Mis à jour le",
+        "ban": {
+          "reason": "Raison du blocage",
+          "reasonPlaceholder": "Entrez la raison du blocage",
+          "defaultReason": "Spam",
+          "never": "Jamais",
+          "expires": "Expiration du blocage",
+          "selectDate": "Sélectionner une date",
+          "button": "Bloquer l'utilisateur",
+          "success": "Utilisateur bloqué",
+          "error": "Échec du blocage de l'utilisateur"
+        },
+        "unban": {
+          "button": "Débloquer l'utilisateur",
+          "success": "Utilisateur débloqué",
+          "error": "Échec du déblocage de l'utilisateur"
+        },
+        "close": "Fermer"
+      }
+    },
+    "settings": {
+      "title": "Paramètres",
+      "profile": {
+        "title": "Profil",
+        "description": "Gérez vos informations de compte",
+        "avatar": {
+          "title": "Avatar",
+          "description": "Cliquez sur le bouton de téléchargement pour uploader un avatar personnalisé",
+          "recommendation": "Un avatar est optionnel mais fortement recommandé",
+          "uploading": "Téléchargement en cours...",
+          "uploadAvatar": "Uploader l'avatar",
+          "success": "Avatar mis à jour avec succès",
+          "fail": "Échec de la mise à jour de l'avatar"
+        },
+        "name": {
+          "title": "Nom",
+          "description": "Veuillez entrer votre nom d'affichage",
+          "placeholder": "Entrez votre nom",
+          "minLength": "Veuillez utiliser au moins 3 caractères",
+          "maxLength": "Veuillez utiliser maximum 30 caractères",
+          "hint": "Utilisez 3 à 30 caractères pour votre nom",
+          "success": "Nom mis à jour avec succès",
+          "fail": "Échec de la mise à jour du nom",
+          "saving": "Enregistrement...",
+          "save": "Enregistrer"
+        }
+      },
+      "billing": {
+        "title": "Facturation",
+        "description": "Gérez votre abonnement et détails de facturation",
+        "status": {
+          "active": "Actif",
+          "trial": "Essai",
+          "free": "Gratuit",
+          "lifetime": "À vie"
+        },
+        "interval": {
+          "month": "mois",
+          "year": "an",
+          "oneTime": "une fois"
+        },
+        "currentPlan": {
+          "title": "Plan actuel",
+          "description": "Détails de votre plan actuel",
+          "noPlan": "Vous n'avez pas de plan actif"
+        },
+        "CustomerPortalButton": {
+          "loading": "Chargement...",
+          "createCustomerPortalFailed": "Échec de l'ouverture du portail client Stripe"
+        },
+        "price": "Prix :",
+        "periodStartDate": "Début de la période :",
+        "periodEndDate": "Fin de la période :",
+        "trialEnds": "Fin de l'essai :",
+        "freePlanMessage": "Vous êtes actuellement sur le plan gratuit avec des fonctionnalités limitées",
+        "lifetimeMessage": "Vous avez un accès à vie à toutes les fonctionnalités premium",
+        "manageSubscription": "Gérer l'abonnement et la facturation",
+        "manageBilling": "Gérer la facturation",
+        "upgradePlan": "Mettre à niveau le plan",
+        "retry": "Réessayer",
+        "errorMessage": "Échec de la récupération des données",
+        "paymentSuccess": "Paiement réussi"
+      },
+      "credits": {
+        "title": "Crédits",
+        "description": "Gérez vos transactions de crédits",
+        "tabs": {
+          "balance": "Solde",
+          "transactions": "Transactions"
+        },
+        "balance": {
+          "title": "Solde de crédits",
+          "description": "Votre solde de crédits",
+          "credits": "Crédits",
+          "creditsDescription": "Vous avez {credits} crédits",
+          "creditsExpired": "Crédits expirés",
+          "creditsAdded": "Des crédits ont été ajoutés à votre compte",
+          "viewTransactions": "Voir les transactions de crédits",
+          "retry": "Réessayer",
+          "expiringCredits": "{credits} crédits expirent dans les {days} prochains jours"
+        },
+        "packages": {
+          "title": "Forfaits de crédits",
+          "description": "Achetez des crédits supplémentaires pour utiliser nos services",
+          "purchase": "Acheter",
+          "processing": "Traitement en cours...",
+          "popular": "Populaire",
+          "completePurchase": "Compléter votre achat",
+          "failedToFetchCredits": "Échec de la récupération des crédits",
+          "failedToCreatePaymentIntent": "Échec de la création de l'intention de paiement",
+          "failedToInitiatePayment": "Échec de l'initiation du paiement",
+          "cancel": "Annuler",
+          "purchaseFailed": "Échec de l'achat de crédits",
+          "checkoutFailed": "Échec de la création de la session de paiement",
+          "loading": "Chargement...",
+          "pay": "Payer"
+        },
+        "transactions": {
+          "title": "Transactions de crédits",
+          "error": "Échec de la récupération des transactions",
+          "search": "Rechercher des transactions...",
+          "clearSearch": "Effacer la recherche",
+          "paymentIdCopied": "ID de paiement copié dans le presse-papiers",
+          "noResults": "Aucun résultat trouvé",
+          "columns": {
+            "columns": "Colonnes",
+            "id": "ID",
+            "type": "Type",
+            "description": "Description",
+            "amount": "Montant",
+            "remainingAmount": "Montant restant",
+            "paymentId": "ID de paiement",
+            "expirationDate": "Date d'expiration",
+            "expirationDateProcessedAt": "Expiration traitée le",
+            "createdAt": "Créé le",
+            "updatedAt": "Mis à jour le"
+          },
+          "types": {
+            "MONTHLY_REFRESH": "Rafraîchissement mensuel",
+            "REGISTER_GIFT": "Cadeau d'inscription",
+            "PURCHASE": "Crédits achetés",
+            "USAGE": "Crédits consommés",
+            "EXPIRE": "Crédits expirés",
+            "SUBSCRIPTION_RENEWAL": "Renouvellement d'abonnement",
+            "LIFETIME_MONTHLY": "Mensuel à vie"
+          },
+          "detailViewer": {
+            "title": "Détail de la transaction",
+            "close": "Fermer"
+          },
+          "expired": "Expiré",
+          "never": "Jamais"
+        }
+      },
+      "notification": {
+        "title": "Notifications",
+        "description": "Gérez vos préférences de notification",
+        "newsletter": {
+          "title": "Abonnement à la newsletter",
+          "description": "Gérez vos préférences d'abonnement à la newsletter",
+          "label": "S'abonner à la newsletter",
+          "hint": "Vous pouvez changer vos préférences d'abonnement à tout moment",
+          "emailRequired": "Un email est requis pour s'abonner à la newsletter",
+          "subscribeSuccess": "Abonnement à la newsletter réussi",
+          "subscribeFail": "Échec de l'abonnement à la newsletter",
+          "unsubscribeSuccess": "Désabonnement réussi",
+          "unsubscribeFail": "Échec du désabonnement",
+          "error": "Une erreur s'est produite lors de la mise à jour de votre abonnement"
+        }
+      },
+      "security": {
+        "title": "Sécurité",
+        "description": "Gérez vos paramètres de sécurité",
+        "updatePassword": {
+          "title": "Mettre à jour le mot de passe",
+          "description": "Mettez à jour votre mot de passe pour protéger votre compte",
+          "currentPassword": "Mot de passe actuel",
+          "newPassword": "Nouveau mot de passe",
+          "confirmPassword": "Confirmer le mot de passe",
+          "update": "Mettre à jour le mot de passe",
+          "success": "Mot de passe mis à jour avec succès",
+          "fail": "Échec de la mise à jour du mot de passe",
+          "currentPasswordRequired": "Veuillez entrer votre mot de passe actuel",
+          "newPasswordRequired": "Veuillez entrer un nouveau mot de passe",
+          "minLength": "Le mot de passe doit contenir au moins 8 caractères",
+          "passwordMismatch": "Les mots de passe ne correspondent pas",
+          "currentRequired": "Current password is required",
+          "newMinLength": "Password must be at least 8 characters",
+          "hint": "Please use at least 8 characters for password",
+          "showPassword": "Show password",
+          "hidePassword": "Hide password",
+          "saving": "Saving...",
+          "save": "Save"
+        },
+        "deleteAccount": {
+          "title": "Delete Account",
+          "description": "Permanently remove your account and all of its contents",
+          "warning": "This action is not reversible, so please continue with caution",
+          "button": "Delete Account",
+          "confirmTitle": "Delete Account",
+          "confirmDescription": "Are you sure you want to delete your account? This action cannot be undone.",
+          "confirm": "Delete",
+          "cancel": "Cancel",
+          "deleting": "Deleting...",
+          "success": "Account deleted successfully",
+          "fail": "Failed to delete account"
+        },
+        "resetPassword": {
+          "title": "Reset Password",
+          "description": "Reset password to enable email login",
+          "info": "Resetting your password will allow you to sign in using your email and password in addition to your social login methods. You will receive an email with instructions to reset your password",
+          "button": "Reset Password"
+        }
+      },
+      "payment": {
+        "processing": {
+          "title": "Processing Payment",
+          "description": "Please wait while we confirm your payment..."
+        },
+        "success": {
+          "title": "Payment Success",
+          "description": "Redirecting automatically..."
+        },
+        "failed": {
+          "title": "Payment Failed",
+          "description": "There was an issue processing your payment."
+        },
+        "timeout": {
+          "title": "Processing Timeout",
+          "description": "Payment processing is taking longer than expected."
+        },
+        "retry": "Retry"
+      }
+    },
+    "upgrade": {
+      "title": "Upgrade",
+      "description": "Upgrade to Pro to access all features",
+      "button": "Upgrade"
     }
   }
 }
