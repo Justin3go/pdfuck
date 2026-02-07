@@ -1,6 +1,11 @@
+import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare';
 import { createMDX } from 'fumadocs-mdx/next';
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
+
+// https://opennext.js.org/cloudflare/get-started#12-develop-locally
+// during local development, to access in any of your server code, local versions of Cloudflare bindings
+initOpenNextCloudflareForDev();
 
 /**
  * https://nextjs.org/docs/app/api-reference/config/next-config-js
@@ -89,9 +94,3 @@ const withNextIntl = createNextIntlPlugin();
 const withMDX = createMDX();
 
 export default withMDX(withNextIntl(nextConfig));
-
-// https://opennext.js.org/cloudflare/get-started#12-develop-locally
-import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare';
-
-// during local development, to access in any of your server code, local versions of Cloudflare bindings
-initOpenNextCloudflareForDev();
