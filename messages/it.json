@@ -250,7 +250,9 @@
       "subtitle": "o fai clic per sfogliare",
       "hint": "I file vengono elaborati localmente nel tuo browser",
       "invalidType": "Tipo di file non valido",
-      "tooLarge": "Il file è troppo grande"
+      "tooLarge": "Il file è troppo grande",
+      "dragMoreFiles": "Trascina altri file qui",
+      "dropHere": "Rilascia per aggiungere file"
     },
     "common": {
       "selectFile": "Seleziona File",

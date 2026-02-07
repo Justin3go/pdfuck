@@ -250,7 +250,9 @@
       "subtitle": "ou cliquez pour parcourir",
       "hint": "Les fichiers sont traités localement dans votre navigateur",
       "invalidType": "Type de fichier invalide",
-      "tooLarge": "Le fichier est trop volumineux"
+      "tooLarge": "Le fichier est trop volumineux",
+      "dragMoreFiles": "Faites glisser d'autres fichiers ici",
+      "dropHere": "Déposez pour ajouter des fichiers"
     },
     "common": {
       "selectFile": "Sélectionner un Fichier",

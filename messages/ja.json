@@ -250,7 +250,9 @@
       "subtitle": "またはクリックして参照",
       "hint": "ファイルはブラウザでローカルに処理されます",
       "invalidType": "無効なファイルタイプ",
-      "tooLarge": "ファイルが大きすぎます"
+      "tooLarge": "ファイルが大きすぎます",
+      "dragMoreFiles": "さらにファイルをここにドラッグ",
+      "dropHere": "離してファイルを追加"
     },
     "common": {
       "selectFile": "ファイルを選択",

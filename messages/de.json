@@ -2809,7 +2809,9 @@
       "subtitle": "or click to browse",
       "hint": "Files are processed locally in your browser",
       "invalidType": "Invalid file type",
-      "tooLarge": "File is too large"
+      "tooLarge": "File is too large",
+      "dragMoreFiles": "Drag more files here",
+      "dropHere": "Drop to add files"
     },
     "hero": {
       "title": "Free Online PDF Tools",

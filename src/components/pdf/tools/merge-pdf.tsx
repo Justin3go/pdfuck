@@ -15,8 +15,11 @@ import {
   FileIcon,
   GripVerticalIcon,
   Trash2Icon,
+  PlusIcon,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { cn } from '@/lib/utils';
+import { useCallback, useState, useRef } from 'react';
 
 export function MergePdfTool() {
   const t = useTranslations('ToolsPage');
@@ -34,6 +37,30 @@ export function MergePdfTool() {
     downloadBlob,
     reset,
   } = usePdfProcessor();
+  const [isDragOver, setIsDragOver] = useState(false);
+  const dropzoneRef = useRef<HTMLDivElement>(null);
+
+  const handleDragOver = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragOver(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragOver(false);
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent) => {
+      e.preventDefault();
+      setIsDragOver(false);
+      const droppedFiles = e.dataTransfer.files;
+      if (droppedFiles.length > 0) {
+        loadFiles(droppedFiles);
+      }
+    },
+    [loadFiles]
+  );
 
   const handleReorder = (newFiles: typeof files) => {
     reorderFiles(newFiles.map((f) => f.id));
@@ -104,7 +131,13 @@ export function MergePdfTool() {
 
   // 上传文件后状态
   return (
-    <div className="flex min-h-[320px] flex-col justify-between rounded-xl border bg-card p-6">
+    <div
+      ref={dropzoneRef}
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+      onDrop={handleDrop}
+      className="flex min-h-[320px] flex-col justify-between rounded-xl border bg-card p-6"
+    >
       <div className="flex-1 overflow-auto">
         <Sortable
           value={files}
@@ -144,6 +177,26 @@ export function MergePdfTool() {
           </SortableContent>
           <SortableOverlay />
         </Sortable>
+
+        {/* 继续拖拽上传区域 */}
+        <div
+          className={cn(
+            'mt-4 flex flex-col items-center justify-center rounded-lg border-2 border-dashed p-4 transition-colors',
+            isDragOver
+              ? 'border-primary bg-primary/5'
+              : 'border-muted-foreground/25 hover:border-muted-foreground/40'
+          )}
+        >
+          <PlusIcon
+            className={cn(
+              'mb-2 size-6 transition-colors',
+              isDragOver ? 'text-primary' : 'text-muted-foreground'
+            )}
+          />
+          <p className="text-sm text-muted-foreground">
+            {isDragOver ? t('dropzone.dropHere') : t('dropzone.dragMoreFiles')}
+          </p>
+        </div>
       </div>
 
       <div className="mt-4 flex justify-center gap-3 border-t pt-4">
