@@ -43,10 +43,13 @@ export function RotatePdfTool() {
     setRotations(newRotations);
   };
 
-  const rotatePage = (pageIndex: number, angle: RotationAngle) => {
+  const rotatePage = (pageIndex: number, delta: number) => {
     setRotations((prev) => {
       const next = new Map(prev);
-      next.set(pageIndex, angle);
+      const current = next.get(pageIndex) || 0;
+      const rawAngle = (current + delta) % 360;
+      const newAngle = (rawAngle < 0 ? rawAngle + 360 : rawAngle) as RotationAngle;
+      next.set(pageIndex, newAngle);
       return next;
     });
   };
@@ -137,14 +140,12 @@ export function RotatePdfTool() {
 
         <div className="flex justify-center gap-2">
           <Button variant="outline" size="sm" onClick={() => rotateAll(90)}>
-            <RotateCwIcon className="mr-1 size-4" />
             90°
           </Button>
           <Button variant="outline" size="sm" onClick={() => rotateAll(180)}>
             180°
           </Button>
           <Button variant="outline" size="sm" onClick={() => rotateAll(270)}>
-            <RotateCcwIcon className="mr-1 size-4" />
             270°
           </Button>
         </div>
@@ -155,7 +156,7 @@ export function RotatePdfTool() {
             return (
               <div
                 key={thumb.pageIndex}
-                className="relative rounded-lg border p-1"
+                className="relative overflow-hidden rounded-lg border p-1"
               >
                 <img
                   src={thumb.dataUrl}
@@ -179,7 +180,7 @@ export function RotatePdfTool() {
                   <button
                     type="button"
                     className="rounded p-0.5 text-muted-foreground hover:bg-muted"
-                    onClick={() => rotatePage(thumb.pageIndex, 270)}
+                    onClick={() => rotatePage(thumb.pageIndex, -90)}
                   >
                     <RotateCcwIcon className="size-3" />
                   </button>
