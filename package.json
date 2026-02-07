@@ -13,8 +13,8 @@
     "format": "biome format --write .",
     "content": "fumadocs-mdx",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "deploy": "node scripts/build-cf.js && opennextjs-cloudflare deploy",
+    "upload": "node scripts/build-cf.js && opennextjs-cloudflare upload",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "knip": "knip"
   },
