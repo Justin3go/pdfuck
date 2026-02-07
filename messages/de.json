@@ -791,7 +791,7 @@
     },
     "tools": {
       "title": "Alle PDF-Tools",
-      "subtitle": "Wählen Sie aus unserer Sammlung von über 10 kostenlosen PDF-Tools für jede Aufgabe."
+      "subtitle": "Wählen Sie aus unserer Sammlung von über {count} kostenlosen PDF-Tools für jede Aufgabe."
     },
     "howItWorks": {
       "title": "So funktioniert es",

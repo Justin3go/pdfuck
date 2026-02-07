@@ -169,7 +169,7 @@
     },
     "tools": {
       "title": "Tutti gli Strumenti PDF",
-      "subtitle": "Scegli dalla nostra collezione di oltre 10 strumenti PDF gratuiti per qualsiasi attività."
+      "subtitle": "Scegli dalla nostra collezione di oltre {count} strumenti PDF gratuiti per qualsiasi attività."
     },
     "howItWorks": {
       "title": "Come Funziona",

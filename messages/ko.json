@@ -169,7 +169,7 @@
     },
     "tools": {
       "title": "모든 PDF 도구",
-      "subtitle": "10개 이상의 묣�료 PDF 도구 컬렉션에서 작업에 맞는 도구를 선택하세요."
+      "subtitle": "{count}개 이상의 묣�료 PDF 도구 컬렉션에서 작업에 맞는 도구를 선택하세요."
     },
     "howItWorks": {
       "title": "작동 방식",

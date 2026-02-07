@@ -169,7 +169,7 @@
     },
     "tools": {
       "title": "Todas as Ferramentas PDF",
-      "subtitle": "Escolha de nossa coleção de mais de 10 ferramentas PDF gratuitas para qualquer tarefa."
+      "subtitle": "Escolha de nossa coleção de mais de {count} ferramentas PDF gratuitas para qualquer tarefa."
     },
     "howItWorks": {
       "title": "Como Funciona",

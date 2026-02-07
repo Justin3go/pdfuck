@@ -169,7 +169,7 @@
     },
     "tools": {
       "title": "Tous les Outils PDF",
-      "subtitle": "Choisissez parmi notre collection de plus de 10 outils PDF gratuits pour toute tâche."
+      "subtitle": "Choisissez parmi notre collection de plus de {count} outils PDF gratuits pour toute tâche."
     },
     "howItWorks": {
       "title": "Comment Ça Marche",

@@ -761,7 +761,7 @@
     },
     "tools": {
       "title": "All PDF Tools",
-      "subtitle": "Choose from our collection of 10+ free PDF tools to handle any task."
+      "subtitle": "Choose from our collection of {count}+ free PDF tools to handle any task."
     },
     "howItWorks": {
       "title": "How It Works",

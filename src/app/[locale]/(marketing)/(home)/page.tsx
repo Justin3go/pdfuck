@@ -136,7 +136,7 @@ export default async function HomePage({ params }: HomePageProps) {
               {t('tools.title')}
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              {t('tools.subtitle')}
+              {t('tools.subtitle', { count: PDF_TOOLS.length })}
             </p>
           </div>
 
