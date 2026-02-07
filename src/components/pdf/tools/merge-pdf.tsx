@@ -78,7 +78,6 @@ export function MergePdfTool() {
           blob: new Blob([new Uint8Array(result)], { type: 'application/pdf' }),
         },
       ]);
-      setStatus('done');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Merge failed');
     }
