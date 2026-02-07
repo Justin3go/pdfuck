@@ -52,7 +52,10 @@ function startWatcher() {
 
 // Clean previous build
 try {
-  execSync('rm -rf .next .open-next', { stdio: 'inherit', cwd: path.join(__dirname, '..') });
+  execSync('rm -rf .next .open-next', {
+    stdio: 'inherit',
+    cwd: path.join(__dirname, '..'),
+  });
 } catch (e) {
   // Ignore
 }
@@ -65,11 +68,15 @@ const stopWatcher = startWatcher();
 
 // Run build
 console.log('Starting Next.js build...');
-const buildProcess = require('child_process').spawn('pnpm', ['exec', 'next', 'build'], {
-  stdio: 'inherit',
-  cwd: path.join(__dirname, '..'),
-  env: { ...process.env, CF_BUILD: 'true' }
-});
+const buildProcess = require('child_process').spawn(
+  'pnpm',
+  ['exec', 'next', 'build'],
+  {
+    stdio: 'inherit',
+    cwd: path.join(__dirname, '..'),
+    env: { ...process.env, CF_BUILD: 'true' },
+  }
+);
 
 buildProcess.on('close', (code) => {
   stopWatcher();

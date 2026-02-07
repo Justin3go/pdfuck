@@ -130,9 +130,7 @@ export function SanitizePdfTool() {
         <div className="space-y-4">
           <div className="flex items-center gap-3 rounded-lg bg-blue-50 p-4 text-blue-800 dark:bg-blue-950 dark:text-blue-200">
             <ShieldCheckIcon className="size-5 shrink-0" />
-            <p className="text-sm">
-              选择要清理的项目，保护文档中的敏感信息。
-            </p>
+            <p className="text-sm">选择要清理的项目，保护文档中的敏感信息。</p>
           </div>
 
           <div className="space-y-3">
@@ -141,10 +139,16 @@ export function SanitizePdfTool() {
                 id="removeMetadata"
                 checked={options.removeMetadata}
                 onCheckedChange={(checked) =>
-                  setOptions((prev) => ({ ...prev, removeMetadata: checked as boolean }))
+                  setOptions((prev) => ({
+                    ...prev,
+                    removeMetadata: checked as boolean,
+                  }))
                 }
               />
-              <label htmlFor="removeMetadata" className="text-sm font-medium cursor-pointer">
+              <label
+                htmlFor="removeMetadata"
+                className="text-sm font-medium cursor-pointer"
+              >
                 删除元数据 (作者、创建者、时间戳等)
               </label>
             </div>
@@ -154,10 +158,16 @@ export function SanitizePdfTool() {
                 id="removeJavaScript"
                 checked={options.removeJavaScript}
                 onCheckedChange={(checked) =>
-                  setOptions((prev) => ({ ...prev, removeJavaScript: checked as boolean }))
+                  setOptions((prev) => ({
+                    ...prev,
+                    removeJavaScript: checked as boolean,
+                  }))
                 }
               />
-              <label htmlFor="removeJavaScript" className="text-sm font-medium cursor-pointer">
+              <label
+                htmlFor="removeJavaScript"
+                className="text-sm font-medium cursor-pointer"
+              >
                 删除 JavaScript 代码
               </label>
             </div>
@@ -167,10 +177,16 @@ export function SanitizePdfTool() {
                 id="removeEmbeddedFiles"
                 checked={options.removeEmbeddedFiles}
                 onCheckedChange={(checked) =>
-                  setOptions((prev) => ({ ...prev, removeEmbeddedFiles: checked as boolean }))
+                  setOptions((prev) => ({
+                    ...prev,
+                    removeEmbeddedFiles: checked as boolean,
+                  }))
                 }
               />
-              <label htmlFor="removeEmbeddedFiles" className="text-sm font-medium cursor-pointer">
+              <label
+                htmlFor="removeEmbeddedFiles"
+                className="text-sm font-medium cursor-pointer"
+              >
                 删除嵌入的文件
               </label>
             </div>
@@ -180,10 +196,16 @@ export function SanitizePdfTool() {
                 id="removeLinks"
                 checked={options.removeLinks}
                 onCheckedChange={(checked) =>
-                  setOptions((prev) => ({ ...prev, removeLinks: checked as boolean }))
+                  setOptions((prev) => ({
+                    ...prev,
+                    removeLinks: checked as boolean,
+                  }))
                 }
               />
-              <label htmlFor="removeLinks" className="text-sm font-medium cursor-pointer">
+              <label
+                htmlFor="removeLinks"
+                className="text-sm font-medium cursor-pointer"
+              >
                 删除超链接
               </label>
             </div>
@@ -193,10 +215,16 @@ export function SanitizePdfTool() {
                 id="removeComments"
                 checked={options.removeComments}
                 onCheckedChange={(checked) =>
-                  setOptions((prev) => ({ ...prev, removeComments: checked as boolean }))
+                  setOptions((prev) => ({
+                    ...prev,
+                    removeComments: checked as boolean,
+                  }))
                 }
               />
-              <label htmlFor="removeComments" className="text-sm font-medium cursor-pointer">
+              <label
+                htmlFor="removeComments"
+                className="text-sm font-medium cursor-pointer"
+              >
                 删除批注和注释
               </label>
             </div>
@@ -205,10 +233,7 @@ export function SanitizePdfTool() {
       </div>
 
       <div className="mt-4 flex justify-center gap-3 border-t pt-4">
-        <Button
-          onClick={handleSanitize}
-          disabled={status === 'processing'}
-        >
+        <Button onClick={handleSanitize} disabled={status === 'processing'}>
           {status === 'processing'
             ? t('common.processing')
             : t('tools.sanitizePdf.name')}

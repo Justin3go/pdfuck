@@ -160,7 +160,15 @@ export async function sanitizePdf(
               }
 
               // Highlight/Squiggly/StrikeOut/Underline (comment-related)
-              const commentTypes = ['Highlight', 'Squiggly', 'StrikeOut', 'Underline', 'Caret', 'Ink', 'Stamp'];
+              const commentTypes = [
+                'Highlight',
+                'Squiggly',
+                'StrikeOut',
+                'Underline',
+                'Caret',
+                'Ink',
+                'Stamp',
+              ];
               if (commentTypes.includes(subtypeName) && opts.removeComments) {
                 hasRemovedComments = true;
                 continue;

@@ -3,6 +3,13 @@
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
 import { addWatermark } from '@/lib/pdf/watermark';
 import { CheckCircleIcon, FileIcon } from 'lucide-react';
@@ -136,23 +143,21 @@ export function WatermarkPdfTool() {
             />
           </div>
           <div>
-            <label
-              htmlFor="position"
-              className="mb-1 block text-sm font-medium"
-            >
-              Position
-            </label>
-            <select
-              id="position"
+            <label className="mb-1 block text-sm font-medium">Position</label>
+            <Select
               value={position}
-              onChange={(e) =>
-                setPosition(e.target.value as 'center' | 'diagonal')
+              onValueChange={(value) =>
+                setPosition(value as 'center' | 'diagonal')
               }
-              className="w-full rounded-md border bg-background px-3 py-2 text-sm"
             >
-              <option value="center">Center</option>
-              <option value="diagonal">Diagonal</option>
-            </select>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select position" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="center">Center</SelectItem>
+                <SelectItem value="diagonal">Diagonal</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
           <div>
             <label

@@ -1,4 +1,4 @@
-import { defineCloudflareConfig } from "@opennextjs/cloudflare";
+import { defineCloudflareConfig } from '@opennextjs/cloudflare';
 
 export default defineCloudflareConfig({
   // Remove the next line to use the default config

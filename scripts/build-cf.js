@@ -66,7 +66,7 @@ console.log('Starting Next.js build...');
 const buildProcess = spawn('pnpm', ['exec', 'next', 'build'], {
   stdio: 'inherit',
   cwd: rootDir,
-  env: { ...process.env, CF_BUILD: 'true' }
+  env: { ...process.env, CF_BUILD: 'true' },
 });
 
 buildProcess.on('close', (code) => {
@@ -78,11 +78,15 @@ buildProcess.on('close', (code) => {
     console.log('Running OpenNext Cloudflare build...');
 
     // Run OpenNext Cloudflare build
-    const openNextBuild = spawn('pnpm', ['exec', 'opennextjs-cloudflare', 'build', '--skipBuild'], {
-      stdio: 'inherit',
-      cwd: rootDir,
-      env: { ...process.env, CF_BUILD: 'true' }
-    });
+    const openNextBuild = spawn(
+      'pnpm',
+      ['exec', 'opennextjs-cloudflare', 'build', '--skipBuild'],
+      {
+        stdio: 'inherit',
+        cwd: rootDir,
+        env: { ...process.env, CF_BUILD: 'true' },
+      }
+    );
 
     openNextBuild.on('close', (openNextCode) => {
       if (openNextCode === 0) {

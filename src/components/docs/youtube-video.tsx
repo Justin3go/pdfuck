@@ -6,7 +6,11 @@ interface YoutubeVideoProps {
   height?: number;
 }
 
-export function YoutubeVideo({ url, width = 560, height = 315 }: YoutubeVideoProps) {
+export function YoutubeVideo({
+  url,
+  width = 560,
+  height = 315,
+}: YoutubeVideoProps) {
   return (
     <div className="my-4 aspect-video">
       <iframe

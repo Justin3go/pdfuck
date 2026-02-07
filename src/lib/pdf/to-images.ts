@@ -36,7 +36,10 @@ export interface BatchMergedImageResult {
   totalPageCount: number;
 }
 
-export type PdfToImagesResult = PageImage[] | MergedImageResult | BatchMergedImageResult;
+export type PdfToImagesResult =
+  | PageImage[]
+  | MergedImageResult
+  | BatchMergedImageResult;
 
 // WebP 编码器限制（Chrome 的 WebP 编码器对大尺寸图片有限制）
 const MAX_WEBP_DIMENSION = 16383; // WebP 编码器通常限制在 16383px
@@ -109,8 +112,10 @@ async function mergeImagesVertically(
       images.map((img, index) => {
         const url = URL.createObjectURL(img.blob);
         urls.push(url);
-        return loadImage(url).then(img => {
-          console.log(`[PDF] Page ${index + 1} loaded: ${img.width}x${img.height}`);
+        return loadImage(url).then((img) => {
+          console.log(
+            `[PDF] Page ${index + 1} loaded: ${img.width}x${img.height}`
+          );
           return img;
         });
       })
@@ -119,7 +124,9 @@ async function mergeImagesVertically(
     const totalHeight = loadedImages.reduce((sum, img) => sum + img.height, 0);
     const maxWidth = Math.max(...loadedImages.map((img) => img.width));
 
-    console.log(`[PDF] Merging ${images.length} pages (PNG/JPG), total: ${maxWidth}x${totalHeight}`);
+    console.log(
+      `[PDF] Merging ${images.length} pages (PNG/JPG), total: ${maxWidth}x${totalHeight}`
+    );
 
     const canvas = document.createElement('canvas');
     canvas.width = maxWidth;
@@ -153,7 +160,9 @@ async function mergeImagesVertically(
       canvas.toBlob((b) => resolve(b!), format, quality)
     );
 
-    console.log(`[PDF] Merge complete: ${images.length} pages, ${blob.size} bytes`);
+    console.log(
+      `[PDF] Merge complete: ${images.length} pages, ${blob.size} bytes`
+    );
 
     return {
       isMerged: true,
@@ -180,8 +189,10 @@ async function mergeImagesVerticallyWebP(
       images.map((img, index) => {
         const url = URL.createObjectURL(img.blob);
         urls.push(url);
-        return loadImage(url).then(img => {
-          console.log(`[PDF] Page ${index + 1} loaded: ${img.width}x${img.height}`);
+        return loadImage(url).then((img) => {
+          console.log(
+            `[PDF] Page ${index + 1} loaded: ${img.width}x${img.height}`
+          );
           return img;
         });
       })
@@ -191,16 +202,25 @@ async function mergeImagesVerticallyWebP(
     const maxWidth = Math.max(...loadedImages.map((img) => img.width));
     const totalArea = maxWidth * totalHeight;
 
-    console.log(`[PDF] Merging ${images.length} pages (WebP), total: ${maxWidth}x${totalHeight}`);
+    console.log(
+      `[PDF] Merging ${images.length} pages (WebP), total: ${maxWidth}x${totalHeight}`
+    );
 
     // 检查是否需要分批
-    const needsBatching = maxWidth > MAX_WEBP_DIMENSION ||
-                         totalHeight > MAX_WEBP_DIMENSION ||
-                         totalArea > MAX_WEBP_AREA;
+    const needsBatching =
+      maxWidth > MAX_WEBP_DIMENSION ||
+      totalHeight > MAX_WEBP_DIMENSION ||
+      totalArea > MAX_WEBP_AREA;
 
     if (needsBatching) {
       console.log(`[PDF] WebP image too large, using batch merge`);
-      return await batchMergeImagesVertically(loadedImages, images, format, quality, maxWidth);
+      return await batchMergeImagesVertically(
+        loadedImages,
+        images,
+        format,
+        quality,
+        maxWidth
+      );
     }
 
     // 不需要分批，直接合并
@@ -230,7 +250,9 @@ async function mergeImagesVerticallyWebP(
       canvas.toBlob((b) => resolve(b!), format, quality)
     );
 
-    console.log(`[PDF] Merge complete: ${images.length} pages, ${blob.size} bytes`);
+    console.log(
+      `[PDF] Merge complete: ${images.length} pages, ${blob.size} bytes`
+    );
 
     return {
       isMerged: true,
@@ -267,7 +289,10 @@ async function batchMergeImagesVertically(
     const imgHeight = loadedImages[i].height;
 
     // 如果当前批为空，或者加上这张图片后不超过限制，就加入当前批
-    if (currentBatchHeight === 0 || currentBatchHeight + imgHeight <= maxBatchHeight) {
+    if (
+      currentBatchHeight === 0 ||
+      currentBatchHeight + imgHeight <= maxBatchHeight
+    ) {
       currentBatchHeight += imgHeight;
     } else {
       // 结束当前批，开始新的一批
@@ -289,7 +314,9 @@ async function batchMergeImagesVertically(
     const batchImages = loadedImages.slice(start, end);
     const batchHeight = batchImages.reduce((sum, img) => sum + img.height, 0);
 
-    console.log(`[PDF] Processing batch ${batchIndex + 1}: pages ${start + 1}-${end}, height: ${batchHeight}`);
+    console.log(
+      `[PDF] Processing batch ${batchIndex + 1}: pages ${start + 1}-${end}, height: ${batchHeight}`
+    );
 
     // Create canvas for this batch
     const canvas = document.createElement('canvas');
@@ -312,13 +339,17 @@ async function batchMergeImagesVertically(
     // Generate dataUrl and blob for this batch
     const dataUrl = canvas.toDataURL(format, quality);
     const blob = await new Promise<Blob>((resolve, reject) => {
-      canvas.toBlob((b) => {
-        if (!b) {
-          reject(new Error('toBlob 返回 null'));
-        } else {
-          resolve(b);
-        }
-      }, format, quality);
+      canvas.toBlob(
+        (b) => {
+          if (!b) {
+            reject(new Error('toBlob 返回 null'));
+          } else {
+            resolve(b);
+          }
+        },
+        format,
+        quality
+      );
     });
 
     batches.push({
@@ -332,7 +363,9 @@ async function batchMergeImagesVertically(
     console.log(`[PDF] Batch ${batchIndex + 1} complete: ${blob.size} bytes`);
   }
 
-  console.log(`[PDF] Batch merge complete: ${batches.length} batches, ${originalImages.length} total pages`);
+  console.log(
+    `[PDF] Batch merge complete: ${batches.length} batches, ${originalImages.length} total pages`
+  );
 
   return {
     isMerged: true,

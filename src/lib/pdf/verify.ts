@@ -125,7 +125,11 @@ export async function verifyPdf(pdfBuffer: Uint8Array): Promise<VerifyResult> {
 
               const fieldType = field.get('FT');
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              if (fieldType && (fieldType as any).asString && (fieldType as any).asString() === 'Sig') {
+              if (
+                fieldType &&
+                (fieldType as any).asString &&
+                (fieldType as any).asString() === 'Sig'
+              ) {
                 hasSignature = true;
 
                 // Get signature details
@@ -137,17 +141,29 @@ export async function verifyPdf(pdfBuffer: Uint8Array): Promise<VerifyResult> {
 
                   // Extract signer name
                   const name = v.get('Name');
-                  if (name && (name as unknown as { asString: () => string }).asString) {
-                    sigDetails.signerName = (name as unknown as { asString: () => string }).asString();
+                  if (
+                    name &&
+                    (name as unknown as { asString: () => string }).asString
+                  ) {
+                    sigDetails.signerName = (
+                      name as unknown as { asString: () => string }
+                    ).asString();
                   }
 
                   // Extract signing time
                   const time = v.get('M');
-                  if (time && (time as unknown as { asString: () => string }).asString) {
+                  if (
+                    time &&
+                    (time as unknown as { asString: () => string }).asString
+                  ) {
                     try {
-                      const timeStr = (time as unknown as { asString: () => string }).asString();
+                      const timeStr = (
+                        time as unknown as { asString: () => string }
+                      ).asString();
                       // Parse PDF date format: D:YYYYMMDDHHmmSSOHH'mm'
-                      const match = timeStr.match(/D:(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/);
+                      const match = timeStr.match(
+                        /D:(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/
+                      );
                       if (match) {
                         sigDetails.signingTime = new Date(
                           parseInt(match[1]),
@@ -165,14 +181,24 @@ export async function verifyPdf(pdfBuffer: Uint8Array): Promise<VerifyResult> {
 
                   // Extract location
                   const location = v.get('Location');
-                  if (location && (location as unknown as { asString: () => string }).asString) {
-                    sigDetails.location = (location as unknown as { asString: () => string }).asString();
+                  if (
+                    location &&
+                    (location as unknown as { asString: () => string }).asString
+                  ) {
+                    sigDetails.location = (
+                      location as unknown as { asString: () => string }
+                    ).asString();
                   }
 
                   // Extract reason
                   const reason = v.get('Reason');
-                  if (reason && (reason as unknown as { asString: () => string }).asString) {
-                    sigDetails.reason = (reason as unknown as { asString: () => string }).asString();
+                  if (
+                    reason &&
+                    (reason as unknown as { asString: () => string }).asString
+                  ) {
+                    sigDetails.reason = (
+                      reason as unknown as { asString: () => string }
+                    ).asString();
                   }
 
                   // Check byte range for integrity verification
@@ -186,7 +212,9 @@ export async function verifyPdf(pdfBuffer: Uint8Array): Promise<VerifyResult> {
 
                     // If byte range exists, we can assume some level of validity
                     // but we can't fully verify without crypto libraries
-                    sigDetails.isValid = Array.isArray(sigDetails.byteRange) && sigDetails.byteRange.length === 4;
+                    sigDetails.isValid =
+                      Array.isArray(sigDetails.byteRange) &&
+                      sigDetails.byteRange.length === 4;
                   }
 
                   signatures.push(sigDetails);

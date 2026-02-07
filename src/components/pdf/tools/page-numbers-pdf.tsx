@@ -3,6 +3,13 @@
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
 import type {
   PageNumberFormat,
@@ -126,42 +133,41 @@ export function PageNumbersPdfTool() {
 
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <label
-              htmlFor="position"
-              className="mb-1 block text-sm font-medium"
-            >
-              Position
-            </label>
-            <select
-              id="position"
+            <label className="mb-1 block text-sm font-medium">Position</label>
+            <Select
               value={position}
-              onChange={(e) =>
-                setPosition(e.target.value as PageNumberPosition)
+              onValueChange={(value) =>
+                setPosition(value as PageNumberPosition)
               }
-              className="w-full rounded-md border bg-background px-3 py-2 text-sm"
             >
-              <option value="bottom-center">Bottom Center</option>
-              <option value="bottom-left">Bottom Left</option>
-              <option value="bottom-right">Bottom Right</option>
-              <option value="top-center">Top Center</option>
-              <option value="top-left">Top Left</option>
-              <option value="top-right">Top Right</option>
-            </select>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select position" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="bottom-center">Bottom Center</SelectItem>
+                <SelectItem value="bottom-left">Bottom Left</SelectItem>
+                <SelectItem value="bottom-right">Bottom Right</SelectItem>
+                <SelectItem value="top-center">Top Center</SelectItem>
+                <SelectItem value="top-left">Top Left</SelectItem>
+                <SelectItem value="top-right">Top Right</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
           <div>
-            <label htmlFor="format" className="mb-1 block text-sm font-medium">
-              Format
-            </label>
-            <select
-              id="format"
+            <label className="mb-1 block text-sm font-medium">Format</label>
+            <Select
               value={format}
-              onChange={(e) => setFormat(e.target.value as PageNumberFormat)}
-              className="w-full rounded-md border bg-background px-3 py-2 text-sm"
+              onValueChange={(value) => setFormat(value as PageNumberFormat)}
             >
-              <option value="numeric">1, 2, 3...</option>
-              <option value="roman">I, II, III...</option>
-              <option value="page-of-total">1 / 10</option>
-            </select>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select format" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="numeric">1, 2, 3...</SelectItem>
+                <SelectItem value="roman">I, II, III...</SelectItem>
+                <SelectItem value="page-of-total">1 / 10</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
           <div>
             <label

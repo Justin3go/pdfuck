@@ -67,9 +67,9 @@ export function PdfToFormatTool({
   const [scale, setScale] = useState(2);
   const [quality, setQuality] = useState(0.9);
   const [images, setImages] = useState<PageImage[]>([]);
-  const [mergedResult, setMergedResult] = useState<MergedImageResult | BatchMergedImageResult | null>(
-    null
-  );
+  const [mergedResult, setMergedResult] = useState<
+    MergedImageResult | BatchMergedImageResult | null
+  >(null);
   const [mergeLongImage, setMergeLongImage] = useState(false);
   const [downloadAsZip, setDownloadAsZip] = useState(false);
 
@@ -80,9 +80,12 @@ export function PdfToFormatTool({
   // 基于标准 PDF 页面高度 (A4 ≈ 842pt, Letter ≈ 792pt，取平均值)
   const ESTIMATED_PAGE_HEIGHT_PT = 820;
   const MAX_WEBP_HEIGHT = 16383;
-  const estimatedBatchCount = file && format === 'image/webp' && mergeLongImage
-    ? Math.ceil((file.pageCount * ESTIMATED_PAGE_HEIGHT_PT * scale) / MAX_WEBP_HEIGHT)
-    : 1;
+  const estimatedBatchCount =
+    file && format === 'image/webp' && mergeLongImage
+      ? Math.ceil(
+          (file.pageCount * ESTIMATED_PAGE_HEIGHT_PT * scale) / MAX_WEBP_HEIGHT
+        )
+      : 1;
 
   const handleConvert = async () => {
     if (!file) return;
@@ -175,7 +178,8 @@ export function PdfToFormatTool({
         : mergedResult.pageCount
       : images.length;
     const isBatchResult = mergedResult && isBatchMergedResult(mergedResult);
-    const isZipDownload = (!mergedResult && downloadAsZip && images.length > 1) || isBatchResult;
+    const isZipDownload =
+      (!mergedResult && downloadAsZip && images.length > 1) || isBatchResult;
 
     return (
       <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-xl border bg-card p-8">
@@ -184,7 +188,10 @@ export function PdfToFormatTool({
         <p className="text-sm text-muted-foreground">
           {mergedResult
             ? isBatchResult
-              ? t('common.webpBatchCompleted', { pageCount: resultCount, batchCount: mergedResult.batches.length })
+              ? t('common.webpBatchCompleted', {
+                  pageCount: resultCount,
+                  batchCount: mergedResult.batches.length,
+                })
               : t('common.mergedImageDesc', { count: resultCount })
             : `${resultCount} ${t('common.pages')}`}
         </p>
@@ -318,22 +325,30 @@ export function PdfToFormatTool({
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
                   {t('common.mergeLongImage')}
-                  {format === 'image/webp' && mergeLongImage && estimatedBatchCount > 1 && (
-                    <span className="ml-1 inline-flex items-center gap-1 text-xs text-amber-600 dark:text-amber-400">
-                      （{t('common.webpBatchEstimate', { count: estimatedBatchCount })}
-                      <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <HelpCircleIcon className="size-3.5 cursor-help" />
-                          </TooltipTrigger>
-                          <TooltipContent side="top" className="max-w-[280px]">
-                            <p>{t('common.webpBatchTooltip')}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                      ）
-                    </span>
-                  )}
+                  {format === 'image/webp' &&
+                    mergeLongImage &&
+                    estimatedBatchCount > 1 && (
+                      <span className="ml-1 inline-flex items-center gap-1 text-xs text-amber-600 dark:text-amber-400">
+                        （
+                        {t('common.webpBatchEstimate', {
+                          count: estimatedBatchCount,
+                        })}
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <HelpCircleIcon className="size-3.5 cursor-help" />
+                            </TooltipTrigger>
+                            <TooltipContent
+                              side="top"
+                              className="max-w-[280px]"
+                            >
+                              <p>{t('common.webpBatchTooltip')}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                        ）
+                      </span>
+                    )}
                 </label>
               </div>
               <div className="flex items-center space-x-2">

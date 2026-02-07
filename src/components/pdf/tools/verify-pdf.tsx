@@ -4,22 +4,22 @@ import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
 import { verifyPdf } from '@/lib/pdf/verify';
-import { CheckCircleIcon, FileIcon, ShieldIcon, AlertTriangleIcon, XCircleIcon, FileCheckIcon } from 'lucide-react';
+import {
+  CheckCircleIcon,
+  FileIcon,
+  ShieldIcon,
+  AlertTriangleIcon,
+  XCircleIcon,
+  FileCheckIcon,
+} from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import type { VerifyResult } from '@/lib/pdf/verify';
 
 export function VerifyPdfTool() {
   const t = useTranslations('ToolsPage');
-  const {
-    files,
-    status,
-    error,
-    loadFiles,
-    setStatus,
-    setError,
-    reset,
-  } = usePdfProcessor();
+  const { files, status, error, loadFiles, setStatus, setError, reset } =
+    usePdfProcessor();
 
   const [verifyResult, setVerifyResult] = useState<VerifyResult | null>(null);
 
@@ -46,7 +46,7 @@ export function VerifyPdfTool() {
     return (
       <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-xl border bg-card p-8">
         {signature.hasSignature ? (
-          signature.signatures.some(s => s.isValid) ? (
+          signature.signatures.some((s) => s.isValid) ? (
             <>
               <CheckCircleIcon className="size-12 text-green-500" />
               <p className="text-lg font-medium">验证完成 - 文档已签名</p>
@@ -78,17 +78,23 @@ export function VerifyPdfTool() {
                       <XCircleIcon className="size-4 text-red-500 mt-0.5" />
                     )}
                     <div>
-                      <p className="font-medium">{sig.signerName || '未知签名者'}</p>
+                      <p className="font-medium">
+                        {sig.signerName || '未知签名者'}
+                      </p>
                       {sig.signingTime && (
                         <p className="text-muted-foreground">
                           签名时间: {sig.signingTime.toLocaleString()}
                         </p>
                       )}
                       {sig.location && (
-                        <p className="text-muted-foreground">位置: {sig.location}</p>
+                        <p className="text-muted-foreground">
+                          位置: {sig.location}
+                        </p>
                       )}
                       {sig.reason && (
-                        <p className="text-muted-foreground">原因: {sig.reason}</p>
+                        <p className="text-muted-foreground">
+                          原因: {sig.reason}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -109,7 +115,9 @@ export function VerifyPdfTool() {
                 ) : (
                   <XCircleIcon className="size-4 text-red-500" />
                 )}
-                <span>文档结构: {integrity.structureValid ? '有效' : '损坏'}</span>
+                <span>
+                  文档结构: {integrity.structureValid ? '有效' : '损坏'}
+                </span>
               </div>
               {integrity.lastModified && (
                 <p className="text-muted-foreground">
@@ -129,7 +137,9 @@ export function VerifyPdfTool() {
                 ) : (
                   <CheckCircleIcon className="size-4 text-green-500" />
                 )}
-                <span>加密状态: {metadata.isEncrypted ? '已加密' : '未加密'}</span>
+                <span>
+                  加密状态: {metadata.isEncrypted ? '已加密' : '未加密'}
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 {metadata.hasJavaScript ? (
@@ -137,7 +147,9 @@ export function VerifyPdfTool() {
                 ) : (
                   <CheckCircleIcon className="size-4 text-green-500" />
                 )}
-                <span>JavaScript: {metadata.hasJavaScript ? '包含' : '无'}</span>
+                <span>
+                  JavaScript: {metadata.hasJavaScript ? '包含' : '无'}
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 {metadata.hasEmbeddedFiles ? (
@@ -145,7 +157,9 @@ export function VerifyPdfTool() {
                 ) : (
                   <CheckCircleIcon className="size-4 text-green-500" />
                 )}
-                <span>嵌入文件: {metadata.hasEmbeddedFiles ? '包含' : '无'}</span>
+                <span>
+                  嵌入文件: {metadata.hasEmbeddedFiles ? '包含' : '无'}
+                </span>
               </div>
             </div>
           </div>
@@ -221,10 +235,7 @@ export function VerifyPdfTool() {
       </div>
 
       <div className="mt-4 flex justify-center gap-3 border-t pt-4">
-        <Button
-          onClick={handleVerify}
-          disabled={status === 'processing'}
-        >
+        <Button onClick={handleVerify} disabled={status === 'processing'}>
           {status === 'processing'
             ? t('common.processing')
             : t('tools.verifyPdf.name')}

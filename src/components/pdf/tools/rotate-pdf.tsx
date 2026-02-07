@@ -48,7 +48,9 @@ export function RotatePdfTool() {
       const next = new Map(prev);
       const current = next.get(pageIndex) || 0;
       const rawAngle = (current + delta) % 360;
-      const newAngle = (rawAngle < 0 ? rawAngle + 360 : rawAngle) as RotationAngle;
+      const newAngle = (
+        rawAngle < 0 ? rawAngle + 360 : rawAngle
+      ) as RotationAngle;
       next.set(pageIndex, newAngle);
       return next;
     });

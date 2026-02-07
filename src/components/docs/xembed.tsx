@@ -15,7 +15,11 @@ export function XEmbedClient({ url, width = 500 }: XEmbedClientProps) {
       >
         <a href={url}>{url}</a>
       </blockquote>
-      <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charSet="utf-8"
+      ></script>
     </div>
   );
 }

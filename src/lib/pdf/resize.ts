@@ -97,7 +97,8 @@ export async function resizePdf(
     if (title) newDoc.setTitle(title);
     if (author) newDoc.setAuthor(author);
     if (subject) newDoc.setSubject(subject);
-    if (keywords) newDoc.setKeywords(Array.isArray(keywords) ? keywords : [keywords]);
+    if (keywords)
+      newDoc.setKeywords(Array.isArray(keywords) ? keywords : [keywords]);
     if (creator) newDoc.setCreator(creator);
     if (producer) newDoc.setProducer(producer);
     if (creationDate) newDoc.setCreationDate(creationDate);

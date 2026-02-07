@@ -133,9 +133,7 @@ export function SplitPdfTool() {
             <Checkbox
               id="downloadAsZip"
               checked={downloadAsZip}
-              onCheckedChange={(checked) =>
-                setDownloadAsZip(checked === true)
-              }
+              onCheckedChange={(checked) => setDownloadAsZip(checked === true)}
             />
             <label
               htmlFor="downloadAsZip"
