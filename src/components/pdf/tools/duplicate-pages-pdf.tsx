@@ -3,8 +3,8 @@
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { PdfPreview } from '@/components/pdf/pdf-preview';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { NumberInput } from '@/components/ui/number-input';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
 import { duplicatePages } from '@/lib/pdf/duplicate-pages';
@@ -191,16 +191,12 @@ export function DuplicatePagesPdfTool() {
           <div className="space-y-2">
             <Label>{t('common.copiesCount')}</Label>
             <div className="flex items-center gap-3">
-              <Input
-                type="number"
+              <NumberInput
                 min={1}
                 max={10}
                 value={copies}
-                onChange={(e) =>
-                  setCopies(
-                    Math.max(1, Math.min(10, parseInt(e.target.value) || 1))
-                  )
-                }
+                onChange={setCopies}
+                showControls={false}
                 className="w-24"
               />
               <span className="text-sm text-muted-foreground">

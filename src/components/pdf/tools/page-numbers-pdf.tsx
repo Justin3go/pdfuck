@@ -2,7 +2,7 @@
 
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { NumberInput } from '@/components/ui/number-input';
 import {
   Select,
   SelectContent,
@@ -118,7 +118,7 @@ export function PageNumbersPdfTool() {
   // 上传文件后状态
   return (
     <div className="flex min-h-[320px] flex-col justify-between rounded-xl border bg-card p-6">
-      <div className="flex-1 space-y-4 overflow-auto">
+      <div className="flex-1 space-y-4 overflow-auto p-1">
         <div className="flex items-center gap-3 border-b pb-4">
           <div className="flex size-10 items-center justify-center rounded-full bg-primary/10">
             <FileIcon className="size-5 text-primary" />
@@ -176,12 +176,12 @@ export function PageNumbersPdfTool() {
             >
               Start Number
             </label>
-            <Input
+            <NumberInput
               id="start-number"
-              type="number"
-              min="1"
+              min={1}
               value={startNumber}
-              onChange={(e) => setStartNumber(Number(e.target.value) || 1)}
+              onChange={setStartNumber}
+              fullWidth
             />
           </div>
           <div>

@@ -2,6 +2,7 @@
 
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
+import { NumberInput } from '@/components/ui/number-input';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
 import { type CropMargins, cropPdf } from '@/lib/pdf/crop';
 import { CheckCircleIcon, FileIcon } from 'lucide-react';
@@ -137,14 +138,14 @@ export function CropPdfTool() {
               >
                 {label} (pt)
               </label>
-              <input
+              <NumberInput
                 id={`margin-${key}`}
-                type="number"
-                min="0"
-                step="1"
+                min={0}
+                step={1}
                 value={margins[key]}
-                onChange={(e) => updateMargin(key, e.target.value)}
-                className="w-full rounded-lg border bg-background px-3 py-2 text-sm"
+                onChange={(value) => updateMargin(key, String(value))}
+                showControls={false}
+                className="w-full"
               />
             </div>
           ))}
