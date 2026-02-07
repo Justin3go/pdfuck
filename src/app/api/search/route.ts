@@ -48,6 +48,18 @@ const searchAPI = createI18nSearchAPI('advanced', {
 
     // Use the default English tokenizer for English content
     en: 'english',
+
+    // Languages supported by Orama
+    es: 'spanish',
+    fr: 'french',
+    de: 'german',
+    pt: 'portuguese',
+    ru: 'russian',
+    it: 'italian',
+
+    // Japanese and Korean are not supported by Orama, fallback to english
+    ja: 'english',
+    ko: 'english',
   },
 
   // Global search configuration

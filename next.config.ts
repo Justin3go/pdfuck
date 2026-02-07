@@ -11,11 +11,22 @@ initOpenNextCloudflareForDev();
  * https://nextjs.org/docs/app/api-reference/config/next-config-js
  */
 const nextConfig: NextConfig = {
-  // Docker standalone output
-  ...(process.env.DOCKER_BUILD === 'true' && { output: 'standalone' }),
+  // Output configuration
+  output: process.env.CF_BUILD === 'true' ? 'standalone' : undefined,
 
   /* config options here */
   devIndicators: false,
+
+  // Exclude @vercel/og to reduce bundle size for Cloudflare
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = config.externals || [];
+      if (Array.isArray(config.externals)) {
+        config.externals.push('@vercel/og');
+      }
+    }
+    return config;
+  },
 
   // https://nextjs.org/docs/architecture/nextjs-compiler#remove-console
   // Remove all console.* calls in production only
