@@ -3,10 +3,16 @@
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { PdfPreview } from '@/components/pdf/pdf-preview';
 import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
 import { splitPdf } from '@/lib/pdf/split';
-import { CheckCircleIcon, FileIcon } from 'lucide-react';
+import {
+  CheckCircleIcon,
+  DownloadIcon,
+  FileArchiveIcon,
+  FileIcon,
+} from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -28,6 +34,7 @@ export function SplitPdfTool() {
 
   const [mode, setMode] = useState<'each-page' | 'ranges'>('each-page');
   const [rangeInput, setRangeInput] = useState('');
+  const [downloadAsZip, setDownloadAsZip] = useState(true);
 
   const file = files[0];
 
@@ -71,8 +78,33 @@ export function SplitPdfTool() {
     }
   };
 
+  const createZipBlob = async (
+    pdfBlobs: { name: string; blob: Blob }[]
+  ): Promise<Blob> => {
+    const { ZipWriter, BlobWriter } = await import('@zip.js/zip.js');
+    const zipWriter = new ZipWriter(new BlobWriter('application/zip'));
+
+    for (const { name, blob } of pdfBlobs) {
+      await zipWriter.add(name, blob.stream());
+    }
+
+    return zipWriter.close();
+  };
+
+  const handleDownloadAll = async () => {
+    if (downloadAsZip && resultBlobs.length > 1) {
+      const baseName = file?.name.replace(/\.pdf$/i, '') || 'split';
+      const zipBlob = await createZipBlob(resultBlobs);
+      downloadBlob(zipBlob, `${baseName}-split.zip`);
+    } else {
+      downloadAll(resultBlobs);
+    }
+  };
+
   // 处理完成状态
   if (status === 'done' && resultBlobs.length > 0) {
+    const isZipDownload = downloadAsZip && resultBlobs.length > 1;
+
     return (
       <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-xl border bg-card p-8">
         <CheckCircleIcon className="size-12 text-green-500" />
@@ -96,9 +128,36 @@ export function SplitPdfTool() {
             </span>
           )}
         </div>
+        {resultBlobs.length > 1 && (
+          <div className="flex items-center space-x-2">
+            <Checkbox
+              id="downloadAsZip"
+              checked={downloadAsZip}
+              onCheckedChange={(checked) =>
+                setDownloadAsZip(checked === true)
+              }
+            />
+            <label
+              htmlFor="downloadAsZip"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              {t('common.downloadAsZip')}
+            </label>
+          </div>
+        )}
         <div className="flex gap-3">
-          <Button onClick={() => downloadAll(resultBlobs)}>
-            {t('common.downloadAll')}
+          <Button onClick={handleDownloadAll} className="gap-2">
+            {isZipDownload ? (
+              <>
+                <FileArchiveIcon className="size-4" />
+                {t('common.downloadZip')}
+              </>
+            ) : (
+              <>
+                <DownloadIcon className="size-4" />
+                {t('common.downloadAll')}
+              </>
+            )}
           </Button>
           <Button variant="outline" onClick={reset}>
             {t('common.reset')}
