@@ -178,7 +178,7 @@ export function DuplicatePagesPdfTool() {
             </div>
           </div>
 
-          <div className="max-h-48 overflow-auto rounded-lg border">
+          <div className="max-h-[576px] overflow-auto rounded-lg border">
             <PdfPreview
               thumbnails={file.thumbnails}
               selectedPages={selectedPages}

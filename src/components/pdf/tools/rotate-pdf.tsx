@@ -150,7 +150,7 @@ export function RotatePdfTool() {
           </Button>
         </div>
 
-        <div className="grid max-h-48 grid-cols-3 gap-3 overflow-auto sm:grid-cols-4 md:grid-cols-6">
+        <div className="grid max-h-[576px] grid-cols-3 gap-3 overflow-auto sm:grid-cols-4 md:grid-cols-6">
           {file.thumbnails.map((thumb) => {
             const rotation = rotations.get(thumb.pageIndex) || 0;
             return (

@@ -240,7 +240,7 @@ export function SplitPdfTool() {
         )}
 
         {file.thumbnails.length > 0 && (
-          <div className="max-h-40 overflow-auto rounded-lg border">
+          <div className="max-h-[480px] overflow-auto rounded-lg border">
             <PdfPreview thumbnails={file.thumbnails} />
           </div>
         )}

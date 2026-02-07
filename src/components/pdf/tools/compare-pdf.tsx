@@ -54,7 +54,7 @@ export function ComparePdfTool() {
           </Button>
         </div>
 
-        <div className="flex-1 space-y-4 overflow-auto max-h-[500px]">
+        <div className="flex-1 space-y-4 overflow-auto max-h-[1500px]">
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-2">
               <h4 className="text-sm font-medium">Document 1</h4>
