@@ -236,7 +236,7 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* How It Works Section */}
-      <section className="border-t bg-muted px-4 py-20">
+      <section className="bg-muted/40 px-4 py-20">
         <div className="mx-auto max-w-5xl">
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
