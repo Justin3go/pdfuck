@@ -84,3 +84,5 @@ logs/security/
 # Place screenshots in logs/images/ for UI review, not in the project root
 logs/images/
 logs/screenshots/
+
+test/
