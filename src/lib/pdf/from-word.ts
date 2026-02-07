@@ -1,20 +1,33 @@
 import * as mammoth from 'mammoth';
-import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import { PDFDocument, rgb } from 'pdf-lib';
+import fontkit from '@pdf-lib/fontkit';
 
 export async function wordToPdf(docxBuffer: Uint8Array): Promise<Uint8Array> {
   // Convert DOCX to HTML with Mammoth
+  // Use arrayBuffer for browser environment compatibility
   const result = await mammoth.convertToHtml({
-    buffer: Buffer.from(docxBuffer),
+    arrayBuffer: docxBuffer.buffer.slice(
+      docxBuffer.byteOffset,
+      docxBuffer.byteOffset + docxBuffer.byteLength
+    ),
   });
   const html = result.value;
 
   // Create PDF
   const pdfDoc = await PDFDocument.create();
+
+  // Register fontkit for custom font support
+  pdfDoc.registerFontkit(fontkit);
+
+  // Load Chinese font
+  const fontResponse = await fetch('/fonts/NotoSansSC-Regular.ttf');
+  const fontBytes = new Uint8Array(await fontResponse.arrayBuffer());
+  const font = await pdfDoc.embedFont(fontBytes);
+  const boldFont = font;
+
+  // Add first page and get dimensions
   let page = pdfDoc.addPage([595.28, 841.89]); // A4 size
   const { width, height } = page.getSize();
-
-  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-  const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
 
   const fontSize = 11;
   const lineHeight = fontSize * 1.5;

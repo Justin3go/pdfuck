@@ -1,13 +1,21 @@
 import * as XLSX from 'xlsx';
-import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import { PDFDocument, rgb } from 'pdf-lib';
+import fontkit from '@pdf-lib/fontkit';
 
 export async function excelToPdf(excelBuffer: Uint8Array): Promise<Uint8Array> {
   // Parse Excel file
   const workbook = XLSX.read(excelBuffer, { type: 'array' });
 
   const pdfDoc = await PDFDocument.create();
-  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-  const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+
+  // Register fontkit for custom font support
+  pdfDoc.registerFontkit(fontkit);
+
+  // Load Chinese font
+  const fontResponse = await fetch('/fonts/NotoSansSC-Regular.ttf');
+  const fontBytes = new Uint8Array(await fontResponse.arrayBuffer());
+  const font = await pdfDoc.embedFont(fontBytes);
+  const boldFont = font;
 
   const fontSize = 10;
   const headerFontSize = 12;
