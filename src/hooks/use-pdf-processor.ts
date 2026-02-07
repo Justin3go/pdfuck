@@ -21,6 +21,13 @@ export function usePdfProcessor() {
     };
   }, [reset]);
 
+  // 处理完成时自动滚动到页面顶部
+  useEffect(() => {
+    if (store.status === 'done') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [store.status]);
+
   const loadFiles = useCallback(
     async (fileList: FileList | File[]) => {
       store.setStatus('loading');
