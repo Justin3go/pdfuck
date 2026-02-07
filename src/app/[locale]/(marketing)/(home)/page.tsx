@@ -56,7 +56,7 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* Features Bar */}
-      <section className="border-y bg-muted/50 px-4 py-8">
+      <section className="px-4 py-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 sm:grid-cols-3">
             <div className="flex flex-col items-center text-center">

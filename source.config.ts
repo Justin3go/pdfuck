@@ -29,21 +29,6 @@ export const docs = defineDocs({
 });
 
 /**
- * Changelog
- *
- * title is required, but description is optional in frontmatter
- */
-export const changelog = defineCollections({
-  type: 'doc',
-  dir: 'content/changelog',
-  schema: frontmatterSchema.extend({
-    version: z.string(),
-    date: z.string().date(),
-    published: z.boolean().default(true),
-  }),
-});
-
-/**
  * Pages, like privacy policy, terms of service, etc.
  *
  * title is required, but description is optional in frontmatter

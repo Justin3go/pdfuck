@@ -766,9 +766,21 @@
       "secondaryButton": "查看演示"
     },
     "features": {
+      "fast": {
+        "title": "极速处理",
+        "description": "在浏览器中即时处理 PDF，无需等待上传或下载。"
+      },
+      "secure": {
+        "title": "100% 隐私保护",
+        "description": "您的文件在本地处理，绝不会上传到任何服务器。"
+      },
+      "free": {
+        "title": "完全免费",
+        "description": "所有工具均可免费使用，无隐藏费用或订阅。"
+      },
       "title": "功能",
-      "subtitle": "您的 SaaS 产品功能",
-      "description": "请在这里介绍您的 SaaS 产品的特色功能的信息",
+      "subtitle": "强大的 PDF 工具",
+      "description": "在浏览器中处理 PDF 文件所需的一切功能",
       "items": {
         "item-1": {
           "title": "产品特色功能一",
@@ -787,6 +799,10 @@
           "description": "请在这里详细描述您的产品特色功能四，尽可能详细，使其更吸引用户，提高落地页的转化率"
         }
       }
+    },
+    "tools": {
+      "title": "所有 PDF 工具",
+      "subtitle": "从我们收集的 10 多种免费 PDF 工具中选择，处理任何任务。"
     },
     "features2": {
       "title": "功能2",

@@ -11,11 +11,7 @@ export enum Routes {
   Docs = '/docs',
   About = '/about',
   Contact = '/contact',
-  Waitlist = '/waitlist',
-  Changelog = '/changelog',
-  Roadmap = '/roadmap',
   Tools = '/tools',
   CookiePolicy = '/cookie',
-  PrivacyPolicy = '/privacy',
   TermsOfService = '/terms',
 }

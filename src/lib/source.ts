@@ -2,7 +2,7 @@ import { type InferPageType, loader } from 'fumadocs-core/source';
 import { createMDXSource } from 'fumadocs-mdx/runtime/next';
 import * as LucideIcons from 'lucide-react';
 import { createElement } from 'react';
-import { author, blog, category, changelog, docs, pages } from '../../.source';
+import { author, blog, category, docs, pages } from '../../.source';
 import { docsI18nConfig } from './docs/i18n';
 
 /**
@@ -28,15 +28,6 @@ export const source = loader({
     console.warn(`Icon not found: ${iconName}`);
     return undefined;
   },
-});
-
-/**
- * Changelog source
- */
-export const changelogSource = loader({
-  baseUrl: '/changelog',
-  i18n: docsI18nConfig,
-  source: createMDXSource(changelog),
 });
 
 /**
@@ -77,7 +68,6 @@ export const blogSource = loader({
   source: createMDXSource(blog),
 });
 
-export type ChangelogType = InferPageType<typeof changelogSource>;
 export type PagesType = InferPageType<typeof pagesSource>;
 export type AuthorType = InferPageType<typeof authorSource>;
 export type CategoryType = InferPageType<typeof categorySource>;

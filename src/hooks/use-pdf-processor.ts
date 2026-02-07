@@ -2,7 +2,7 @@
 
 import { generateThumbnails } from '@/lib/pdf/preview';
 import { type PdfFile, usePdfToolStore } from '@/stores/pdf-tool-store';
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 
 let idCounter = 0;
 function generateId() {
@@ -12,6 +12,14 @@ function generateId() {
 
 export function usePdfProcessor() {
   const store = usePdfToolStore();
+  const reset = store.reset;
+
+  // 组件卸载时重置状态，确保各工具页面状态独立
+  useEffect(() => {
+    return () => {
+      reset();
+    };
+  }, [reset]);
 
   const loadFiles = useCallback(
     async (fileList: FileList | File[]) => {
