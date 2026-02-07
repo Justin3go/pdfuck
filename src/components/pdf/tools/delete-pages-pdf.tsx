@@ -153,7 +153,7 @@ export function DeletePagesPdfTool() {
           </Button>
         </div>
 
-        <div className="max-h-[576px] overflow-auto rounded-lg border">
+        <div className="max-h-[576px] overflow-auto rounded-lg border p-1">
           <PdfPreview
             thumbnails={file.thumbnails}
             selectedPages={selectedPages}

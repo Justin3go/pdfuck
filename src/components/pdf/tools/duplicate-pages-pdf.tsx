@@ -149,7 +149,7 @@ export function DuplicatePagesPdfTool() {
   // 上传文件后状态
   return (
     <div className="flex min-h-[320px] flex-col justify-between rounded-xl border bg-card p-6">
-      <div className="flex-1 space-y-4 overflow-auto">
+      <div className="flex-1 space-y-4 overflow-auto px-1">
         <div className="flex items-center gap-3 border-b pb-4">
           <div className="flex size-10 items-center justify-center rounded-full bg-primary/10">
             <FileIcon className="size-5 text-primary" />
@@ -178,7 +178,7 @@ export function DuplicatePagesPdfTool() {
             </div>
           </div>
 
-          <div className="max-h-[576px] overflow-auto rounded-lg border">
+          <div className="max-h-[576px] overflow-auto rounded-lg border p-1">
             <PdfPreview
               thumbnails={file.thumbnails}
               selectedPages={selectedPages}

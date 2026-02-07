@@ -137,7 +137,7 @@ export function ReorderPdfTool() {
           onValueChange={setOrderedThumbnails}
           orientation="mixed"
         >
-          <SortableContent className="grid max-h-[576px] grid-cols-3 gap-3 overflow-auto sm:grid-cols-4 md:grid-cols-6">
+          <SortableContent className="grid max-h-[576px] grid-cols-3 gap-3 overflow-auto rounded-lg border p-1 sm:grid-cols-4 md:grid-cols-6">
             {orderedThumbnails.map((thumb) => (
               <SortableItem
                 key={thumb.pageIndex}
