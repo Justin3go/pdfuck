@@ -8,7 +8,8 @@ import type { Locale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { AnchorLink } from '@/components/ui/anchor-link';
+import './hero-gradient.css';
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -44,92 +45,151 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-4 pt-24 pb-8 sm:pt-32 sm:pb-10">
-        <div className="mx-auto max-w-4xl text-center relative z-10">
-          <div className="inline-flex items-center rounded-full border bg-muted/50 px-3 py-1 text-sm text-muted-foreground mb-6">
-            <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
+      <section className="relative overflow-hidden px-4 pt-24 pb-8 sm:pt-32 sm:pb-10 hero-tyndall min-h-screen flex flex-col">
+        {/* Tyndall Effect Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Main spotlight from top-left - brighter core */}
+          <div
+            className="absolute -top-40 -left-40 w-[1200px] h-[1200px]"
+            style={{
+              background: `radial-gradient(ellipse at 0% 0%,
+                hsl(0 0% 95% / 0.9) 0%,
+                hsl(0 0% 90% / 0.5) 8%,
+                hsl(0 0% 85% / 0.25) 18%,
+                hsl(0 0% 80% / 0.12) 30%,
+                hsl(0 0% 75% / 0.05) 45%,
+                transparent 65%)`,
+              transform: 'rotate(-25deg)',
+            }}
+          />
+          {/* Light beam rays - more defined rays */}
+          <div
+            className="absolute -top-10 -left-10 w-[900px] h-[900px]"
+            style={{
+              background: `conic-gradient(from 210deg at 0% 0%,
+                transparent 0deg,
+                hsl(0 0% 92% / 0.4) 5deg,
+                hsl(0 0% 88% / 0.15) 12deg,
+                transparent 20deg,
+                transparent 32deg,
+                hsl(0 0% 90% / 0.3) 38deg,
+                hsl(0 0% 85% / 0.1) 48deg,
+                transparent 58deg,
+                transparent 72deg,
+                hsl(0 0% 88% / 0.2) 78deg,
+                hsl(0 0% 82% / 0.08) 88deg,
+                transparent 98deg)`,
+            }}
+          />
+          {/* Soft glow overlay */}
+          <div
+            className="absolute -top-20 -left-20 w-[800px] h-[800px]"
+            style={{
+              background: `radial-gradient(circle at 0% 0%,
+                hsl(0 0% 95% / 0.25) 0%,
+                hsl(0 0% 90% / 0.1) 30%,
+                transparent 55%)`,
+            }}
+          />
+          {/* Subtle ambient wash */}
+          <div
+            className="absolute top-0 left-0 w-full h-full"
+            style={{
+              background: `linear-gradient(165deg,
+                hsl(0 0% 95% / 0.08) 0%,
+                hsl(0 0% 90% / 0.03) 25%,
+                transparent 50%)`,
+            }}
+          />
+        </div>
+
+        <div className="mx-auto max-w-4xl text-center relative z-10 flex-1 flex flex-col">
+          {/* 指示器 - 保持原来位置 */}
+          <div className="inline-flex items-center rounded-full border bg-muted/50 px-3 py-1 text-sm text-muted-foreground mb-6 backdrop-blur-sm self-center">
+            <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
             {t('hero.privacy')}
           </div>
 
-          <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl pb-2">
-            {t('hero.title')}
-          </h1>
+          {/* 中间内容区域 - 垂直居中 */}
+          <div className="flex-1 flex flex-col justify-center min-h-0">
+            <h1 className="hero-title-gradient text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl pb-2">
+              {t('hero.title')}
+            </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl leading-relaxed">
-            {t('hero.subtitle')}
-          </p>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl leading-relaxed">
+              {t('hero.subtitle')}
+            </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              size="lg"
-              className="h-12 rounded-full px-8 text-base shadow-lg shadow-primary/20"
-              asChild
-            >
-              <Link href="#tools">
-                {t('tools.title')} <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="h-12 rounded-full px-8 text-base"
-              asChild
-            >
-              <Link href="#faqs">{t('faqs.title')}</Link>
-            </Button>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button
+                size="lg"
+                className="h-12 rounded-full px-8 text-base"
+                asChild
+              >
+                <AnchorLink href="#tools">
+                  {t('tools.title')} <ArrowRight className="ml-2 h-4 w-4" />
+                </AnchorLink>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-12 rounded-full px-8 text-base"
+                asChild
+              >
+                <AnchorLink href="#faqs">{t('faqs.title')}</AnchorLink>
+              </Button>
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="px-4 py-16">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-4 sm:grid-cols-3">
-            <Card className="relative overflow-hidden border bg-card shadow-sm transition-colors hover:border-foreground/20 group">
-              <CardContent className="flex flex-col items-center p-5 text-center">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
-                  <Zap className="h-6 w-6" />
-                </div>
-                <h3 className="mb-2 text-lg font-bold">
-                  {t('features.fast.title')}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {t('features.fast.description')}
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="relative overflow-hidden border bg-card shadow-sm transition-colors hover:border-foreground/20 group">
-              <CardContent className="flex flex-col items-center p-5 text-center">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
-                  <Shield className="h-6 w-6" />
-                </div>
-                <h3 className="mb-2 text-lg font-bold">
-                  {t('features.secure.title')}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {t('features.secure.description')}
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="relative overflow-hidden border bg-card shadow-sm transition-colors hover:border-foreground/20 group">
-              <CardContent className="flex flex-col items-center p-5 text-center">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110">
-                  <FileText className="h-6 w-6" />
-                </div>
-                <h3 className="mb-2 text-lg font-bold">
-                  {t('features.free.title')}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {t('features.free.description')}
-                </p>
-              </CardContent>
-            </Card>
+          {/* Features Cards - 移到 Hero 区域内共享背景 */}
+          <div className="mt-auto pt-16 mx-auto max-w-6xl">
+            <div className="grid gap-4 sm:grid-cols-3">
+              <Card>
+                <CardContent className="flex flex-col items-center text-center">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Zap className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-2 text-lg font-bold">
+                    {t('features.fast.title')}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t('features.fast.description')}
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex flex-col items-center text-center">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Shield className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-2 text-lg font-bold">
+                    {t('features.secure.title')}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t('features.secure.description')}
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex flex-col items-center text-center">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <FileText className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-2 text-lg font-bold">
+                    {t('features.free.title')}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t('features.free.description')}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Tools Grid Section */}
-      <section id="tools" className="px-4 py-20 bg-muted/30">
+      <section id="tools" className="px-4 py-20 bg-background">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">
@@ -176,7 +236,7 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* How It Works Section */}
-      <section className="border-t bg-background px-4 py-20">
+      <section className="border-t bg-muted px-4 py-20">
         <div className="mx-auto max-w-5xl">
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -228,7 +288,7 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* FAQ Section */}
-      <section id="faqs" className="px-4 py-20 bg-muted/30">
+      <section id="faqs" className="px-4 py-20 bg-background">
         <div className="mx-auto max-w-3xl">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -240,11 +300,8 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
           <div className="grid gap-4">
             {([1, 2, 3, 4, 5] as const).map((i) => (
-              <Card
-                key={i}
-                className="overflow-hidden border bg-card shadow-sm transition-colors hover:border-foreground/20"
-              >
-                <CardHeader className="p-6">
+              <Card key={i}>
+                <CardHeader>
                   <h3 className="font-semibold text-lg">
                     {t(`faqs.items.item-${i}.question`)}
                   </h3>

@@ -76,3 +76,11 @@ next-env.d.ts
 .worktrees/
 .security-key
 logs/security/
+
+# Playwright MCP logs and screenshots
+.playwright-mcp/
+
+# Temporary screenshot files for UI review
+# Place screenshots in logs/images/ for UI review, not in the project root
+logs/images/
+logs/screenshots/

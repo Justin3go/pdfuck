@@ -43,12 +43,12 @@ export function Navbar({ scroll }: NavBarProps) {
   return (
     <section
       className={cn(
-        'sticky inset-x-0 top-0 z-40 py-4 transition-all duration-300',
+        'fixed inset-x-0 top-0 z-40 py-4 transition-all duration-300',
         scroll
           ? scrolled
-            ? 'bg-muted/50 backdrop-blur-md border-b supports-backdrop-filter:bg-muted/50'
-            : 'bg-transparent'
-          : 'border-b bg-muted/50'
+            ? 'bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-sm'
+            : 'bg-transparent border-b border-transparent'
+          : 'bg-background/70 backdrop-blur-xl border-b border-border/50'
       )}
     >
       <Container className="px-4">

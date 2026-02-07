@@ -151,3 +151,16 @@ Copy `env.example` to `.env` before running commands. Store production credentia
 - The app supports both light and dark themes
 - Content is managed through MDX files in the `content/` directory
 - The project includes comprehensive internationalization support
+
+## File Organization Guidelines
+
+### Temporary Files and Screenshots
+
+When taking screenshots for UI review or debugging:
+
+1. **Screenshots**: Place all temporary screenshots in `logs/images/` or `logs/screenshots/`
+2. **Playwright MCP logs**: Automatically saved to `.playwright-mcp/` (already gitignored)
+3. **Never commit**: Do not commit temporary screenshot files to the repository
+4. **Naming convention**: Use descriptive names like `homepage-landing.png`, `dark-mode-cards.png`
+
+These directories are already configured in `.gitignore` and will not be tracked by git.

@@ -502,8 +502,8 @@
         }
       },
       "pdfToPng": {
-        "name": "PDF a PNG",
-        "description": "Convierte páginas PDF a imágenes PNG de alta calidad con compresión sin pérdida. Fusionar en imagen larga.",
+        "name": "PDF a PNG + Long Image",
+        "description": "Convierte páginas PDF a imágenes PNG de alta calidad con compresión sin pérdida.",
         "metaTitle": "Convert PDF to PNG Online Free - PDF to PNG Converter",
         "metaDescription": "Convert PDF pages to PNG images for free. Merge multiple pages into one long image. High-quality lossless conversion with adjustable resolution. Browser-based, no uploads needed.",
         "longDescription": "Convert each page of your PDF document into high-quality PNG images with lossless compression. PNG preserves sharp text and graphics perfectly, making it ideal for documents, screenshots, and images requiring transparency support. Option to merge all pages into a single long image for easy social media sharing.",
@@ -549,8 +549,8 @@
         }
       },
       "pdfToJpg": {
-        "name": "PDF a JPG",
-        "description": "Convierte páginas PDF a imágenes JPG con calidad ajustable. Fusionar en imagen larga.",
+        "name": "PDF a JPG + Long Image",
+        "description": "Convierte páginas PDF a imágenes JPG con calidad ajustable.",
         "metaTitle": "Convert PDF to JPG Online Free - PDF to JPEG Converter",
         "metaDescription": "Convert PDF pages to JPG images for free. Merge multiple pages into one long image. Adjustable quality and resolution settings. Browser-based, no uploads needed.",
         "longDescription": "Convert each page of your PDF document into JPG images. Adjust the quality and resolution to balance file size and visual fidelity. JPG is the most widely supported image format, ideal for photos, web use, and sharing. Option to merge all pages into a single long image for easy social media sharing.",
@@ -596,8 +596,8 @@
         }
       },
       "pdfToWebp": {
-        "name": "PDF a WebP",
-        "description": "Convierte páginas PDF a imágenes WebP modernas con compresión superior. Fusionar en imagen larga.",
+        "name": "PDF a WebP + Long Image",
+        "description": "Convierte páginas PDF a imágenes WebP modernas con compresión superior.",
         "metaTitle": "Convert PDF to WebP Online Free - PDF to WebP Converter",
         "metaDescription": "Convert PDF pages to WebP images for free. Merge multiple pages into one long image. Modern format with superior compression and quality. Browser-based, no uploads needed.",
         "longDescription": "Convert each page of your PDF document into WebP images, the modern image format developed by Google. WebP offers superior compression with excellent visual quality, resulting in significantly smaller file sizes compared to JPG and PNG. Option to merge all pages into a single long image for easy social media sharing.",

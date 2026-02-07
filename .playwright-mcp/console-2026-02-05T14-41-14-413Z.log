@@ -1,6 +1,0 @@
-[    8718ms] [WARNING] [.WebGL-0x12400444e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ https://www.reddit.com/:0
-[   20589ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://accounts.google.com/gsi/client:80
-[   20605ms] [ERROR] Not signed in with the identity provider. @ https://www.reddit.com/?captcha=1:0
-[   20881ms] [WARNING] [.WebGL-0x12400454a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ https://www.reddit.com/?captcha=1:0
-[   21023ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://www.reddit.com/?captcha=1:0
-[   24004ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://accounts.google.com/gsi/client:81
