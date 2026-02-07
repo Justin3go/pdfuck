@@ -33,11 +33,14 @@ Routes and server actions live in `src/app` (locale-aware pages in `[locale]`). 
 Install dependencies with `pnpm install` and run `pnpm dev` for the local Next.js server. Use `pnpm build` to produce the optimized bundle and `pnpm start` to serve it. `pnpm lint` triggers Biome checks, while `pnpm format` applies consistent formatting. Database work flows through Drizzle: `pnpm db:generate` emits SQL from the schema, `pnpm db:migrate` applies local changes, and `pnpm db:push` syncs to remote instances. Support tooling includes `pnpm email` for the email previewer and utility scripts such as `pnpm list-users` or `pnpm fix-payments`.
 
 ### Core Development
-- `pnpm dev` - Start development server with content collections
+- `pnpm dev` - Start development server with content collections (port 8787)
 - `pnpm build` - Build the application and content collections
 - `pnpm start` - Start production server
 - `pnpm lint` - Run Biome linter (use for code quality checks)
 - `pnpm format` - Format code with Biome
+
+### Development Server
+- **Port**: 8787 (not the default 3000) - Always use `http://localhost:8787` for local development
 
 ### Database Operations (Drizzle ORM)
 - `pnpm db:generate` - Generate new migration files based on schema changes
