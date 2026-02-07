@@ -46,9 +46,9 @@ export function Navbar({ scroll }: NavBarProps) {
         'fixed inset-x-0 top-0 z-40 py-4 transition-all duration-300',
         scroll
           ? scrolled
-            ? 'bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-sm'
+            ? 'bg-background/70 dark:bg-background/10 backdrop-blur-xl backdrop-saturate-150 border-b border-border! shadow-sm'
             : 'bg-transparent border-b border-transparent'
-          : 'bg-background/70 backdrop-blur-xl border-b border-border/50'
+          : 'bg-background/70 dark:bg-background/10 backdrop-blur-xl backdrop-saturate-150 border-b border-border!'
       )}
     >
       <Container className="px-4">
