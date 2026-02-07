@@ -14,7 +14,7 @@ export function ToolCard({ tool, name, description }: ToolCardProps) {
 
   return (
     <LocaleLink href={`/tools/${tool.slug}`} className="group block h-full">
-      <div className="flex h-full flex-col rounded-xl border bg-card p-6 shadow-sm hover:border-foreground/20">
+      <div className="flex h-full flex-col rounded-xl border bg-card p-6 shadow-sm transition-colors hover:border-foreground/20">
         <div className="mb-4 flex h-10 items-center">
           {Icon2 ? (
             <>

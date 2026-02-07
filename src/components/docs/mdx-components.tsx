@@ -1,47 +1,82 @@
-import { ImageWrapper } from '@/components/docs/image-wrapper';
-import { Wrapper } from '@/components/docs/wrapper';
-import { YoutubeVideo } from '@/components/docs/youtube-video';
+import { XEmbedClient } from './xembed';
+import { YoutubeVideo } from './youtube-video';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 import { Callout } from 'fumadocs-ui/components/callout';
+import { Card, Cards } from 'fumadocs-ui/components/card';
+import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
 import { File, Files, Folder } from 'fumadocs-ui/components/files';
-import { Step, Steps } from 'fumadocs-ui/components/steps';
 import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 import { TypeTable } from 'fumadocs-ui/components/type-table';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
-import * as LucideIcons from 'lucide-react';
-import type { MDXComponents } from 'mdx/types';
-import type { ComponentProps, FC } from 'react';
-import { XEmbedClient } from './xembed';
+import {
+  Cpu,
+  Database,
+  Globe,
+  Home,
+  Layout,
+  LayoutTemplate,
+  Palette,
+  PanelsTopLeft,
+  Search,
+  Settings,
+  Terminal,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react';
 
-/**
- * Enhanced MDX Content component that includes commonly used MDX components
- * It can be used for blog posts, documentation, and custom pages
- */
-export function getMDXComponents(components?: MDXComponents): MDXComponents {
-  // Start with default components
-  const baseComponents: Record<string, any> = {
-    ...defaultMdxComponents,
-    ...LucideIcons,
-    // ...((await import('lucide-react')) as unknown as MDXComponents),
-    XEmbedClient,
-    YoutubeVideo,
-    Tabs,
-    Tab,
-    TypeTable,
+// Icon mapping for MDX components
+const iconMap: Record<string, LucideIcon> = {
+  // Full icon names
+  CpuIcon: Cpu,
+  DatabaseIcon: Database,
+  GlobeIcon: Globe,
+  HomeIcon: Home,
+  LayoutIcon: Layout,
+  LayoutTemplateIcon: LayoutTemplate,
+  PaletteIcon: Palette,
+  PanelsTopLeftIcon: PanelsTopLeft,
+  SearchIcon: Search,
+  SettingsIcon: Settings,
+  TerminalIcon: Terminal,
+  ZapIcon: Zap,
+  // Short names (also used in MDX)
+  Cpu,
+  Database,
+  Globe,
+  Home,
+  Layout,
+  LayoutTemplate,
+  Palette,
+  PanelsTopLeft,
+  Search,
+  Settings,
+  Terminal,
+  Zap,
+};
+
+export function getMDXComponents() {
+  return {
+    // Layout components
     Accordion,
     Accordions,
-    Steps,
-    Step,
-    Wrapper,
+    Callout,
+    Card,
+    Cards,
+    Tab,
+    Tabs,
+    TypeTable,
     File,
-    Folder,
     Files,
-    blockquote: Callout as unknown as FC<ComponentProps<'blockquote'>>,
-    img: ImageWrapper,
-  };
+    Folder,
 
-  return {
-    ...baseComponents,
-    ...components,
+    // Code block
+    pre: Pre,
+    code: CodeBlock,
+
+    // Icons
+    ...iconMap,
+
+    // Embeds
+    XEmbedClient,
+    YoutubeVideo,
   };
 }

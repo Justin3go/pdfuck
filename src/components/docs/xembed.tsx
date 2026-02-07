@@ -1,16 +1,21 @@
 'use client';
 
-import { XEmbed, type XEmbedProps } from 'react-social-media-embed';
+interface XEmbedClientProps {
+  url: string;
+  width?: number;
+}
 
-/**
- * Embedding X Posts in Fumadocs
- *
- * https://rjv.im/blog/solution/embed-x-post-in-fuma-docs
- */
-export function XEmbedClient({ ...props }: XEmbedProps) {
+export function XEmbedClient({ url, width = 500 }: XEmbedClientProps) {
   return (
-    <div className="flex justify-center">
-      <XEmbed {...props} />
+    <div className="my-4">
+      <blockquote
+        className="twitter-tweet"
+        data-conversation="none"
+        data-width={width}
+      >
+        <a href={url}>{url}</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
     </div>
   );
 }

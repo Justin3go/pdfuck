@@ -10,7 +10,7 @@ import {
 
 const intlMiddleware = createMiddleware(routing);
 
-export default async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const { nextUrl } = req;
 
   // When AI agents request docs with markdown preference, serve markdown content

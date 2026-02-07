@@ -1,32 +1,8 @@
 import {
   defineCollections,
-  defineDocs,
   frontmatterSchema,
-  metaSchema,
 } from 'fumadocs-mdx/config';
 import { z } from 'zod';
-
-/**
- * https://fumadocs.dev/docs/mdx/collections#schema-1
- */
-export const docs = defineDocs({
-  dir: 'content/docs',
-  docs: {
-    schema: frontmatterSchema.extend({
-      preview: z.string().optional(),
-      index: z.boolean().default(false),
-      premium: z.boolean().optional(),
-    }),
-    postprocess: {
-      includeProcessedMarkdown: true,
-    },
-  },
-  meta: {
-    schema: metaSchema.extend({
-      description: z.string().optional(),
-    }),
-  },
-});
 
 /**
  * Pages, like privacy policy, terms of service, etc.

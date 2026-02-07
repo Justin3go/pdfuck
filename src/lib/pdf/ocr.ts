@@ -34,6 +34,7 @@ async function renderPageToImage(
   await page.render({
     canvasContext: context,
     viewport,
+    canvas,
   }).promise;
 
   return context.getImageData(0, 0, canvas.width, canvas.height);
