@@ -67,7 +67,7 @@ export function ToolLayout({
         }}
       />
 
-      <div className="mx-auto max-w-7xl px-4 py-12">
+      <div className="mx-auto max-w-7xl px-4 pt-24 pb-12">
         {/* Hero */}
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <div className="mb-4 flex justify-center">
