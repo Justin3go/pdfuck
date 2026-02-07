@@ -3,12 +3,19 @@
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import type { PdfToolI18nKey } from '@/config/pdf-tools';
 import { usePdfProcessor } from '@/hooks/use-pdf-processor';
 import {
   type ImageFormat,
   type PageImage,
   type MergedImageResult,
+  type BatchMergedImageResult,
   pdfToImages,
 } from '@/lib/pdf/to-images';
 import {
@@ -17,6 +24,7 @@ import {
   FileIcon,
   ImageIcon,
   FileArchiveIcon,
+  HelpCircleIcon,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
@@ -28,9 +36,15 @@ interface PdfToFormatToolProps {
 }
 
 function isMergedResult(
-  result: PageImage[] | MergedImageResult
-): result is MergedImageResult {
+  result: PageImage[] | MergedImageResult | BatchMergedImageResult
+): result is MergedImageResult | BatchMergedImageResult {
   return 'isMerged' in result && result.isMerged;
+}
+
+function isBatchMergedResult(
+  result: MergedImageResult | BatchMergedImageResult
+): result is BatchMergedImageResult {
+  return 'isBatch' in result && result.isBatch;
 }
 
 export function PdfToFormatTool({
@@ -53,7 +67,7 @@ export function PdfToFormatTool({
   const [scale, setScale] = useState(2);
   const [quality, setQuality] = useState(0.9);
   const [images, setImages] = useState<PageImage[]>([]);
-  const [mergedResult, setMergedResult] = useState<MergedImageResult | null>(
+  const [mergedResult, setMergedResult] = useState<MergedImageResult | BatchMergedImageResult | null>(
     null
   );
   const [mergeLongImage, setMergeLongImage] = useState(false);
@@ -61,6 +75,14 @@ export function PdfToFormatTool({
 
   const file = files[0];
   const showQuality = format !== 'image/png';
+
+  // 估算 WebP 长图会被分割成多少份
+  // 基于标准 PDF 页面高度 (A4 ≈ 842pt, Letter ≈ 792pt，取平均值)
+  const ESTIMATED_PAGE_HEIGHT_PT = 820;
+  const MAX_WEBP_HEIGHT = 16383;
+  const estimatedBatchCount = file && format === 'image/webp' && mergeLongImage
+    ? Math.ceil((file.pageCount * ESTIMATED_PAGE_HEIGHT_PT * scale) / MAX_WEBP_HEIGHT)
+    : 1;
 
   const handleConvert = async () => {
     if (!file) return;
@@ -108,9 +130,20 @@ export function PdfToFormatTool({
   const handleDownloadAll = async () => {
     const baseName = file?.name.replace(/\.pdf$/i, '') || 'page';
 
-    // If merged long image
-    if (mergedResult) {
+    // If merged long image (single batch)
+    if (mergedResult && !isBatchMergedResult(mergedResult)) {
       downloadBlob(mergedResult.blob, `${baseName}-merged.${fileExtension}`);
+      return;
+    }
+
+    // If batch merged long images (multiple batches - pack into ZIP)
+    if (mergedResult && isBatchMergedResult(mergedResult)) {
+      const imageBlobs = mergedResult.batches.map((batch, index) => ({
+        name: `${baseName}-part${index + 1}-pages${batch.startPage}-${batch.endPage}.${fileExtension}`,
+        blob: batch.blob,
+      }));
+      const zipBlob = await createZipBlob(imageBlobs);
+      downloadBlob(zipBlob, `${baseName}-merged.zip`);
       return;
     }
 
@@ -136,8 +169,13 @@ export function PdfToFormatTool({
 
   // 处理完成状态 - 使用卡片包裹
   if (status === 'done' && (images.length > 0 || mergedResult)) {
-    const resultCount = mergedResult ? mergedResult.pageCount : images.length;
-    const isZipDownload = !mergedResult && downloadAsZip && images.length > 1;
+    const resultCount = mergedResult
+      ? isBatchMergedResult(mergedResult)
+        ? mergedResult.totalPageCount
+        : mergedResult.pageCount
+      : images.length;
+    const isBatchResult = mergedResult && isBatchMergedResult(mergedResult);
+    const isZipDownload = (!mergedResult && downloadAsZip && images.length > 1) || isBatchResult;
 
     return (
       <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-xl border bg-card p-8">
@@ -145,9 +183,17 @@ export function PdfToFormatTool({
         <p className="text-lg font-medium">{t('common.completed')}</p>
         <p className="text-sm text-muted-foreground">
           {mergedResult
-            ? t('common.mergedImageDesc', { count: resultCount })
+            ? isBatchResult
+              ? t('common.webpBatchCompleted', { pageCount: resultCount, batchCount: mergedResult.batches.length })
+              : t('common.mergedImageDesc', { count: resultCount })
             : `${resultCount} ${t('common.pages')}`}
         </p>
+        {isBatchResult && (
+          <div className="max-w-md rounded-lg bg-amber-50 px-4 py-3 text-sm text-amber-800 dark:bg-amber-950 dark:text-amber-200">
+            <p className="font-medium">{t('common.webpBatchCompletedDesc')}</p>
+            <p className="mt-1">{t('common.webpBatchCompletedExplanation')}</p>
+          </div>
+        )}
         <div className="flex flex-wrap justify-center gap-3">
           <Button onClick={handleDownloadAll} className="gap-2">
             {isZipDownload ? (
@@ -259,7 +305,7 @@ export function PdfToFormatTool({
           <div className="space-y-3 border-t pt-4 shrink-0">
             <p className="text-sm font-medium">{t('common.options')}</p>
             <div className="flex flex-col gap-3 min-h-[4.5rem]">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-start space-x-2">
                 <Checkbox
                   id="mergeLongImage"
                   checked={mergeLongImage}
@@ -272,6 +318,22 @@ export function PdfToFormatTool({
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
                   {t('common.mergeLongImage')}
+                  {format === 'image/webp' && mergeLongImage && estimatedBatchCount > 1 && (
+                    <span className="ml-1 inline-flex items-center gap-1 text-xs text-amber-600 dark:text-amber-400">
+                      （{t('common.webpBatchEstimate', { count: estimatedBatchCount })}
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <HelpCircleIcon className="size-3.5 cursor-help" />
+                          </TooltipTrigger>
+                          <TooltipContent side="top" className="max-w-[280px]">
+                            <p>{t('common.webpBatchTooltip')}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                      ）
+                    </span>
+                  )}
                 </label>
               </div>
               <div className="flex items-center space-x-2">
