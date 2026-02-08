@@ -2,7 +2,9 @@
 
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
 import { NumberInput } from '@/components/ui/number-input';
+import { Slider } from '@/components/ui/slider';
 import {
   Select,
   SelectContent,
@@ -132,8 +134,8 @@ export function PageNumbersPdfTool() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label className="mb-1 block text-sm font-medium">Position</label>
+          <div className="space-y-2">
+            <Label>Position</Label>
             <Select
               value={position}
               onValueChange={(value) =>
@@ -153,8 +155,8 @@ export function PageNumbersPdfTool() {
               </SelectContent>
             </Select>
           </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium">Format</label>
+          <div className="space-y-2">
+            <Label>Format</Label>
             <Select
               value={format}
               onValueChange={(value) => setFormat(value as PageNumberFormat)}
@@ -169,13 +171,8 @@ export function PageNumbersPdfTool() {
               </SelectContent>
             </Select>
           </div>
-          <div>
-            <label
-              htmlFor="start-number"
-              className="mb-1 block text-sm font-medium"
-            >
-              Start Number
-            </label>
+          <div className="space-y-2">
+            <Label htmlFor="start-number">Start Number</Label>
             <NumberInput
               id="start-number"
               min={1}
@@ -184,21 +181,16 @@ export function PageNumbersPdfTool() {
               fullWidth
             />
           </div>
-          <div>
-            <label
-              htmlFor="font-size"
-              className="mb-1 block text-sm font-medium"
-            >
-              Font Size ({fontSize}px)
-            </label>
-            <input
-              id="font-size"
-              type="range"
-              min="8"
-              max="24"
-              value={fontSize}
-              onChange={(e) => setFontSize(Number(e.target.value))}
-              className="w-full"
+          <div className="space-y-2">
+            <Label>
+              {t('common.fontSize')}: {fontSize}px
+            </Label>
+            <Slider
+              value={[fontSize]}
+              onValueChange={(value) => setFontSize(value[0])}
+              min={8}
+              max={24}
+              step={1}
             />
           </div>
         </div>

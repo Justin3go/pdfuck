@@ -317,7 +317,10 @@
       "chinese": "Cinese",
       "english": "Inglese",
       "auto": "Rilevamento automatico",
-      "recognizing": "Riconoscimento in corso..."
+      "recognizing": "Riconoscimento in corso...",
+      "headerFooterAdded": "Intestazione e piè di pagina aggiunti",
+      "headerAdded": "Intestazione aggiunta",
+      "footerAdded": "Piè di pagina aggiunto"
     },
     "tools": {
       "mergePdf": {

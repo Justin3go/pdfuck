@@ -317,7 +317,10 @@
       "chinese": "Chinês",
       "english": "Inglês",
       "auto": "Detecção automática",
-      "recognizing": "Reconhecendo..."
+      "recognizing": "Reconhecendo...",
+      "headerFooterAdded": "Cabeçalho e rodapé adicionados",
+      "headerAdded": "Cabeçalho adicionado",
+      "footerAdded": "Rodapé adicionado"
     },
     "tools": {
       "mergePdf": {

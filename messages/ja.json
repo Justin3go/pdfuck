@@ -317,7 +317,10 @@
       "chinese": "中国語",
       "english": "英語",
       "auto": "自動検出",
-      "recognizing": "認識中..."
+      "recognizing": "認識中...",
+      "headerFooterAdded": "ヘッダーとフッターが追加されました",
+      "headerAdded": "ヘッダーが追加されました",
+      "footerAdded": "フッターが追加されました"
     },
     "tools": {
       "mergePdf": {

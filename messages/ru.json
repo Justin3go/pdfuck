@@ -909,7 +909,10 @@
       "chinese": "Китайский",
       "english": "Английский",
       "auto": "Автоопределение",
-      "recognizing": "Распознавание..."
+      "recognizing": "Распознавание...",
+      "headerFooterAdded": "Колонтитулы добавлены",
+      "headerAdded": "Верхний колонтитул добавлен",
+      "footerAdded": "Нижний колонтитул добавлен"
     },
     "tools": {
       "mergePdf": {

@@ -3,6 +3,8 @@
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Slider } from '@/components/ui/slider';
 import {
   Select,
   SelectContent,
@@ -114,7 +116,7 @@ export function WatermarkPdfTool() {
   // 上传文件后状态
   return (
     <div className="flex min-h-[320px] flex-col justify-between rounded-xl border bg-card p-6">
-      <div className="flex-1 space-y-4 overflow-auto">
+      <div className="flex-1 space-y-4 overflow-auto p-1">
         <div className="flex items-center gap-3 border-b pb-4">
           <div className="flex size-10 items-center justify-center rounded-full bg-primary/10">
             <FileIcon className="size-5 text-primary" />
@@ -128,13 +130,8 @@ export function WatermarkPdfTool() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label
-              htmlFor="watermark-text"
-              className="mb-1 block text-sm font-medium"
-            >
-              Text
-            </label>
+          <div className="space-y-2">
+            <Label htmlFor="watermark-text">Text</Label>
             <Input
               id="watermark-text"
               value={text}
@@ -142,8 +139,8 @@ export function WatermarkPdfTool() {
               placeholder="Watermark text"
             />
           </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium">Position</label>
+          <div className="space-y-2">
+            <Label>Position</Label>
             <Select
               value={position}
               onValueChange={(value) =>
@@ -159,36 +156,28 @@ export function WatermarkPdfTool() {
               </SelectContent>
             </Select>
           </div>
-          <div>
-            <label
-              htmlFor="font-size"
-              className="mb-1 block text-sm font-medium"
-            >
-              Font Size ({fontSize}px)
-            </label>
-            <input
-              id="font-size"
-              type="range"
-              min="12"
-              max="120"
-              value={fontSize}
-              onChange={(e) => setFontSize(Number(e.target.value))}
-              className="w-full"
+          <div className="space-y-2">
+            <Label>
+              {t('common.fontSize')}: {fontSize}px
+            </Label>
+            <Slider
+              value={[fontSize]}
+              onValueChange={(value) => setFontSize(value[0])}
+              min={12}
+              max={120}
+              step={1}
             />
           </div>
-          <div>
-            <label htmlFor="opacity" className="mb-1 block text-sm font-medium">
-              Opacity ({Math.round(opacity * 100)}%)
-            </label>
-            <input
-              id="opacity"
-              type="range"
-              min="0.05"
-              max="1"
-              step="0.05"
-              value={opacity}
-              onChange={(e) => setOpacity(Number(e.target.value))}
-              className="w-full"
+          <div className="space-y-2">
+            <Label>
+              Opacity: {Math.round(opacity * 100)}%
+            </Label>
+            <Slider
+              value={[opacity]}
+              onValueChange={(value) => setOpacity(value[0])}
+              min={0.05}
+              max={1}
+              step={0.05}
             />
           </div>
         </div>

@@ -3,6 +3,8 @@
 import { FileDropzone } from '@/components/pdf/file-dropzone';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Label } from '@/components/ui/label';
+import { Slider } from '@/components/ui/slider';
 import {
   Tooltip,
   TooltipContent,
@@ -271,38 +273,29 @@ export function PdfToFormatTool({
           <div
             className={`grid gap-4 shrink-0 ${showQuality ? 'sm:grid-cols-2' : ''}`}
           >
-            <div>
-              <label htmlFor="scale" className="mb-1 block text-sm font-medium">
-                Scale ({scale}x)
-              </label>
-              <input
-                id="scale"
-                type="range"
-                min="1"
-                max="4"
-                step="0.5"
-                value={scale}
-                onChange={(e) => setScale(Number(e.target.value))}
-                className="w-full"
+            <div className="space-y-2">
+              <Label>
+                Scale: {scale}x
+              </Label>
+              <Slider
+                value={[scale]}
+                onValueChange={(value) => setScale(value[0])}
+                min={1}
+                max={4}
+                step={0.5}
               />
             </div>
             {showQuality && (
-              <div>
-                <label
-                  htmlFor="quality"
-                  className="mb-1 block text-sm font-medium"
-                >
-                  Quality ({Math.round(quality * 100)}%)
-                </label>
-                <input
-                  id="quality"
-                  type="range"
-                  min="0.1"
-                  max="1"
-                  step="0.1"
-                  value={quality}
-                  onChange={(e) => setQuality(Number(e.target.value))}
-                  className="w-full"
+              <div className="space-y-2">
+                <Label>
+                  Quality: {Math.round(quality * 100)}%
+                </Label>
+                <Slider
+                  value={[quality]}
+                  onValueChange={(value) => setQuality(value[0])}
+                  min={0.1}
+                  max={1}
+                  step={0.1}
                 />
               </div>
             )}

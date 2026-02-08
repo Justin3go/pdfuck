@@ -949,7 +949,10 @@
       "chinese": "Chinesisch",
       "english": "Englisch",
       "auto": "Automatisch erkennen",
-      "recognizing": "Erkennung läuft..."
+      "recognizing": "Erkennung läuft...",
+      "headerFooterAdded": "Kopf- und Fußzeile hinzugefügt",
+      "headerAdded": "Kopfzeile hinzugefügt",
+      "footerAdded": "Fußzeile hinzugefügt"
     },
     "tools": {
       "mergePdf": {

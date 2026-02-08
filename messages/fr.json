@@ -317,7 +317,10 @@
       "chinese": "Chinois",
       "english": "Anglais",
       "auto": "Détection automatique",
-      "recognizing": "Reconnaissance en cours..."
+      "recognizing": "Reconnaissance en cours...",
+      "headerFooterAdded": "En-tête et pied de page ajoutés",
+      "headerAdded": "En-tête ajouté",
+      "footerAdded": "Pied de page ajouté"
     },
     "tools": {
       "mergePdf": {

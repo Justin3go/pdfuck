@@ -909,7 +909,10 @@
       "chinese": "Chinese",
       "english": "English",
       "auto": "Auto detect",
-      "recognizing": "Recognizing..."
+      "recognizing": "Recognizing...",
+      "headerFooterAdded": "Header & Footer added",
+      "headerAdded": "Header added",
+      "footerAdded": "Footer added"
     },
     "tools": {
       "mergePdf": {

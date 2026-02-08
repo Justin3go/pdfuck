@@ -317,7 +317,10 @@
       "chinese": "중국어",
       "english": "영어",
       "auto": "자동 감지",
-      "recognizing": "인식 중..."
+      "recognizing": "인식 중...",
+      "headerFooterAdded": "머리글과 바닥글이 추가되었습니다",
+      "headerAdded": "머리글이 추가되었습니다",
+      "footerAdded": "바닥글이 추가되었습니다"
     },
     "tools": {
       "mergePdf": {

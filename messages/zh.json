@@ -1064,7 +1064,10 @@
       "chinese": "中文",
       "english": "英文",
       "auto": "自动检测",
-      "recognizing": "识别中..."
+      "recognizing": "识别中...",
+      "headerFooterAdded": "页眉和页脚已添加",
+      "headerAdded": "页眉已添加",
+      "footerAdded": "页脚已添加"
     },
     "tools": {
       "mergePdf": {
