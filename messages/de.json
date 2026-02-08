@@ -1504,6 +1504,16 @@
         "metaTitle": "PDF kostenlos online signieren - Elektronisches Signatur-Tool",
         "metaDescription": "Kostenlos elektronische oder handschriftliche Signaturen zu PDF-Dokumenten hinzufügen. Unterstützung für Text- und Bildsignaturen. Browser-basiert, keine Uploads erforderlich.",
         "longDescription": "Fügen Sie elektronische Signaturen zu Ihren PDF-Dokumenten hinzu. Unterstützung für Textsignaturen (anpassbare Schriftart, Größe, Farbe) und handschriftliche Signaturen (auf Leinwand zeichnen). Platzieren Sie Signaturen überall, um rechtsgültig signierte Dokumente zu erstellen.",
+        "textSignature": "Textsignatur",
+        "drawSignature": "Handsignatur",
+        "signatureText": "Signaturtext",
+        "enterYourName": "Geben Sie Ihren Namen ein",
+        "drawYourSignature": "Zeichnen Sie Ihre Unterschrift",
+        "clear": "Löschen",
+        "saveSignature": "Signatur speichern",
+        "signatureSaved": "Signatur gespeichert!",
+        "positionHint": "Die Signatur wird im oberen linken Bereich der ersten Seite platziert. Laden Sie das Dokument herunter und verwenden Sie einen PDF-Editor, wenn Sie eine präzise Positionierung benötigen.",
+        "pleaseEnterSignature": "Bitte geben Sie den Signaturtext ein oder zeichnen Sie eine Unterschrift",
         "faq": {
           "item-1": {
             "question": "Welche Signaturtypen werden unterstützt?",

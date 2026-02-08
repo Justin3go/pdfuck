@@ -115,7 +115,7 @@ export function SignPdfTool() {
     }
 
     if (mode === 'text' && !signatureText.trim() && !signatureData) {
-      setError('Please enter signature text or draw a signature');
+      setError(t('tools.signPdf.pleaseEnterSignature'));
       return;
     }
 
@@ -214,32 +214,32 @@ export function SignPdfTool() {
               size="sm"
               onClick={() => setMode('text')}
             >
-              Text Signature
+              {t('tools.signPdf.textSignature')}
             </Button>
             <Button
               variant={mode === 'draw' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setMode('draw')}
             >
-              Draw Signature
+              {t('tools.signPdf.drawSignature')}
             </Button>
           </div>
 
           {mode === 'text' ? (
             <div className="p-1">
               <label className="mb-1 block text-sm font-medium">
-                Signature Text
+                {t('tools.signPdf.signatureText')}
               </label>
               <Input
                 value={signatureText}
                 onChange={(e) => setSignatureText(e.target.value)}
-                placeholder="Enter your name"
+                placeholder={t('tools.signPdf.enterYourName')}
               />
             </div>
           ) : (
             <div className="space-y-2">
               <label className="block text-sm font-medium">
-                Draw Your Signature
+                {t('tools.signPdf.drawYourSignature')}
               </label>
               <div className="rounded-lg border bg-white p-2">
                 <canvas
@@ -255,25 +255,21 @@ export function SignPdfTool() {
               </div>
               <div className="flex gap-2">
                 <Button variant="outline" size="sm" onClick={clearCanvas}>
-                  Clear
+                  {t('tools.signPdf.clear')}
                 </Button>
                 <Button variant="outline" size="sm" onClick={saveCanvas}>
-                  Save Signature
+                  {t('tools.signPdf.saveSignature')}
                 </Button>
               </div>
               {signatureImage && (
-                <p className="text-xs text-green-600">Signature saved!</p>
+                <p className="text-xs text-green-600">{t('tools.signPdf.signatureSaved')}</p>
               )}
             </div>
           )}
 
           <div className="flex items-start gap-2 rounded-lg bg-muted p-3 text-sm text-muted-foreground">
             <MousePointerClickIcon className="mt-0.5 size-4 shrink-0" />
-            <p>
-              The signature will be placed in the upper-left area of the first
-              page. Download and use a PDF editor if you need precise
-              positioning.
-            </p>
+            <p>{t('tools.signPdf.positionHint')}</p>
           </div>
         </div>
       </div>

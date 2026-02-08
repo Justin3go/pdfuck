@@ -1413,6 +1413,16 @@
         "metaTitle": "Sign PDF Online Free - Electronic Signature Tool",
         "metaDescription": "Add electronic or handwritten signatures to PDF documents for free. Support text and image signatures. Browser-based, no uploads needed.",
         "longDescription": "Add electronic signatures to your PDF documents. Support text signatures (customizable font, size, color) and handwritten signatures (draw on canvas). Place signatures anywhere to create legally binding signed documents.",
+        "textSignature": "텍스트 서명",
+        "drawSignature": "손으로 그리기",
+        "signatureText": "서명 텍스트",
+        "enterYourName": "이름을 입력하세요",
+        "drawYourSignature": "서명을 그려주세요",
+        "clear": "지우기",
+        "saveSignature": "서명 저장",
+        "signatureSaved": "서명이 저장되었습니다!",
+        "positionHint": "서명은 첫 페이지의 왼쪽 상단 영역에 배치됩니다. 정확한 위치 조정이 필요한 경우 다운로드하여 PDF 편집기를 사용하세요.",
+        "pleaseEnterSignature": "서명 텍스트를 입력하거나 서명을 그려주세요",
         "faq": {
           "item-1": {
             "question": "What signature types are supported?",

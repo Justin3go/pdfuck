@@ -1413,6 +1413,16 @@
         "metaTitle": "Sign PDF Online Free - Electronic Signature Tool",
         "metaDescription": "Add electronic or handwritten signatures to PDF documents for free. Support text and image signatures. Browser-based, no uploads needed.",
         "longDescription": "Add electronic signatures to your PDF documents. Support text signatures (customizable font, size, color) and handwritten signatures (draw on canvas). Place signatures anywhere to create legally binding signed documents.",
+        "textSignature": "テキスト署名",
+        "drawSignature": "手書き署名",
+        "signatureText": "署名テキスト",
+        "enterYourName": "お名前を入力してください",
+        "drawYourSignature": "署名を描画してください",
+        "clear": "クリア",
+        "saveSignature": "署名を保存",
+        "signatureSaved": "署名を保存しました！",
+        "positionHint": "署名は最初のページの左上領域に配置されます。正確な位置調整が必要な場合は、ダウンロードしてPDFエディタを使用してください。",
+        "pleaseEnterSignature": "署名テキストを入力するか、署名を描画してください",
         "faq": {
           "item-1": {
             "question": "What signature types are supported?",

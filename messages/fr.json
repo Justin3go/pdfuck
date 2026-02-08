@@ -1413,6 +1413,16 @@
         "metaTitle": "Sign PDF Online Free - Electronic Signature Tool",
         "metaDescription": "Add electronic or handwritten signatures to PDF documents for free. Support text and image signatures. Browser-based, no uploads needed.",
         "longDescription": "Add electronic signatures to your PDF documents. Support text signatures (customizable font, size, color) and handwritten signatures (draw on canvas). Place signatures anywhere to create legally binding signed documents.",
+        "textSignature": "Signature texte",
+        "drawSignature": "Dessiner une signature",
+        "signatureText": "Texte de signature",
+        "enterYourName": "Entrez votre nom",
+        "drawYourSignature": "Dessinez votre signature",
+        "clear": "Effacer",
+        "saveSignature": "Enregistrer la signature",
+        "signatureSaved": "Signature enregistrée !",
+        "positionHint": "La signature sera placée dans le coin supérieur gauche de la première page. Téléchargez et utilisez un éditeur PDF si vous avez besoin d'un positionnement précis.",
+        "pleaseEnterSignature": "Veuillez entrer le texte de la signature ou dessiner une signature",
         "faq": {
           "item-1": {
             "question": "What signature types are supported?",

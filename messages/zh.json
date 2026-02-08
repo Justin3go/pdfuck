@@ -2465,6 +2465,16 @@
         "metaTitle": "免费在线签名PDF - 电子签名工具",
         "metaDescription": "免费为PDF文档添加电子签名或手写签名。支持文字签名和图片签名。基于浏览器处理，无需上传。",
         "longDescription": "为您的PDF文档添加电子签名。支持文字签名（可自定义字体、大小、颜色）和手写签名（通过画布绘制）。将签名放置在任意位置，创建具有法律效力的签名文档。",
+        "textSignature": "文字签名",
+        "drawSignature": "手绘签名",
+        "signatureText": "签名文字",
+        "enterYourName": "请输入您的姓名",
+        "drawYourSignature": "绘制您的签名",
+        "clear": "清除",
+        "saveSignature": "保存签名",
+        "signatureSaved": "签名已保存！",
+        "positionHint": "签名将放置在首页的左上角区域。如需精确定位，请下载后使用PDF编辑器。",
+        "pleaseEnterSignature": "请输入签名文字或绘制签名",
         "faq": {
           "item-1": {
             "question": "支持哪些签名类型？",
