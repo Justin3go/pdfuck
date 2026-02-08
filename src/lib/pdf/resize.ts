@@ -61,7 +61,7 @@ export async function resizePdf(
       // 设置新页面尺寸
       copiedPage.setSize(targetWidth, targetHeight);
 
-      // 如果需要缩放内容
+      // 如果需要缩放内容，使用 embedPage 方式重新嵌入并缩放
       if (options.scaleContent && targetSize) {
         const scaleX = targetWidth / originalWidth;
         const scaleY = targetHeight / originalHeight;
@@ -73,15 +73,18 @@ export async function resizePdf(
         const offsetX = (targetWidth - originalWidth * scale) / 2;
         const offsetY = (targetHeight - originalHeight * scale) / 2;
 
-        // 注意：pdf-lib 不支持直接缩放页面内容
-        // 这里我们只是调整页面大小，内容保持原样
-        // 实际内容缩放需要在创建页面时处理
-
-        // 如果目标页面比原页面大，内容保持原位
-        // 如果目标页面比原页面小，内容可能被裁剪
+        // 嵌入原页面为 XObject，然后在新页面上绘制并缩放
+        const embeddedPage = await newDoc.embedPage(sourcePage);
+        const newPage = newDoc.addPage([targetWidth, targetHeight]);
+        newPage.drawPage(embeddedPage, {
+          x: offsetX,
+          y: offsetY,
+          width: originalWidth * scale,
+          height: originalHeight * scale,
+        });
+      } else {
+        newDoc.addPage(copiedPage);
       }
-
-      newDoc.addPage(copiedPage);
     }
 
     // 复制元数据

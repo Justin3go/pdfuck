@@ -82,7 +82,7 @@ export function ResizePdfTool() {
       <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-xl border bg-card p-8">
         <CheckCircleIcon className="size-12 text-green-500" />
         <p className="text-lg font-medium">{t('common.completed')}</p>
-        <p className="text-sm text-muted-foreground">Resized to {targetSize}</p>
+        <p className="text-sm text-muted-foreground">{t('common.resizedTo', { size: targetSize })}</p>
         <div className="flex gap-3">
           <Button
             onClick={() =>
@@ -176,8 +176,7 @@ export function ResizePdfTool() {
                 >
                   {t('common.keepOriginal')}
                   <p className="text-xs text-muted-foreground">
-                    Content size remains unchanged, may be cropped or have white
-                    space
+                    {t('common.keepOriginalDescription')}
                   </p>
                 </Label>
               </div>
@@ -189,7 +188,7 @@ export function ResizePdfTool() {
                 >
                   {t('common.fitToSize')}
                   <p className="text-xs text-muted-foreground">
-                    Content will be scaled to fit the new page size
+                    {t('common.fitToSizeDescription')}
                   </p>
                 </Label>
               </div>
