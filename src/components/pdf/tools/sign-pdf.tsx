@@ -40,8 +40,10 @@ export function SignPdfTool() {
     if (!ctx) return;
 
     const rect = canvas.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    const x = (e.clientX - rect.left) * scaleX;
+    const y = (e.clientY - rect.top) * scaleY;
 
     ctx.beginPath();
     ctx.moveTo(x, y);
@@ -57,8 +59,10 @@ export function SignPdfTool() {
       if (!ctx) return;
 
       const rect = canvas.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const x = (e.clientX - rect.left) * scaleX;
+      const y = (e.clientY - rect.top) * scaleY;
 
       ctx.lineTo(x, y);
       ctx.stroke();
@@ -222,7 +226,7 @@ export function SignPdfTool() {
           </div>
 
           {mode === 'text' ? (
-            <div>
+            <div className="p-1">
               <label className="mb-1 block text-sm font-medium">
                 Signature Text
               </label>
